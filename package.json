@@ -31,7 +31,7 @@
         "error",
         {
           "devDependencies": [
-            "./src/__tests__/**/*",
+            "./src/tests/**/*",
             "./src/setupTests.js"
           ]
         }

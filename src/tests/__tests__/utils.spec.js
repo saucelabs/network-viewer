@@ -1,4 +1,4 @@
-import * as utils from '../utils';
+import * as utils from '../../utils';
 import networkDataMock from '../__fixtures__/network.json';
 import preparedMockData from '../__fixtures__/preparedData';
 
