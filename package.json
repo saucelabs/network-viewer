@@ -1,0 +1,70 @@
+{
+  "name": "network-viewer",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-scripts": "3.2.0"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^17.1.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "react-test-renderer": "^16.11.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "test:coverage": "npm run test -- --coverage",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "airbnb"
+    ],
+    "rules": {
+      "react/forbid-prop-types": 0,
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": [
+            "./src/__tests__/**/*",
+            "./src/setupTests.js"
+          ]
+        }
+      ]
+    }
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/src/setupTests.js",
+      "!<rootDir>/src/index.jsx",
+      "!<rootDir>/src/serviceWorker.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
