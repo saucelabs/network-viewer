@@ -1,11 +1,9 @@
-import { Map, List } from 'immutable';
+import { Map } from 'immutable';
 
 import * as types from '../../state/network/types';
 import { reducer, initialState } from '../../state/network/reducer';
-import networkDataMock from '../__fixtures__/network.json';
-import { prepareViewerData } from '../../utils';
-
-const preparedMockData = () => new List(prepareViewerData(networkDataMock.log.entries).data);
+import networkDataMock from '../../__fixtures__/network.json';
+import preparedMockData from '../../__fixtures__/preparedData';
 
 describe('network reducer', () => {
   let state;
@@ -21,7 +19,7 @@ describe('network reducer', () => {
 
   it('UPDATE_SEARCH', () => {
     const newState = initialState.merge(new Map({
-      actualData: preparedMockData(),
+      actualData: preparedMockData,
     }));
 
     state = reducer(newState, {
@@ -34,7 +32,7 @@ describe('network reducer', () => {
 
   it('UPDATE_FILTER', () => {
     const newState = initialState.merge(new Map({
-      actualData: preparedMockData(),
+      actualData: preparedMockData,
     }));
 
     state = reducer(newState, {
@@ -50,7 +48,7 @@ describe('network reducer', () => {
 
   it('UPDATE_SORT', () => {
     const newState = initialState.merge(new Map({
-      data: preparedMockData(),
+      data: preparedMockData,
     }));
 
     state = reducer(newState, {

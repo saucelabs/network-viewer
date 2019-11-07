@@ -75,7 +75,7 @@ export const sortBy = (data, key, isAsc = true) => data.sort((prev, next) => {
 
 export const filterData = (data, filter) => {
   const { search, key, value } = filter;
-  const trimmedSearch = search.trim();
+  const trimmedSearch = search && search.trim();
 
   return !trimmedSearch && !key
     ? data
