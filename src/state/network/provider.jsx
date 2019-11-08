@@ -1,9 +1,7 @@
 import React, { useReducer, useContext, useMemo } from 'react';
 
 import { reducer, initialState } from './reducer';
-import {
-  updateData, updateSearch, updateSort, updateFilter,
-} from './actions';
+import * as actions from './actions';
 import { actionsWrapper } from '../../utils';
 
 export const NetworkContext = React.createContext();
@@ -25,10 +23,15 @@ export const useNetwork = () => {
     state,
     dispatch,
     actions: actionsWrapper({
-      updateData,
-      updateSearch,
-      updateSort,
-      updateFilter,
+      updateData: actions.updateData,
+      updateSearch: actions.updateSearch,
+      updateSort: actions.updateSort,
+      updateFilter: actions.updateFilter,
+      errorNotification: actions.errorNotification,
+      warningNotification: actions.warningNotification,
+      successNotification: actions.successNotification,
+      infoNotification: actions.infoNotification,
+      dismissNotification: actions.dismissNotification,
     })(dispatch, state),
   };
 };

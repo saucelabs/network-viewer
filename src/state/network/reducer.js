@@ -16,6 +16,7 @@ const initialState = new Map({
     key: null,
     value: null,
   },
+  notifications: new List(),
 });
 
 const reducer = (state = initialState, { type, payload }) => {
@@ -62,6 +63,20 @@ const reducer = (state = initialState, { type, payload }) => {
           .set('sort', payload)
           .set('data', sortBy(state.get('data'), payload.key, payload.isAcs));
       });
+    }
+    case types.ADD_NOTIFICATION: {
+      const existingNotification = state.get('notifications');
+      const lastId = existingNotification.size
+        ? existingNotification.last().id : 0;
+      return state.setIn(['notifications', existingNotification.size], {
+        id: lastId + 1,
+        ...payload,
+      });
+    }
+    case types.DISMISS_NOTIFICATION: {
+      const existingNotification = state.get('notifications');
+      const index = existingNotification.findIndex(({ id }) => id === payload);
+      return state.set('notifications', existingNotification.delete(index));
     }
     default:
       return state;
