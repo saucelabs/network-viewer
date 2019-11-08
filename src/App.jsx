@@ -1,14 +1,15 @@
 import React from 'react';
-import './App.css';
 import { NetworkProvider } from './state/network/provider';
 import FilterContainer from './Containers/FilterContainer';
 import Notification from './Components/Notification';
+import NetworkTableContainer from './Containers/NetworkTableContainer';
 
 function App() {
   return (
     <NetworkProvider>
       <Notification />
       <FilterContainer />
+      <NetworkTableContainer />
     </NetworkProvider>
   );
 }

@@ -1,0 +1,18 @@
+@import "../common.scss";
+
+.drag-drop {
+  display: flex;
+  height: 100%;
+  min-height: 300px;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed $gray-200;
+  border-radius: 4px;
+  font-size: $font-size-lg;
+  margin: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $gray-400;
+  }
+}

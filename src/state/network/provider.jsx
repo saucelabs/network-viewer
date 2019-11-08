@@ -19,19 +19,21 @@ export const useNetwork = () => {
   }
   const [state, dispatch] = context;
 
+  const wrappedActions = actionsWrapper({
+    updateData: actions.updateData,
+    updateSearch: actions.updateSearch,
+    updateSort: actions.updateSort,
+    updateFilter: actions.updateFilter,
+    errorNotification: actions.errorNotification,
+    warningNotification: actions.warningNotification,
+    successNotification: actions.successNotification,
+    infoNotification: actions.infoNotification,
+    dismissNotification: actions.dismissNotification,
+  })(dispatch, state);
+
   return {
     state,
     dispatch,
-    actions: actionsWrapper({
-      updateData: actions.updateData,
-      updateSearch: actions.updateSearch,
-      updateSort: actions.updateSort,
-      updateFilter: actions.updateFilter,
-      errorNotification: actions.errorNotification,
-      warningNotification: actions.warningNotification,
-      successNotification: actions.successNotification,
-      infoNotification: actions.infoNotification,
-      dismissNotification: actions.dismissNotification,
-    })(dispatch, state),
+    actions: wrappedActions,
   };
 };
