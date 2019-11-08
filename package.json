@@ -3,21 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "immutable": "^3.8.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts": "3.2.0"
   },
   "devDependencies": {
-    "eslint-config-airbnb": "^17.1.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
+    "eslint-config-airbnb": "^17.1.0",
     "react-test-renderer": "^16.11.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:coverage": "npm run test -- --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -31,28 +31,11 @@
         "error",
         {
           "devDependencies": [
-            "./src/__tests__/**/*",
+            "./src/tests/**/*",
             "./src/setupTests.js"
           ]
         }
       ]
-    }
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}",
-      "!<rootDir>/node_modules/",
-      "!<rootDir>/src/setupTests.js",
-      "!<rootDir>/src/index.jsx",
-      "!<rootDir>/src/serviceWorker.js"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 90,
-        "functions": 90,
-        "lines": 90,
-        "statements": 90
-      }
     }
   },
   "browserslist": {
