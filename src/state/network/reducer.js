@@ -25,14 +25,12 @@ const reducer = (state = initialState, { type, payload }) => {
         const sort = state.get('sort');
         const { data, totalNetworkTime } = prepareViewerData(payload);
         const sortedData = new List(sortBy(data, sort.key, sort.isAcs));
-
-        return newState
+        newState
           .set('data', sortedData)
           .set('actualData', sortedData)
           .set('totalNetworkTime', totalNetworkTime);
       });
     }
-
     case types.UPDATE_SEARCH: {
       return state.withMutations((newState) => {
         const existingFilter = state.get('filter');
@@ -46,7 +44,6 @@ const reducer = (state = initialState, { type, payload }) => {
           .set('data', filterData(state.get('actualData'), filter));
       });
     }
-
     case types.UPDATE_FILTER: {
       return state.withMutations((newState) => {
         const existingFilter = state.get('filter');
@@ -59,7 +56,6 @@ const reducer = (state = initialState, { type, payload }) => {
           .set('data', filterData(state.get('actualData'), filter));
       });
     }
-
     case types.UPDATE_SORT: {
       return state.withMutations((newState) => {
         newState
@@ -67,7 +63,6 @@ const reducer = (state = initialState, { type, payload }) => {
           .set('data', sortBy(state.get('data'), payload.key, payload.isAcs));
       });
     }
-
     default:
       return state;
   }
