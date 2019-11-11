@@ -24,10 +24,13 @@ describe('network reducer', () => {
 
     state = reducer(newState, {
       type: types.UPDATE_SEARCH,
-      payload: 'e96c15f68c68',
+      payload: {
+        key: 'url',
+        value: 'e96c15f68c68',
+      },
     });
     expect(state.get('data').toJS()).toMatchSnapshot();
-    expect(state.get('filter')).toMatchSnapshot();
+    expect(state.get('search')).toMatchSnapshot();
   });
 
   it('UPDATE_FILTER', () => {

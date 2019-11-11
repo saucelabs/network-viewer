@@ -1,5 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
+
 import Notification from '../../../Components/Notification';
 import { NetworkProvider } from '../../../state/network/provider';
 
