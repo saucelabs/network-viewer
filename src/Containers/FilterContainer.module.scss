@@ -1,0 +1,13 @@
+@import "./../common.scss";
+
+.filters-container {
+  background: $gray-100;
+  border-bottom: 1px solid $gray-300;
+  padding: $grid-gutter-width / 4;
+}
+
+.filters-button-group {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}

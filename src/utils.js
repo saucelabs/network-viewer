@@ -1,3 +1,5 @@
+/* eslint no-underscore-dangle: 0 */
+
 export const getUrlInfo = (url) => {
   const urlInfo = new URL(url);
   const pathSplit = urlInfo.pathname.split('/');
@@ -38,6 +40,14 @@ export const getTimings = ({ startedDateTime, timings }, firstEntryTime) => ({
   startTime: new Date(startedDateTime).getTime() - new Date(firstEntryTime).getTime(),
 });
 
+export const getContent = ({ mimeType, text }) => {
+  if (mimeType === 'application/json') {
+    return JSON.stringify(JSON.parse(text));
+  }
+
+  return text;
+};
+
 export const prepareViewerData = (entries) => {
   const firstEntryTime = entries[0].startedDateTime;
   const lastEntryTime = entries[entries.length - 1].startedDateTime;
@@ -49,8 +59,9 @@ export const prepareViewerData = (entries) => {
       method: entry.request.method,
       size: parseSize(entry.response),
       startedDateTime: entry.startedDateTime,
-      type: getContentType(entry.response.headers),
+      type: entry._resourceType || getContentType(entry.response.headers),
       timings: getTimings(entry, firstEntryTime),
+      body: getContent(entry.response.content),
       ...getUrlInfo(entry.request.url),
     }));
 
@@ -73,15 +84,17 @@ export const sortBy = (data, key, isAsc = true) => data.sort((prev, next) => {
   return 0;
 });
 
-export const filterData = (data, filter) => {
-  const { search, key, value } = filter;
-  const trimmedSearch = search && search.trim();
+export const filterData = ({
+  data, filter, search,
+}) => {
+  const trimmedSearch = search.value && search.value.trim();
 
-  return !trimmedSearch && !key
+  return !trimmedSearch && !filter.name
     ? data
     : data.filter((info) => {
-      const isSearchMatched = trimmedSearch ? info.filename.includes(trimmedSearch) : true;
-      const isFilterMatched = key ? info[key] === value : true;
+      const isSearchMatched = trimmedSearch
+        ? info[search.name] && info[search.name].includes(trimmedSearch) : true;
+      const isFilterMatched = filter.name ? info[filter.name] === filter.value : true;
       return isSearchMatched && isFilterMatched;
     });
 };

@@ -11,9 +11,12 @@ const initialState = new Map({
     key: 'startedDateTime',
     isAcs: true,
   },
+  search: {
+    name: 'url',
+    value: '',
+  },
   filter: {
-    search: '',
-    key: null,
+    name: null,
     value: null,
   },
   notifications: new List(),
@@ -34,27 +37,24 @@ const reducer = (state = initialState, { type, payload }) => {
     }
     case types.UPDATE_SEARCH: {
       return state.withMutations((newState) => {
-        const existingFilter = state.get('filter');
-
-        const filter = {
-          ...existingFilter,
-          search: payload,
-        };
         newState
-          .set('filter', filter)
-          .set('data', filterData(state.get('actualData'), filter));
+          .set('search', payload)
+          .set('data', filterData({
+            data: state.get('actualData'),
+            filter: state.get('filter'),
+            search: payload,
+          }));
       });
     }
     case types.UPDATE_FILTER: {
       return state.withMutations((newState) => {
-        const existingFilter = state.get('filter');
-        const filter = {
-          ...existingFilter,
-          ...payload,
-        };
         newState
-          .set('filter', filter)
-          .set('data', filterData(state.get('actualData'), filter));
+          .set('filter', payload)
+          .set('data', filterData({
+            data: state.get('actualData'),
+            filter: payload,
+            search: state.get('search'),
+          }));
       });
     }
     case types.UPDATE_SORT: {

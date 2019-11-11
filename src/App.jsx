@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { NetworkProvider } from './state/network/provider';
 import FilterContainer from './Containers/FilterContainer';
 import Notification from './Components/Notification';

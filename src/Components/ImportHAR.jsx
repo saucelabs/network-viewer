@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDropzone } from 'react-dropzone';
 import { Button } from 'react-bootstrap';
+
 import { useNetwork } from '../state/network/provider';
 
 import Styles from './ImportHAR.module.scss';
@@ -43,7 +44,7 @@ const ImportHar = ({ showButton }) => {
       <input {...getInputProps()} />
       {
         showButton
-          ? <Button variant="secondary" size="sm">Import HAR file</Button>
+          ? <Button variant="secondary" size="sm">Import HAR</Button>
           : <p className={Styles['drag-drop']}>Drag and drop HAR file here, or click to select file</p>
       }
     </div>
