@@ -1,8 +1,9 @@
 import React, { useReducer, useContext, useMemo } from 'react';
 
+import { actionsWrapper } from '../../utils';
+
 import { reducer, initialState } from './reducer';
 import * as actions from './actions';
-import { actionsWrapper } from '../../utils';
 
 export const NetworkContext = React.createContext();
 

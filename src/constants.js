@@ -27,7 +27,7 @@ export const VIEWER_FIELDS = [
 ];
 
 export const DEFAULT_FILTER = {
-  key: null,
+  name: null,
   value: null,
 };
 
@@ -37,45 +37,66 @@ export const FILTERS = [
     filterBy: DEFAULT_FILTER,
   },
   {
-    name: 'HTML',
+    name: 'XHR',
     filterBy: {
-      key: 'type',
-      value: 'html',
-    },
-  },
-  {
-    name: 'CSS',
-    filterBy: {
-      key: 'type',
-      value: 'css',
+      name: 'type',
+      value: 'xhr',
     },
   },
   {
     name: 'JS',
     filterBy: {
-      key: 'type',
-      value: 'javascript',
+      name: 'type',
+      value: 'script',
     },
   },
   {
-    name: 'XHR',
+    name: 'CSS',
     filterBy: {
-      key: 'type',
-      value: 'xhr',
+      name: 'type',
+      value: 'stylesheet',
     },
   },
   {
-    name: 'Fonts',
+    name: 'Img',
     filterBy: {
-      key: 'type',
-      value: 'fonts',
+      name: 'type',
+      value: 'image',
     },
   },
   {
-    name: 'Images',
+    name: 'Media',
     filterBy: {
-      key: 'type',
-      value: 'images',
+      name: 'type',
+      value: 'media',
+    },
+  },
+  {
+    name: 'Font',
+    filterBy: {
+      name: 'type',
+      value: 'font',
+    },
+  },
+  {
+    name: 'Doc',
+    filterBy: {
+      name: 'type',
+      value: 'document',
+    },
+  },
+  {
+    name: 'WS',
+    filterBy: {
+      name: 'type',
+      value: 'websocket',
+    },
+  },
+  {
+    name: 'Manifest',
+    filterBy: {
+      name: 'type',
+      value: 'manifest',
     },
   },
 ];

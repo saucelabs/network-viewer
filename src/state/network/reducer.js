@@ -1,7 +1,8 @@
 import { Map, List } from 'immutable';
 
-import * as types from './types';
 import { filterData, sortBy, prepareViewerData } from '../../utils';
+
+import * as types from './types';
 
 const initialState = new Map({
   data: new List(),

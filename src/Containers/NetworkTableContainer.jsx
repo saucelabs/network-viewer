@@ -10,10 +10,11 @@ import Styles from './NetworkTableContainer.module.scss';
 
 const NetworkTableContainer = () => {
   const { state } = useNetwork();
+  const actualData = state.get('actualData');
   const data = state.get('data');
   const totalNetworkTime = state.get('totalNetworkTime');
 
-  if (!data.size) {
+  if (!actualData.size) {
     return (
       <section className={Styles['table-container']}>
         <ImportHar showButton={false} />
