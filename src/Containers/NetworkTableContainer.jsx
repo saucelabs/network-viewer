@@ -3,7 +3,7 @@ import { Table } from 'react-bootstrap';
 
 import NetworkTableHeader from './../Components/NetworkTable/NetworkTableHeader';
 import NetworkTableRow from './../Components/NetworkTable/NetworkTableRow';
-import { useNetwork } from './../state/network/provider';
+import { useNetwork } from './../state/network/Context';
 import ImportHar from './../Components/ImportHAR';
 import Styles from './NetworkTableContainer.styles';
 

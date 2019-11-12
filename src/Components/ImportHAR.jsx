@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useDropzone } from 'react-dropzone';
 import { Button } from 'react-bootstrap';
 
-import { useNetwork } from './../state/network/provider';
+import { useNetwork } from './../state/network/Context';
 import Styles from './ImportHAR.styles';
 
 const DROP_FILE_CONFIG = {
