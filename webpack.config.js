@@ -40,7 +40,7 @@ module.exports = {
     },
     {
       test: /\.s(a|c)ss$/,
-      exclude: /\.module.(s(a|c)ss)$/,
+      exclude: /\.styles.(s(a|c)ss)$/,
       loader: [
         isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
         'css-loader',

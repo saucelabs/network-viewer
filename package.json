@@ -2,6 +2,13 @@
   "name": "network-viewer",
   "version": "0.1.0",
   "private": true,
+  "main": "lib/App.jsx",
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "test": "jest",
+    "lint": "eslint ./src/**/*.js* --quiet --fix",
+    "build": "make build"
+  },
   "dependencies": {
     "bootstrap": "4.3.1",
     "immutable": "3.8.2",
@@ -14,6 +21,7 @@
     "react-dom": "^16.11.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.7.0",
     "@babel/core": "^7.7.2",
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
@@ -39,6 +47,9 @@
     "jest-watch-typeahead": "0.4.0",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.13.0",
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "postcss-import": "^12.0.1",
+    "postcss-preset-env": "^6.7.0",
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
     "react-dom": "^16.11.0",
@@ -48,11 +59,6 @@
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
-  },
-  "scripts": {
-    "start": "webpack-dev-server --mode development",
-    "test": "jest",
-    "lint": "eslint ./src/**/*.js* --quiet --fix"
   },
   "browserslist": {
     "production": [

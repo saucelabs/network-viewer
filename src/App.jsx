@@ -5,7 +5,7 @@ import FilterContainer from './Containers/FilterContainer';
 import Notification from './Components/Notification';
 import NetworkTableContainer from './Containers/NetworkTableContainer';
 
-import './App.scss';
+import './App.styles';
 
 function App() {
   return (

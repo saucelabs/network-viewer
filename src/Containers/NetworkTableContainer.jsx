@@ -5,7 +5,7 @@ import NetworkTableHeader from './../Components/NetworkTable/NetworkTableHeader'
 import NetworkTableRow from './../Components/NetworkTable/NetworkTableRow';
 import { useNetwork } from './../state/network/provider';
 import ImportHar from './../Components/ImportHAR';
-import Styles from './NetworkTableContainer.module.scss';
+import Styles from './NetworkTableContainer.styles';
 
 const NetworkTableContainer = () => {
   const { state } = useNetwork();
