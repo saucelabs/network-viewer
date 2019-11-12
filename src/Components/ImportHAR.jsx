@@ -47,7 +47,7 @@ const ImportHar = ({ showButton }) => {
           size="sm"
           variant="secondary"
         >
-            Import HAR
+          Import HAR
         </Button>
       ) : (
         <p className={Styles['drag-drop']}>Drag and drop HAR file here, or click to select file</p>
