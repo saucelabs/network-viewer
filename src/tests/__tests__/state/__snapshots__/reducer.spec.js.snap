@@ -15,6 +15,7 @@ exports[`network reducer DISMISS_NOTIFICATION 1`] = `Array []`;
 exports[`network reducer UPDATE_DATA 1`] = `
 Array [
   Object {
+    "body": "",
     "domain": "developer.mozilla.org",
     "filename": "slice",
     "index": 0,
@@ -33,10 +34,11 @@ Array [
       "startTime": 0,
       "wait": 26.03899999633059,
     },
-    "type": "html",
+    "type": "document",
     "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
   },
   Object {
+    "body": "",
     "domain": "developer.mozilla.org",
     "filename": "ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
     "index": 1,
@@ -55,10 +57,11 @@ Array [
       "startTime": 49,
       "wait": 18.80099998585507,
     },
-    "type": "woff2",
+    "type": "font",
     "url": "https://developer.mozilla.org/static/fonts/locales/ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
   },
   Object {
+    "body": "",
     "domain": "developer.mozilla.org",
     "filename": "ZillaSlab-Bold.subset.e96c15f68c68.woff2",
     "index": 2,
@@ -77,10 +80,11 @@ Array [
       "startTime": 49,
       "wait": 35.81200000759028,
     },
-    "type": "woff2",
+    "type": "font",
     "url": "https://developer.mozilla.org/static/fonts/locales/ZillaSlab-Bold.subset.e96c15f68c68.woff2",
   },
   Object {
+    "body": ".logo{display:block;grid-area:I;width:200px;height:44px;margin-right:24px}",
     "domain": "developer.mozilla.org",
     "filename": "react-header.2a659f6ad280.css",
     "index": 3,
@@ -99,10 +103,11 @@ Array [
       "startTime": 51,
       "wait": 36.02600000113249,
     },
-    "type": "css",
+    "type": "stylesheet",
     "url": "https://developer.mozilla.org/static/build/styles/react-header.2a659f6ad280.css",
   },
   Object {
+    "body": "",
     "domain": "developer.mozilla.org",
     "filename": "react-mdn.c66d8d89d98e.css",
     "index": 4,
@@ -121,7 +126,7 @@ Array [
       "startTime": 52,
       "wait": 37.96100001042895,
     },
-    "type": "css",
+    "type": "stylesheet",
     "url": "https://developer.mozilla.org/static/build/styles/react-mdn.c66d8d89d98e.css",
   },
 ]
@@ -132,6 +137,7 @@ exports[`network reducer UPDATE_DATA 2`] = `5`;
 exports[`network reducer UPDATE_FILTER 1`] = `
 Array [
   Object {
+    "body": "",
     "domain": "developer.mozilla.org",
     "filename": "slice",
     "index": 0,
@@ -150,80 +156,11 @@ Array [
       "startTime": 0,
       "wait": 26.03899999633059,
     },
-    "type": "html",
+    "type": "document",
     "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
   },
-]
-`;
-
-exports[`network reducer UPDATE_FILTER 2`] = `
-Object {
-  "key": "type",
-  "search": "",
-  "value": "html",
-}
-`;
-
-exports[`network reducer UPDATE_SEARCH 1`] = `
-Array [
   Object {
-    "domain": "developer.mozilla.org",
-    "filename": "ZillaSlab-Bold.subset.e96c15f68c68.woff2",
-    "index": 2,
-    "method": "GET",
-    "size": 33.27,
-    "startedDateTime": "2019-10-14T08:47:11.641Z",
-    "status": 200,
-    "timings": Object {
-      "_blocked_queueing": 13.034000003244728,
-      "blocked": 14.968000003244727,
-      "connect": -1,
-      "dns": -1,
-      "receive": 1.9629999878816307,
-      "send": 0.40400000000000014,
-      "ssl": -1,
-      "startTime": 49,
-      "wait": 35.81200000759028,
-    },
-    "type": "woff2",
-    "url": "https://developer.mozilla.org/static/fonts/locales/ZillaSlab-Bold.subset.e96c15f68c68.woff2",
-  },
-]
-`;
-
-exports[`network reducer UPDATE_SEARCH 2`] = `
-Object {
-  "key": null,
-  "search": "e96c15f68c68",
-  "value": null,
-}
-`;
-
-exports[`network reducer UPDATE_SORT 1`] = `
-Array [
-  Object {
-    "domain": "developer.mozilla.org",
-    "filename": "react-header.2a659f6ad280.css",
-    "index": 3,
-    "method": "GET",
-    "size": 2.76,
-    "startedDateTime": "2019-10-14T08:47:11.643Z",
-    "status": 200,
-    "timings": Object {
-      "_blocked_queueing": 11.349999986123294,
-      "blocked": 13.026999986123293,
-      "connect": -1,
-      "dns": -1,
-      "receive": 1.951000012923032,
-      "send": 0.21299999999999986,
-      "ssl": -1,
-      "startTime": 51,
-      "wait": 36.02600000113249,
-    },
-    "type": "css",
-    "url": "https://developer.mozilla.org/static/build/styles/react-header.2a659f6ad280.css",
-  },
-  Object {
+    "body": "",
     "domain": "developer.mozilla.org",
     "filename": "ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
     "index": 1,
@@ -242,10 +179,11 @@ Array [
       "startTime": 49,
       "wait": 18.80099998585507,
     },
-    "type": "woff2",
+    "type": "font",
     "url": "https://developer.mozilla.org/static/fonts/locales/ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
   },
   Object {
+    "body": "",
     "domain": "developer.mozilla.org",
     "filename": "ZillaSlab-Bold.subset.e96c15f68c68.woff2",
     "index": 2,
@@ -264,32 +202,34 @@ Array [
       "startTime": 49,
       "wait": 35.81200000759028,
     },
-    "type": "woff2",
+    "type": "font",
     "url": "https://developer.mozilla.org/static/fonts/locales/ZillaSlab-Bold.subset.e96c15f68c68.woff2",
   },
   Object {
+    "body": ".logo{display:block;grid-area:I;width:200px;height:44px;margin-right:24px}",
     "domain": "developer.mozilla.org",
-    "filename": "slice",
-    "index": 0,
+    "filename": "react-header.2a659f6ad280.css",
+    "index": 3,
     "method": "GET",
-    "size": 135.04,
-    "startedDateTime": "2019-10-14T08:47:11.592Z",
+    "size": 2.76,
+    "startedDateTime": "2019-10-14T08:47:11.643Z",
     "status": 200,
     "timings": Object {
-      "_blocked_queueing": 4.382999992230907,
-      "blocked": 5.496999992230907,
+      "_blocked_queueing": 11.349999986123294,
+      "blocked": 13.026999986123293,
       "connect": -1,
       "dns": -1,
-      "receive": 3.252000024076551,
-      "send": 0.2819999999999998,
+      "receive": 1.951000012923032,
+      "send": 0.21299999999999986,
       "ssl": -1,
-      "startTime": 0,
-      "wait": 26.03899999633059,
+      "startTime": 51,
+      "wait": 36.02600000113249,
     },
-    "type": "html",
-    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+    "type": "stylesheet",
+    "url": "https://developer.mozilla.org/static/build/styles/react-header.2a659f6ad280.css",
   },
   Object {
+    "body": "",
     "domain": "developer.mozilla.org",
     "filename": "react-mdn.c66d8d89d98e.css",
     "index": 4,
@@ -308,7 +248,143 @@ Array [
       "startTime": 52,
       "wait": 37.96100001042895,
     },
-    "type": "css",
+    "type": "stylesheet",
+    "url": "https://developer.mozilla.org/static/build/styles/react-mdn.c66d8d89d98e.css",
+  },
+]
+`;
+
+exports[`network reducer UPDATE_FILTER 2`] = `
+Object {
+  "key": "type",
+  "value": "html",
+}
+`;
+
+exports[`network reducer UPDATE_SEARCH 1`] = `Array []`;
+
+exports[`network reducer UPDATE_SEARCH 2`] = `
+Object {
+  "key": "url",
+  "value": "e96c15f68c68",
+}
+`;
+
+exports[`network reducer UPDATE_SORT 1`] = `
+Array [
+  Object {
+    "body": ".logo{display:block;grid-area:I;width:200px;height:44px;margin-right:24px}",
+    "domain": "developer.mozilla.org",
+    "filename": "react-header.2a659f6ad280.css",
+    "index": 3,
+    "method": "GET",
+    "size": 2.76,
+    "startedDateTime": "2019-10-14T08:47:11.643Z",
+    "status": 200,
+    "timings": Object {
+      "_blocked_queueing": 11.349999986123294,
+      "blocked": 13.026999986123293,
+      "connect": -1,
+      "dns": -1,
+      "receive": 1.951000012923032,
+      "send": 0.21299999999999986,
+      "ssl": -1,
+      "startTime": 51,
+      "wait": 36.02600000113249,
+    },
+    "type": "stylesheet",
+    "url": "https://developer.mozilla.org/static/build/styles/react-header.2a659f6ad280.css",
+  },
+  Object {
+    "body": "",
+    "domain": "developer.mozilla.org",
+    "filename": "ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
+    "index": 1,
+    "method": "GET",
+    "size": 33.02,
+    "startedDateTime": "2019-10-14T08:47:11.641Z",
+    "status": 200,
+    "timings": Object {
+      "_blocked_queueing": 12.528999999631196,
+      "blocked": 13.952999999631196,
+      "connect": -1,
+      "dns": -1,
+      "receive": 7.124000025214627,
+      "send": 0.2370000000000001,
+      "ssl": -1,
+      "startTime": 49,
+      "wait": 18.80099998585507,
+    },
+    "type": "font",
+    "url": "https://developer.mozilla.org/static/fonts/locales/ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
+  },
+  Object {
+    "body": "",
+    "domain": "developer.mozilla.org",
+    "filename": "ZillaSlab-Bold.subset.e96c15f68c68.woff2",
+    "index": 2,
+    "method": "GET",
+    "size": 33.27,
+    "startedDateTime": "2019-10-14T08:47:11.641Z",
+    "status": 200,
+    "timings": Object {
+      "_blocked_queueing": 13.034000003244728,
+      "blocked": 14.968000003244727,
+      "connect": -1,
+      "dns": -1,
+      "receive": 1.9629999878816307,
+      "send": 0.40400000000000014,
+      "ssl": -1,
+      "startTime": 49,
+      "wait": 35.81200000759028,
+    },
+    "type": "font",
+    "url": "https://developer.mozilla.org/static/fonts/locales/ZillaSlab-Bold.subset.e96c15f68c68.woff2",
+  },
+  Object {
+    "body": "",
+    "domain": "developer.mozilla.org",
+    "filename": "slice",
+    "index": 0,
+    "method": "GET",
+    "size": 135.04,
+    "startedDateTime": "2019-10-14T08:47:11.592Z",
+    "status": 200,
+    "timings": Object {
+      "_blocked_queueing": 4.382999992230907,
+      "blocked": 5.496999992230907,
+      "connect": -1,
+      "dns": -1,
+      "receive": 3.252000024076551,
+      "send": 0.2819999999999998,
+      "ssl": -1,
+      "startTime": 0,
+      "wait": 26.03899999633059,
+    },
+    "type": "document",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+  },
+  Object {
+    "body": "",
+    "domain": "developer.mozilla.org",
+    "filename": "react-mdn.c66d8d89d98e.css",
+    "index": 4,
+    "method": "GET",
+    "size": 142.88,
+    "startedDateTime": "2019-10-14T08:47:11.644Z",
+    "status": 200,
+    "timings": Object {
+      "_blocked_queueing": 11.250000010477379,
+      "blocked": 13.423000010477379,
+      "connect": -1,
+      "dns": -1,
+      "receive": 1.2719999940600246,
+      "send": 0.5390000000000001,
+      "ssl": -1,
+      "startTime": 52,
+      "wait": 37.96100001042895,
+    },
+    "type": "stylesheet",
     "url": "https://developer.mozilla.org/static/build/styles/react-mdn.c66d8d89d98e.css",
   },
 ]

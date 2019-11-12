@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDropzone } from 'react-dropzone';
 import { Button } from 'react-bootstrap';
-import { useNetwork } from '../state/network/provider';
 
+import { useNetwork } from './../state/network/provider';
 import Styles from './ImportHAR.module.scss';
 
 const DROP_FILE_CONFIG = {
@@ -15,7 +15,7 @@ const ImportHar = ({ showButton }) => {
   const { actions } = useNetwork();
   const { errorNotification } = actions;
 
-  const prepareData = newNetworkData => (
+  const prepareData = (newNetworkData) => (
     actions.updateData(newNetworkData.log.entries)
   );
 
@@ -42,11 +42,16 @@ const ImportHar = ({ showButton }) => {
   return (
     <div {...getRootProps()}>
       <input {...getInputProps()} />
-      {
-        showButton
-          ? <Button variant="secondary" size="sm">Import HAR file</Button>
-          : <p className={Styles['drag-drop']}>Drag and drop HAR file here, or click to select file</p>
-      }
+      {showButton ? (
+        <Button
+          size="sm"
+          variant="secondary"
+        >
+          Import HAR
+        </Button>
+      ) : (
+        <p className={Styles['drag-drop']}>Drag and drop HAR file here, or click to select file</p>
+      )}
     </div>
   );
 };

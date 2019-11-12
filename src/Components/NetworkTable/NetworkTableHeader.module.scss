@@ -1,13 +1,23 @@
+@import "./../../common.scss";
+
 .thead tr th {
   text-align: left;
 }
 
 .filename {
-  max-width: 150px;
+  max-width: 300px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   word-break: break-all;
+
+  @include media-breakpoint-down(md) {
+    max-width: 200px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    max-width: 150px;
+  }
 }
 
 .timeline-header {

@@ -1,9 +1,9 @@
 import { Map, List } from 'immutable';
 
-import * as types from '../../../state/network/types';
-import { reducer, initialState } from '../../../state/network/reducer';
-import networkDataMock from '../../__fixtures__/network.json';
-import preparedMockData from '../../__fixtures__/preparedData';
+import * as types from './../../../state/network/types';
+import { reducer, initialState } from './../../../state/network/reducer';
+import networkDataMock from './../../__fixtures__/network.json';
+import preparedMockData from './../../__fixtures__/preparedData';
 
 describe('network reducer', () => {
   let state;
@@ -24,10 +24,13 @@ describe('network reducer', () => {
 
     state = reducer(newState, {
       type: types.UPDATE_SEARCH,
-      payload: 'e96c15f68c68',
+      payload: {
+        key: 'url',
+        value: 'e96c15f68c68',
+      },
     });
     expect(state.get('data').toJS()).toMatchSnapshot();
-    expect(state.get('filter')).toMatchSnapshot();
+    expect(state.get('search')).toMatchSnapshot();
   });
 
   it('UPDATE_FILTER', () => {

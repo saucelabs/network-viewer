@@ -1,6 +1,8 @@
-import * as utils from '../../utils';
-import networkDataMock from '../__fixtures__/network.json';
-import preparedMockData from '../__fixtures__/preparedData';
+/* eslint no-useless-escape: 0 */
+
+import * as utils from './../../utils';
+import networkDataMock from './../__fixtures__/network.json';
+import preparedMockData from './../__fixtures__/preparedData';
 
 describe('utils', () => {
   it('getUrlInfo', () => {
@@ -33,7 +35,23 @@ describe('utils', () => {
   });
 
   it('filterData', () => {
-    expect(utils.filterData(preparedMockData, { search: 'e96c15f68c68' }).toJS()).toMatchSnapshot();
-    expect(utils.filterData(preparedMockData, { key: 'type', value: 'html' }).toJS()).toMatchSnapshot();
+    expect(utils.filterData({
+      data: preparedMockData,
+      search: { name: 'url', value: 'e96c15f68c68' },
+      filter: {},
+    }).toJS()).toMatchSnapshot();
+    expect(utils.filterData({
+      data: preparedMockData,
+      filter: { key: 'type', value: 'html' },
+      search: {},
+    }).toJS()).toMatchSnapshot();
+  });
+
+  it('getContent', () => {
+    expect(utils.getContent({
+      mimeType: 'application/json',
+      text: '{\n  \"foo\": \"bar\"\n}',
+    })).toMatchSnapshot();
+    expect(utils.getContent({ content: 'cool' })).toMatchSnapshot();
   });
 });

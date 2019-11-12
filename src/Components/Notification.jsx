@@ -1,7 +1,7 @@
 import React from 'react';
 import { Alert } from 'react-bootstrap';
 
-import { useNetwork } from '../state/network/provider';
+import { useNetwork } from './../state/network/provider';
 import Styles from './Notification.module.css';
 
 const Notification = () => {
@@ -11,11 +11,14 @@ const Notification = () => {
   return notifications.map(({
     id, type, title, description,
   }) => (
-    <div key={id} className={Styles['alert-container']}>
+    <div
+      key={id}
+      className={Styles['alert-container']}
+    >
       <Alert
-        variant={type}
-        onClose={() => actions.dismissNotification(id)}
         dismissible
+        onClose={() => actions.dismissNotification(id)}
+        variant={type}
       >
         {title && (<Alert.Heading>{title}</Alert.Heading>)}
         {description && (<p>{description}</p>)}
