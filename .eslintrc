@@ -1,6 +1,5 @@
 {
   "extends": [
-    "react-app",
     "./config/eslint-react.js"
   ]
 }

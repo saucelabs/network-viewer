@@ -3,6 +3,7 @@ module.exports = {
     browser: true,
     node: true,
     mocha: true,
+    jest: true,
   },
   globals: {
     document: true,
@@ -76,9 +77,9 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       'error', {
         devDependencies: [
-          './src/tests/**/*',
-          './src/setupTests.js',
-          './config/*.js',
+          './tests/**/*',
+          './config/**/*',
+          './webpack.config.js',
         ],
       },
     ],
