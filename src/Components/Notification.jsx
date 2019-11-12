@@ -11,11 +11,14 @@ const Notification = () => {
   return notifications.map(({
     id, type, title, description,
   }) => (
-    <div key={id} className={Styles['alert-container']}>
+    <div
+      key={id}
+      className={Styles['alert-container']}
+    >
       <Alert
-        variant={type}
-        onClose={() => actions.dismissNotification(id)}
         dismissible
+        onClose={() => actions.dismissNotification(id)}
+        variant={type}
       >
         {title && (<Alert.Heading>{title}</Alert.Heading>)}
         {description && (<p>{description}</p>)}

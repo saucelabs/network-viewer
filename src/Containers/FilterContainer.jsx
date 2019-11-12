@@ -7,7 +7,6 @@ import ImportHar from '../Components/ImportHAR';
 import Search from '../Components/Filters/Search';
 import { useNetwork } from '../state/network/provider';
 import { FILTERS } from '../constants';
-
 import Styles from './FilterContainer.module.scss';
 
 const FilterContainer = () => {
@@ -17,16 +16,30 @@ const FilterContainer = () => {
   return (
     <section className={Styles['filters-container']}>
       <Row>
-        <Col xs={12} sm={4} md={5}>
-          <Search {...state.get('search')} onChange={actions.updateSearch} />
+        <Col
+          md={5}
+          sm={4}
+          xs={12}
+        >
+          <Search
+            {...state.get('search')}
+            onChange={actions.updateSearch}
+          />
         </Col>
-        <Col xs={12} sm={8} md={7}>
-          <ButtonGroup size="sm" className={Styles['filters-button-group']}>
+        <Col
+          md={7}
+          sm={8}
+          xs={12}
+        >
+          <ButtonGroup
+            className={Styles['filters-button-group']}
+            size="sm"
+          >
             {FILTERS.map(({ name, filterBy }) => (
               <Button
                 key={name}
-                size="sm"
                 onClick={() => actions.updateFilter(filterBy)}
+                size="sm"
                 variant={filterBy.value === filter.value ? 'secondary' : 'light'}
               >
                 {name}
