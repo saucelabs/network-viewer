@@ -2,7 +2,7 @@
   "name": "network-viewer",
   "version": "0.1.0",
   "private": true,
-  "main": "lib/App.jsx",
+  "main": "./lib/index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "test": "jest",
