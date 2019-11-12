@@ -3,10 +3,10 @@ import {
   Row, Col, ButtonGroup, Button,
 } from 'react-bootstrap';
 
-import ImportHar from '../Components/ImportHAR';
-import Search from '../Components/Filters/Search';
-import { useNetwork } from '../state/network/provider';
-import { FILTERS } from '../constants';
+import ImportHar from './../Components/ImportHAR';
+import Search from './../Components/Filters/Search';
+import { useNetwork } from './../state/network/provider';
+import { FILTERS } from './../constants';
 import Styles from './FilterContainer.module.scss';
 
 const FilterContainer = () => {

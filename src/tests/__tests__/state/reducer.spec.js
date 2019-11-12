@@ -1,9 +1,9 @@
 import { Map, List } from 'immutable';
 
-import * as types from '../../../state/network/types';
-import { reducer, initialState } from '../../../state/network/reducer';
-import networkDataMock from '../../__fixtures__/network.json';
-import preparedMockData from '../../__fixtures__/preparedData';
+import * as types from './../../../state/network/types';
+import { reducer, initialState } from './../../../state/network/reducer';
+import networkDataMock from './../../__fixtures__/network.json';
+import preparedMockData from './../../__fixtures__/preparedData';
 
 describe('network reducer', () => {
   let state;

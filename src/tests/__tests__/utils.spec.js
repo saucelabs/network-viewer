@@ -1,8 +1,8 @@
 /* eslint no-useless-escape: 0 */
 
-import * as utils from '../../utils';
-import networkDataMock from '../__fixtures__/network.json';
-import preparedMockData from '../__fixtures__/preparedData';
+import * as utils from './../../utils';
+import networkDataMock from './../__fixtures__/network.json';
+import preparedMockData from './../__fixtures__/preparedData';
 
 describe('utils', () => {
   it('getUrlInfo', () => {

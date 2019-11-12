@@ -1,6 +1,6 @@
 import React, { useReducer, useContext, useMemo } from 'react';
 
-import { actionsWrapper } from '../../utils';
+import { actionsWrapper } from './../../utils';
 import { reducer, initialState } from './reducer';
 import * as actions from './actions';
 

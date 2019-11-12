@@ -1,7 +1,6 @@
 import { Map, List } from 'immutable';
 
-import { filterData, sortBy, prepareViewerData } from '../../utils';
-
+import { filterData, sortBy, prepareViewerData } from './../../utils';
 import * as types from './types';
 
 const initialState = new Map({
@@ -67,8 +66,8 @@ const reducer = (state = initialState, { type, payload }) => {
     }
     case types.ADD_NOTIFICATION: {
       const existingNotification = state.get('notifications');
-      const lastId = existingNotification.size
-        ? existingNotification.last().id : 0;
+      const lastId = existingNotification.size ?
+        existingNotification.last().id : 0;
       return state.setIn(['notifications', existingNotification.size], {
         id: lastId + 1,
         ...payload,

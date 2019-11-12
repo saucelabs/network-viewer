@@ -1,10 +1,10 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
 
-import NetworkTableHeader from '../Components/NetworkTable/NetworkTableHeader';
-import NetworkTableRow from '../Components/NetworkTable/NetworkTableRow';
-import { useNetwork } from '../state/network/provider';
-import ImportHar from '../Components/ImportHAR';
+import NetworkTableHeader from './../Components/NetworkTable/NetworkTableHeader';
+import NetworkTableRow from './../Components/NetworkTable/NetworkTableRow';
+import { useNetwork } from './../state/network/provider';
+import ImportHar from './../Components/ImportHAR';
 import Styles from './NetworkTableContainer.module.scss';
 
 const NetworkTableContainer = () => {

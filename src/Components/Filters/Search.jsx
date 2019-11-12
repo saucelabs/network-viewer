@@ -22,21 +22,34 @@ const Search = ({ name, value, onChange }) => {
   };
 
   return (
-    <InputGroup className={Styles['search-container']} size="sm">
+    <InputGroup
+      className={Styles['search-container']}
+      size="sm"
+    >
       <DropdownButton
         as={InputGroup.Prepend}
-        variant="outline-secondary"
-        title={name}
         id="input-group-dropdown-1"
+        title={name}
+        variant="outline-secondary"
       >
-        <Dropdown.Item onSelect={handleDropdownChange} eventKey="url">url</Dropdown.Item>
-        <Dropdown.Item onSelect={handleDropdownChange} eventKey="body">body</Dropdown.Item>
+        <Dropdown.Item
+          eventKey="url"
+          onSelect={handleDropdownChange}
+        >
+          url
+        </Dropdown.Item>
+        <Dropdown.Item
+          eventKey="body"
+          onSelect={handleDropdownChange}
+        >
+          body
+        </Dropdown.Item>
       </DropdownButton>
       <FormControl
         aria-describedby="basic-addon1"
+        onChange={handleInputChange}
         placeholder="search here..."
         value={value}
-        onChange={handleInputChange}
       />
     </InputGroup>
   );
@@ -44,8 +57,8 @@ const Search = ({ name, value, onChange }) => {
 
 Search.propTypes = {
   name: PropTypes.string.isRequired,
-  value: PropTypes.string,
   onChange: PropTypes.func.isRequired,
+  value: PropTypes.string,
 };
 
 Search.defaultProps = {

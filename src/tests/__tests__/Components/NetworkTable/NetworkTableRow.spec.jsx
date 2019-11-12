@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import NetworkTableRow from '../../../../Components/NetworkTable/NetworkTableRow';
+import NetworkTableRow from './../../../../Components/NetworkTable/NetworkTableRow';
 
 describe('NetworkTableRow', () => {
   const props = {

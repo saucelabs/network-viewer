@@ -41,17 +41,16 @@ const ImportHar = ({ showButton }) => {
   return (
     <div {...getRootProps()}>
       <input {...getInputProps()} />
-      {
-        showButton ? (
-          <Button
-            size="sm"
-            variant="secondary"
-          >
+      {showButton ? (
+        <Button
+          size="sm"
+          variant="secondary"
+        >
             Import HAR
-          </Button>
-        ) :
-          <p className={Styles['drag-drop']}>Drag and drop HAR file here, or click to select file</p>
-      }
+        </Button>
+      ) : (
+        <p className={Styles['drag-drop']}>Drag and drop HAR file here, or click to select file</p>
+      )}
     </div>
   );
 };
