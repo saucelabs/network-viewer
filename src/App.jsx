@@ -1,11 +1,15 @@
 import React from 'react';
 import './App.css';
+import { NetworkProvider } from './state/network/provider';
+import FilterContainer from './Containers/FilterContainer';
+import Notification from './Components/Notification';
 
 function App() {
   return (
-    <div className="app">
-      Hello from Network viewer
-    </div>
+    <NetworkProvider>
+      <Notification />
+      <FilterContainer />
+    </NetworkProvider>
   );
 }
 

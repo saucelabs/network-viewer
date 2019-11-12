@@ -1,4 +1,4 @@
-import { Map } from 'immutable';
+import { Map, List } from 'immutable';
 
 import * as types from '../../../state/network/types';
 import { reducer, initialState } from '../../../state/network/reducer';
@@ -60,5 +60,35 @@ describe('network reducer', () => {
     });
     expect(state.get('data').toJS()).toMatchSnapshot();
     expect(state.get('sort')).toMatchSnapshot();
+  });
+
+  it('ADD_NOTIFICATION', () => {
+    const newState = initialState;
+
+    state = reducer(newState, {
+      type: types.ADD_NOTIFICATION,
+      payload: {
+        type: 'danger',
+        title: 'Error notification',
+      },
+    });
+
+    expect(state.get('notifications').toJS()).toMatchSnapshot();
+  });
+
+  it('DISMISS_NOTIFICATION', () => {
+    const newState = initialState.merge(new Map({
+      notifications: new List([{
+        id: 1,
+        type: 'danger',
+      }]),
+    }));
+
+    state = reducer(newState, {
+      type: types.DISMISS_NOTIFICATION,
+      payload: 1,
+    });
+
+    expect(state.get('notifications').toJS()).toMatchSnapshot();
   });
 });
