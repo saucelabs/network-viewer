@@ -1,13 +1,13 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import ImportHAR from '../../../Components/ImportHAR';
+import NetworkTableContainer from '../../../Containers/NetworkTableContainer';
 import { NetworkProvider } from '../../../state/network/provider';
 
-describe('ImportHAR', () => {
+describe('NetworkTableContainer', () => {
   it('renders without crashing', () => {
     mount(
       <NetworkProvider>
-        <ImportHAR />
+        <NetworkTableContainer />
       </NetworkProvider>,
     );
   });

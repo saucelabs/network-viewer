@@ -1,0 +1,15 @@
+.thead tr th {
+  text-align: left;
+}
+
+.filename {
+  max-width: 150px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: break-all;
+}
+
+.timeline-header {
+  width: 40%;
+}

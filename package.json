@@ -18,6 +18,7 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "eslint-config-airbnb": "^17.1.0",
+    "node-sass": "^4.13.0",
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
     "react-dom": "^16.11.0",

@@ -1,29 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDropzone } from 'react-dropzone';
+import { Button } from 'react-bootstrap';
+import { useNetwork } from '../state/network/provider';
+
+import Styles from './ImportHAR.module.scss';
 
 const DROP_FILE_CONFIG = {
   accept: '.har',
   multiple: false,
 };
 
-const ImportHar = ({ onDataLoad, onError }) => {
+const ImportHar = ({ showButton }) => {
+  const { actions } = useNetwork();
+  const { errorNotification } = actions;
+
+  const prepareData = newNetworkData => (
+    actions.updateData(newNetworkData.log.entries)
+  );
+
   const onDrop = (files) => {
     const reader = new FileReader();
-    reader.onabort = () => onError({ title: 'file reading was aborted' });
-    reader.onerror = () => onError({ title: 'file reading has failed' });
+    reader.onabort = () => errorNotification({ description: 'file reading was aborted' });
+    reader.onerror = () => errorNotification({ description: 'file reading has failed' });
     reader.onload = () => {
       try {
         const data = JSON.parse(reader.result);
-        onDataLoad(data);
+        prepareData(data);
       } catch (error) {
-        onError({ description: 'Error while parsing HAR file' });
+        errorNotification({ description: 'Error while parsing HAR file' });
       }
     };
     reader.readAsText(files[0]);
   };
 
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+  const { getRootProps, getInputProps } = useDropzone({
     ...DROP_FILE_CONFIG,
     onDrop,
   });
@@ -32,17 +43,20 @@ const ImportHar = ({ onDataLoad, onError }) => {
     <div {...getRootProps()}>
       <input {...getInputProps()} />
       {
-        isDragActive
-          ? <p>Drop the files here ...</p>
-          : <p>Drag and drop a file here, or click to select file</p>
+        showButton
+          ? <Button variant="secondary" size="sm">Import HAR file</Button>
+          : <p className={Styles['drag-drop']}>Drag and drop HAR file here, or click to select file</p>
       }
     </div>
   );
 };
 
 ImportHar.propTypes = {
-  onDataLoad: PropTypes.func.isRequired,
-  onError: PropTypes.func.isRequired,
+  showButton: PropTypes.bool,
+};
+
+ImportHar.defaultProps = {
+  showButton: true,
 };
 
 export default ImportHar;
