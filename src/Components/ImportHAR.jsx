@@ -13,6 +13,7 @@ const DROP_FILE_CONFIG = {
 
 const ImportHar = ({ showButton }) => {
   const { actions } = useNetwork();
+  const { errorNotification } = actions;
 
   const prepareData = newNetworkData => (
     actions.updateData(newNetworkData.log.entries)
@@ -20,14 +21,14 @@ const ImportHar = ({ showButton }) => {
 
   const onDrop = (files) => {
     const reader = new FileReader();
-    reader.onabort = () => actions.errorNotification({ description: 'file reading was aborted' });
-    reader.onerror = () => actions.errorNotification({ description: 'file reading has failed' });
+    reader.onabort = () => errorNotification({ description: 'file reading was aborted' });
+    reader.onerror = () => errorNotification({ description: 'file reading has failed' });
     reader.onload = () => {
       try {
         const data = JSON.parse(reader.result);
         prepareData(data);
       } catch (error) {
-        actions.errorNotification({ description: 'Error while parsing HAR file' });
+        errorNotification({ description: 'Error while parsing HAR file' });
       }
     };
     reader.readAsText(files[0]);
