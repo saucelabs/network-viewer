@@ -3,6 +3,6 @@ import ReactDOM from 'react-dom';
 
 import './index.css';
 import NetworkViewer from './../../src/NetworkViewer';
-import networkData from './../../tests/__fixtures__/network.json';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-ReactDOM.render(<NetworkViewer data={networkData} />, document.getElementById('root'));
+ReactDOM.render(<NetworkViewer />, document.getElementById('root'));
