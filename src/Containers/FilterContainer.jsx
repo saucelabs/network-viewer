@@ -7,7 +7,7 @@ import ImportHar from './../Components/ImportHAR';
 import Search from './../Components/Filters/Search';
 import { useNetwork } from './../state/network/provider';
 import { FILTERS } from './../constants';
-import Styles from './FilterContainer.module.scss';
+import Styles from './FilterContainer.styles';
 
 const FilterContainer = () => {
   const { state, actions } = useNetwork();

@@ -1,5 +1,12 @@
 {
   "extends": [
     "./config/eslint-react.js"
-  ]
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".scss"]
+      }
+    }
+  }
 }

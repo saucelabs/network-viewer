@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { VIEWER_FIELDS } from './../../constants';
-import Styles from './NetworkTableHeader.module.scss';
+import Styles from './NetworkTableHeader.styles';
 
 const NetworkTableRow = ({ payload }) => (
   <tr>

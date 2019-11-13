@@ -20,7 +20,7 @@ module.exports = {
       test: /\.css$/,
       use: ['style-loader', 'css-loader'],
     }, {
-      test: /\.module\.s(a|c)ss$/,
+      test: /\.styles\.s(a|c)ss$/,
       loader: [
         isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
         {
@@ -40,7 +40,7 @@ module.exports = {
     },
     {
       test: /\.s(a|c)ss$/,
-      exclude: /\.module.(s(a|c)ss)$/,
+      exclude: /\.styles.(s(a|c)ss)$/,
       loader: [
         isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
         'css-loader',
