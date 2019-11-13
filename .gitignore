@@ -72,6 +72,7 @@ typings/
 # production
 /build
 /lib
+/examples/dist
 
 # misc
 .DS_Store
