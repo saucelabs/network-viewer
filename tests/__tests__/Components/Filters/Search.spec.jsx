@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Search from './../../../../Components/Filters/Search';
+import Search from './../../../../src/Components/Filters/Search';
 
 describe('Search', () => {
   const params = {

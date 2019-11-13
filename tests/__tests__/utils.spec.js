@@ -1,6 +1,6 @@
 /* eslint no-useless-escape: 0 */
 
-import * as utils from './../../utils';
+import * as utils from './../../src/utils';
 import networkDataMock from './../__fixtures__/network.json';
 import preparedMockData from './../__fixtures__/preparedData';
 

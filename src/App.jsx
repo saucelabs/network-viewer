@@ -5,6 +5,8 @@ import FilterContainer from './Containers/FilterContainer';
 import Notification from './Components/Notification';
 import NetworkTableContainer from './Containers/NetworkTableContainer';
 
+import './App.scss';
+
 function App() {
   return (
     <NetworkProvider>
