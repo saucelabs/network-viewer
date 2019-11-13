@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { VIEWER_FIELDS } from './../../constants';
-import Styles from './NetworkTableHeader.styles';
+import Styles from './NetworkTableHeader.styles.scss';
 
 const NetworkTableHeader = () => (
   <thead className={Styles.thead}>

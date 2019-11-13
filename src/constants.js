@@ -100,3 +100,5 @@ export const FILTERS = [
     },
   },
 ];
+
+export const FETCH_FILE_LOAD_TEXT = 'Please wait, Fetching file is in progress.';

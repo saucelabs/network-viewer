@@ -20,6 +20,8 @@ const initialState = new Map({
     value: null,
   },
   notifications: new List(),
+  error: null,
+  loading: false,
 });
 
 const reducer = (state = initialState, { type, payload }) => {
@@ -30,6 +32,7 @@ const reducer = (state = initialState, { type, payload }) => {
         const { data, totalNetworkTime } = prepareViewerData(payload);
         const sortedData = new List(sortBy(data, sort.key, sort.isAcs));
         newState
+          .set('error', null)
           .set('data', sortedData)
           .set('actualData', sortedData)
           .set('totalNetworkTime', totalNetworkTime);
@@ -77,6 +80,27 @@ const reducer = (state = initialState, { type, payload }) => {
       const existingNotification = state.get('notifications');
       const index = existingNotification.findIndex(({ id }) => id === payload);
       return state.set('notifications', existingNotification.delete(index));
+    }
+    case types.FETCH_FILE.REQUEST: {
+      return state.withMutations((newState) => {
+        newState
+          .set('error', null)
+          .set('loading', true);
+      });
+    }
+    case types.FETCH_FILE.SUCCESS: {
+      return state.withMutations((newState) => {
+        newState
+          .set('error', null)
+          .set('loading', false);
+      });
+    }
+    case types.FETCH_FILE.FAILURE: {
+      return state.withMutations((newState) => {
+        newState
+          .set('error', payload)
+          .set('loading', false);
+      });
     }
     default:
       return state;
