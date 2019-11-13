@@ -47,7 +47,7 @@ export const FILTERS = [
     name: 'JS',
     filterBy: {
       name: 'type',
-      value: ['script', 'javascript'],
+      value: ['script', 'javascript', 'x-javascript', 'json'],
     },
   },
   {
@@ -82,7 +82,7 @@ export const FILTERS = [
     name: 'Doc',
     filterBy: {
       name: 'type',
-      value: ['document', 'html', 'json'],
+      value: ['document', 'html'],
     },
   },
   {

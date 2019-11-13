@@ -58,7 +58,7 @@ export const prepareViewerData = (entries) => {
   const firstEntryTime = entries[0].startedDateTime;
   const lastEntryTime = entries[entries.length - 1].startedDateTime;
   const data = entries
-    .filter((entry) => entry.response)
+    .filter((entry) => entry.response && getUrlInfo(entry.request.url).domain)
     .map((entry, index) => ({
       index,
       status: entry.response.status,
