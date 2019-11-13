@@ -100,7 +100,7 @@ export const filterData = ({
     data.filter((info) => {
       const isSearchMatched = trimmedSearch ?
         info[search.name] && info[search.name].includes(trimmedSearch) : true;
-      const isFilterMatched = filter.name ? info[filter.name] === filter.value : true;
+      const isFilterMatched = filter.name ? filter.value.includes(info[filter.name]) : true;
       return isSearchMatched && isFilterMatched;
     });
 };

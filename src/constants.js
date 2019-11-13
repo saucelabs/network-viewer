@@ -40,63 +40,63 @@ export const FILTERS = [
     name: 'XHR',
     filterBy: {
       name: 'type',
-      value: 'xhr',
+      value: ['xhr', 'XHR'],
     },
   },
   {
     name: 'JS',
     filterBy: {
       name: 'type',
-      value: 'script',
+      value: ['script', 'javascript'],
     },
   },
   {
     name: 'CSS',
     filterBy: {
       name: 'type',
-      value: 'stylesheet',
+      value: ['stylesheet', 'css'],
     },
   },
   {
     name: 'Img',
     filterBy: {
       name: 'type',
-      value: 'image',
+      value: ['image', 'png', 'jpeg', 'svg+xml', 'gif'],
     },
   },
   {
     name: 'Media',
     filterBy: {
       name: 'type',
-      value: 'media',
+      value: ['media'],
     },
   },
   {
     name: 'Font',
     filterBy: {
       name: 'type',
-      value: 'font',
+      value: ['font', 'woff2'],
     },
   },
   {
     name: 'Doc',
     filterBy: {
       name: 'type',
-      value: 'document',
+      value: ['document', 'html', 'json'],
     },
   },
   {
     name: 'WS',
     filterBy: {
       name: 'type',
-      value: 'websocket',
+      value: ['websocket'],
     },
   },
   {
     name: 'Manifest',
     filterBy: {
       name: 'type',
-      value: 'manifest',
+      value: ['manifest.json'],
     },
   },
 ];

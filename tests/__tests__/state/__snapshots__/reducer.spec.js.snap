@@ -257,7 +257,9 @@ Array [
 exports[`network reducer UPDATE_FILTER 2`] = `
 Object {
   "key": "type",
-  "value": "html",
+  "value": Array [
+    "html",
+  ],
 }
 `;
 

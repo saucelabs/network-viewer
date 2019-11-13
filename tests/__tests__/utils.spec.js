@@ -42,7 +42,7 @@ describe('utils', () => {
     }).toJS()).toMatchSnapshot();
     expect(utils.filterData({
       data: preparedMockData,
-      filter: { key: 'type', value: 'html' },
+      filter: { key: 'type', value: ['html'] },
       search: {},
     }).toJS()).toMatchSnapshot();
   });
