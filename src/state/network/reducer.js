@@ -19,7 +19,6 @@ const initialState = new Map({
     name: null,
     value: null,
   },
-  notifications: new List(),
   error: null,
   loading: false,
 });
@@ -67,20 +66,6 @@ const reducer = (state = initialState, { type, payload }) => {
           .set('data', sortBy(state.get('data'), payload.key, payload.isAcs));
       });
     }
-    case types.ADD_NOTIFICATION: {
-      const existingNotification = state.get('notifications');
-      const lastId = existingNotification.size ?
-        existingNotification.last().id : 0;
-      return state.setIn(['notifications', existingNotification.size], {
-        id: lastId + 1,
-        ...payload,
-      });
-    }
-    case types.DISMISS_NOTIFICATION: {
-      const existingNotification = state.get('notifications');
-      const index = existingNotification.findIndex(({ id }) => id === payload);
-      return state.set('notifications', existingNotification.delete(index));
-    }
     case types.FETCH_FILE.REQUEST: {
       return state.withMutations((newState) => {
         newState
@@ -95,7 +80,8 @@ const reducer = (state = initialState, { type, payload }) => {
           .set('loading', false);
       });
     }
-    case types.FETCH_FILE.FAILURE: {
+    case types.FETCH_FILE.FAILURE:
+    case types.UPDATE_ERROR_MESSAGE: {
       return state.withMutations((newState) => {
         newState
           .set('error', payload)

@@ -17,11 +17,7 @@ export const useNetwork = () => {
     updateSearch: actions.updateSearch,
     updateSort: actions.updateSort,
     updateFilter: actions.updateFilter,
-    errorNotification: actions.errorNotification,
-    warningNotification: actions.warningNotification,
-    successNotification: actions.successNotification,
-    infoNotification: actions.infoNotification,
-    dismissNotification: actions.dismissNotification,
+    updateErrorMessage: actions.updateErrorMessage,
   })(dispatch, state);
 
   return {

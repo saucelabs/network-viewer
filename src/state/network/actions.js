@@ -1,6 +1,6 @@
 import {
   UPDATE_DATA, UPDATE_SEARCH, UPDATE_SORT, UPDATE_FILTER,
-  ADD_NOTIFICATION, DISMISS_NOTIFICATION, FETCH_FILE,
+  FETCH_FILE, UPDATE_ERROR_MESSAGE,
 } from './types';
 
 export const updateData = (dispatch) => (payload) => dispatch({
@@ -23,43 +23,6 @@ export const updateFilter = (dispatch) => (payload) => dispatch({
   payload,
 });
 
-export const errorNotification = (dispatch) => (payload) => dispatch({
-  type: ADD_NOTIFICATION,
-  payload: {
-    type: 'danger',
-    ...payload,
-  },
-});
-
-export const warningNotification = (dispatch) => (payload) => dispatch({
-  type: ADD_NOTIFICATION,
-  payload: {
-    type: 'warning',
-    ...payload,
-  },
-});
-
-export const successNotification = (dispatch) => (payload) => dispatch({
-  type: ADD_NOTIFICATION,
-  payload: {
-    type: 'success',
-    ...payload,
-  },
-});
-
-export const infoNotification = (dispatch) => (payload) => dispatch({
-  type: ADD_NOTIFICATION,
-  payload: {
-    type: 'info',
-    ...payload,
-  },
-});
-
-export const dismissNotification = (dispatch) => (payload) => dispatch({
-  type: DISMISS_NOTIFICATION,
-  payload,
-});
-
 export const fetchFileRequest = (dispatch) => (payload) => dispatch({
   type: FETCH_FILE.REQUEST, payload,
 });
@@ -70,6 +33,10 @@ export const fetchFileSuccess = (dispatch) => (payload) => dispatch({
 
 export const fetchFileFailure = (dispatch) => (payload) => dispatch({
   type: FETCH_FILE.FAILURE, payload,
+});
+
+export const updateErrorMessage = (dispatch) => (payload) => dispatch({
+  type: UPDATE_ERROR_MESSAGE, payload,
 });
 
 export const fetchFile = (dispatch) => (file, fetchOptions) => {

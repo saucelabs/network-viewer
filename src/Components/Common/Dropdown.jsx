@@ -39,9 +39,7 @@ const Dropdown = ({ items, selected, onChange, className }) => {
   }, [isExpand]);
 
   return (
-    <span
-      className={context('dropdown-container', className, { expanded: isExpand })}
-    >
+    <span className={context('dropdown-container', className, { expanded: isExpand })}>
       <Button
         category="default"
         className={context('dropdown-toggle', { active: isExpand })}

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Table } from 'react-bootstrap';
 
 import NetworkTableHeader from './../Components/NetworkTable/NetworkTableHeader';
 import NetworkTableRow from './../Components/NetworkTable/NetworkTableRow';
@@ -31,12 +30,7 @@ const NetworkTableContainer = () => {
 
   return (
     <section className={Styles['table-container']}>
-      <Table
-        bordered
-        hover
-        size="sm"
-        striped
-      >
+      <table className={Styles.table}>
         <NetworkTableHeader maxTime={totalNetworkTime} />
         <tbody className={Styles['table-content']}>
           {Array.from(data).map((rowInfo) => (
@@ -47,7 +41,7 @@ const NetworkTableContainer = () => {
             />
           ))}
         </tbody>
-      </Table>
+      </table>
     </section>
   );
 };

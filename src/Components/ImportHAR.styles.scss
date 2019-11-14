@@ -1,4 +1,4 @@
-@import "../common.scss";
+@import "./../styles/variables";
 
 .drag-drop {
   display: flex;
@@ -6,13 +6,15 @@
   min-height: 300px;
   align-items: center;
   justify-content: center;
-  border: 2px dashed $gray-200;
+  border: 2px dashed $white-85;
   border-radius: 4px;
-  font-size: $font-size-lg;
+  font-size: $font-size-h4;
   margin: 1rem;
   cursor: pointer;
+  color: $brand-primary-gray;
 
   &:hover {
-    border-color: $gray-400;
+    border-color: $white-75;
+    color: $white-33;
   }
 }

@@ -1,4 +1,4 @@
-@import "./../../common.scss";
+@import "./../../styles/variables";
 
 .thead tr th {
   text-align: left;
@@ -11,11 +11,11 @@
   white-space: nowrap;
   word-break: break-all;
 
-  @include media-breakpoint-down(md) {
+  @media (max-width: $md) {
     max-width: 200px;
   }
 
-  @include media-breakpoint-down(sm) {
+  @media (max-width: $sm) {
     max-width: 150px;
   }
 }
