@@ -9,9 +9,7 @@ const LoaderContainer = ({ children, show, text }) => {
 
   return !show ? children : (
     <section className={Styles['loader-container']}>
-      <div
-        className={Styles.spin}
-      >
+      <div className={Styles.spin}>
         <svg
           viewBox="0 0 100 100"
           xmlns="http://www.w3.org/2000/svg"
