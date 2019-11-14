@@ -1,0 +1,156 @@
+@import "./../../styles/variables.scss";
+
+$black-opacity-12: rgba(0, 0, 0, .12);
+$black-opacity-14: rgba(0, 0, 0, .14);
+$black-opacity-20: rgba(0, 0, 0, .2);
+$gray-opacity-20: rgba(158, 158, 158, .2);
+$gray-opacity-40: rgba(158, 158, 158, .4);
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+  padding: 11px $gutter * 2;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  box-sizing: border-box;
+  margin: 0;
+  background-image: none;
+  background-color: $brand-blue;
+  color: $white-100;
+  border: 1px solid transparent;
+  border-radius: $border-radius-base;
+
+  transition: background-color .2s;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+    color: $gray-ligther;
+    border-color: $gray-ligther;
+
+    svg {
+      fill: $gray-ligther;
+    }
+
+    &:hover {
+      border-color: darken($gray-ligther, 10%);
+    }
+  }
+}
+
+.btn-sm {
+  padding: $gutter / 2 $gutter;
+  font-size: 0.9rem;
+  height: $filter-button-height;
+}
+
+// MATERIAL
+%button-material {
+  // sass-lint:disable-block indentation
+  display: inline-flex;
+  align-items: center;
+  font-weight: 400;
+  height: 36px;
+  line-height: 1;
+  letter-spacing: 0;
+  overflow: hidden;
+  vertical-align: middle;
+  background-color: transparent;
+  border-color: transparent;
+  will-change: box-shadow;
+  outline: none;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1),
+              background-color .2s cubic-bezier(.4, 0, .2, 1),
+              color .2s cubic-bezier(.4, 0, .2, 1);
+
+  &:active,
+  &:focus,
+  &:hover,
+  &.active,
+  &:disabled {
+    outline: none;
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  &:disabled {
+    color: $white-33;
+  }
+
+  &:hover {
+    background-color: $gray-opacity-20;
+  }
+
+  &:active {
+    background-color: $gray-opacity-40;
+  }
+
+  &:focus {
+    &:not(:active) {
+      background-color: $black-opacity-12;
+    }
+  }
+
+  svg {
+    fill: currentColor;
+  }
+}
+
+.btn-md-raised {
+  // sass-lint:disable-block indentation
+  box-shadow: 0 2px 2px 0 $black-opacity-14,
+              0 3px 1px -2px $black-opacity-20,
+              0 1px 5px 0 $black-opacity-12;
+
+  &:active {
+    box-shadow: 0 4px 5px 0 $black-opacity-14,
+                0 2px 12px 0 $black-opacity-12,
+                0 2px 4px -1px $black-opacity-20;
+  }
+}
+
+.btn-md-default {
+  @extend %button-material;
+  color: $brand-primary-gray;
+
+  &-raised {
+    color: $white-100;
+    background: $brand-primary-gray;
+
+    &:active {
+      background: $brand-primary-gray;
+    }
+
+    &:hover {
+      background: $brand-primary-gray;
+    }
+
+    &:focus {
+      &:not(:active) {
+        background: $brand-primary-gray;
+      }
+    }
+  }
+
+  &.btn-sm {
+    height: $filter-button-height;
+  }
+}

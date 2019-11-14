@@ -1,13 +1,12 @@
 import React from 'react';
-import {
-  Row, Col, ButtonGroup, Button,
-} from 'react-bootstrap';
+import { Row, Col } from 'react-flexbox-grid';
 
 import ImportHar from './../Components/ImportHAR';
 import Search from './../Components/Filters/Search';
 import { useNetwork } from './../state/network/Context';
 import { FILTERS } from './../constants';
 import Styles from './FilterContainer.styles.scss';
+import Button from './../Components/Common/Button';
 
 const FilterContainer = () => {
   const { state, actions } = useNetwork();
@@ -31,22 +30,22 @@ const FilterContainer = () => {
           sm={8}
           xs={12}
         >
-          <ButtonGroup
-            className={Styles['filters-button-group']}
-            size="sm"
-          >
+          <div className={Styles['filters-button-group']}>
             {FILTERS.map(({ name, filterBy }) => (
               <Button
                 key={name}
+                category="default"
+                className={Styles['filter-button']}
+                material
                 onClick={() => actions.updateFilter(filterBy)}
+                raised={filterBy.value === filter.value}
                 size="sm"
-                variant={filterBy.value === filter.value ? 'secondary' : 'light'}
               >
                 {name}
               </Button>
             ))}
-            <ImportHar />
-          </ButtonGroup>
+            <ImportHar className={Styles['filter-button']} />
+          </div>
         </Col>
       </Row>
     </section>

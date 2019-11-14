@@ -2,17 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import NetworkProvider from './state/network/NetworkProvider';
-import './NetworkViewer.styles.scss';
 import MainContainer from './Containers/MainContainer';
+import Styles from './NetworkViewer.styles.scss';
 
 const NetworkViewer = ({ file, data, fetchOptions }) => (
-  <NetworkProvider
-    data={data}
-    fetchOptions={fetchOptions}
-    file={file}
-  >
-    <MainContainer />
-  </NetworkProvider>
+  <section className={Styles['network-viewer']}>
+    <NetworkProvider
+      data={data}
+      fetchOptions={fetchOptions}
+      file={file}
+    >
+      <MainContainer />
+    </NetworkProvider>
+  </section>
 );
 
 NetworkViewer.propTypes = {

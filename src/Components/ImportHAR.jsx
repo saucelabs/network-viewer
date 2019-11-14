@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDropzone } from 'react-dropzone';
-import { Button } from 'react-bootstrap';
 
 import { useNetwork } from './../state/network/Context';
 import Styles from './ImportHAR.styles.scss';
+import Button from './Common/Button';
 
 const DROP_FILE_CONFIG = {
   accept: '.har',
   multiple: false,
 };
 
-const ImportHar = ({ showButton }) => {
+const ImportHar = ({ showButton, className }) => {
   const { actions } = useNetwork();
   const { errorNotification } = actions;
 
@@ -44,8 +44,11 @@ const ImportHar = ({ showButton }) => {
       <input {...getInputProps()} />
       {showButton ? (
         <Button
+          category="default"
+          className={className}
+          material
+          raised
           size="sm"
-          variant="secondary"
         >
           Import HAR
         </Button>
@@ -57,10 +60,12 @@ const ImportHar = ({ showButton }) => {
 };
 
 ImportHar.propTypes = {
+  className: PropTypes.string,
   showButton: PropTypes.bool,
 };
 
 ImportHar.defaultProps = {
+  className: null,
   showButton: true,
 };
 
