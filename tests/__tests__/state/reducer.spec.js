@@ -42,7 +42,7 @@ describe('network reducer', () => {
       type: types.UPDATE_FILTER,
       payload: {
         key: 'type',
-        value: 'html',
+        value: ['html'],
       },
     });
     expect(state.get('data').toJS()).toMatchSnapshot();

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Alert } from 'react-bootstrap';
 
-import { useNetwork } from './../state/network/provider';
-import Styles from './Notification.styles';
+import { useNetwork } from './../state/network/Context';
+import Styles from './Notification.styles.scss';
 
 const Notification = () => {
   const { state, actions } = useNetwork();

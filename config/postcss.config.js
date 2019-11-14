@@ -3,7 +3,7 @@
 module.exports = {
   plugins: [
     require('postcss-import'),
-    require('postcss-cssnext'),
+    require('postcss-preset-env'),
     require('postcss-flexbugs-fixes'),
   ],
 };

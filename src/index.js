@@ -1,5 +1,5 @@
-import App from './App';
+import NetworkViewer from './NetworkViewer';
 
 export {
-  App,
+  NetworkViewer,
 };

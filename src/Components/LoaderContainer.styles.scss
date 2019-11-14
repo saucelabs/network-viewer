@@ -1,0 +1,34 @@
+@import "./../common.scss";
+
+.loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.spin {
+  width: 3rem;
+  height: 3rem;
+  transform: translateZ(0);
+  line-height: 0;
+
+  svg {
+    animation: load 1.4s infinite linear;
+  }
+}
+
+.text {
+  padding-left: 15px;
+}
+
+@keyframes load {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+

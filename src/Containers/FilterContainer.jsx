@@ -5,9 +5,9 @@ import {
 
 import ImportHar from './../Components/ImportHAR';
 import Search from './../Components/Filters/Search';
-import { useNetwork } from './../state/network/provider';
+import { useNetwork } from './../state/network/Context';
 import { FILTERS } from './../constants';
-import Styles from './FilterContainer.styles';
+import Styles from './FilterContainer.styles.scss';
 
 const FilterContainer = () => {
   const { state, actions } = useNetwork();

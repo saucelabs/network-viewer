@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { useDropzone } from 'react-dropzone';
 import { Button } from 'react-bootstrap';
 
-import { useNetwork } from './../state/network/provider';
-import Styles from './ImportHAR.styles';
+import { useNetwork } from './../state/network/Context';
+import Styles from './ImportHAR.styles.scss';
 
 const DROP_FILE_CONFIG = {
   accept: '.har',

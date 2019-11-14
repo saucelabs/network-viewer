@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import App from './../../src/App';
+import NetworkViewer from './../../src/NetworkViewer';
 
 it('renders without crashing', () => {
-  shallow(<App />);
+  shallow(<NetworkViewer />);
 });

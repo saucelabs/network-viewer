@@ -1,21 +1,9 @@
-import React, { useReducer, useContext, useMemo } from 'react';
+import React, { useContext } from 'react';
 
 import { actionsWrapper } from './../../utils';
-import { reducer, initialState } from './reducer';
 import * as actions from './actions';
 
 export const NetworkContext = React.createContext();
-
-export const NetworkProvider = (props) => {
-  const [state, dispatch] = useReducer(reducer, initialState);
-  const value = useMemo(() => [state, dispatch], [state]);
-  return (
-    <NetworkContext.Provider
-      value={value}
-      {...props}
-    />
-  );
-};
 
 export const useNetwork = () => {
   const context = useContext(NetworkContext);

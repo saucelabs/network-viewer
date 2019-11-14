@@ -5,7 +5,7 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".jsx", ".scss"]
+        "extensions": [".js", ".jsx"]
       }
     }
   }

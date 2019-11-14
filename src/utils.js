@@ -3,8 +3,8 @@
 export const getUrlInfo = (url) => {
   const urlInfo = new URL(url);
   const pathSplit = urlInfo.pathname.split('/');
-  const fileName = pathSplit[pathSplit.length - 1].trim()
-    ? pathSplit[pathSplit.length - 1] : pathSplit[pathSplit.length - 2];
+  const fileName = pathSplit[pathSplit.length - 1].trim() ?
+    pathSplit[pathSplit.length - 1] : pathSplit[pathSplit.length - 2];
 
   return {
     domain: urlInfo.host,
@@ -42,7 +42,13 @@ export const getTimings = ({ startedDateTime, timings }, firstEntryTime) => ({
 
 export const getContent = ({ mimeType, text }) => {
   if (mimeType === 'application/json') {
-    return JSON.stringify(JSON.parse(text));
+    let parsedJson = text;
+    try {
+      parsedJson = JSON.stringify(JSON.parse(text));
+    } catch (err) {
+      parsedJson = text;
+    }
+    return parsedJson;
   }
 
   return text;
@@ -52,7 +58,7 @@ export const prepareViewerData = (entries) => {
   const firstEntryTime = entries[0].startedDateTime;
   const lastEntryTime = entries[entries.length - 1].startedDateTime;
   const data = entries
-    .filter(entry => entry.response)
+    .filter((entry) => entry.response && getUrlInfo(entry.request.url).domain)
     .map((entry, index) => ({
       index,
       status: entry.response.status,
@@ -65,9 +71,9 @@ export const prepareViewerData = (entries) => {
       ...getUrlInfo(entry.request.url),
     }));
 
-  const totalNetworkTime = new Date(lastEntryTime).getTime()
-    - new Date(firstEntryTime).getTime()
-    + data[data.length - 1].timings.receive;
+  const totalNetworkTime = new Date(lastEntryTime).getTime() -
+    new Date(firstEntryTime).getTime() +
+    data[data.length - 1].timings.receive;
   return {
     totalNetworkTime,
     data,
@@ -89,12 +95,12 @@ export const filterData = ({
 }) => {
   const trimmedSearch = search.value && search.value.trim();
 
-  return !trimmedSearch && !filter.name
-    ? data
-    : data.filter((info) => {
-      const isSearchMatched = trimmedSearch
-        ? info[search.name] && info[search.name].includes(trimmedSearch) : true;
-      const isFilterMatched = filter.name ? info[filter.name] === filter.value : true;
+  return !trimmedSearch && !filter.name ?
+    data :
+    data.filter((info) => {
+      const isSearchMatched = trimmedSearch ?
+        info[search.name] && info[search.name].includes(trimmedSearch) : true;
+      const isFilterMatched = filter.name ? filter.value.includes(info[filter.name]) : true;
       return isSearchMatched && isFilterMatched;
     });
 };

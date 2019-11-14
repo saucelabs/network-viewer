@@ -4,7 +4,7 @@ import {
   InputGroup, DropdownButton, Dropdown, FormControl,
 } from 'react-bootstrap';
 
-import Styles from './Search.styles';
+import Styles from './Search.styles.scss';
 
 const Search = ({ name, value, onChange }) => {
   const handleInputChange = ({ target }) => {

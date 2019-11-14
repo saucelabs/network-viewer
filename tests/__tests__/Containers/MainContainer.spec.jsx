@@ -1,14 +1,14 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import Notification from './../../../src/Components/Notification';
+import MainContainer from './../../../src/Containers/MainContainer';
 import NetworkProvider from './../../../src/state/network/NetworkProvider';
 
-describe('Notification', () => {
+describe('MainContainer', () => {
   it('renders without crashing', () => {
     mount(
       <NetworkProvider>
-        <Notification />
+        <MainContainer />
       </NetworkProvider>,
     );
   });
