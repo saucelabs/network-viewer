@@ -1,25 +1,56 @@
 @import "./../../styles/variables";
 
-.thead tr th {
-  text-align: left;
-}
-
-.filename {
-  max-width: 300px;
+%ellipsis {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   word-break: break-all;
+}
 
-  @media (max-width: $md) {
-    max-width: 200px;
+.thead tr th {
+  text-align: left;
+}
+
+.value-cell {
+  max-width: 50px;
+  box-sizing: border-box;
+  @extend %ellipsis;
+
+  &.filename {
+    max-width: 300px;
+  
+    @media (max-width: $md) {
+      max-width: 200px;
+    }
+  
+    @media (max-width: $sm) {
+      max-width: 150px;
+    }
   }
 
-  @media (max-width: $sm) {
+  &.domain {
     max-width: 150px;
+  
+    @media (max-width: $md) {
+      max-width: 100px;
+    }
+  
+    @media (max-width: $sm) {
+      max-width: 50px;
+    }
   }
 }
 
 .timeline-header {
-  width: 40%;
+  width: 250px;
+}
+
+.network-table-row {
+  &.pending {
+    color: $white-66;
+  }
+
+  &.error {
+    color: $brand-danger;
+  }
 }

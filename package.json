@@ -16,7 +16,8 @@
     "classnames": "2.2.6",
     "immutable": "3.8.2",
     "react-dropzone": "10.1.10",
-    "react-flexbox-grid": "2.1.2"
+    "react-flexbox-grid": "2.1.2",
+    "recharts": "^1.8.5"
   },
   "peerDependencies": {
     "prop-types": "^15.7.2",

@@ -1,0 +1,140 @@
+@import "./../../styles/variables.scss";
+
+.tooltip {
+  display: block;
+  width: 300px;
+  height: auto;
+  background: $white-100;
+  border: 1px solid $white-90;
+  border-radius: 3px;
+  color: $white-33;
+  font-size: $font-size-small;
+  padding: $gutter / 2;
+  opacity: 1;
+  transform: translate(-150px, 20px);
+}
+
+.tooltip-info {
+  margin-bottom: $gutter;
+
+  .time-info {
+    margin: 0;
+  }
+}
+
+.waterfall-tooltip-table {
+  border: 0;
+  width: 100%;
+
+  .waterfall-tooltip-tbody,
+  .waterfall-tooltip-thead {
+    .waterfall-tooltip-value,
+    .waterfall-tooltip-key,
+    .waterfall-tooltip-th {
+      padding: 0;
+      border: 0;
+      background: transparent;
+      font-weight: normal;
+      text-align: left;
+    }
+
+    .waterfall-tooltip-value {
+      text-align: right;
+    }
+
+    .waterfall-tooltip-tr:nth-of-type(odd) {
+      background-color: $white-100;
+    }
+    
+   .waterfall-tooltip-key {
+      font-weight: bold;
+      padding: 0 $gutter;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: $gutter / 4;
+        width: $gutter / 2;
+        height: $gutter / 2;
+      }
+
+      &.blocked {
+        color: $time-blocked;
+
+        &::before {
+          background: $time-blocked;
+        }
+      }
+
+      &.dns {
+        color: $time-dns;
+
+        &::before {
+          background: $time-dns;
+        }
+      }
+
+      &.ssl {
+        color: $time-ssl;
+
+        &::before {
+          background: $time-ssl;
+        }
+      }
+
+      &.connect {
+        color: $time-connect;
+
+        &::before {
+          background: $time-connect;
+        }
+      }
+
+      &.send {
+        color: $time-send;
+
+        &::before {
+          background: $time-send;
+        }
+      }
+
+      &.wait {
+        color: $time-wait;
+
+        &::before {
+          background: $time-wait;
+        }
+      }
+
+      &.receive {
+        color: $time-receive;
+
+        &::before {
+          background: $time-receive;
+        }
+      }
+
+      &.queueing {
+        color: $time-queueing;
+
+        &::before {
+          background: $time-queueing;
+        }
+      }
+    }
+  }
+
+
+  .waterfall-tooltip-thead {
+    .waterfall-tooltip-th {
+      padding-bottom: $gutter / 2;
+      color: $white-50;
+
+      &:nth-child(2) {
+        text-align: right;
+      }
+    }
+  }
+}
