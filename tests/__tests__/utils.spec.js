@@ -84,4 +84,19 @@ describe('utils', () => {
     };
     expect(utils.calcTotalTime(data)).toMatchSnapshot();
   });
+
+  it('calcChartAttributes', () => {
+    const data = {
+      blocked: 240.50000000000034,
+      connect: 42,
+      dns: 14,
+      receive: 7045.500000000004,
+      send: 0,
+      ssl: 24,
+      wait: 786.5000000000023,
+      _blocked_queueing: 196.50000000000034,
+      startTime: 672,
+    };
+    expect(utils.calcChartAttributes(data, '17256.999999999985')).toMatchSnapshot();
+  });
 });

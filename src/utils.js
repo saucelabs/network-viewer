@@ -1,3 +1,5 @@
+import { TIMINGS } from './constants';
+
 /* eslint no-underscore-dangle: 0 */
 
 export const getUrlInfo = (url) => {
@@ -161,4 +163,31 @@ export const formatValue = (key, value, unit) => {
     default:
       return !unit ? value : `${value} ${unit}`;
   }
+};
+
+export const calcChartAttributes = (data, maxTime) => {
+  const startTimePercent = (data.startTime / maxTime) * 100;
+  let previousX = 0;
+  let previousWidth = 0;
+  const chartAttributes = [];
+
+  Object.keys(TIMINGS).forEach((key) => {
+    const timingInfo = TIMINGS[key];
+    const value = data[timingInfo.dataKey];
+    if (value <= 0) {
+      return;
+    }
+
+    previousX += !previousWidth ? startTimePercent : previousWidth;
+    previousWidth = value > 0 ? (value / maxTime) * 100 : 0;
+
+    chartAttributes.push({
+      width: `${previousWidth}%`,
+      x: `${previousX}%`,
+      fill: timingInfo.fill,
+      key,
+    });
+  });
+
+  return chartAttributes;
 };

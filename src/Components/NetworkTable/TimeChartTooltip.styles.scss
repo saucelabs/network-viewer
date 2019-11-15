@@ -11,7 +11,12 @@
   font-size: $font-size-small;
   padding: $gutter / 2;
   opacity: 1;
-  transform: translate(-150px, 20px);
+}
+
+:global {
+  .Popover-tip {
+    display: none;
+  }
 }
 
 .tooltip-info {

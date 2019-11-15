@@ -1,53 +1,42 @@
-import React from 'react';
+import React, { useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
-import {
-  ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip,
-} from 'recharts';
+import Popover from 'react-popover';
 
-import Styles from './TimeChart.styles.scss';
-import { TIMINGS } from '../../constants';
+import { calcChartAttributes } from './../../utils';
+import { TIME_CHART_DEFAULT_PROPS, TIME_CHART_SVG_PROPS } from './../../constants';
 import TimeChartTooltip from './TimeChartTooltip';
 
-const timeStyle = {
-  zIndex: 10,
-};
+const TimeChart = ({ timings, maxTime }) => {
+  const chartAttributes = useMemo(() => calcChartAttributes(timings, maxTime), [timings, maxTime]);
+  const [isOpen, updateOpen] = useState(false);
+  const displayPopover = () => updateOpen(true);
+  const hidePopover = () => updateOpen(false);
 
-const TimeChart = ({ timings, maxTime }) => (
-  <div className={Styles['timechart-container']}>
-    <ResponsiveContainer
-      height={30}
-      width="100%"
+  return (
+    <Popover
+      body={<TimeChartTooltip data={timings} />}
+      isOpen={isOpen}
+      preferPlace="below"
     >
-      <BarChart
-        data={[timings]}
-        layout="vertical"
+      <div
+        onMouseOut={hidePopover}
+        onMouseOver={displayPopover}
       >
-        <XAxis
-          domain={[-timings.startTime, maxTime]}
-          hide
-          type="number"
-        />
-        <YAxis
-          dataKey="name"
-          hide
-          type="category"
-        />
-        <Tooltip
-          content={<TimeChartTooltip />}
-          cursor={false}
-          wrapperStyle={timeStyle}
-        />
-        {Object.keys(TIMINGS).map((key) => (
-          <Bar
-            key={TIMINGS[key].dataKey}
-            {...TIMINGS[key]}
-            stackId="timing"
-          />
-        ))}
-      </BarChart>
-    </ResponsiveContainer>
-  </div>
-);
+        <svg {...TIME_CHART_SVG_PROPS}>
+          <g>
+            {chartAttributes.map((chartProps) => (
+              <rect
+                key={chartProps.key}
+                {...chartProps}
+                {...TIME_CHART_DEFAULT_PROPS}
+              />
+            ))}
+          </g>
+        </svg>
+      </div>
+    </Popover>
+  );
+};
 
 TimeChart.propTypes = {
   maxTime: PropTypes.number.isRequired,

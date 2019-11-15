@@ -19,11 +19,10 @@ const DETAIL = [{
   category: ['send', 'wait', 'receive'],
 }];
 
-const TimeChartTooltip = ({ payload }) => {
-  const data = payload && payload.length ? payload[0].payload : null;
+const TimeChartTooltip = ({ data }) => {
   const tooltipData = useMemo(() => (!data ? null : prepareTooltipData(data)), [data]);
 
-  if (!data || !tooltipData) {
+  if (!tooltipData) {
     return null;
   }
 
@@ -81,11 +80,7 @@ const TimeChartTooltip = ({ payload }) => {
 };
 
 TimeChartTooltip.propTypes = {
-  payload: PropTypes.array,
-};
-
-TimeChartTooltip.defaultProps = {
-  payload: [],
+  data: PropTypes.object.isRequired,
 };
 
 export default TimeChartTooltip;
