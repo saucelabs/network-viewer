@@ -1,17 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`network reducer ADD_NOTIFICATION 1`] = `
-Array [
-  Object {
-    "id": 1,
-    "title": "Error notification",
-    "type": "danger",
-  },
-]
-`;
-
-exports[`network reducer DISMISS_NOTIFICATION 1`] = `Array []`;
-
 exports[`network reducer UPDATE_DATA 1`] = `
 Array [
   Object {
@@ -23,6 +11,7 @@ Array [
     "size": 135.04,
     "startedDateTime": "2019-10-14T08:47:11.592Z",
     "status": 200,
+    "time": 35.07000001263805,
     "timings": Object {
       "_blocked_queueing": 4.382999992230907,
       "blocked": 5.496999992230907,
@@ -46,6 +35,7 @@ Array [
     "size": 33.02,
     "startedDateTime": "2019-10-14T08:47:11.641Z",
     "status": 200,
+    "time": 40.115000010700896,
     "timings": Object {
       "_blocked_queueing": 12.528999999631196,
       "blocked": 13.952999999631196,
@@ -69,6 +59,7 @@ Array [
     "size": 33.27,
     "startedDateTime": "2019-10-14T08:47:11.641Z",
     "status": 200,
+    "time": 53.14699999871664,
     "timings": Object {
       "_blocked_queueing": 13.034000003244728,
       "blocked": 14.968000003244727,
@@ -92,6 +83,7 @@ Array [
     "size": 2.76,
     "startedDateTime": "2019-10-14T08:47:11.643Z",
     "status": 200,
+    "time": 51.217000000178814,
     "timings": Object {
       "_blocked_queueing": 11.349999986123294,
       "blocked": 13.026999986123293,
@@ -115,6 +107,7 @@ Array [
     "size": 142.88,
     "startedDateTime": "2019-10-14T08:47:11.644Z",
     "status": 200,
+    "time": 53.195000014966354,
     "timings": Object {
       "_blocked_queueing": 11.250000010477379,
       "blocked": 13.423000010477379,
@@ -145,6 +138,7 @@ Array [
     "size": 135.04,
     "startedDateTime": "2019-10-14T08:47:11.592Z",
     "status": 200,
+    "time": 35.07000001263805,
     "timings": Object {
       "_blocked_queueing": 4.382999992230907,
       "blocked": 5.496999992230907,
@@ -168,6 +162,7 @@ Array [
     "size": 33.02,
     "startedDateTime": "2019-10-14T08:47:11.641Z",
     "status": 200,
+    "time": 40.115000010700896,
     "timings": Object {
       "_blocked_queueing": 12.528999999631196,
       "blocked": 13.952999999631196,
@@ -191,6 +186,7 @@ Array [
     "size": 33.27,
     "startedDateTime": "2019-10-14T08:47:11.641Z",
     "status": 200,
+    "time": 53.14699999871664,
     "timings": Object {
       "_blocked_queueing": 13.034000003244728,
       "blocked": 14.968000003244727,
@@ -214,6 +210,7 @@ Array [
     "size": 2.76,
     "startedDateTime": "2019-10-14T08:47:11.643Z",
     "status": 200,
+    "time": 51.217000000178814,
     "timings": Object {
       "_blocked_queueing": 11.349999986123294,
       "blocked": 13.026999986123293,
@@ -237,6 +234,7 @@ Array [
     "size": 142.88,
     "startedDateTime": "2019-10-14T08:47:11.644Z",
     "status": 200,
+    "time": 53.195000014966354,
     "timings": Object {
       "_blocked_queueing": 11.250000010477379,
       "blocked": 13.423000010477379,
@@ -283,6 +281,7 @@ Array [
     "size": 2.76,
     "startedDateTime": "2019-10-14T08:47:11.643Z",
     "status": 200,
+    "time": 51.217000000178814,
     "timings": Object {
       "_blocked_queueing": 11.349999986123294,
       "blocked": 13.026999986123293,
@@ -306,6 +305,7 @@ Array [
     "size": 33.02,
     "startedDateTime": "2019-10-14T08:47:11.641Z",
     "status": 200,
+    "time": 40.115000010700896,
     "timings": Object {
       "_blocked_queueing": 12.528999999631196,
       "blocked": 13.952999999631196,
@@ -329,6 +329,7 @@ Array [
     "size": 33.27,
     "startedDateTime": "2019-10-14T08:47:11.641Z",
     "status": 200,
+    "time": 53.14699999871664,
     "timings": Object {
       "_blocked_queueing": 13.034000003244728,
       "blocked": 14.968000003244727,
@@ -352,6 +353,7 @@ Array [
     "size": 135.04,
     "startedDateTime": "2019-10-14T08:47:11.592Z",
     "status": 200,
+    "time": 35.07000001263805,
     "timings": Object {
       "_blocked_queueing": 4.382999992230907,
       "blocked": 5.496999992230907,
@@ -375,6 +377,7 @@ Array [
     "size": 142.88,
     "startedDateTime": "2019-10-14T08:47:11.644Z",
     "status": 200,
+    "time": 53.195000014966354,
     "timings": Object {
       "_blocked_queueing": 11.250000010477379,
       "blocked": 13.423000010477379,

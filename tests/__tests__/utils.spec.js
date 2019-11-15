@@ -54,4 +54,34 @@ describe('utils', () => {
     })).toMatchSnapshot();
     expect(utils.getContent({ content: 'cool' })).toMatchSnapshot();
   });
+
+  it('prepareTooltipData', () => {
+    const data = {
+      blocked: 53.00000000000955,
+      connect: 32,
+      dns: 9,
+      receive: 530.0000000000152,
+      send: 5,
+      ssl: 20,
+      wait: 588.9999999999925,
+      _blocked_queueing: 2.0000000000095497,
+      startTime: 671,
+    };
+    expect(utils.prepareTooltipData(data)).toMatchSnapshot();
+  });
+
+  it('calcTotalTime', () => {
+    const data = {
+      blocked: 53.00000000000955,
+      connect: 32,
+      dns: 9,
+      receive: 530.0000000000152,
+      send: 5,
+      ssl: 20,
+      wait: 588.9999999999925,
+      _blocked_queueing: 2.0000000000095497,
+      startTime: 671,
+    };
+    expect(utils.calcTotalTime(data)).toMatchSnapshot();
+  });
 });
