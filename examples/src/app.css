@@ -1,0 +1,8 @@
+.tab-container {
+  height: 100%;
+}
+
+.app-container {
+  height: calc(100% - 35px);
+  border-bottom: 2px solid #ccc;
+}
