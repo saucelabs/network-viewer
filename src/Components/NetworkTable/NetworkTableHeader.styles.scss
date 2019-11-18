@@ -12,37 +12,21 @@
 }
 
 .value-cell {
-  max-width: 50px;
+  width: 8%;
   box-sizing: border-box;
   @extend %ellipsis;
 
   &.filename {
-    max-width: 300px;
-  
-    @media (max-width: $md) {
-      max-width: 200px;
-    }
-  
-    @media (max-width: $sm) {
-      max-width: 150px;
-    }
+    width: 25%;
   }
 
   &.domain {
-    max-width: 150px;
-  
-    @media (max-width: $md) {
-      max-width: 100px;
-    }
-  
-    @media (max-width: $sm) {
-      max-width: 50px;
-    }
+    max-width: 10%;
   }
 }
 
 .timeline-header {
-  width: 250px;
+  width: 25%;
 }
 
 .network-table-row {
