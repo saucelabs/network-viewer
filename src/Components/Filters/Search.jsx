@@ -4,13 +4,7 @@ import PropTypes from 'prop-types';
 import Styles from './Search.styles.scss';
 import Dropdown from './../Common/Dropdown';
 
-const SEARCH_CATEGORY = [{
-  key: 'url',
-  text: 'URL',
-}, {
-  key: 'body',
-  text: 'Body',
-}];
+const SEARCH_CATEGORY = ['url', 'body'];
 
 const Search = ({ name, value, onChange }) => {
   const handleInputChange = ({ target }) => {

@@ -13,8 +13,7 @@ const dropdownItemID = {
 
 const Dropdown = ({ items, selected, onChange, className }) => {
   const [isExpand, setExpand] = useState(false);
-  const [selectedKey, setSelection] = useState(selected !== null ? selected : items[0].key);
-  const selectedText = items.find(({ key }) => key === selectedKey).text;
+  const [selectedKey, setSelection] = useState(selected !== null ? selected : items[0]);
 
   const handleItemSelection = (key) => {
     setSelection(key);
@@ -48,18 +47,18 @@ const Dropdown = ({ items, selected, onChange, className }) => {
         raised={isExpand}
         size="sm"
       >
-        {selectedText}
+        {selectedKey}
       </Button>
       {isExpand && (
         <ul className={Styles.list}>
-          {items.map(({ key, text }, index) => (
+          {items.map((text, index) => (
             <li
-              key={key}
-              className={context('list-item', { active: key === selectedKey })}
+              key={text}
+              className={context('list-item', { active: text === selectedKey })}
             >
               <span
                 className={Styles['item-text']}
-                onClick={() => handleItemSelection(key)}
+                onClick={() => handleItemSelection(text)}
                 role="button"
                 tabIndex={index}
                 {...dropdownItemID}
