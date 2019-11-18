@@ -22,11 +22,5 @@
       vertical-align: bottom;
       border-bottom: 2px solid $white-90;
     }
-
-    tbody {
-      tr:nth-of-type(odd) {
-        background-color: $white-97;
-      }
-    }
   }
 }
