@@ -66,7 +66,7 @@ export const prepareViewerData = (entries) => {
       status: entry.response.status,
       method: entry.request.method,
       size: parseSize(entry.response),
-      startedDateTime: entry.startedDateTime,
+      startedDateTime: new Date(entry.startedDateTime).getTime(),
       type: entry._resourceType || getContentType(entry.response.headers),
       timings: getTimings(entry, firstEntryTime),
       body: getContent(entry.response.content),
@@ -191,3 +191,10 @@ export const calcChartAttributes = (data, maxTime) => {
 
   return chartAttributes;
 };
+
+export const findIndexByTimeStamp = (data, exactTimestamp) => (
+  data.reduce(({ value, index }, { startedDateTime: currentValue, index: currentIndex }) => (
+    Math.abs(currentValue - exactTimestamp) < Math.abs(value - exactTimestamp) ?
+      { value: currentValue, index: currentIndex } : { value, index }
+  ), { value: 0, index: 0 }).index
+);
