@@ -1,7 +1,31 @@
-@import "./../common.scss";
+@import "./../styles/variables";
 
 .table-container {
   flex: 1 1 auto;
   height: 100%;
   overflow: auto;
+
+  .table {
+    border: 1px solid $white-90;
+    width: 100%;
+    margin-bottom: 1rem;
+    border-collapse: collapse;
+
+    td, th {
+      padding: .3rem;
+      border: 1px solid $white-90;
+    }
+    
+    thead th {
+      border-bottom-width: 2px;
+      vertical-align: bottom;
+      border-bottom: 2px solid $white-90;
+    }
+
+    tbody {
+      tr:nth-of-type(odd) {
+        background-color: $white-97;
+      }
+    }
+  }
 }

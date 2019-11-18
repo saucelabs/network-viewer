@@ -1,13 +1,20 @@
-@import "./../common.scss";
+@import "./../styles/variables";
 
 .filters-container {
-  background: $gray-100;
-  border-bottom: 1px solid $gray-300;
-  padding: $grid-gutter-width / 4;
+  background: $white-97;
+  border-bottom: 1px solid $white-85;
+  padding: $gutter / 2 $gutter;
 }
 
 .filters-button-group {
-  width: 100%;
-  display: flex;
+  display: inline-flex;
   justify-content: flex-end;
+  vertical-align: middle;
+  width: 100%;
+
+  .filter-button {
+    flex: 1 1 auto;
+    padding: .25rem .5rem;
+    justify-content: center;
+  }
 }

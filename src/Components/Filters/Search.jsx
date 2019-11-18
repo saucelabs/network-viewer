@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  InputGroup, DropdownButton, Dropdown, FormControl,
-} from 'react-bootstrap';
 
 import Styles from './Search.styles.scss';
+import Dropdown from './../Common/Dropdown';
+
+const SEARCH_CATEGORY = ['url', 'body'];
 
 const Search = ({ name, value, onChange }) => {
   const handleInputChange = ({ target }) => {
@@ -14,44 +14,29 @@ const Search = ({ name, value, onChange }) => {
     });
   };
 
-  const handleDropdownChange = (selectedField) => {
+  const handleDropdownChange = (selectedKey) => {
     onChange({
-      name: selectedField,
+      name: selectedKey,
       value,
     });
   };
 
   return (
-    <InputGroup
-      className={Styles['search-container']}
-      size="sm"
-    >
-      <DropdownButton
-        as={InputGroup.Prepend}
-        id="input-group-dropdown-1"
-        title={name}
-        variant="outline-secondary"
-      >
-        <Dropdown.Item
-          eventKey="url"
-          onSelect={handleDropdownChange}
-        >
-          url
-        </Dropdown.Item>
-        <Dropdown.Item
-          eventKey="body"
-          onSelect={handleDropdownChange}
-        >
-          body
-        </Dropdown.Item>
-      </DropdownButton>
-      <FormControl
-        aria-describedby="basic-addon1"
+    <div className={Styles['search-container']}>
+      <Dropdown
+        className={Styles['prepend-dropdown']}
+        items={SEARCH_CATEGORY}
+        onChange={handleDropdownChange}
+        selected="url"
+      />
+      <input
+        className={Styles.input}
         onChange={handleInputChange}
         placeholder="search here..."
+        type="text"
         value={value}
       />
-    </InputGroup>
+    </div>
   );
 };
 

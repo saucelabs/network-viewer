@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { useNetwork } from '../state/network/Context';
-import Notification from '../Components/Notification';
 import FilterContainer from './FilterContainer';
 import NetworkTableContainer from './NetworkTableContainer';
 import LoaderContainer from '../Components/LoaderContainer';
@@ -13,7 +12,6 @@ const MainContainer = () => {
 
   return (
     <>
-      <Notification />
       <FilterContainer />
       <LoaderContainer
         show={loading}

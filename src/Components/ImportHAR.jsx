@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDropzone } from 'react-dropzone';
-import { Button } from 'react-bootstrap';
 
 import { useNetwork } from './../state/network/Context';
 import Styles from './ImportHAR.styles.scss';
+import Button from './Common/Button';
 
 const DROP_FILE_CONFIG = {
   accept: '.har',
   multiple: false,
 };
 
-const ImportHar = ({ showButton }) => {
+const ImportHar = ({ showButton, className }) => {
   const { actions } = useNetwork();
-  const { errorNotification } = actions;
+  const { updateErrorMessage } = actions;
 
   const prepareData = (newNetworkData) => (
     actions.updateData(newNetworkData.log.entries)
@@ -21,14 +21,14 @@ const ImportHar = ({ showButton }) => {
 
   const onDrop = (files) => {
     const reader = new FileReader();
-    reader.onabort = () => errorNotification({ description: 'file reading was aborted' });
-    reader.onerror = () => errorNotification({ description: 'file reading has failed' });
+    reader.onabort = () => updateErrorMessage({ title: 'file reading was aborted' });
+    reader.onerror = () => updateErrorMessage({ title: 'file reading has failed' });
     reader.onload = () => {
       try {
         const data = JSON.parse(reader.result);
         prepareData(data);
       } catch (error) {
-        errorNotification({ description: 'Error while parsing HAR file' });
+        updateErrorMessage({ title: 'Error while parsing HAR file' });
       }
     };
     reader.readAsText(files[0]);
@@ -44,8 +44,11 @@ const ImportHar = ({ showButton }) => {
       <input {...getInputProps()} />
       {showButton ? (
         <Button
+          category="default"
+          className={className}
+          material
+          raised
           size="sm"
-          variant="secondary"
         >
           Import HAR
         </Button>
@@ -57,10 +60,12 @@ const ImportHar = ({ showButton }) => {
 };
 
 ImportHar.propTypes = {
+  className: PropTypes.string,
   showButton: PropTypes.bool,
 };
 
 ImportHar.defaultProps = {
+  className: null,
   showButton: true,
 };
 

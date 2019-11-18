@@ -1,1 +1,7 @@
-@import "~bootstrap/scss/bootstrap";
+.network-viewer {
+  height: 100%;
+
+  * {
+    box-sizing: border-box;
+  }
+}
