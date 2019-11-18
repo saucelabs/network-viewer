@@ -1,17 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`network reducer ADD_NOTIFICATION 1`] = `
-Array [
-  Object {
-    "id": 1,
-    "title": "Error notification",
-    "type": "danger",
-  },
-]
-`;
-
-exports[`network reducer DISMISS_NOTIFICATION 1`] = `Array []`;
-
 exports[`network reducer UPDATE_DATA 1`] = `
 Array [
   Object {
