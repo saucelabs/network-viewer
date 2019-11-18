@@ -161,3 +161,5 @@ export const TIME_CHART_DEFAULT_PROPS = {
   height: 16,
   y: 3.5,
 };
+
+export const ROW_ID_PREFIX = 'network-viewer-table-row-';
