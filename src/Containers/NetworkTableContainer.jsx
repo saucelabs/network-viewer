@@ -13,6 +13,7 @@ const NetworkTableContainer = () => {
   const data = state.get('data');
   const totalNetworkTime = state.get('totalNetworkTime');
   const error = state.get('error');
+  const scrollToIndex = state.get('scrollToIndex');
 
   if (error) {
     return (
@@ -38,6 +39,7 @@ const NetworkTableContainer = () => {
               key={rowInfo.index}
               maxTime={totalNetworkTime}
               payload={rowInfo}
+              scrollHighlight={rowInfo.index === scrollToIndex}
             />
           ))}
         </tbody>

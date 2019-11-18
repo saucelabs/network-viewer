@@ -1,6 +1,6 @@
 import {
   UPDATE_DATA, UPDATE_SEARCH, UPDATE_SORT, UPDATE_FILTER,
-  FETCH_FILE, UPDATE_ERROR_MESSAGE,
+  FETCH_FILE, UPDATE_ERROR_MESSAGE, UPDATE_SCROLL_TO_INDEX,
 } from './types';
 
 export const updateData = (dispatch) => (payload) => dispatch({
@@ -37,6 +37,10 @@ export const fetchFileFailure = (dispatch) => (payload) => dispatch({
 
 export const updateErrorMessage = (dispatch) => (payload) => dispatch({
   type: UPDATE_ERROR_MESSAGE, payload,
+});
+
+export const updateScrollToIndex = (dispatch) => (payload) => dispatch({
+  type: UPDATE_SCROLL_TO_INDEX, payload,
 });
 
 export const fetchFile = (dispatch) => (file, fetchOptions) => {
