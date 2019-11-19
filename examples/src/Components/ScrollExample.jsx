@@ -13,7 +13,6 @@ const ScrollExample = () => {
     const updateInterval = setInterval(() => {
       currentTimestamp += 2000;
       updateTimeStamp(currentTimestamp);
-      console.log('hello');
     }, 2000);
 
     setTimeout(() => {

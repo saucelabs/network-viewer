@@ -6,7 +6,7 @@ import DefaultNetworkViewer from './Components/DefaultNetworkViewer';
 import ScrollExample from './Components/ScrollExample';
 import './app.css';
 
-const ITEMS = ['Default', 'Preloaded Data', 'Scroll'];
+const ITEMS = ['Default', 'Preloaded Data', 'Auto Scroll by timestamp'];
 
 const App = () => {
   const [key, setKey] = useState('default');
