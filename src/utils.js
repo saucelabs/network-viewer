@@ -1,3 +1,5 @@
+import { TIMINGS } from './constants';
+
 /* eslint no-underscore-dangle: 0 */
 
 export const getUrlInfo = (url) => {
@@ -68,6 +70,7 @@ export const prepareViewerData = (entries) => {
       type: entry._resourceType || getContentType(entry.response.headers),
       timings: getTimings(entry, firstEntryTime),
       body: getContent(entry.response.content),
+      time: entry.time,
       ...getUrlInfo(entry.request.url),
     }));
 
@@ -110,3 +113,81 @@ export const actionsWrapper = (actions = {}) => (dispatch, state) => Object.keys
     ...modifiedActions,
     [type]: actions[type](dispatch, state),
   }), {});
+
+export const parseTime = (time) => {
+  if (!time) {
+    return time;
+  }
+
+  if (time > 1000) {
+    return `${(time / 1000).toFixed(2)} s`;
+  }
+
+  return `${time.toFixed(2)} ms`;
+};
+
+export const calcTotalTime = (data) => {
+  const total = Object.keys(data)
+    .filter((key) => !['_blocked_queueing', 'startTime'].includes(key))
+    .reduce((acc, key) => acc + data[key], 0);
+  return total;
+};
+
+export const prepareTooltipData = (data) => ({
+  queuedAt: parseTime(data.startTime),
+  startedAt: parseTime(data.startTime + data._blocked_queueing),
+  totalTime: parseTime(calcTotalTime(data)),
+  ...(Object.keys(data).reduce((acc, key) => {
+    acc[key] = parseTime(data[key]);
+    return acc;
+  }, {})
+  ),
+});
+
+export const getStatusClass = (status) => {
+  if (status === 0) {
+    return 'pending';
+  }
+  if (status >= 400) {
+    return 'error';
+  }
+  return 'info';
+};
+
+export const formatValue = (key, value, unit) => {
+  switch (key) {
+    case 'time':
+      return value === 0 ? 'Pending' : parseTime(value);
+    case 'status':
+      return value === 0 ? 'Pending' : value;
+    default:
+      return !unit ? value : `${value} ${unit}`;
+  }
+};
+
+export const calcChartAttributes = (data, maxTime) => {
+  const startTimePercent = (data.startTime / maxTime) * 100;
+  let previousX = 0;
+  let previousWidth = 0;
+  const chartAttributes = [];
+
+  Object.keys(TIMINGS).forEach((key) => {
+    const timingInfo = TIMINGS[key];
+    const value = data[timingInfo.dataKey];
+    if (value <= 0) {
+      return;
+    }
+
+    previousX += !previousWidth ? startTimePercent : previousWidth;
+    previousWidth = value > 0 ? (value / maxTime) * 100 : 0;
+
+    chartAttributes.push({
+      width: `${previousWidth}%`,
+      x: `${previousX}%`,
+      fill: timingInfo.fill,
+      key,
+    });
+  });
+
+  return chartAttributes;
+};

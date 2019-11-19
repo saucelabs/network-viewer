@@ -32,6 +32,15 @@ $white-13: lighten($white-0, 13.5%); // #222
 $white-6: lighten($white-0, 6.5%);   // #111
 $gray-ligther: #d8dde3;
 
+$time-blocked: #a1000c;
+$time-dns: #dcc9e5;
+$time-ssl: #e78057;
+$time-connect: #db8553;
+$time-send: #3c96c4;
+$time-wait: #7ca0bf;
+$time-receive: #65b955;
+$time-queueing: $white-80;
+
 $font-size-base:          14px !default;
 $font-size-bigger:        16px !default;
 $font-size-huge:          42px;

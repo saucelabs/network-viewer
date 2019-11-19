@@ -24,6 +24,10 @@ export const VIEWER_FIELDS = [
     name: 'Size',
     unit: 'KB',
   },
+  {
+    key: 'time',
+    name: 'Time',
+  },
 ];
 
 export const DEFAULT_FILTER = {
@@ -102,3 +106,58 @@ export const FILTERS = [
 ];
 
 export const FETCH_FILE_LOAD_TEXT = 'Please wait, Fetching file is in progress.';
+
+export const TIMINGS = {
+  queueing: {
+    dataKey: '_blocked_queueing',
+    fill: '#ccc',
+    name: 'Queueing',
+  },
+  blocked: {
+    dataKey: 'blocked',
+    fill: '#A1000C',
+    name: 'Stalled',
+  },
+  dns: {
+    dataKey: 'dns',
+    fill: '#DCC9E5',
+    name: 'DNS Lookup',
+  },
+  ssl: {
+    dataKey: 'ssl',
+    fill: '#E78057',
+    name: 'SSL',
+  },
+  connect: {
+    dataKey: 'connect',
+    fill: '#DB8553',
+    name: 'Initial Connection',
+  },
+  send: {
+    dataKey: 'send',
+    fill: '#3C96C4',
+    name: 'Request Sent',
+  },
+  wait: {
+    dataKey: 'wait',
+    fill: '#7CA0BF',
+    name: 'Waiting (TTFB)',
+  },
+  receive: {
+    dataKey: 'receive',
+    fill: '#65B955',
+    name: 'Content Downloaded',
+  },
+};
+
+export const TIME_CHART_SVG_PROPS = {
+  width: '250',
+  height: '20',
+  viewBox: '0 0 250 20',
+  version: '1.1',
+};
+
+export const TIME_CHART_DEFAULT_PROPS = {
+  height: 16,
+  y: 3.5,
+};

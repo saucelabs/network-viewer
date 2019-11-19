@@ -54,4 +54,49 @@ describe('utils', () => {
     })).toMatchSnapshot();
     expect(utils.getContent({ content: 'cool' })).toMatchSnapshot();
   });
+
+  it('prepareTooltipData', () => {
+    const data = {
+      blocked: 53.00000000000955,
+      connect: 32,
+      dns: 9,
+      receive: 530.0000000000152,
+      send: 5,
+      ssl: 20,
+      wait: 588.9999999999925,
+      _blocked_queueing: 2.0000000000095497,
+      startTime: 671,
+    };
+    expect(utils.prepareTooltipData(data)).toMatchSnapshot();
+  });
+
+  it('calcTotalTime', () => {
+    const data = {
+      blocked: 53.00000000000955,
+      connect: 32,
+      dns: 9,
+      receive: 530.0000000000152,
+      send: 5,
+      ssl: 20,
+      wait: 588.9999999999925,
+      _blocked_queueing: 2.0000000000095497,
+      startTime: 671,
+    };
+    expect(utils.calcTotalTime(data)).toMatchSnapshot();
+  });
+
+  it('calcChartAttributes', () => {
+    const data = {
+      blocked: 240.50000000000034,
+      connect: 42,
+      dns: 14,
+      receive: 7045.500000000004,
+      send: 0,
+      ssl: 24,
+      wait: 786.5000000000023,
+      _blocked_queueing: 196.50000000000034,
+      startTime: 672,
+    };
+    expect(utils.calcChartAttributes(data, '17256.999999999985')).toMatchSnapshot();
+  });
 });

@@ -57,6 +57,9 @@ const config = deepMerge(baseConfig, {
       prop: 'parens-new-line',
     }],
     'react-hooks/rules-of-hooks': 2,
+    'react/jsx-props-no-spreading': [0, {
+      html: 'ignore',
+    }],
   },
 });
 
