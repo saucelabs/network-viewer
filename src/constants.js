@@ -151,7 +151,7 @@ export const TIMINGS = {
 };
 
 export const TIME_CHART_SVG_PROPS = {
-  width: '250',
+  width: '100%',
   height: '20',
   viewBox: '0 0 250 20',
   version: '1.1',
@@ -161,3 +161,5 @@ export const TIME_CHART_DEFAULT_PROPS = {
   height: 16,
   y: 3.5,
 };
+
+export const ROW_ID_PREFIX = 'network-viewer-table-row-';

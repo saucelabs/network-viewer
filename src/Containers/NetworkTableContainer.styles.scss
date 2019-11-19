@@ -6,10 +6,11 @@
   overflow: auto;
 
   .table {
-    border: 1px solid $white-90;
     width: 100%;
+    border: 1px solid $white-90;
     margin-bottom: 1rem;
     border-collapse: collapse;
+    table-layout: fixed;
 
     td, th {
       padding: .3rem;
@@ -20,12 +21,6 @@
       border-bottom-width: 2px;
       vertical-align: bottom;
       border-bottom: 2px solid $white-90;
-    }
-
-    tbody {
-      tr:nth-of-type(odd) {
-        background-color: $white-97;
-      }
     }
   }
 }

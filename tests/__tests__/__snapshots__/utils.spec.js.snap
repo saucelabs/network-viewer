@@ -58,7 +58,7 @@ Array [
     "index": 2,
     "method": "GET",
     "size": 33.27,
-    "startedDateTime": "2019-10-14T08:47:11.641Z",
+    "startedDateTime": 1571042831641,
     "status": 200,
     "time": 53.14699999871664,
     "timings": Object {
@@ -87,7 +87,7 @@ Array [
     "index": 0,
     "method": "GET",
     "size": 135.04,
-    "startedDateTime": "2019-10-14T08:47:11.592Z",
+    "startedDateTime": 1571042831592,
     "status": 200,
     "time": 35.07000001263805,
     "timings": Object {
@@ -111,7 +111,7 @@ Array [
     "index": 1,
     "method": "GET",
     "size": 33.02,
-    "startedDateTime": "2019-10-14T08:47:11.641Z",
+    "startedDateTime": 1571042831641,
     "status": 200,
     "time": 40.115000010700896,
     "timings": Object {
@@ -135,7 +135,7 @@ Array [
     "index": 2,
     "method": "GET",
     "size": 33.27,
-    "startedDateTime": "2019-10-14T08:47:11.641Z",
+    "startedDateTime": 1571042831641,
     "status": 200,
     "time": 53.14699999871664,
     "timings": Object {
@@ -159,7 +159,7 @@ Array [
     "index": 3,
     "method": "GET",
     "size": 2.76,
-    "startedDateTime": "2019-10-14T08:47:11.643Z",
+    "startedDateTime": 1571042831643,
     "status": 200,
     "time": 51.217000000178814,
     "timings": Object {
@@ -183,7 +183,7 @@ Array [
     "index": 4,
     "method": "GET",
     "size": 142.88,
-    "startedDateTime": "2019-10-14T08:47:11.644Z",
+    "startedDateTime": 1571042831644,
     "status": 200,
     "time": 53.195000014966354,
     "timings": Object {
@@ -260,7 +260,7 @@ Object {
       "index": 0,
       "method": "GET",
       "size": 135.04,
-      "startedDateTime": "2019-10-14T08:47:11.592Z",
+      "startedDateTime": 1571042831592,
       "status": 200,
       "time": 35.07000001263805,
       "timings": Object {
@@ -284,7 +284,7 @@ Object {
       "index": 1,
       "method": "GET",
       "size": 33.02,
-      "startedDateTime": "2019-10-14T08:47:11.641Z",
+      "startedDateTime": 1571042831641,
       "status": 200,
       "time": 40.115000010700896,
       "timings": Object {
@@ -308,7 +308,7 @@ Object {
       "index": 2,
       "method": "GET",
       "size": 33.27,
-      "startedDateTime": "2019-10-14T08:47:11.641Z",
+      "startedDateTime": 1571042831641,
       "status": 200,
       "time": 53.14699999871664,
       "timings": Object {
@@ -332,7 +332,7 @@ Object {
       "index": 3,
       "method": "GET",
       "size": 2.76,
-      "startedDateTime": "2019-10-14T08:47:11.643Z",
+      "startedDateTime": 1571042831643,
       "status": 200,
       "time": 51.217000000178814,
       "timings": Object {
@@ -356,7 +356,7 @@ Object {
       "index": 4,
       "method": "GET",
       "size": 142.88,
-      "startedDateTime": "2019-10-14T08:47:11.644Z",
+      "startedDateTime": 1571042831644,
       "status": 200,
       "time": 53.195000014966354,
       "timings": Object {
@@ -387,7 +387,7 @@ Array [
     "index": 3,
     "method": "GET",
     "size": 2.76,
-    "startedDateTime": "2019-10-14T08:47:11.643Z",
+    "startedDateTime": 1571042831643,
     "status": 200,
     "time": 51.217000000178814,
     "timings": Object {
@@ -411,7 +411,7 @@ Array [
     "index": 1,
     "method": "GET",
     "size": 33.02,
-    "startedDateTime": "2019-10-14T08:47:11.641Z",
+    "startedDateTime": 1571042831641,
     "status": 200,
     "time": 40.115000010700896,
     "timings": Object {
@@ -435,7 +435,7 @@ Array [
     "index": 2,
     "method": "GET",
     "size": 33.27,
-    "startedDateTime": "2019-10-14T08:47:11.641Z",
+    "startedDateTime": 1571042831641,
     "status": 200,
     "time": 53.14699999871664,
     "timings": Object {
@@ -459,7 +459,7 @@ Array [
     "index": 0,
     "method": "GET",
     "size": 135.04,
-    "startedDateTime": "2019-10-14T08:47:11.592Z",
+    "startedDateTime": 1571042831592,
     "status": 200,
     "time": 35.07000001263805,
     "timings": Object {
@@ -483,7 +483,7 @@ Array [
     "index": 4,
     "method": "GET",
     "size": 142.88,
-    "startedDateTime": "2019-10-14T08:47:11.644Z",
+    "startedDateTime": 1571042831644,
     "status": 200,
     "time": 53.195000014966354,
     "timings": Object {

@@ -28,6 +28,7 @@ describe('NetworkTableRow', () => {
       url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice',
     },
     maxTime: 5000,
+    scrollHighlight: false,
   };
 
   it('renders without crashing', () => {

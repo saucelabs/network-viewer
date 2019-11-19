@@ -21,6 +21,7 @@ const initialState = new Map({
   },
   error: null,
   loading: false,
+  scrollToIndex: null,
 });
 
 const reducer = (state = initialState, { type, payload }) => {
@@ -87,6 +88,9 @@ const reducer = (state = initialState, { type, payload }) => {
           .set('error', payload)
           .set('loading', false);
       });
+    }
+    case types.UPDATE_SCROLL_TO_INDEX: {
+      return state.set('scrollToIndex', payload);
     }
     default:
       return state;

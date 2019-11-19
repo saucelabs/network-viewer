@@ -57,6 +57,9 @@ module.exports = {
           },
         },
       ],
+    }, {
+      test: /\.har$/i,
+      use: 'raw-loader',
     }],
   },
   plugins: [
