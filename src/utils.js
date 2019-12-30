@@ -93,6 +93,16 @@ export const sortBy = (data, key, isAsc = true) => data.sort((prev, next) => {
   return 0;
 });
 
+export const filterCondition = ({ filter, info }) => {
+  switch (filter.name) {
+    case 'error':
+      return info.status >= 400;
+    case 'type':
+    default:
+      return filter.value.includes(info[filter.name]);
+  }
+};
+
 export const filterData = ({
   data, filter, search,
 }) => {
@@ -103,7 +113,7 @@ export const filterData = ({
     data.filter((info) => {
       const isSearchMatched = trimmedSearch ?
         info[search.name] && info[search.name].includes(trimmedSearch) : true;
-      const isFilterMatched = filter.name ? filter.value.includes(info[filter.name]) : true;
+      const isFilterMatched = filter.name ? filterCondition({ filter, info }) : true;
       return isSearchMatched && isFilterMatched;
     });
 };

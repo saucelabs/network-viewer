@@ -99,4 +99,15 @@ describe('utils', () => {
     };
     expect(utils.calcChartAttributes(data, '17256.999999999985')).toMatchSnapshot();
   });
+
+  it('filterCondition', () => {
+    expect(utils.filterCondition({
+      filter: { name: 'type', value: ['document', 'html'] },
+      info: preparedMockData.get(0),
+    })).toMatchSnapshot();
+    expect(utils.filterCondition({
+      filter: { name: 'error', value: ['error'] },
+      info: preparedMockData.get(1),
+    })).toMatchSnapshot();
+  });
 });
