@@ -103,6 +103,13 @@ export const FILTERS = [
       value: ['manifest.json'],
     },
   },
+  {
+    name: 'Error',
+    filterBy: {
+      name: 'error',
+      value: ['error'],
+    },
+  },
 ];
 
 export const FETCH_FILE_LOAD_TEXT = 'Please wait, Fetching file is in progress.';

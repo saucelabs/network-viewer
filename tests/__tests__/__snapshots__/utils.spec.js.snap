@@ -49,6 +49,10 @@ Array [
 
 exports[`utils calcTotalTime 1`] = `1238.0000000000173`;
 
+exports[`utils filterCondition 1`] = `true`;
+
+exports[`utils filterCondition 2`] = `true`;
+
 exports[`utils filterData 1`] = `
 Array [
   Object {
@@ -112,7 +116,7 @@ Array [
     "method": "GET",
     "size": 33.02,
     "startedDateTime": 1571042831641,
-    "status": 200,
+    "status": 400,
     "time": 40.115000010700896,
     "timings": Object {
       "_blocked_queueing": 12.528999999631196,
@@ -285,7 +289,7 @@ Object {
       "method": "GET",
       "size": 33.02,
       "startedDateTime": 1571042831641,
-      "status": 200,
+      "status": 400,
       "time": 40.115000010700896,
       "timings": Object {
         "_blocked_queueing": 12.528999999631196,
@@ -412,7 +416,7 @@ Array [
     "method": "GET",
     "size": 33.02,
     "startedDateTime": 1571042831641,
-    "status": 200,
+    "status": 400,
     "time": 40.115000010700896,
     "timings": Object {
       "_blocked_queueing": 12.528999999631196,
