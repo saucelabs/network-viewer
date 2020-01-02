@@ -11,6 +11,8 @@ import Styles from './MainContainer.styles.scss';
 const MainContainer = () => {
   const { state } = useNetwork();
   const loading = state.get('loading');
+  const selectedReqIndex = state.get('selectedReqIndex');
+  const shouldShowDetail = selectedReqIndex || selectedReqIndex === 0;
 
   return (
     <>
@@ -21,7 +23,7 @@ const MainContainer = () => {
       >
         <section className={Styles['main-container']}>
           <NetworkTableContainer />
-          <ReqDetailContainer />
+          {shouldShowDetail && <ReqDetailContainer />}
         </section>
       </LoaderContainer>
     </>
