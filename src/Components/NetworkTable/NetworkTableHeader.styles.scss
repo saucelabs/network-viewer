@@ -1,4 +1,5 @@
 @import "./../../styles/variables";
+$cell-height: 32px;
 
 %ellipsis {
   text-overflow: ellipsis;
@@ -9,12 +10,14 @@
 
 .thead tr th {
   text-align: left;
+  height: $cell-height;
 }
 
 .value-cell {
   width: 8%;
   box-sizing: border-box;
   @extend %ellipsis;
+  height: $cell-height;
 
   &.filename {
     width: 25%;
@@ -22,6 +25,10 @@
 
   &.domain {
     max-width: 10%;
+  }
+
+  label {
+    cursor: inherit;
   }
 }
 
@@ -31,6 +38,8 @@
 
 tbody {
   .network-table-row {
+    cursor: pointer;
+
     &:nth-of-type(odd) {
       background-color: $white-97;
     }
@@ -45,6 +54,10 @@ tbody {
 
     &.highlight {
       background: $white-80;
+    }
+
+    &:hover {
+      background: $white-90;
     }
   }
 }

@@ -1,0 +1,8 @@
+@import "./../styles/variables";
+
+.req-detail-container {
+  flex: 1 1 auto;
+  height: 100%;
+  overflow: auto;
+  background: $white-95;
+}
