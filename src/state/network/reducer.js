@@ -98,7 +98,7 @@ const reducer = (state = initialState, { type, payload }) => {
       return state.withMutations((newState) => {
         newState
           .set('selectedReqIndex', payload)
-          .set('reqDetail', payload || payload === 0 ? state.getIn(['data', payload]) : null);
+          .set('reqDetail', state.getIn(['data', payload]));
       });
     }
     default:

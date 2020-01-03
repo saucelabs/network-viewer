@@ -53,7 +53,7 @@ const NetworkTableRow = ({
         />
       ))}
       <td className={Styles['timeline-header']}>
-        {!payload.time ? null : (
+        {payload.time && (
           <TimeChart
             maxTime={maxTime}
             timings={payload.timings}
