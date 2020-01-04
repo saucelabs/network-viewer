@@ -64,4 +64,17 @@ describe('network reducer', () => {
     expect(state.get('data').toJS()).toMatchSnapshot();
     expect(state.get('sort')).toMatchSnapshot();
   });
+
+  it('SELECT_REQUEST', () => {
+    const newState = initialState.merge(new Map({
+      data: preparedMockData,
+    }));
+
+    state = reducer(newState, {
+      type: types.SELECT_REQUEST,
+      payload: 0,
+    });
+    expect(state.get('selectedReqIndex')).toBe(0);
+    expect(state.get('reqDetail')).toMatchSnapshot();
+  });
 });

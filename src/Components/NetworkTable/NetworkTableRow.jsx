@@ -10,38 +10,66 @@ import { getStatusClass } from '../../utils';
 
 const context = classNames.bind(Styles);
 
-const NetworkTableRow = ({ payload, maxTime, scrollHighlight }) => (
-  <tr
-    className={context(
+const NetworkTableRow = ({
+  payload,
+  maxTime,
+  scrollHighlight,
+  showAllCols,
+  onSelect,
+}) => {
+  const handleSelectRequest = () => {
+    onSelect(payload.index);
+  };
+
+  const rowProps = {
+    className: context(
       'network-table-row',
       getStatusClass(payload.status), {
         highlight: scrollHighlight,
-      })}
-    id={ROW_ID_PREFIX + payload.index}
-  >
-    {VIEWER_FIELDS.map(({ key, unit }) => (
-      <NetworkCellValue
-        key={key}
-        datakey={key}
-        payload={payload}
-        unit={unit}
-      />
-    ))}
-    <td className={Styles['timeline-header']}>
-      {!payload.time ? null : (
-        <TimeChart
-          maxTime={maxTime}
-          timings={payload.timings}
+      }),
+    id: ROW_ID_PREFIX + payload.index,
+    onClick: handleSelectRequest,
+  };
+
+  if (!showAllCols) {
+    return (
+      <tr {...rowProps}>
+        <NetworkCellValue
+          datakey="filename"
+          payload={payload}
         />
-      )}
-    </td>
-  </tr>
-);
+      </tr>
+    );
+  }
+
+  return (
+    <tr {...rowProps}>
+      {Object.entries(VIEWER_FIELDS).map(([datakey, { key, unit }]) => (
+        <NetworkCellValue
+          key={datakey}
+          datakey={key}
+          payload={payload}
+          unit={unit}
+        />
+      ))}
+      <td className={Styles['timeline-header']}>
+        {payload.time && (
+          <TimeChart
+            maxTime={maxTime}
+            timings={payload.timings}
+          />
+        )}
+      </td>
+    </tr>
+  );
+};
 
 NetworkTableRow.propTypes = {
   maxTime: PropTypes.number.isRequired,
+  onSelect: PropTypes.func.isRequired,
   payload: PropTypes.object.isRequired,
   scrollHighlight: PropTypes.bool.isRequired,
+  showAllCols: PropTypes.bool.isRequired,
 };
 
 export default NetworkTableRow;

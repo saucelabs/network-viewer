@@ -4,6 +4,8 @@ import { mount } from 'enzyme';
 import NetworkTableRow from './../../../../src/Components/NetworkTable/NetworkTableRow';
 
 describe('NetworkTableRow', () => {
+  const NOOP = () => {};
+
   const props = {
     payload: {
       domain: 'developer.mozilla.org',
@@ -29,6 +31,8 @@ describe('NetworkTableRow', () => {
     },
     maxTime: 5000,
     scrollHighlight: false,
+    showAllCols: true,
+    onSelect: NOOP,
   };
 
   it('renders without crashing', () => {
