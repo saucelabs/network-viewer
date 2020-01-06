@@ -1,8 +1,22 @@
 @import "./../styles/variables";
 
+$close-button-width: 35px;
+
 .req-detail-container {
   flex: 1 1 auto;
   height: 100%;
   overflow: auto;
   background: $white-95;
+  position: relative;
+}
+
+.nav-tabs {
+  padding-left: $close-button-width;
+}
+
+.close-button {
+  position: absolute;
+  left: $gutter / 2;
+  top: $gutter / 2;
+  cursor: pointer;
 }
