@@ -74,7 +74,7 @@ const Tabs = ({
 };
 
 Tabs.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   defaultSelectedKey: PropTypes.string,
   navLinkClassName: PropTypes.string,
   navTabsClassName: PropTypes.string,
@@ -84,7 +84,6 @@ Tabs.propTypes = {
 };
 
 Tabs.defaultProps = {
-  children: null,
   defaultSelectedKey: null,
   navLinkClassName: null,
   navTabsClassName: null,
