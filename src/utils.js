@@ -94,6 +94,17 @@ export const isCachedEntry = ({ response }) => {
   const resBodySize = Math.max(0, bodySize);
   return (resBodySize === 0 && content && content.size > 0);
 };
+export const sortHeaders = (current, next) => {
+  if (current.name < next.name) {
+    return -1;
+  }
+  return current.name > next.name ? 1 : 0;
+};
+
+export const getHeaders = (entry) => ({
+  request: entry.request.headers.sort(sortHeaders),
+  response: entry.response.headers.sort(sortHeaders),
+});
 
 export const prepareViewerData = (entries) => {
   const firstEntryTime = entries[0].startedDateTime;
@@ -115,9 +126,12 @@ export const prepareViewerData = (entries) => {
         timings: getTimings(entry, firstEntryTime),
         body: getContent(entry.response.content),
         time: entry.time,
+        serverIPAddress: entry.serverIPAddress || ':80',
+        headers: getHeaders(entry),
         ...getUrlInfo(entry.request.url),
       };
     });
+
   const totalRequests = data.length;
   const totalNetworkTime = new Date(lastEntryTime).getTime() -
     new Date(firstEntryTime).getTime() +

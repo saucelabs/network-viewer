@@ -4,9 +4,12 @@ import { useNetwork } from './../state/network/Context';
 import Styles from './ReqDetailContainer.styles.scss';
 import Tabs from '../Components/Common/Tabs';
 import Tab from '../Components/Common/Tab';
+import Headers from '../Components/ReqDetail/Headers';
 
 const ReqDetailContainer = () => {
-  const { actions } = useNetwork();
+  const { actions, state } = useNetwork();
+  const reqDetail = state.get('reqDetail');
+
   const handleCloseClick = () => {
     actions.selectRequest(null);
   };
@@ -23,12 +26,13 @@ const ReqDetailContainer = () => {
       <Tabs
         defaultSelectedKey="headers"
         navTabsClassName={Styles['nav-tabs']}
+        tabsContainerClassName={Styles['tabs-container']}
       >
         <Tab
           eventKey="headers"
           name="Headers"
         >
-          <p>Headers coming soon</p>
+          <Headers data={reqDetail} />
         </Tab>
         <Tab
           eventKey="preview"

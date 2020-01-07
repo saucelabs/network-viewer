@@ -4,14 +4,22 @@
   flex: 1 1 auto;
   height: 100%;
   overflow: auto;
+  border-right: 1px solid $white-90;
 
   &.limited-cols {
     max-width: $name-col-width;
+
+    .table {
+      td, th {
+        border-right: 0;
+      }
+    }
   }
 
   .table {
     width: 100%;
     border: 1px solid $white-90;
+    border-right: 0;
     margin-bottom: 1rem;
     border-collapse: collapse;
     table-layout: fixed;

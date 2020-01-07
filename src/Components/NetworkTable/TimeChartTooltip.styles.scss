@@ -9,7 +9,7 @@
   border-radius: 3px;
   color: $white-33;
   font-size: $font-size-small;
-  padding: $gutter / 2;
+  padding: $size-m / 2;
   opacity: 1;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .tooltip-info {
-  margin-bottom: $gutter;
+  margin-bottom: $size-m;
 
   .time-info {
     margin: 0;
@@ -53,16 +53,16 @@
     
    .waterfall-tooltip-key {
       font-weight: bold;
-      padding: 0 $gutter;
+      padding: 0 $size-m;
       position: relative;
 
       &::before {
         content: "";
         position: absolute;
         left: 0;
-        top: $gutter / 4;
-        width: $gutter / 2;
-        height: $gutter / 2;
+        top: $size-m / 4;
+        width: $size-m / 2;
+        height: $size-m / 2;
       }
 
       &.blocked {
@@ -134,7 +134,7 @@
 
   .waterfall-tooltip-thead {
     .waterfall-tooltip-th {
-      padding-bottom: $gutter / 2;
+      padding-bottom: $size-m / 2;
       color: $white-50;
 
       &:nth-child(2) {

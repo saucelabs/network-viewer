@@ -14,7 +14,7 @@ $gray-opacity-40: rgba(158, 158, 158, .4);
   cursor: pointer;
   white-space: nowrap;
   user-select: none;
-  padding: 11px $gutter * 2;
+  padding: 11px $size-m * 2;
   font-size: 1rem;
   line-height: 1.5;
   text-decoration: none;
@@ -55,7 +55,7 @@ $gray-opacity-40: rgba(158, 158, 158, .4);
 }
 
 .btn-sm {
-  padding: $gutter / 2 $gutter;
+  padding: $size-m / 2 $size-m;
   font-size: 0.9rem;
   height: $filter-button-height;
 }

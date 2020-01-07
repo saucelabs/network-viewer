@@ -133,5 +133,14 @@ describe('utils', () => {
     it('converts Minutes', () => {
       expect(utils.formatTime(90001)).toBe('2m');
     });
+  it('getHeaders', () => {
+    expect(utils.getHeaders({
+      request: {
+        headers: [{ name: 'b' }, { name: 'a' }],
+      },
+      response: {
+        headers: [{ name: 'z' }, { name: 'y' }, { name: 'x' }],
+      },
+    })).toMatchSnapshot();
   });
 });
