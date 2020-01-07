@@ -37,7 +37,6 @@ const reducer = (state = initialState, { type, payload }) => {
           totalNetworkTime,
           totalRequests,
           totalTransferredSize,
-          cachedSize,
           totalUncompressedSize,
         } = prepareViewerData(payload.entries);
         const sortedData = new List(sortBy(data, sort.key, sort.isAcs));
@@ -49,7 +48,6 @@ const reducer = (state = initialState, { type, payload }) => {
           .set('dataSummary', new Map({
             totalRequests,
             totalTransferredSize,
-            cachedSize,
             totalUncompressedSize,
             timings: calculateTimings(payload.pages),
           }));

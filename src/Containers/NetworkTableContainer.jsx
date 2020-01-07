@@ -37,6 +37,7 @@ const NetworkTableContainer = () => {
       </section>
     );
   }
+
   return (
     <section className={containerClassName}>
       <table className={Styles.table}>
@@ -56,10 +57,10 @@ const NetworkTableContainer = () => {
             />
           ))}
         </tbody>
+        <NetworkTableFooter
+          dataSummary={dataSummary}
+        />
       </table>
-      <NetworkTableFooter
-        dataSummary={dataSummary}
-      />
     </section>
   );
 };

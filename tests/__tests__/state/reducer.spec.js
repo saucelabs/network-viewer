@@ -11,7 +11,10 @@ describe('network reducer', () => {
   it('UPDATE_DATA', () => {
     state = reducer(initialState, {
       type: types.UPDATE_DATA,
-      payload: networkDataMock.log.entries,
+      payload: {
+        entries: networkDataMock.log.entries,
+        pages: networkDataMock.log.pages,
+      },
     });
     expect(state.get('data').toJS()).toMatchSnapshot();
     expect(state.get('actualData').size).toMatchSnapshot();

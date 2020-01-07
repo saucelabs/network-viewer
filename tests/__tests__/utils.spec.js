@@ -110,4 +110,28 @@ describe('utils', () => {
       info: preparedMockData.get(1),
     })).toMatchSnapshot();
   });
+
+  describe('formatSize', () => {
+    it('converts Bytes', () => {
+      expect(utils.formatSize(50)).toBe('50B');
+    });
+    it('converts Kilobytes', () => {
+      expect(utils.formatSize(90001)).toBe('88KB');
+    });
+    it('converts Megabytes', () => {
+      expect(utils.formatSize(4448576)).toBe('4MB');
+    });
+  });
+
+  describe('formatTime', () => {
+    it('converts Millisecond', () => {
+      expect(utils.formatTime(900)).toBe('900ms');
+    });
+    it('converts Seconds', () => {
+      expect(utils.formatTime(9001)).toBe('9.01s');
+    });
+    it('converts Minutes', () => {
+      expect(utils.formatTime(90001)).toBe('2m');
+    });
+  });
 });

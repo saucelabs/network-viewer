@@ -170,11 +170,3 @@ export const TIME_CHART_DEFAULT_PROPS = {
 };
 
 export const ROW_ID_PREFIX = 'network-viewer-table-row-';
-
-export const FOOTER_FIELDS = {
-  requests: 'requests',
-  transferred: 'transferred',
-  uncompressed: 'uncompressed',
-  DOMContentLoaded: 'DOMContentLoaded',
-  onLoad: 'onLoad',
-};

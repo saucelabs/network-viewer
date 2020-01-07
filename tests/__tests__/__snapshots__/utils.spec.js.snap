@@ -379,6 +379,9 @@ Object {
     },
   ],
   "totalNetworkTime": 53.271999994060025,
+  "totalRequests": 5,
+  "totalTransferredSize": 130535,
+  "totalUncompressedSize": 355292,
 }
 `;
 

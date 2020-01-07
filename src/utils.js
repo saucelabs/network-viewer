@@ -100,15 +100,11 @@ export const prepareViewerData = (entries) => {
   const lastEntryTime = entries[entries.length - 1].startedDateTime;
   let totalTransferredSize = 0;
   let totalUncompressedSize = 0;
-  let cachedSize = 0;
   const data = entries
     .filter((entry) => entry.response && getUrlInfo(entry.request.url).domain)
     .map((entry, index) => {
       totalTransferredSize += getEntryTransferredSize(entry);
       totalUncompressedSize += getEntryUncompressedSize(entry);
-      if (isCachedEntry(entry)) {
-        cachedSize += getEntryUncompressedSize(entry);
-      }
       return {
         index,
         status: entry.response.status,
@@ -132,7 +128,6 @@ export const prepareViewerData = (entries) => {
     totalRequests,
     totalTransferredSize,
     totalUncompressedSize,
-    cachedSize,
   };
 };
 
