@@ -8,8 +8,11 @@ import ScrollExample from './Components/ScrollExample';
 import './app.css';
 
 const App = () => (
-  <section className="tab-container">
-    <Tabs defaultSelectedKey="preloaded">
+  <section className="app-container">
+    <Tabs
+      defaultSelectedKey="preloaded"
+      tabsContainerClassName="tab-container"
+    >
       <Tab
         eventKey="default"
         name="Default"

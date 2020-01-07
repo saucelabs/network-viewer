@@ -1,0 +1,33 @@
+@import "./../../styles/variables";
+
+.headers-container {
+  width: 100%;
+
+  .header-info {
+    border-bottom: 1px solid $white-90;
+    margin-bottom: $gutter;
+
+    .header-title {
+      margin: 0;
+    }
+
+    .header-detail {
+      padding: $gutter 0 $gutter $gutter;
+
+      .info-row {
+        margin: 0;
+        font-size: $font-size-small;
+        padding-bottom: $gutter / 2;
+      }
+
+      .info-caption {
+        font-weight: bold;
+        padding-right: $gutter / 2;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

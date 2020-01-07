@@ -34,7 +34,7 @@ const Tabs = ({
       }
     });
     updateItems(itemsCollection);
-  }, []);
+  }, [children]);
 
   const [activeTab, updateTab] = useState(
     defaultSelectedKey || (items && items.length ? items[0].key : null),

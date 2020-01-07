@@ -170,3 +170,22 @@ export const TIME_CHART_DEFAULT_PROPS = {
 };
 
 export const ROW_ID_PREFIX = 'network-viewer-table-row-';
+
+export const GENERAL_HEADERS = Object.freeze({
+  url: Object.freeze({
+    key: 'url',
+    name: 'Request URL',
+  }),
+  method: Object.freeze({
+    key: 'method',
+    name: 'Request Method',
+  }),
+  status: Object.freeze({
+    key: 'status',
+    name: 'Status Code',
+  }),
+  serverIPAddress: Object.freeze({
+    key: 'serverIPAddress',
+    name: 'Remote Address',
+  }),
+});

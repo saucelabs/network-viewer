@@ -56,6 +56,18 @@ export const getContent = ({ mimeType, text }) => {
   return text;
 };
 
+export const sortHeaders = (current, next) => {
+  if (current.name < next.name) {
+    return -1;
+  }
+  return current.name > next.name ? 1 : 0;
+};
+
+export const getHeaders = (entry) => ({
+  request: entry.request.headers.sort(sortHeaders),
+  response: entry.response.headers.sort(sortHeaders),
+});
+
 export const prepareViewerData = (entries) => {
   const firstEntryTime = entries[0].startedDateTime;
   const lastEntryTime = entries[entries.length - 1].startedDateTime;
@@ -71,6 +83,8 @@ export const prepareViewerData = (entries) => {
       timings: getTimings(entry, firstEntryTime),
       body: getContent(entry.response.content),
       time: entry.time,
+      serverIPAddress: entry.serverIPAddress || ':80',
+      headers: getHeaders(entry),
       ...getUrlInfo(entry.request.url),
     }));
 

@@ -1,12 +1,13 @@
 @import "./../styles/variables";
 
 $close-button-width: 35px;
+$tab-height: 35px;
 
 .req-detail-container {
   flex: 1 1 auto;
   height: 100%;
   overflow: auto;
-  background: $white-95;
+  background: $white-100;
   position: relative;
 }
 
@@ -19,4 +20,12 @@ $close-button-width: 35px;
   left: $gutter / 2;
   top: $gutter / 2;
   cursor: pointer;
+}
+
+.tabs-container {
+  display: flex;
+  width: 100%;
+  padding: $gutter;
+  height: calc(100% - $tab-height);
+  overflow: auto;
 }
