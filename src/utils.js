@@ -70,7 +70,7 @@ export const getEntryTransferredSize = ({ response }) => {
 
 export const getEntryUncompressedSize = ({ response }) => {
   const { bodySize, _transferSize, content: { size } } = response;
-  if (size > -1) {
+  if (size > 0) {
     return size;
   }
   if (_transferSize > -1) {
@@ -82,18 +82,14 @@ export const getEntryUncompressedSize = ({ response }) => {
   return -1;
 };
 
-export const isCachedEntry = ({ response }) => {
-  const { _transferSize, status, bodySize, content } = response;
-  if (status === 304) {
-    return true;
-  }
-
-  if (_transferSize > 0) {
-    return false;
-  }
-  const resBodySize = Math.max(0, bodySize);
-  return (resBodySize === 0 && content && content.size > 0);
+export const calculateFinishTime = (data) => {
+  const finishTimes = data.map(({ timings }) => (
+    Object.values(timings).reduce((acc, durationInMS) => (
+      acc + (durationInMS > -1 ? durationInMS : 0)
+    ), 0)));
+  return Math.max(...finishTimes);
 };
+
 export const sortHeaders = (current, next) => {
   if (current.name < next.name) {
     return -1;
@@ -136,12 +132,15 @@ export const prepareViewerData = (entries) => {
   const totalNetworkTime = new Date(lastEntryTime).getTime() -
     new Date(firstEntryTime).getTime() +
     data[data.length - 1].timings.receive;
+  console.log(data);
+  const finishTime = calculateFinishTime(data);
   return {
     totalNetworkTime,
     data,
     totalRequests,
     totalTransferredSize,
     totalUncompressedSize,
+    finishTime,
   };
 };
 
@@ -281,15 +280,15 @@ export const formatSize = (bytes) => {
   if (bytes < 1024) {
     return `${bytes}B`;
   }
-  if (bytes < (1024 * 1024)) {
+  if (bytes < (1024 ** 2)) {
     return `${Math.round(bytes / 1024)}KB`;
   }
-  return `${Math.round((bytes / (1024 * 1024)))}MB`;
+  return `${Math.round((bytes / (1024 ** 2)))}MB`;
 };
 
 export const formatTime = (time) => {
   if (time < 1000) {
-    return `${time}ms`;
+    return `${Math.round(time)}ms`;
   }
   if (time < 60000) {
     return `${Math.ceil(time / 10) / 100}s`;

@@ -1,9 +1,17 @@
 @import "./../../styles/variables.scss";
 
 .footer {
-  background-color: $gray-ligther;
-
-  td:last-child {
-    text-align: right;
+  span {
+    &:after {
+      content: "";
+      border-left: 1px solid $brand-primary-gray;
+      margin: $size-m;
+    } 
+    &:last-child {
+      &:after {
+        content: "";
+        border-left: none;
+      }
+    }
   }
 }

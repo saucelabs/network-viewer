@@ -10,18 +10,13 @@ const context = classNames.bind(Styles);
 const NetworkTableFooter = ({ dataSummary }) => (
   <tfoot>
     <tr className={context('footer')}>
-      <td colSpan={3}>
-        {`${dataSummary.get('totalRequests')} requests`}
-      </td>
-      <td colSpan={3}>
-        {formatSize(dataSummary.get('totalTransferredSize'))}
-        {' '}
-        {`(${formatSize(dataSummary.get('totalUncompressedSize'))} Uncompressed)`}
-      </td>
-      <td colSpan={2}>
-        {`${formatTime(dataSummary.get('timings').DOMContentLoaded)}`}
-        {' '}
-        {`(onload: ${formatTime(dataSummary.get('timings').onLoad)})`}
+      <td colSpan="100%">
+        <span>{`${dataSummary.get('totalRequests')} requests`}</span>
+        <span>{`${formatSize(dataSummary.get('totalTransferredSize'))} transferred`}</span>
+        <span>{`${formatSize(dataSummary.get('totalUncompressedSize'))} resources`}</span>
+        <span>{`Finished: ${formatTime(dataSummary.get('finish'))}`}</span>
+        <span>{`DOMContentLoaded: ${formatTime(dataSummary.get('timings').DOMContentLoaded)}`}</span>
+        <span>{`Load: ${formatTime(dataSummary.get('timings').onLoad)}`}</span>
       </td>
     </tr>
   </tfoot>

@@ -38,6 +38,7 @@ const reducer = (state = initialState, { type, payload }) => {
           totalRequests,
           totalTransferredSize,
           totalUncompressedSize,
+          finishTime,
         } = prepareViewerData(payload.entries);
         const sortedData = new List(sortBy(data, sort.key, sort.isAcs));
         newState
@@ -49,7 +50,9 @@ const reducer = (state = initialState, { type, payload }) => {
             totalRequests,
             totalTransferredSize,
             totalUncompressedSize,
+            finishTime,
             timings: calculateTimings(payload.pages),
+            finish: finishTime,
           }));
       });
     }

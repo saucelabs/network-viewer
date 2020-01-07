@@ -57,9 +57,7 @@ const NetworkTableContainer = () => {
             />
           ))}
         </tbody>
-        <NetworkTableFooter
-          dataSummary={dataSummary}
-        />
+        <NetworkTableFooter dataSummary={dataSummary} />
       </table>
     </section>
   );
