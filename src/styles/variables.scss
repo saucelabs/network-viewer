@@ -58,8 +58,21 @@ $font-size-h6:            ceil(($font-size-base * .85)) !default; // ~12px
 $border-radius-base: 4px;
 $border-size: 4px;
 
-// GUTTER
-$gutter: 14px;
+// SIZES
+$size-base: 4px;
+
+$size-xs: $size-base; // 4px;
+$size-s: $size-base * 3; // 12px;
+$size-m: $size-base * 4; // 16px;
+$size-l: $size-base * 5; // 20px;
+$size-xl: $size-base * 7; // 28px;
+$size-xxl: $size-base * 9; // 36px;
+$size-xxxl: $size-base * 11; // 44px;
+
+// Then only use these increments of 4px for consistent sizing/spacing
+//          XS      S       M       L       XL      XXL     XXXL
+//  1x      4       12      16      20      28      36      44
+//  2x      8       24      32      40      56      72      88
 
 $filter-button-height: 26px;
 

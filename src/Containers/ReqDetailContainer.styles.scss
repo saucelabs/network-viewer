@@ -17,15 +17,15 @@ $tab-height: 35px;
 
 .close-button {
   position: absolute;
-  left: $gutter / 2;
-  top: $gutter / 2;
+  left: $size-m / 2;
+  top: $size-m / 2;
   cursor: pointer;
 }
 
 .tabs-container {
   display: flex;
   width: 100%;
-  padding: $gutter;
+  padding: $size-m;
   height: calc(100% - $tab-height);
   overflow: auto;
 }
