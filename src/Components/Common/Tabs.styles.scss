@@ -1,5 +1,7 @@
+@import "./../../styles/variables.scss";
+
 .nav-tabs {
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: 1px solid $white-90;
   display: flex;
   flex-wrap: wrap;
   padding-left: 0;
@@ -25,7 +27,7 @@
 }
 
 .tab-item.active {
-  color: #495057;
-  background-color: #fff;
-  border-color: #dee2e6 #dee2e6 #fff;
+  color: $white-39;
+  background-color: $white-100;
+  border-color: $white-90 $white-90 $white-100;
 }
