@@ -1,6 +1,6 @@
 import {
   UPDATE_DATA, UPDATE_SEARCH, UPDATE_SORT, UPDATE_FILTER,
-  FETCH_FILE, UPDATE_ERROR_MESSAGE, UPDATE_SCROLL_TO_INDEX,
+  FETCH_FILE, UPDATE_ERROR_MESSAGE, UPDATE_SCROLL_TO_INDEX, SELECT_REQUEST,
 } from './types';
 
 export const updateData = (dispatch) => (payload) => dispatch({
@@ -41,6 +41,10 @@ export const updateErrorMessage = (dispatch) => (payload) => dispatch({
 
 export const updateScrollToIndex = (dispatch) => (payload) => dispatch({
   type: UPDATE_SCROLL_TO_INDEX, payload,
+});
+
+export const selectRequest = (dispatch) => (payload) => dispatch({
+  type: SELECT_REQUEST, payload,
 });
 
 export const fetchFile = (dispatch) => (file, fetchOptions) => {

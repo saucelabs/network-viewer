@@ -23,6 +23,8 @@ const initialState = new Map({
   error: null,
   loading: false,
   scrollToIndex: null,
+  selectedReqIndex: null,
+  reqDetail: null,
 });
 
 const reducer = (state = initialState, { type, payload }) => {
@@ -106,6 +108,13 @@ const reducer = (state = initialState, { type, payload }) => {
     }
     case types.UPDATE_SCROLL_TO_INDEX: {
       return state.set('scrollToIndex', payload);
+    }
+    case types.SELECT_REQUEST: {
+      return state.withMutations((newState) => {
+        newState
+          .set('selectedReqIndex', payload)
+          .set('reqDetail', state.getIn(['data', payload]));
+      });
     }
     default:
       return state;

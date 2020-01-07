@@ -7,7 +7,7 @@ describe('NetworkTableHeader', () => {
   it('renders without crashing', () => {
     mount(
       <table>
-        <NetworkTableHeader />
+        <NetworkTableHeader showAllCols />
       </table>,
     );
   });

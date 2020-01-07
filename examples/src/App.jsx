@@ -1,39 +1,35 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import Tabs from './Components/Tabs';
+import Tabs from './../../src/Components/Common/Tabs';
+import Tab from './../../src/Components/Common/Tab';
 import LoadedData from './Components/LoadedData';
 import DefaultNetworkViewer from './Components/DefaultNetworkViewer';
 import ScrollExample from './Components/ScrollExample';
 import './app.css';
 
-const ITEMS = ['Default', 'Preloaded Data', 'Auto Scroll by timestamp'];
-
-const App = () => {
-  const [key, setKey] = useState('default');
-
-  const renderItem = () => {
-    switch (key) {
-      case 'Preloaded Data':
-        return (<LoadedData />);
-      case 'Scroll':
-        return (<ScrollExample />);
-      case 'Default':
-      default:
-        return (<DefaultNetworkViewer />);
-    }
-  };
-
-  return (
-    <section className="tab-container">
-      <Tabs
-        items={ITEMS}
-        onUpdate={(item) => setKey(item)}
-      />
-      <div className="app-container">
-        {renderItem()}
-      </div>
-    </section>
-  );
-};
+const App = () => (
+  <section className="tab-container">
+    <Tabs defaultSelectedKey="preloaded">
+      <Tab
+        eventKey="default"
+        name="Default"
+      >
+        <DefaultNetworkViewer />
+      </Tab>
+      <Tab
+        eventKey="preloaded"
+        name="Preloaded Data"
+      >
+        <LoadedData />
+      </Tab>
+      <Tab
+        eventKey="scroll"
+        name="Scroll"
+      >
+        <ScrollExample />
+      </Tab>
+    </Tabs>
+  </section>
+);
 
 export default App;

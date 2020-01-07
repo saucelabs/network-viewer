@@ -1,34 +1,34 @@
-export const VIEWER_FIELDS = [
-  {
-    key: 'status',
-    name: 'Status',
-  },
-  {
-    key: 'method',
-    name: 'Method',
-  },
-  {
-    key: 'domain',
-    name: 'Domain',
-  },
-  {
+export const VIEWER_FIELDS = Object.freeze({
+  file: Object.freeze({
     key: 'filename',
     name: 'File',
-  },
-  {
+  }),
+  status: Object.freeze({
+    key: 'status',
+    name: 'Status',
+  }),
+  method: Object.freeze({
+    key: 'method',
+    name: 'Method',
+  }),
+  domain: Object.freeze({
+    key: 'domain',
+    name: 'Domain',
+  }),
+  type: Object.freeze({
     key: 'type',
     name: 'Type',
-  },
-  {
+  }),
+  size: Object.freeze({
     key: 'size',
     name: 'Size',
     unit: 'KB',
-  },
-  {
+  }),
+  time: Object.freeze({
     key: 'time',
     name: 'Time',
-  },
-];
+  }),
+});
 
 export const DEFAULT_FILTER = {
   name: null,

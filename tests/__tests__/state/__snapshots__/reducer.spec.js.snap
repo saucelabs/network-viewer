@@ -1,5 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`network reducer SELECT_REQUEST 1`] = `
+Object {
+  "body": "",
+  "domain": "developer.mozilla.org",
+  "filename": "slice",
+  "index": 0,
+  "method": "GET",
+  "size": 135.04,
+  "startedDateTime": 1571042831592,
+  "status": 200,
+  "time": 35.07000001263805,
+  "timings": Object {
+    "_blocked_queueing": 4.382999992230907,
+    "blocked": 5.496999992230907,
+    "connect": -1,
+    "dns": -1,
+    "receive": 3.252000024076551,
+    "send": 0.2819999999999998,
+    "ssl": -1,
+    "startTime": 0,
+    "wait": 26.03899999633059,
+  },
+  "type": "document",
+  "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+}
+`;
+
 exports[`network reducer UPDATE_DATA 1`] = `
 Array [
   Object {

@@ -5,6 +5,10 @@
   height: 100%;
   overflow: auto;
 
+  &.limited-cols {
+    max-width: $name-col-width;
+  }
+
   .table {
     width: 100%;
     border: 1px solid $white-90;
@@ -16,7 +20,7 @@
       padding: .3rem;
       border: 1px solid $white-90;
     }
-    
+
     thead th {
       border-bottom-width: 2px;
       vertical-align: bottom;
