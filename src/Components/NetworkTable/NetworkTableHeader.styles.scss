@@ -21,6 +21,7 @@ $cell-height: 32px;
 
   &.filename {
     width: 25%;
+    max-width: 250px;
   }
 
   &.domain {
@@ -52,12 +53,13 @@ tbody {
       color: $brand-danger;
     }
 
-    &.highlight {
-      background: $white-80;
-    }
-
     &:hover {
       background: $white-90;
+    }
+
+    &.highlight {
+      background: $dark-gray;
+      color: $white-100;
     }
   }
 }

@@ -6,19 +6,35 @@
   .header-info {
     border-bottom: 1px solid $white-90;
     margin-bottom: $size-m;
+    padding-bottom: $size-m;
 
     &:last-child {
       margin-bottom: 0;
     }
+
+   &.active {
+    .caret-icon {
+      transform: translateY(-1px) translateX(-5px) rotate(180deg);
+    }
+   }
   }
 }
 
 .header-title {
   margin: 0;
+  cursor: pointer;
+  display: inline-block;
+
+  .caret-icon {
+    display: inline-block;
+    height: $size-xs * 2;
+    transform: translateY(-1px) translateX(-5px) rotate(90deg);
+    width: $size-xs * 2;
+  }
 }
 
 .header-detail {
-  padding: $size-m 0 $size-m $size-m;
+  padding: $size-m 0 0 $size-m;
 
   .info-row {
     margin: 0;

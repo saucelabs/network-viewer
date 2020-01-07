@@ -59,7 +59,12 @@ module.exports = {
       ],
     }, {
       test: /\.har$/i,
+      exclude: /node_modules/,
       use: 'raw-loader',
+    }, {
+      test: /\.svg$/,
+      exclude: /node_modules/,
+      loader: 'svg-react-loader',
     }],
   },
   plugins: [
