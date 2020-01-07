@@ -1,12 +1,13 @@
 import { Map, List } from 'immutable';
 
-import { filterData, sortBy, prepareViewerData } from './../../utils';
+import { filterData, sortBy, prepareViewerData, calculateTimings } from './../../utils';
 import * as types from './types';
 
 const initialState = new Map({
   data: new List(),
   actualData: new List(),
   totalNetworkTime: null,
+  dataSummary: new Map(),
   sort: {
     key: 'startedDateTime',
     isAcs: true,
@@ -29,13 +30,27 @@ const reducer = (state = initialState, { type, payload }) => {
     case types.UPDATE_DATA: {
       return state.withMutations((newState) => {
         const sort = state.get('sort');
-        const { data, totalNetworkTime } = prepareViewerData(payload);
+        const {
+          data,
+          totalNetworkTime,
+          totalRequests,
+          totalTransferredSize,
+          cachedSize,
+          totalUncompressedSize,
+        } = prepareViewerData(payload.entries);
         const sortedData = new List(sortBy(data, sort.key, sort.isAcs));
         newState
           .set('error', null)
           .set('data', sortedData)
           .set('actualData', sortedData)
-          .set('totalNetworkTime', totalNetworkTime);
+          .set('totalNetworkTime', totalNetworkTime)
+          .set('dataSummary', new Map({
+            totalRequests,
+            totalTransferredSize,
+            cachedSize,
+            totalUncompressedSize,
+            timings: calculateTimings(payload.pages),
+          }));
       });
     }
     case types.UPDATE_SEARCH: {

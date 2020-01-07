@@ -1,11 +1,12 @@
 import React from 'react';
 
 import NetworkTableHeader from './../Components/NetworkTable/NetworkTableHeader';
+import NetworkTableFooter from './../Components/NetworkTable/NetworkTableFooter';
 import NetworkTableRow from './../Components/NetworkTable/NetworkTableRow';
 import { useNetwork } from './../state/network/Context';
 import ImportHar from './../Components/ImportHAR';
 import Styles from './NetworkTableContainer.styles.scss';
-import ErrorMessage from '../Components/ErrorMessage';
+import ErrorMessage from './../Components/ErrorMessage';
 
 const NetworkTableContainer = () => {
   const { state } = useNetwork();
@@ -14,7 +15,7 @@ const NetworkTableContainer = () => {
   const totalNetworkTime = state.get('totalNetworkTime');
   const error = state.get('error');
   const scrollToIndex = state.get('scrollToIndex');
-
+  const dataSummary = state.get('dataSummary');
   if (error) {
     return (
       <ErrorMessage {...error} />
@@ -28,7 +29,6 @@ const NetworkTableContainer = () => {
       </section>
     );
   }
-
   return (
     <section className={Styles['table-container']}>
       <table className={Styles.table}>
@@ -44,6 +44,9 @@ const NetworkTableContainer = () => {
           ))}
         </tbody>
       </table>
+      <NetworkTableFooter
+        dataSummary={dataSummary}
+      />
     </section>
   );
 };

@@ -16,7 +16,10 @@ const ImportHar = ({ showButton, className }) => {
   const { updateErrorMessage } = actions;
 
   const prepareData = (newNetworkData) => (
-    actions.updateData(newNetworkData.log.entries)
+    actions.updateData({
+      entries: newNetworkData.log.entries,
+      pages: newNetworkData.log.pages,
+    })
   );
 
   const onDrop = (files) => {

@@ -69,6 +69,17 @@ $sm: 768px;
 $md: 992px;
 $lg: 1200px;
 
+// SIZES
+$size-base: 4px;
+
+$size-xs: $size-base; // 4px;
+$size-s: $size-base * 3; // 12px;
+$size-m: $size-base * 4; // 16px;
+$size-l: $size-base * 5; // 20px;
+$size-xl: $size-base * 7; // 28px;
+$size-xxl: $size-base * 9; // 36px;
+$size-xxxl: $size-base * 11; // 44px;
+
 :export {
   // sass-lint:disable-block no-misspelled-properties
   brandBlue: $brand-blue;

@@ -1,0 +1,17 @@
+@import "./../../styles/variables.scss";
+
+.container {
+  height: 35px;
+  width: 100%;
+  background-color: $gray-ligther;
+
+  td {
+    span {
+      margin: $size-xs;
+    }
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+}
