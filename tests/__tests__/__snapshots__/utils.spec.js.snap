@@ -1011,6 +1011,30 @@ exports[`utils getContent 2`] = `undefined`;
 
 exports[`utils getContentType 1`] = `"html"`;
 
+exports[`utils getHeaders 1`] = `
+Object {
+  "request": Array [
+    Object {
+      "name": "a",
+    },
+    Object {
+      "name": "b",
+    },
+  ],
+  "response": Array [
+    Object {
+      "name": "x",
+    },
+    Object {
+      "name": "y",
+    },
+    Object {
+      "name": "z",
+    },
+  ],
+}
+`;
+
 exports[`utils getTimings 1`] = `
 Object {
   "_blocked_queueing": 11.349999986123294,

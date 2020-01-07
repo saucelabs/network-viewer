@@ -110,4 +110,15 @@ describe('utils', () => {
       info: preparedMockData.get(1),
     })).toMatchSnapshot();
   });
+
+  it('getHeaders', () => {
+    expect(utils.getHeaders({
+      request: {
+        headers: [{ name: 'b' }, { name: 'a' }],
+      },
+      response: {
+        headers: [{ name: 'z' }, { name: 'y' }, { name: 'x' }],
+      },
+    })).toMatchSnapshot();
+  });
 });
