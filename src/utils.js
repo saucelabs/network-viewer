@@ -132,7 +132,6 @@ export const prepareViewerData = (entries) => {
   const totalNetworkTime = new Date(lastEntryTime).getTime() -
     new Date(firstEntryTime).getTime() +
     data[data.length - 1].timings.receive;
-  console.log(data);
   const finishTime = calculateFinishTime(data);
   return {
     totalNetworkTime,
