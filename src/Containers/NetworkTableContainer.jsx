@@ -2,11 +2,12 @@ import React from 'react';
 import classNames from 'classnames/bind';
 
 import NetworkTableHeader from './../Components/NetworkTable/NetworkTableHeader';
+import NetworkTableFooter from './../Components/NetworkTable/NetworkTableFooter';
 import NetworkTableRow from './../Components/NetworkTable/NetworkTableRow';
 import { useNetwork } from './../state/network/Context';
 import ImportHar from './../Components/ImportHAR';
 import Styles from './NetworkTableContainer.styles.scss';
-import ErrorMessage from '../Components/ErrorMessage';
+import ErrorMessage from './../Components/ErrorMessage';
 
 const context = classNames.bind(Styles);
 const NetworkTableContainer = () => {
@@ -16,6 +17,7 @@ const NetworkTableContainer = () => {
   const totalNetworkTime = state.get('totalNetworkTime');
   const error = state.get('error');
   const scrollToIndex = state.get('scrollToIndex');
+  const dataSummary = state.get('dataSummary');
   const selectedReqIndex = state.get('selectedReqIndex');
   const showAllCols = !(selectedReqIndex || selectedReqIndex === 0);
   const containerClassName = context('table-container', {
@@ -55,6 +57,7 @@ const NetworkTableContainer = () => {
             />
           ))}
         </tbody>
+        <NetworkTableFooter dataSummary={dataSummary} />
       </table>
     </section>
   );

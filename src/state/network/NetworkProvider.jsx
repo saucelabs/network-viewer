@@ -14,7 +14,10 @@ const NetworkProvider = (props) => {
 
   useEffect(() => {
     if (data && data.log && data.log.entries) {
-      updateData(dispatch)(data.log.entries);
+      updateData(dispatch)({
+        entries: data.log.entries,
+        pages: data.log.pages,
+      });
     }
   }, [data]);
 

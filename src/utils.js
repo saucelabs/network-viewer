@@ -56,6 +56,40 @@ export const getContent = ({ mimeType, text }) => {
   return text;
 };
 
+export const getEntryTransferredSize = ({ response }) => {
+  const { bodySize, _transferSize } = response;
+  if (_transferSize > -1) {
+    return _transferSize;
+  }
+
+  if (bodySize > -1) {
+    return bodySize;
+  }
+  return -1;
+};
+
+export const getEntryUncompressedSize = ({ response }) => {
+  const { bodySize, _transferSize, content: { size } } = response;
+  if (size > 0) {
+    return size;
+  }
+  if (_transferSize > -1) {
+    return _transferSize;
+  }
+  if (bodySize > -1) {
+    return bodySize;
+  }
+  return -1;
+};
+
+export const calculateFinishTime = (data) => {
+  const finishTimes = data.map(({ timings }) => (
+    Object.values(timings).reduce((acc, durationInMS) => (
+      acc + (durationInMS > -1 ? durationInMS : 0)
+    ), 0)));
+  return Math.max(...finishTimes);
+};
+
 export const sortHeaders = (current, next) => {
   if (current.name < next.name) {
     return -1;
@@ -71,29 +105,41 @@ export const getHeaders = (entry) => ({
 export const prepareViewerData = (entries) => {
   const firstEntryTime = entries[0].startedDateTime;
   const lastEntryTime = entries[entries.length - 1].startedDateTime;
+  let totalTransferredSize = 0;
+  let totalUncompressedSize = 0;
   const data = entries
     .filter((entry) => entry.response && getUrlInfo(entry.request.url).domain)
-    .map((entry, index) => ({
-      index,
-      status: entry.response.status,
-      method: entry.request.method,
-      size: parseSize(entry.response),
-      startedDateTime: new Date(entry.startedDateTime).getTime(),
-      type: entry._resourceType || getContentType(entry.response.headers),
-      timings: getTimings(entry, firstEntryTime),
-      body: getContent(entry.response.content),
-      time: entry.time,
-      serverIPAddress: entry.serverIPAddress || ':80',
-      headers: getHeaders(entry),
-      ...getUrlInfo(entry.request.url),
-    }));
+    .map((entry, index) => {
+      totalTransferredSize += getEntryTransferredSize(entry);
+      totalUncompressedSize += getEntryUncompressedSize(entry);
+      return {
+        index,
+        status: entry.response.status,
+        method: entry.request.method,
+        size: parseSize(entry.response),
+        startedDateTime: new Date(entry.startedDateTime).getTime(),
+        type: entry._resourceType || getContentType(entry.response.headers),
+        timings: getTimings(entry, firstEntryTime),
+        body: getContent(entry.response.content),
+        time: entry.time,
+        serverIPAddress: entry.serverIPAddress || ':80',
+        headers: getHeaders(entry),
+        ...getUrlInfo(entry.request.url),
+      };
+    });
 
+  const totalRequests = data.length;
   const totalNetworkTime = new Date(lastEntryTime).getTime() -
     new Date(firstEntryTime).getTime() +
     data[data.length - 1].timings.receive;
+  const finishTime = calculateFinishTime(data);
   return {
     totalNetworkTime,
     data,
+    totalRequests,
+    totalTransferredSize,
+    totalUncompressedSize,
+    finishTime,
   };
 };
 
@@ -222,3 +268,29 @@ export const findIndexByTimeStamp = (data, exactTimestamp) => (
       { value: currentValue, index: currentIndex } : { value, index }
   ), { value: 0, index: 0 }).index
 );
+
+export const calculateTimings = (pages) => (
+  pages.reduce(({ DOMContentLoaded, onLoad }, { pageTimings }) => ({
+    DOMContentLoaded: DOMContentLoaded + pageTimings.onContentLoad,
+    onLoad: onLoad + pageTimings.onLoad,
+  }), { DOMContentLoaded: 0, onLoad: 0 }));
+
+export const formatSize = (bytes) => {
+  if (bytes < 1024) {
+    return `${bytes}B`;
+  }
+  if (bytes < (1024 ** 2)) {
+    return `${Math.round(bytes / 1024)}KB`;
+  }
+  return `${Math.round((bytes / (1024 ** 2)))}MB`;
+};
+
+export const formatTime = (time) => {
+  if (time < 1000) {
+    return `${Math.round(time)}ms`;
+  }
+  if (time < 60000) {
+    return `${Math.ceil(time / 10) / 100}s`;
+  }
+  return `${(Math.ceil(time / 60000) * 100) / 100}m`;
+};

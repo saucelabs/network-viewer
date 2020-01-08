@@ -1867,7 +1867,11 @@ Object {
       "url": "https://developer.mozilla.org/static/build/styles/react-mdn.c66d8d89d98e.css",
     },
   ],
+  "finishTime": 116.44500002544373,
   "totalNetworkTime": 53.271999994060025,
+  "totalRequests": 5,
+  "totalTransferredSize": 130535,
+  "totalUncompressedSize": 355292,
 }
 `;
 
