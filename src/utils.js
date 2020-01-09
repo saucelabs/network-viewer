@@ -5,12 +5,14 @@ import { TIMINGS } from './constants';
 export const getUrlInfo = (url) => {
   const urlInfo = new URL(url);
   const pathSplit = urlInfo.pathname.split('/');
-  const fileName = pathSplit[pathSplit.length - 1].trim() ?
-    pathSplit[pathSplit.length - 1] : pathSplit[pathSplit.length - 2];
+  const fileName = (
+    pathSplit[pathSplit.length - 1].trim() ?
+      pathSplit[pathSplit.length - 1] : pathSplit[pathSplit.length - 2]
+  ) + urlInfo.search;
 
   return {
     domain: urlInfo.host,
-    filename: fileName + urlInfo.search,
+    filename: fileName || urlInfo.href,
     url: urlInfo.href,
   };
 };

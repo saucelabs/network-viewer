@@ -14,6 +14,7 @@ const Tabs = ({
   navTabsClassName,
   tabsContainerClassName,
   navLinkClassName,
+  activeClassName,
 }) => {
   const [items, updateItems] = useState([]);
 
@@ -54,15 +55,17 @@ const Tabs = ({
   return (
     <>
       <nav className={context('nav-tabs', navTabsClassName)}>
-        {items.map(({ key: item }, index) => (
+        {items.map(({ key: item, name }, index) => (
           <a
             key={item}
-            className={context('tab-item', navLinkClassName, { active: activeTab === item })}
+            className={context('tab-item', navLinkClassName, {
+              [activeClassName || Styles.active]: activeTab === item,
+            })}
             onClick={() => handleUpdate(item)}
             role="tab"
             tabIndex={index}
           >
-            {item}
+            {name}
           </a>
         ))}
       </nav>
@@ -74,6 +77,7 @@ const Tabs = ({
 };
 
 Tabs.propTypes = {
+  activeClassName: PropTypes.string,
   children: PropTypes.node.isRequired,
   defaultSelectedKey: PropTypes.string,
   navLinkClassName: PropTypes.string,
@@ -84,6 +88,7 @@ Tabs.propTypes = {
 };
 
 Tabs.defaultProps = {
+  activeClassName: null,
   defaultSelectedKey: null,
   navLinkClassName: null,
   navTabsClassName: null,

@@ -4,7 +4,8 @@ import { useNetwork } from './../state/network/Context';
 import Styles from './ReqDetailContainer.styles.scss';
 import Tabs from '../Components/Common/Tabs';
 import Tab from '../Components/Common/Tab';
-import Headers from '../Components/ReqDetail/Headers';
+import Headers from './../Components/ReqDetail/Headers';
+import IconClose from './../Icons/icn-close-sign.svg';
 
 const ReqDetailContainer = () => {
   const { actions, state } = useNetwork();
@@ -21,10 +22,12 @@ const ReqDetailContainer = () => {
         onClick={handleCloseClick}
         type="button"
       >
-        x
+        <IconClose className={Styles['close-icon']} />
       </button>
       <Tabs
+        activeClassName={Styles.active}
         defaultSelectedKey="headers"
+        navLinkClassName={Styles['tab-link']}
         navTabsClassName={Styles['nav-tabs']}
         tabsContainerClassName={Styles['tabs-container']}
       >

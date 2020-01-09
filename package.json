@@ -69,6 +69,7 @@
     "sass": "^1.23.6",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
+    "svg-react-loader": "^0.4.6",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"

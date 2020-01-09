@@ -189,3 +189,18 @@ export const GENERAL_HEADERS = Object.freeze({
     name: 'Remote Address',
   }),
 });
+
+export const HEADERS_TITLES = Object.freeze({
+  general: Object.freeze({
+    key: 'general',
+    name: 'General',
+  }),
+  response: Object.freeze({
+    key: 'response',
+    name: 'Response Headers',
+  }),
+  request: Object.freeze({
+    key: 'request',
+    name: 'Request Headers',
+  }),
+});

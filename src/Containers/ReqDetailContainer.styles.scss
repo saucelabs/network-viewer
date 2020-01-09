@@ -9,10 +9,24 @@ $tab-height: 35px;
   overflow: auto;
   background: $white-100;
   position: relative;
+  width: calc(100% - #{$name-col-width});
 }
 
 .nav-tabs {
   padding-left: $close-button-width;
+  border: 0;
+}
+
+.tab-link {
+  color: $white-33;
+  border: 0;
+  border-bottom: 2px solid transparent;
+
+  &.active {
+    border: 0;
+    color: $white-20;
+    border-bottom: 2px solid $white-20;
+  }
 }
 
 .close-button {
@@ -20,12 +34,29 @@ $tab-height: 35px;
   left: $size-m / 2;
   top: $size-m / 2;
   cursor: pointer;
+  background: transparent;
+  border: 0;
+
+  .close-icon {
+    height: $size-xs * 2;
+    width: $size-xs * 2;
+
+    g {
+      stroke: $white-33;
+    }
+  }
+
+  &:hover {
+    .close-icon g {
+      stroke: $white-0;
+    }
+  }
 }
 
 .tabs-container {
   display: flex;
   width: 100%;
   padding: $size-m;
-  height: calc(100% - $tab-height);
+  height: calc(100% - #{$tab-height});
   overflow: auto;
 }
