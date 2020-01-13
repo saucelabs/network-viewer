@@ -156,6 +156,8 @@ export const prepareViewerData = (entries) => {
         time: entry.time,
         serverIPAddress: entry.serverIPAddress || ':80',
         headers: getHeaders(entry),
+        transferredSize: getEntryTransferredSize(entry),
+        uncompressedSize: getEntryUncompressedSize(entry),
         ...getUrlInfo(entry.request.url),
       };
     });
@@ -306,3 +308,15 @@ export const calculateTimings = (pages) => (
     DOMContentLoaded: DOMContentLoaded + pageTimings.onContentLoad,
     onLoad: onLoad + pageTimings.onLoad,
   }), { DOMContentLoaded: 0, onLoad: 0 }));
+
+export const getSummary = (data) => (
+  data.reduce((acc, req) => {
+    acc.totalTransferredSize += req.transferredSize;
+    acc.totalUncompressedSize += req.uncompressedSize;
+    return acc;
+  }, {
+    totalTransferredSize: 0,
+    totalUncompressedSize: 0,
+    totalRequests: data.size,
+  })
+);

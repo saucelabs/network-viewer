@@ -1,4 +1,5 @@
 /* eslint no-useless-escape: 0 */
+import { List } from 'immutable';
 
 import * as utils from './../../src/utils';
 import networkDataMock from './../__fixtures__/network.json';
@@ -156,6 +157,22 @@ describe('utils', () => {
       expect(utils.roundOff(50.1234)).toBe(50.1);
       expect(utils.roundOff(50.1634)).toBe(50.2);
       expect(utils.roundOff(50.1634, 2)).toBe(50.16);
+    });
+  });
+
+  describe('getSummary', () => {
+    it('should return correct value', () => {
+      const data = new List([{
+        transferredSize: 1343,
+        uncompressedSize: 2400,
+      }, {
+        transferredSize: 2090,
+        uncompressedSize: 3000,
+      }, {
+        transferredSize: 200,
+        uncompressedSize: 650,
+      }]);
+      expect(utils.getSummary(data)).toMatchSnapshot();
     });
   });
 });

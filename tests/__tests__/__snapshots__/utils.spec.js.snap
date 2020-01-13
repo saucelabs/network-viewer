@@ -207,7 +207,9 @@ Array [
       "startTime": 49,
       "wait": 35.81200000759028,
     },
+    "transferredSize": 34538,
     "type": "font",
+    "uncompressedSize": 34064,
     "url": "https://developer.mozilla.org/static/fonts/locales/ZillaSlab-Bold.subset.e96c15f68c68.woff2",
   },
 ]
@@ -379,7 +381,9 @@ Array [
       "startTime": 0,
       "wait": 26.03899999633059,
     },
+    "transferredSize": 30825,
     "type": "document",
+    "uncompressedSize": 138279,
     "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
   },
   Object {
@@ -534,7 +538,9 @@ Array [
       "startTime": 49,
       "wait": 18.80099998585507,
     },
+    "transferredSize": 34271,
     "type": "font",
+    "uncompressedSize": 33808,
     "url": "https://developer.mozilla.org/static/fonts/locales/ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
   },
   Object {
@@ -689,7 +695,9 @@ Array [
       "startTime": 49,
       "wait": 35.81200000759028,
     },
+    "transferredSize": 34538,
     "type": "font",
+    "uncompressedSize": 34064,
     "url": "https://developer.mozilla.org/static/fonts/locales/ZillaSlab-Bold.subset.e96c15f68c68.woff2",
   },
   Object {
@@ -844,7 +852,9 @@ Array [
       "startTime": 51,
       "wait": 36.02600000113249,
     },
+    "transferredSize": 1418,
     "type": "stylesheet",
+    "uncompressedSize": 2829,
     "url": "https://developer.mozilla.org/static/build/styles/react-header.2a659f6ad280.css",
   },
   Object {
@@ -999,7 +1009,9 @@ Array [
       "startTime": 52,
       "wait": 37.96100001042895,
     },
+    "transferredSize": 29483,
     "type": "stylesheet",
+    "uncompressedSize": 146312,
     "url": "https://developer.mozilla.org/static/build/styles/react-mdn.c66d8d89d98e.css",
   },
 ]
@@ -1032,6 +1044,14 @@ Object {
       "name": "z",
     },
   ],
+}
+`;
+
+exports[`utils getSummary should return correct value 1`] = `
+Object {
+  "totalRequests": 3,
+  "totalTransferredSize": 3633,
+  "totalUncompressedSize": 6050,
 }
 `;
 
@@ -1243,7 +1263,9 @@ Object {
         "startTime": 0,
         "wait": 26.03899999633059,
       },
+      "transferredSize": 30825,
       "type": "document",
+      "uncompressedSize": 138279,
       "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
     },
     Object {
@@ -1398,7 +1420,9 @@ Object {
         "startTime": 49,
         "wait": 18.80099998585507,
       },
+      "transferredSize": 34271,
       "type": "font",
+      "uncompressedSize": 33808,
       "url": "https://developer.mozilla.org/static/fonts/locales/ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
     },
     Object {
@@ -1553,7 +1577,9 @@ Object {
         "startTime": 49,
         "wait": 35.81200000759028,
       },
+      "transferredSize": 34538,
       "type": "font",
+      "uncompressedSize": 34064,
       "url": "https://developer.mozilla.org/static/fonts/locales/ZillaSlab-Bold.subset.e96c15f68c68.woff2",
     },
     Object {
@@ -1708,7 +1734,9 @@ Object {
         "startTime": 51,
         "wait": 36.02600000113249,
       },
+      "transferredSize": 1418,
       "type": "stylesheet",
+      "uncompressedSize": 2829,
       "url": "https://developer.mozilla.org/static/build/styles/react-header.2a659f6ad280.css",
     },
     Object {
@@ -1863,7 +1891,9 @@ Object {
         "startTime": 52,
         "wait": 37.96100001042895,
       },
+      "transferredSize": 29483,
       "type": "stylesheet",
+      "uncompressedSize": 146312,
       "url": "https://developer.mozilla.org/static/build/styles/react-mdn.c66d8d89d98e.css",
     },
   ],
@@ -2041,7 +2071,9 @@ Array [
       "startTime": 0,
       "wait": 26.03899999633059,
     },
+    "transferredSize": 30825,
     "type": "document",
+    "uncompressedSize": 138279,
     "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
   },
   Object {
@@ -2196,7 +2228,9 @@ Array [
       "startTime": 52,
       "wait": 37.96100001042895,
     },
+    "transferredSize": 29483,
     "type": "stylesheet",
+    "uncompressedSize": 146312,
     "url": "https://developer.mozilla.org/static/build/styles/react-mdn.c66d8d89d98e.css",
   },
   Object {
@@ -2351,7 +2385,9 @@ Array [
       "startTime": 51,
       "wait": 36.02600000113249,
     },
+    "transferredSize": 1418,
     "type": "stylesheet",
+    "uncompressedSize": 2829,
     "url": "https://developer.mozilla.org/static/build/styles/react-header.2a659f6ad280.css",
   },
   Object {
@@ -2506,7 +2542,9 @@ Array [
       "startTime": 49,
       "wait": 18.80099998585507,
     },
+    "transferredSize": 34271,
     "type": "font",
+    "uncompressedSize": 33808,
     "url": "https://developer.mozilla.org/static/fonts/locales/ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
   },
   Object {
@@ -2661,7 +2699,9 @@ Array [
       "startTime": 49,
       "wait": 35.81200000759028,
     },
+    "transferredSize": 34538,
     "type": "font",
+    "uncompressedSize": 34064,
     "url": "https://developer.mozilla.org/static/fonts/locales/ZillaSlab-Bold.subset.e96c15f68c68.woff2",
   },
 ]
