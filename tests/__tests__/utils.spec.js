@@ -113,15 +113,15 @@ describe('utils', () => {
 
   describe('formatSize', () => {
     it('converts Bytes', () => {
-      expect(utils.formatSize(50)).toBe('50B');
+      expect(utils.formatSize(50)).toBe('50 B');
     });
 
     it('converts Kilobytes', () => {
-      expect(utils.formatSize(90001)).toBe('88KB');
+      expect(utils.formatSize(90001)).toBe('87.9 KB');
     });
 
     it('converts Megabytes', () => {
-      expect(utils.formatSize(4448576)).toBe('4MB');
+      expect(utils.formatSize(4448576)).toBe('4.2 MB');
     });
   });
 
