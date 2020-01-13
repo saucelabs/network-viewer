@@ -149,4 +149,13 @@ describe('utils', () => {
       },
     })).toMatchSnapshot();
   });
+
+  describe('roundOff', () => {
+    it('should return correct value', () => {
+      expect(utils.roundOff(50)).toBe(50);
+      expect(utils.roundOff(50.1234)).toBe(50.1);
+      expect(utils.roundOff(50.1634)).toBe(50.2);
+      expect(utils.roundOff(50.1634, 2)).toBe(50.16);
+    });
+  });
 });
