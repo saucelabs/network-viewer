@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 
@@ -6,44 +6,48 @@ import Styles from './Dropdown.styles.scss';
 import Button from './Button';
 
 const context = classNames.bind(Styles);
-const dropdownItemKey = 'data-network-viewer-dropdown-item';
-const dropdownItemID = {
-  [dropdownItemKey]: true,
-};
 
 const Dropdown = ({ items, selected, onChange, className }) => {
   const [isExpand, setExpand] = useState(false);
   const [selectedKey, setSelection] = useState(selected !== null ? selected : items[0]);
+  const dropdownItemsRef = useRef(null);
+  const isExpandRef = useRef(isExpand);
+
+  const updateToggle = (toggleState) => {
+    setExpand(toggleState);
+    isExpandRef.current = toggleState;
+  };
 
   const handleItemSelection = (key) => {
     setSelection(key);
     onChange(key);
-    setExpand(false);
+    updateToggle(false);
+  };
+
+  const removeFocus = ({ target }) => {
+    if (isExpandRef.current && !dropdownItemsRef.current.contains(target)) {
+      updateToggle(false);
+    }
   };
 
   useEffect(() => {
-    const removeFocus = ({ target }) => {
-      if (!(target && target.getAttribute(dropdownItemKey))) {
-        setExpand(false);
-      }
-    };
-
-    if (isExpand) {
-      document.body.addEventListener('click', removeFocus);
-    }
+    window.addEventListener('click', removeFocus);
 
     return () => {
-      document.body.removeEventListener('click', removeFocus);
+      window.removeEventListener('click', removeFocus);
     };
-  }, [isExpand]);
+  }, []);
 
   return (
-    <span className={context('dropdown-container', className, { expanded: isExpand })}>
+    <span
+      ref={dropdownItemsRef}
+      className={context('dropdown-container', className, { expanded: isExpand })}
+    >
       <Button
         category="default"
         className={context('dropdown-toggle', { active: isExpand })}
         material
-        onClick={() => setExpand(!isExpand)}
+        onClick={() => updateToggle(!isExpand)}
         raised={isExpand}
         size="sm"
       >
@@ -61,7 +65,6 @@ const Dropdown = ({ items, selected, onChange, className }) => {
                 onClick={() => handleItemSelection(text)}
                 role="button"
                 tabIndex={index}
-                {...dropdownItemID}
               >
                 {text}
               </span>
