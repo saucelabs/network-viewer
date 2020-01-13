@@ -57,7 +57,10 @@ const NetworkTableContainer = () => {
             />
           ))}
         </tbody>
-        <NetworkTableFooter dataSummary={dataSummary} />
+        <NetworkTableFooter
+          dataSummary={dataSummary}
+          showAllInfo={showAllCols}
+        />
       </table>
     </section>
   );
