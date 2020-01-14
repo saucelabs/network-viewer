@@ -34,6 +34,7 @@ describe('network reducer', () => {
     });
     expect(state.get('data').toJS()).toMatchSnapshot();
     expect(state.get('search')).toMatchSnapshot();
+    expect(state.get('dataSummary')).toMatchSnapshot();
   });
 
   it('UPDATE_FILTER', () => {
@@ -50,6 +51,7 @@ describe('network reducer', () => {
     });
     expect(state.get('data').toJS()).toMatchSnapshot();
     expect(state.get('filter')).toMatchSnapshot();
+    expect(state.get('dataSummary')).toMatchSnapshot();
   });
 
   it('UPDATE_SORT', () => {

@@ -2,6 +2,31 @@ import { TIMINGS } from './constants';
 
 /* eslint no-underscore-dangle: 0 */
 
+export const roundOff = (value, decimal = 1) => {
+  const base = 10 ** decimal;
+  return Math.round(value * base) / base;
+};
+
+export const formatSize = (bytes) => {
+  if (bytes < 1024) {
+    return `${roundOff(bytes)} B`;
+  }
+  if (bytes < (1024 ** 2)) {
+    return `${roundOff(bytes / 1024)} KB`;
+  }
+  return `${roundOff(bytes / (1024 ** 2))} MB`;
+};
+
+export const formatTime = (time) => {
+  if (time < 1000) {
+    return `${Math.round(time)}ms`;
+  }
+  if (time < 60000) {
+    return `${Math.ceil(time / 10) / 100}s`;
+  }
+  return `${(Math.ceil(time / 60000) * 100) / 100}m`;
+};
+
 export const getUrlInfo = (url) => {
   const urlInfo = new URL(url);
   const pathSplit = urlInfo.pathname.split('/');
@@ -17,17 +42,22 @@ export const getUrlInfo = (url) => {
   };
 };
 
-export const parseSize = ({ headers, content }) => {
+export const parseSize = ({ bodySize, _transferSize, headers, content }) => {
   if (content && content.size) {
-    return Number((content.size / 1024).toFixed(2));
+    return formatSize(content.size);
   }
-
+  if (_transferSize > -1) {
+    return formatSize(_transferSize);
+  }
+  if (bodySize > -1) {
+    return formatSize(bodySize);
+  }
   const contentInfo = headers.find(({ name }) => ['content-length', 'Content-Length'].includes(name));
   if (!contentInfo) {
     return 0;
   }
 
-  return Number((contentInfo.value / 1024).toFixed(2));
+  return formatSize(contentInfo.value);
 };
 
 export const getContentType = (headers) => {
@@ -126,6 +156,8 @@ export const prepareViewerData = (entries) => {
         time: entry.time,
         serverIPAddress: entry.serverIPAddress || ':80',
         headers: getHeaders(entry),
+        transferredSize: getEntryTransferredSize(entry),
+        uncompressedSize: getEntryUncompressedSize(entry),
         ...getUrlInfo(entry.request.url),
       };
     });
@@ -277,22 +309,14 @@ export const calculateTimings = (pages) => (
     onLoad: onLoad + pageTimings.onLoad,
   }), { DOMContentLoaded: 0, onLoad: 0 }));
 
-export const formatSize = (bytes) => {
-  if (bytes < 1024) {
-    return `${bytes}B`;
-  }
-  if (bytes < (1024 ** 2)) {
-    return `${Math.round(bytes / 1024)}KB`;
-  }
-  return `${Math.round((bytes / (1024 ** 2)))}MB`;
-};
-
-export const formatTime = (time) => {
-  if (time < 1000) {
-    return `${Math.round(time)}ms`;
-  }
-  if (time < 60000) {
-    return `${Math.ceil(time / 10) / 100}s`;
-  }
-  return `${(Math.ceil(time / 60000) * 100) / 100}m`;
-};
+export const getSummary = (data) => (
+  data.reduce((acc, req) => {
+    acc.totalTransferredSize += req.transferredSize;
+    acc.totalUncompressedSize += req.uncompressedSize;
+    return acc;
+  }, {
+    totalTransferredSize: 0,
+    totalUncompressedSize: 0,
+    totalRequests: data.size,
+  })
+);

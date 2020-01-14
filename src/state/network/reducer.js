@@ -1,6 +1,6 @@
 import { Map, List } from 'immutable';
 
-import { filterData, sortBy, prepareViewerData, calculateTimings } from './../../utils';
+import { filterData, sortBy, prepareViewerData, calculateTimings, getSummary } from './../../utils';
 import * as types from './types';
 
 const initialState = new Map({
@@ -58,24 +58,34 @@ const reducer = (state = initialState, { type, payload }) => {
     }
     case types.UPDATE_SEARCH: {
       return state.withMutations((newState) => {
+        const data = filterData({
+          data: state.get('actualData'),
+          filter: state.get('filter'),
+          search: payload,
+        });
+        const summary = getSummary(data);
         newState
           .set('search', payload)
-          .set('data', filterData({
-            data: state.get('actualData'),
-            filter: state.get('filter'),
-            search: payload,
-          }));
+          .set('data', data)
+          .setIn(['dataSummary', 'totalRequests'], summary.totalRequests)
+          .setIn(['dataSummary', 'totalTransferredSize'], summary.totalTransferredSize)
+          .setIn(['dataSummary', 'totalUncompressedSize'], summary.totalUncompressedSize);
       });
     }
     case types.UPDATE_FILTER: {
       return state.withMutations((newState) => {
+        const data = filterData({
+          data: state.get('actualData'),
+          filter: payload,
+          search: state.get('search'),
+        });
+        const summary = getSummary(data);
         newState
           .set('filter', payload)
-          .set('data', filterData({
-            data: state.get('actualData'),
-            filter: payload,
-            search: state.get('search'),
-          }));
+          .set('data', data)
+          .setIn(['dataSummary', 'totalRequests'], summary.totalRequests)
+          .setIn(['dataSummary', 'totalTransferredSize'], summary.totalTransferredSize)
+          .setIn(['dataSummary', 'totalUncompressedSize'], summary.totalUncompressedSize);
       });
     }
     case types.UPDATE_SORT: {

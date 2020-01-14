@@ -1,4 +1,5 @@
 /* eslint no-useless-escape: 0 */
+import { List } from 'immutable';
 
 import * as utils from './../../src/utils';
 import networkDataMock from './../__fixtures__/network.json';
@@ -113,15 +114,15 @@ describe('utils', () => {
 
   describe('formatSize', () => {
     it('converts Bytes', () => {
-      expect(utils.formatSize(50)).toBe('50B');
+      expect(utils.formatSize(50)).toBe('50 B');
     });
 
     it('converts Kilobytes', () => {
-      expect(utils.formatSize(90001)).toBe('88KB');
+      expect(utils.formatSize(90001)).toBe('87.9 KB');
     });
 
     it('converts Megabytes', () => {
-      expect(utils.formatSize(4448576)).toBe('4MB');
+      expect(utils.formatSize(4448576)).toBe('4.2 MB');
     });
   });
 
@@ -148,5 +149,30 @@ describe('utils', () => {
         headers: [{ name: 'z' }, { name: 'y' }, { name: 'x' }],
       },
     })).toMatchSnapshot();
+  });
+
+  describe('roundOff', () => {
+    it('should return correct value', () => {
+      expect(utils.roundOff(50)).toBe(50);
+      expect(utils.roundOff(50.1234)).toBe(50.1);
+      expect(utils.roundOff(50.1634)).toBe(50.2);
+      expect(utils.roundOff(50.1634, 2)).toBe(50.16);
+    });
+  });
+
+  describe('getSummary', () => {
+    it('should return correct value', () => {
+      const data = new List([{
+        transferredSize: 1343,
+        uncompressedSize: 2400,
+      }, {
+        transferredSize: 2090,
+        uncompressedSize: 3000,
+      }, {
+        transferredSize: 200,
+        uncompressedSize: 650,
+      }]);
+      expect(utils.getSummary(data)).toMatchSnapshot();
+    });
   });
 });

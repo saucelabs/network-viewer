@@ -22,7 +22,6 @@ export const VIEWER_FIELDS = Object.freeze({
   size: Object.freeze({
     key: 'size',
     name: 'Size',
-    unit: 'KB',
   }),
   time: Object.freeze({
     key: 'time',

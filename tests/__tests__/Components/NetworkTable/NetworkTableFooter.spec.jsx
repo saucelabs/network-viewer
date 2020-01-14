@@ -8,15 +8,17 @@ describe('NetworkTableFooter', () => {
   it('renders without crashing', () => {
     mount(
       <table>
-        <NetworkTableFooter dataSummary={new Map({
-          totalRequests: 20,
-          totalTransferredSize: 2034,
-          totalUncompressedSize: 1035,
-          timings: {
-            onLoad: 999,
-            DOMContentLoaded: 2000,
-          },
-        })}
+        <NetworkTableFooter
+          dataSummary={new Map({
+            totalRequests: 20,
+            totalTransferredSize: 2034,
+            totalUncompressedSize: 1035,
+            timings: {
+              onLoad: 999,
+              DOMContentLoaded: 2000,
+            },
+          })}
+          showAllInfo
         />
       </table>,
     );
