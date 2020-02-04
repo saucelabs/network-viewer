@@ -202,4 +202,8 @@ export const HEADERS_TITLES = Object.freeze({
     key: 'request',
     name: 'Request Headers',
   }),
+  queryString: Object.freeze({
+    key: 'queryString',
+    name: 'Query String Parameters',
+  }),
 });
