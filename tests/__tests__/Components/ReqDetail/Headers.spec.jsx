@@ -30,6 +30,7 @@ describe('Headers', () => {
       headers: {
         response: [{ name: 'Connection', value: 'keep-alive' }],
         request: [{ name: 'Connection', value: 'keep-alive' }],
+        queryString: [],
       },
     },
     maxTime: 5000,
