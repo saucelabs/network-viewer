@@ -6,6 +6,7 @@ Object {
   "domain": "developer.mozilla.org",
   "filename": "slice",
   "headers": Object {
+    "queryString": Array [],
     "request": Array [
       Object {
         "name": ":authority",
@@ -179,6 +180,7 @@ Array [
     "domain": "developer.mozilla.org",
     "filename": "slice",
     "headers": Object {
+      "queryString": Array [],
       "request": Array [
         Object {
           "name": ":authority",
@@ -348,6 +350,7 @@ Array [
     "domain": "developer.mozilla.org",
     "filename": "ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
     "headers": Object {
+      "queryString": Array [],
       "request": Array [
         Object {
           "name": ":authority",
@@ -505,6 +508,7 @@ Array [
     "domain": "developer.mozilla.org",
     "filename": "ZillaSlab-Bold.subset.e96c15f68c68.woff2",
     "headers": Object {
+      "queryString": Array [],
       "request": Array [
         Object {
           "name": ":authority",
@@ -662,6 +666,7 @@ Array [
     "domain": "developer.mozilla.org",
     "filename": "react-header.2a659f6ad280.css",
     "headers": Object {
+      "queryString": Array [],
       "request": Array [
         Object {
           "name": ":authority",
@@ -819,6 +824,7 @@ Array [
     "domain": "developer.mozilla.org",
     "filename": "react-mdn.c66d8d89d98e.css",
     "headers": Object {
+      "queryString": Array [],
       "request": Array [
         Object {
           "name": ":authority",
@@ -983,6 +989,7 @@ Array [
     "domain": "developer.mozilla.org",
     "filename": "slice",
     "headers": Object {
+      "queryString": Array [],
       "request": Array [
         Object {
           "name": ":authority",
@@ -1152,6 +1159,7 @@ Array [
     "domain": "developer.mozilla.org",
     "filename": "ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
     "headers": Object {
+      "queryString": Array [],
       "request": Array [
         Object {
           "name": ":authority",
@@ -1309,6 +1317,7 @@ Array [
     "domain": "developer.mozilla.org",
     "filename": "ZillaSlab-Bold.subset.e96c15f68c68.woff2",
     "headers": Object {
+      "queryString": Array [],
       "request": Array [
         Object {
           "name": ":authority",
@@ -1466,6 +1475,7 @@ Array [
     "domain": "developer.mozilla.org",
     "filename": "react-header.2a659f6ad280.css",
     "headers": Object {
+      "queryString": Array [],
       "request": Array [
         Object {
           "name": ":authority",
@@ -1623,6 +1633,7 @@ Array [
     "domain": "developer.mozilla.org",
     "filename": "react-mdn.c66d8d89d98e.css",
     "headers": Object {
+      "queryString": Array [],
       "request": Array [
         Object {
           "name": ":authority",
@@ -1819,6 +1830,7 @@ Array [
     "domain": "developer.mozilla.org",
     "filename": "slice",
     "headers": Object {
+      "queryString": Array [],
       "request": Array [
         Object {
           "name": ":authority",
@@ -1988,6 +2000,7 @@ Array [
     "domain": "developer.mozilla.org",
     "filename": "react-mdn.c66d8d89d98e.css",
     "headers": Object {
+      "queryString": Array [],
       "request": Array [
         Object {
           "name": ":authority",
@@ -2145,6 +2158,7 @@ Array [
     "domain": "developer.mozilla.org",
     "filename": "react-header.2a659f6ad280.css",
     "headers": Object {
+      "queryString": Array [],
       "request": Array [
         Object {
           "name": ":authority",
@@ -2302,6 +2316,7 @@ Array [
     "domain": "developer.mozilla.org",
     "filename": "ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
     "headers": Object {
+      "queryString": Array [],
       "request": Array [
         Object {
           "name": ":authority",
@@ -2459,6 +2474,7 @@ Array [
     "domain": "developer.mozilla.org",
     "filename": "ZillaSlab-Bold.subset.e96c15f68c68.woff2",
     "headers": Object {
+      "queryString": Array [],
       "request": Array [
         Object {
           "name": ":authority",

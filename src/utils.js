@@ -132,6 +132,7 @@ export const sortHeaders = (current, next) => {
 export const getHeaders = (entry) => ({
   request: entry.request.headers.sort(sortHeaders),
   response: entry.response.headers.sort(sortHeaders),
+  queryString: entry.request.queryString,
 });
 
 export const prepareViewerData = (entries) => {

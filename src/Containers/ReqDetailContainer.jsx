@@ -10,7 +10,6 @@ import IconClose from './../Icons/icn-close-sign.svg';
 const ReqDetailContainer = () => {
   const { actions, state } = useNetwork();
   const reqDetail = state.get('reqDetail');
-
   const handleCloseClick = () => {
     actions.selectRequest(null);
   };
