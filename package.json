@@ -19,7 +19,8 @@
     "immutable": "3.8.2",
     "react-dropzone": "10.1.10",
     "react-flexbox-grid": "2.1.2",
-    "react-popover": "^0.5.10"
+    "react-popover": "^0.5.10",
+    "recharts": "^2.0.0-beta.1"
   },
   "peerDependencies": {
     "prop-types": "^15.7.2",
