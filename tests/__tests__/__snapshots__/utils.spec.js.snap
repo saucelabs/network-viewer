@@ -1023,7 +1023,11 @@ Array [
 ]
 `;
 
-exports[`utils getContent 1`] = `"{\\"foo\\":\\"bar\\"}"`;
+exports[`utils getContent 1`] = `
+"{
+  \\"foo\\": \\"bar\\"
+}"
+`;
 
 exports[`utils getContent 2`] = `undefined`;
 
