@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import { ScatterChart, Scatter, XAxis, YAxis, ResponsiveContainer } from 'recharts';
 
 import Styles from './TimelineChart.styles.scss';
-
+import TimelineDatapoint from './TimelineDatapoint';
 
 const TimelineChart = ({ chartData, totalNetworkTime }) => (
   <div className={Styles['chart-container']}>
     <ResponsiveContainer
-      height={160}
+      height={100}
       width="100%"
     >
       <ScatterChart
@@ -32,6 +32,11 @@ const TimelineChart = ({ chartData, totalNetworkTime }) => (
         />
         <Scatter
           data={chartData}
+          shape={(
+            <TimelineDatapoint
+              maxTime={totalNetworkTime}
+            />
+          )}
         />
       </ScatterChart>
     </ResponsiveContainer>
@@ -39,7 +44,7 @@ const TimelineChart = ({ chartData, totalNetworkTime }) => (
 );
 
 TimelineChart.propTypes = {
-  chartData: PropTypes.object.isRequired,
+  chartData: PropTypes.array.isRequired,
   totalNetworkTime: PropTypes.number.isRequired,
 };
 

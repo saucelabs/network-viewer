@@ -13,7 +13,6 @@ const TimelineContainer = () => {
   if (error || !actualData.size) {
     return null;
   }
-  console.log(data.toArray());
   return (
     <section className={Styles['timeline-container']}>
       <TimelineChart
