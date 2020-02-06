@@ -78,7 +78,7 @@ export const getContent = ({ mimeType, text }) => {
   if (mimeType === 'application/json') {
     let parsedJson = text;
     try {
-      parsedJson = JSON.stringify(JSON.parse(text));
+      parsedJson = JSON.stringify(JSON.parse(text), null, 2);
     } catch (err) {
       parsedJson = text;
     }

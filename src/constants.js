@@ -211,3 +211,5 @@ export const HEADERS_TITLES = Object.freeze({
     name: 'Form Data',
   }),
 });
+
+export const MAX_COLOR_CONTENT_SIZE = 100000; // 100kB
