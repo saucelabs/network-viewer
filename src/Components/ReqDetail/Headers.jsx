@@ -1,3 +1,5 @@
+/* eslint-disable react/no-array-index-key */
+
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
@@ -59,9 +61,9 @@ const Headers = ({ data }) => {
         />
         {visibleStates[HEADERS_TITLES.response.key] && (
           <div className={Styles['header-detail']}>
-            {data.headers.response.map(({ name, value }) => (
+            {data.headers.response.map(({ name, value }, index) => (
               <p
-                key={name}
+                key={`${name}-${index}`}
                 className={Styles['info-row']}
               >
                 <span className={Styles['info-caption']}>
@@ -82,9 +84,9 @@ const Headers = ({ data }) => {
         />
         {visibleStates[HEADERS_TITLES.request.key] && (
           <div className={Styles['header-detail']}>
-            {data.headers.request.map(({ name, value }) => (
+            {data.headers.request.map(({ name, value }, index) => (
               <p
-                key={name}
+                key={`${name}-${index}`}
                 className={Styles['info-row']}
               >
                 <span className={Styles['info-caption']}>
@@ -106,9 +108,9 @@ const Headers = ({ data }) => {
           />
           {visibleStates[HEADERS_TITLES.queryString.key] && (
             <div className={Styles['header-detail']}>
-              {data.headers.queryString.map(({ name, value }) => (
+              {data.headers.queryString.map(({ name, value }, index) => (
                 <p
-                  key={name}
+                  key={`${name}-${index}`}
                   className={Styles['info-row']}
                 >
                   <span className={Styles['info-caption']}>

@@ -207,3 +207,5 @@ export const HEADERS_TITLES = Object.freeze({
     name: 'Query String Parameters',
   }),
 });
+
+export const MAX_COLOR_CONTENT_SIZE = 100000; // 100kB
