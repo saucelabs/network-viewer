@@ -5,9 +5,9 @@ import Styles from './../Headers.styles.scss';
 
 const Response = ({ data }) => (
   <div className={Styles['header-detail']}>
-    {data.headers.response.map(({ name, value }) => (
+    {data.headers.response.map(({ name, value }, index) => (
       <p
-        key={name}
+        key={`${name}-${index}`}
         className={Styles['info-row']}
       >
         <span className={Styles['info-caption']}>
