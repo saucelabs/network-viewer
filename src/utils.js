@@ -270,9 +270,9 @@ export const formatValue = (key, value, unit) => {
   }
 };
 
-export const calcChartAttributes = (data, maxTime) => {
+export const calcChartAttributes = (data, maxTime, cx, index) => {
   const startTimePercent = (data.startTime / maxTime) * 100;
-  let previousX = 0;
+  let previousX = cx || 0;
   let previousWidth = 0;
   const chartAttributes = [];
 
@@ -288,7 +288,9 @@ export const calcChartAttributes = (data, maxTime) => {
 
     chartAttributes.push({
       width: `${previousWidth}%`,
-      x: `${previousX}%`,
+      height: cx ? 5 : null,
+      y: index ? ((index % 10) * 10) + 50 : null,
+      x: cx ? previousX : `${previousX}%`,
       fill: timingInfo.fill,
       key,
     });

@@ -17,7 +17,7 @@ const TimelineChart = ({ chartData, totalNetworkTime }) => (
         <XAxis
           axisLine={false}
           dataKey="time"
-          domain={[0, Math.floor(totalNetworkTime) + 50]}
+          domain={[0, Math.floor(totalNetworkTime) + 500]}
           interval="preserveStartEnd"
           orientation="top"
           tickCount={10}
