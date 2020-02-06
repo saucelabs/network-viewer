@@ -12,8 +12,19 @@
     "build:lib": "make build",
     "build": "webpack --mode production",
     "deploy": "gh-pages -d examples/dist",
-    "publish-demo": "npm run build && npm run deploy"
+    "publish-demo": "npm run build && npm run deploy",
+    "prepublishOnly": "npm prune && run-s build",
+    "release": "npm run release:patch",
+    "release:patch": "np patch",
+    "release:minor": "np minor",
+    "release:major": "np major"
   },
+  "author": "The Sauce Labs Performance Team <Performance@saucelabs.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/saucelabs/network-viewer/issues"
+  },
+  "homepage": "https://github.com/saucelabs/network-viewer#readme",
   "dependencies": {
     "classnames": "2.2.6",
     "immutable": "3.8.2",
@@ -56,6 +67,7 @@
     "jest-watch-typeahead": "^0.4.2",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.13.0",
+    "np": "^5.2.1",
     "npm-run-all": "^4.1.5",
     "postcss": "^7.0.21",
     "postcss-cli": "^6.1.3",
