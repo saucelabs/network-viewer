@@ -1,0 +1,15 @@
+@import "./../../styles/variables";
+
+.no-response {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-h4;
+  width: 100%;
+  color: $brand-primary-gray;
+}
+
+.response-content {
+  font-size: $font-size-small;
+  width: 100%;
+}
