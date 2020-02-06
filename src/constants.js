@@ -206,4 +206,8 @@ export const HEADERS_TITLES = Object.freeze({
     key: 'queryString',
     name: 'Query String Parameters',
   }),
+  formData: Object.freeze({
+    key: 'formaData',
+    name: 'Form Data',
+  }),
 });
