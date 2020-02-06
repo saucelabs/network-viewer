@@ -6,6 +6,7 @@ import Tabs from '../Components/Common/Tabs';
 import Tab from '../Components/Common/Tab';
 import Headers from './../Components/ReqDetail/Headers';
 import IconClose from './../Icons/icn-close-sign.svg';
+import Response from '../Components/ReqDetail/Response';
 
 const ReqDetailContainer = () => {
   const { actions, state } = useNetwork();
@@ -46,7 +47,7 @@ const ReqDetailContainer = () => {
           eventKey="response"
           name="Response"
         >
-          <p>Response soon</p>
+          <Response data={reqDetail} />
         </Tab>
         <Tab
           eventKey="timing"
