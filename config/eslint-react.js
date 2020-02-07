@@ -60,6 +60,7 @@ const config = deepMerge(baseConfig, {
     'react/jsx-props-no-spreading': [0, {
       html: 'ignore',
     }],
+    'react/no-array-index-key': 0,
   },
 });
 
