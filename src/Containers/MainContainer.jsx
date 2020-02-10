@@ -7,6 +7,7 @@ import LoaderContainer from '../Components/LoaderContainer';
 import { FETCH_FILE_LOAD_TEXT } from '../constants';
 import ReqDetailContainer from './ReqDetailContainer';
 import Styles from './MainContainer.styles.scss';
+import TimelineContainer from './TimelineContainer';
 
 const MainContainer = () => {
   const { state } = useNetwork();
@@ -22,6 +23,7 @@ const MainContainer = () => {
         text={FETCH_FILE_LOAD_TEXT}
       >
         <section className={Styles['main-container']}>
+          <TimelineContainer />
           <NetworkTableContainer />
           {shouldShowDetail && <ReqDetailContainer />}
         </section>
