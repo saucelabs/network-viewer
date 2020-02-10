@@ -1,4 +1,4 @@
-import { TIMINGS } from './constants';
+import { TIMINGS, TIMELINE_DATA_POINT_HEIGHT } from './constants';
 
 /* eslint no-underscore-dangle: 0 */
 
@@ -270,8 +270,8 @@ export const formatValue = (key, value, unit) => {
   }
 };
 
-export const calcChartAttributes = (data, maxTime, cx, index) => {
-  const startTimePercent = (data.startTime / maxTime) * 100;
+export const calcChartAttributes = (data, maxTime, cx, index, cy = null) => {
+  const startTimePercent = cx ? 0 : (data.startTime / maxTime) * 100;
   let previousX = cx || 0;
   let previousWidth = 0;
   const chartAttributes = [];
@@ -288,8 +288,7 @@ export const calcChartAttributes = (data, maxTime, cx, index) => {
 
     chartAttributes.push({
       width: `${previousWidth}%`,
-      height: cx ? 5 : null,
-      y: index ? ((index % 10) * 10) + 50 : null,
+      y: index ? ((index % 10) * (TIMELINE_DATA_POINT_HEIGHT + 1)) + 40 : cy,
       x: cx ? previousX : `${previousX}%`,
       fill: timingInfo.fill,
       key,

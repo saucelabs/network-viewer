@@ -209,3 +209,4 @@ export const HEADERS_TITLES = Object.freeze({
 });
 
 export const MAX_COLOR_CONTENT_SIZE = 100000; // 100kB
+export const TIMELINE_DATA_POINT_HEIGHT = 2;

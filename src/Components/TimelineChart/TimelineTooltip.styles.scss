@@ -1,0 +1,20 @@
+@import "./../../styles/variables.scss";
+
+.tooltip {
+  display: block;
+  width: 300px;
+  height: auto;
+  background: $white-100;
+  border: 1px solid $white-90;
+  border-radius: 3px;
+  color: $white-33;
+  font-size: $font-size-small;
+  padding: $size-m / 2;
+  opacity: 1;
+}
+
+.content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
