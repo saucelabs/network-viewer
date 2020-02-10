@@ -30,14 +30,14 @@
     "immutable": "3.8.2",
     "react-dropzone": "10.1.10",
     "react-flexbox-grid": "2.1.2",
-    "react-popover": "^0.5.10",
-    "recharts": "^2.0.0-beta.1"
+    "react-popover": "^0.5.10"
   },
   "peerDependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
     "react-dom": "^16.11.0",
-    "react-syntax-highlighter": ">=7.0.2"
+    "react-syntax-highlighter": ">=7.0.2",
+    "recharts": ">=1.8.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.0",
@@ -81,6 +81,7 @@
     "react-dom": "^16.12.0",
     "react-syntax-highlighter": "7.0.4",
     "react-test-renderer": "^16.12.0",
+    "recharts": "1.8.5",
     "sass": "^1.23.6",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
