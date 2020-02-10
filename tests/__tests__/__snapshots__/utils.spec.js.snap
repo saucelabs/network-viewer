@@ -1087,6 +1087,8 @@ Object {
 }
 `;
 
+exports[`utils getTotalTimeOfEntry should return totalTimeOfEntry 1`] = `1571042831631.4531`;
+
 exports[`utils getUrlInfo 1`] = `
 Object {
   "domain": "developer.mozilla.org",
@@ -1921,7 +1923,7 @@ Object {
     },
   ],
   "finishTime": 116.44500002544373,
-  "totalNetworkTime": 53.271999994060025,
+  "totalNetworkTime": 116.445068359375,
   "totalRequests": 5,
   "totalTransferredSize": 130535,
   "totalUncompressedSize": 355292,

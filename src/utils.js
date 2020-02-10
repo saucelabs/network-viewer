@@ -135,9 +135,13 @@ export const getHeaders = (entry) => ({
   queryString: entry.request.queryString,
 });
 
+export const getTotalTimeOfEntry = ({ startedDateTime, time, timings }) => (
+  new Date(startedDateTime).getTime() + time + timings._blocked_queueing
+);
+
 export const prepareViewerData = (entries) => {
   const firstEntryTime = entries[0].startedDateTime;
-  const lastEntryTime = entries[entries.length - 1].startedDateTime;
+  let endTime = getTotalTimeOfEntry(entries[entries.length - 1]);
   let totalTransferredSize = 0;
   let totalUncompressedSize = 0;
   const data = entries
@@ -145,6 +149,8 @@ export const prepareViewerData = (entries) => {
     .map((entry, index) => {
       totalTransferredSize += getEntryTransferredSize(entry);
       totalUncompressedSize += getEntryUncompressedSize(entry);
+      const lastTimeOfEntry = getTotalTimeOfEntry(entry);
+      endTime = endTime < lastTimeOfEntry ? lastTimeOfEntry : endTime;
       return {
         index,
         status: entry.response.status,
@@ -164,9 +170,7 @@ export const prepareViewerData = (entries) => {
     });
 
   const totalRequests = data.length;
-  const totalNetworkTime = new Date(lastEntryTime).getTime() -
-    new Date(firstEntryTime).getTime() +
-    data[data.length - 1].timings.receive;
+  const totalNetworkTime = endTime - new Date(firstEntryTime).getTime();
   const finishTime = calculateFinishTime(data);
   return {
     totalNetworkTime,
@@ -271,8 +275,8 @@ export const formatValue = (key, value, unit) => {
 };
 
 export const calcChartAttributes = (data, maxTime, cx, index, cy = null) => {
-  const startTimePercent = cx ? 0 : (data.startTime / maxTime) * 100;
-  let previousX = cx || 0;
+  const startTimePercent = (data.startTime / maxTime) * 100;
+  let previousX = 0;
   let previousWidth = 0;
   const chartAttributes = [];
 
@@ -289,7 +293,7 @@ export const calcChartAttributes = (data, maxTime, cx, index, cy = null) => {
     chartAttributes.push({
       width: `${previousWidth}%`,
       y: index ? ((index % 10) * (TIMELINE_DATA_POINT_HEIGHT + 1)) + 40 : cy,
-      x: cx ? previousX : `${previousX}%`,
+      x: `${previousX}%`,
       fill: timingInfo.fill,
       key,
     });

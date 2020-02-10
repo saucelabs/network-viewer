@@ -175,4 +175,10 @@ describe('utils', () => {
       expect(utils.getSummary(data)).toMatchSnapshot();
     });
   });
+
+  describe('getTotalTimeOfEntry', () => {
+    it('should return totalTimeOfEntry', () => {
+      expect(utils.getTotalTimeOfEntry(networkDataMock.log.entries[0])).toMatchSnapshot();
+    });
+  });
 });

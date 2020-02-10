@@ -1,5 +1,9 @@
 @import "./../../styles/variables";
 
+.chart-container {
+  margin: 0 $size-xs * 2;
+}
+
 .scatter-chart {
   tspan {
     font-size: 10px;
