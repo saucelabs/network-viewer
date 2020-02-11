@@ -63,3 +63,17 @@ tbody {
     }
   }
 }
+
+.tooltip {
+  display: block;
+  width: auto;
+  max-width: 300px;
+  height: auto;
+  background: $white-100;
+  border: 1px solid $white-90;
+  border-radius: 3px;
+  color: $white-20;
+  font-size: $font-size-small;
+  padding: $size-m / 2;
+  opacity: 1;
+}
