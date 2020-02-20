@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { HEADERS_TITLES } from './../../constants';
-import IconCaretUp from './../../icons/IconCaretUp';
+import IconCaretUp from './../../Icons/IconCaretUp';
 import Styles from './Headers.styles.scss';
 
 const HeaderTitle = ({ onClick, eventKey }) => (

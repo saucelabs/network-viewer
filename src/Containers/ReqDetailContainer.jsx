@@ -5,7 +5,7 @@ import Styles from './ReqDetailContainer.styles.scss';
 import Tabs from '../Components/Common/Tabs';
 import Tab from '../Components/Common/Tab';
 import Headers from './../Components/ReqDetail/Headers';
-import CloseSignIcon from './../icons/IconCloseSign';
+import CloseSignIcon from './../Icons/IconCloseSign';
 import Response from '../Components/ReqDetail/Response';
 
 const ReqDetailContainer = () => {
