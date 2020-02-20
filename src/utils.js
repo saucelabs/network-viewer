@@ -133,6 +133,7 @@ export const getHeaders = (entry) => ({
   request: entry.request.headers.sort(sortHeaders),
   response: entry.response.headers.sort(sortHeaders),
   queryString: entry.request.queryString,
+  postData: entry.request.postData,
 });
 
 export const getTotalTimeOfEntry = ({ startedDateTime, time, timings }) => (

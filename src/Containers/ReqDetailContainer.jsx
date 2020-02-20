@@ -38,12 +38,6 @@ const ReqDetailContainer = () => {
           <Headers data={reqDetail} />
         </Tab>
         <Tab
-          eventKey="preview"
-          name="Preview"
-        >
-          <p>Preview coming soon</p>
-        </Tab>
-        <Tab
           eventKey="response"
           name="Response"
         >
