@@ -5,7 +5,7 @@ import Styles from './ReqDetailContainer.styles.scss';
 import Tabs from '../Components/Common/Tabs';
 import Tab from '../Components/Common/Tab';
 import Headers from './../Components/ReqDetail/Headers';
-import CloseSignIcon from './../Icons/IconCloseSign';
+import IconCloseSign from './../Icons/IconCloseSign';
 import Response from '../Components/ReqDetail/Response';
 
 const ReqDetailContainer = () => {
@@ -22,7 +22,7 @@ const ReqDetailContainer = () => {
         onClick={handleCloseClick}
         type="button"
       >
-        <CloseSignIcon className={Styles['close-icon']} />
+        <IconCloseSign className={Styles['close-icon']} />
       </button>
       <Tabs
         activeClassName={Styles.active}

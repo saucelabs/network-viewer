@@ -15,7 +15,7 @@
     "build:examples": "webpack --mode production",
     "deploy": "gh-pages -d examples/dist",
     "publish-demo": "npm run build && npm run deploy",
-    "prepublishOnly": "npm prune && run-s build:*",
+    "prepublishOnly": "npm prune && run-s build",
     "release": "npm run release:patch",
     "release:patch": "np patch",
     "release:minor": "np minor",
