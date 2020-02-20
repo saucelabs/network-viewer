@@ -32,7 +32,7 @@ const Search = ({ name, value, onChange }) => {
       <input
         className={Styles.input}
         onChange={handleInputChange}
-        placeholder="search here..."
+        placeholder="Filter"
         type="text"
         value={value}
       />

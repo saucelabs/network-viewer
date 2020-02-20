@@ -1,5 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'react-flexbox-grid';
+import classNames from 'classnames/bind';
 
 import ImportHar from './../Components/ImportHAR';
 import Search from './../Components/Filters/Search';
@@ -8,10 +9,11 @@ import { FILTERS } from './../constants';
 import Styles from './FilterContainer.styles.scss';
 import Button from './../Components/Common/Button';
 
+const context = classNames.bind(Styles);
+
 const FilterContainer = () => {
   const { state, actions } = useNetwork();
   const filter = state.get('filter');
-
   return (
     <section className={Styles['filters-container']}>
       <Row>
@@ -31,20 +33,26 @@ const FilterContainer = () => {
           xs={12}
         >
           <div className={Styles['filters-button-group']}>
-            {FILTERS.map(({ name, filterBy }) => (
-              <Button
-                key={name}
-                category="default"
-                className={Styles['filter-button']}
-                material
-                onClick={() => actions.updateFilter(filterBy)}
-                raised={filterBy.value === filter.value}
-                size="sm"
-              >
-                {name}
-              </Button>
-            ))}
-            <ImportHar className={Styles['filter-button']} />
+            {FILTERS.map(({ name, filterBy }) => {
+              const selectedFilter = filterBy.value === filter.value;
+              const buttonStyle = context('filter-button', {
+                'selected-filter': selectedFilter,
+              });
+              return (
+                <Button
+                  key={name}
+                  category="default"
+                  className={buttonStyle}
+                  material
+                  onClick={() => actions.updateFilter(filterBy)}
+                  raised={selectedFilter}
+                  size="sm"
+                >
+                  {name}
+                </Button>
+              );
+            })}
+            <ImportHar className={context('filter-button', 'selected-filter')} />
           </div>
         </Col>
       </Row>

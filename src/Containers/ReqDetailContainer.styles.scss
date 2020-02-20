@@ -10,6 +10,7 @@ $tab-height: 35px;
   background: $white-100;
   position: relative;
   width: calc(100% - #{$name-col-width});
+  border: $border;
 }
 
 .nav-tabs {

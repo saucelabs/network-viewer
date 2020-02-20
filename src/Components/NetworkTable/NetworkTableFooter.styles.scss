@@ -1,10 +1,11 @@
 @import "./../../styles/variables.scss";
 
 .footer {
+  border-top: 2px solid $white-90;
   span {
     &:after {
       content: "";
-      border-left: 1px solid $brand-primary-gray;
+      border-left: 1px solid $white-90;
       margin: $size-m;
     } 
     &:last-child {

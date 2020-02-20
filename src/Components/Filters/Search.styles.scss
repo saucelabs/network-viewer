@@ -6,7 +6,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
-  width: 100%;
+  width: 75%;
 
   .prepend-dropdown {
     display: flex;
@@ -28,7 +28,7 @@
     color: $white-39;
     background-color: $white-100;
     background-clip: padding-box;
-    border: 1px solid $white-80;
+    border: $border;
   }
 }
 

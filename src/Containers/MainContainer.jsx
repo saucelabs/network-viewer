@@ -17,13 +17,13 @@ const MainContainer = () => {
 
   return (
     <>
-      <FilterContainer />
       <LoaderContainer
         show={loading}
         text={FETCH_FILE_LOAD_TEXT}
       >
+        <TimelineContainer />
+        <FilterContainer />
         <section className={Styles['main-container']}>
-          <TimelineContainer />
           <NetworkTableContainer />
           {shouldShowDetail && <ReqDetailContainer />}
         </section>
