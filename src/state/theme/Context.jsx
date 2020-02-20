@@ -20,7 +20,6 @@ export const ThemeProvider = (props) => {
     ...NETWORK_VIEWER_DEFAULT_OPTIONS,
     ...options,
   };
-  console.log(finalOptions);
 
   return (
     <ThemeContext.Provider
