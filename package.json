@@ -17,7 +17,7 @@
     "publish-demo": "npm run build && npm run deploy",
     "prepublishOnly": "npm prune && run-s build",
     "release": "npm run release:patch",
-    "release:patch": "np patch",
+    "release:patch": "np patch --any-branch",
     "release:minor": "np minor",
     "release:major": "np major"
   },
