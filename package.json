@@ -1,7 +1,6 @@
 {
   "name": "network-viewer",
   "version": "0.1.2",
-  "private": true,
   "main": "./lib/index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
@@ -15,9 +14,9 @@
     "build:examples": "webpack --mode production",
     "deploy": "gh-pages -d examples/dist",
     "publish-demo": "npm run build && npm run deploy",
-    "prepublishOnly": "npm prune && run-s build",
+    "prepublishOnly": "npm prune && run-s build:*",
     "release": "npm run release:patch",
-    "release:patch": "np patch --any-branch",
+    "release:patch": "np patch",
     "release:minor": "np minor",
     "release:major": "np major"
   },
