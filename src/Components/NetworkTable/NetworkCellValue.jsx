@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import Popover from 'react-popover';
 
 import { formatValue } from '../../utils';
 import Styles from './NetworkTableHeader.styles.scss';
@@ -9,14 +10,26 @@ import { VIEWER_FIELDS } from '../../constants';
 const context = classNames.bind(Styles);
 
 const NetworkCellValue = ({ datakey, unit, payload }) => {
+  const [isOpen, updateOpen] = useState(false);
+  const displayPopover = () => updateOpen(true);
+  const hidePopover = () => updateOpen(false);
   const formatedValue = formatValue(datakey, payload[datakey], unit);
   const title = datakey === VIEWER_FIELDS.file.key ? payload.url : formatedValue;
 
   return (
     <td className={context('value-cell', datakey)}>
-      <label title={title}>
-        {formatedValue}
-      </label>
+      <Popover
+        body={<span className={Styles.tooltip}>{title}</span>}
+        isOpen={isOpen}
+        preferPlace="below"
+      >
+        <span
+          onMouseOut={hidePopover}
+          onMouseOver={displayPopover}
+        >
+          {formatedValue}
+        </span>
+      </Popover>
     </td>
   );
 };

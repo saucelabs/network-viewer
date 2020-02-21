@@ -6,15 +6,17 @@ import TimelineChartDatapoint from './../../../../src/Components/TimelineChart/T
 describe('TimelineChartDatapoint', () => {
   it('renders without crashing', () => {
     mount(
-      <TimelineChartDatapoint
-        cx={234}
-        index={5}
-        maxTime={17000}
-        payload={{
-          timings: {
-            startTime: 1200,
-          },
-        }}
-      />);
+      <svg>
+        <TimelineChartDatapoint
+          cx={234}
+          index={5}
+          maxTime={17000}
+          payload={{
+            timings: {
+              startTime: 1200,
+            },
+          }}
+        />
+      </svg>);
   });
 });

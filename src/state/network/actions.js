@@ -57,8 +57,8 @@ export const fetchFile = (dispatch) => (file, fetchOptions) => {
       return response.json();
     })
     .then((data) => {
-      if (data && data.log && data.log.entries) {
-        updateData(dispatch)(data.log.entries);
+      if (data && data.log) {
+        updateData(dispatch)(data.log);
       }
       fetchFileSuccess(dispatch)();
     })

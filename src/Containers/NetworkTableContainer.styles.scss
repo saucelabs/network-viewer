@@ -2,7 +2,7 @@
 
 .table-container {
   flex: 1 1 auto;
-  height: 100%;
+  height: calc(100% - 100px);
   overflow: auto;
   border-right: 1px solid $white-90;
 

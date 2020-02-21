@@ -8,9 +8,11 @@ import { FETCH_FILE_LOAD_TEXT } from '../constants';
 import ReqDetailContainer from './ReqDetailContainer';
 import Styles from './MainContainer.styles.scss';
 import TimelineContainer from './TimelineContainer';
+import { useTheme } from '../state/theme/Context';
 
 const MainContainer = () => {
   const { state } = useNetwork();
+  const { showTimeline } = useTheme();
   const loading = state.get('loading');
   const selectedReqIndex = state.get('selectedReqIndex');
   const shouldShowDetail = selectedReqIndex || selectedReqIndex === 0;
@@ -23,7 +25,7 @@ const MainContainer = () => {
         text={FETCH_FILE_LOAD_TEXT}
       >
         <section className={Styles['main-container']}>
-          <TimelineContainer />
+          {showTimeline && <TimelineContainer />}
           <NetworkTableContainer />
           {shouldShowDetail && <ReqDetailContainer />}
         </section>
