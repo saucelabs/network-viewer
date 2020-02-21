@@ -13,7 +13,7 @@
     "build:lib": "npm run lib:js && npm run lib:css",
     "build:examples": "webpack --mode production",
     "deploy": "gh-pages -d examples/dist",
-    "publish-demo": "npm run build && npm run deploy",
+    "publish-demo": "npm run build:examples && npm run deploy",
     "prepublishOnly": "npm prune && run-s build:*",
     "release": "npm run release:patch",
     "release:patch": "np patch",
