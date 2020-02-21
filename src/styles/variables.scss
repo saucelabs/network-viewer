@@ -102,3 +102,7 @@ $size-xxxl: $size-base * 11; // 44px;
 // widths
 $name-col-width: 200px;
 $filter-row-height: 42px;
+
+// borders
+$border: 1px solid $white-80;
+$border-dashed: 2px dashed $white-80;
