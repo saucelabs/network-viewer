@@ -8,11 +8,13 @@ import { useNetwork } from './../state/network/Context';
 import { FILTERS } from './../constants';
 import Styles from './FilterContainer.styles.scss';
 import Button from './../Components/Common/Button';
+import { useTheme } from '../state/theme/Context';
 
 const context = classNames.bind(Styles);
 
 const FilterContainer = () => {
   const { state, actions } = useNetwork();
+  const { showImportHAR } = useTheme();
   const filter = state.get('filter');
   return (
     <section className={Styles['filters-container']}>
@@ -52,7 +54,7 @@ const FilterContainer = () => {
                 </Button>
               );
             })}
-            <ImportHar className={context('filter-button', 'selected-filter')} />
+            {showImportHAR && <ImportHar className={Styles['filter-button']} />}
           </div>
         </Col>
       </Row>

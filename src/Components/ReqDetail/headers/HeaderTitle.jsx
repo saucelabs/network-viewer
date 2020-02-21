@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { HEADERS_TITLES } from './../../../constants';
-import IconCaret from './../../../Icons/icn-caret-up.svg';
+import IconCaretUp from './../../../icons/IconCaretUp';
 import Styles from './../Headers.styles.scss';
 
 const ENCODE_TEXT = {
@@ -23,7 +23,7 @@ const HeaderTitle = ({
       role="button"
       tabIndex={0}
     >
-      <IconCaret className={Styles['caret-icon']} />
+      <IconCaretUp className={Styles['caret-icon']} />
       {HEADERS_TITLES[eventKey].name}
     </span>
     {supportEncode && (

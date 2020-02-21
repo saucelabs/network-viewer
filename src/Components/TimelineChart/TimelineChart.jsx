@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ScatterChart, Scatter, XAxis, YAxis, ResponsiveContainer } from 'recharts';
+import { ScatterChart, Scatter, XAxis, YAxis, ResponsiveContainer, Tooltip } from 'recharts';
 
 import Styles from './TimelineChart.styles.scss';
 import TimelineDatapoint from './TimelineDatapoint';
+import { formatTime } from '../../utils';
+import TimelineTooltip from './TimelineTooltip';
 
 const TimelineChart = ({ chartData, totalNetworkTime }) => (
   <div className={Styles['chart-container']}>
@@ -16,20 +18,22 @@ const TimelineChart = ({ chartData, totalNetworkTime }) => (
       >
         <XAxis
           axisLine={false}
-          dataKey="time"
-          domain={[0, Math.floor(totalNetworkTime) + 500]}
+          dataKey="timings.startTime"
+          domain={[0, totalNetworkTime]}
           interval="preserveStartEnd"
           orientation="top"
           tickCount={10}
+          tickFormatter={formatTime}
           tickLine={false}
           type="number"
-          unit="ms"
         />
         <YAxis
           dataKey="index"
-          domain={['auto', 'auto']}
+          domain={['min', 'max']}
           hide
+          reversed
         />
+        <Tooltip content={<TimelineTooltip />} />
         <Scatter
           data={chartData}
           shape={(

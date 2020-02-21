@@ -4,7 +4,6 @@ exports[`utils calcChartAttributes 1`] = `
 Array [
   Object {
     "fill": "#ccc",
-    "height": null,
     "key": "queueing",
     "width": "1.1386683664599901%",
     "x": "3.8940719707944633%",
@@ -12,7 +11,6 @@ Array [
   },
   Object {
     "fill": "#A1000C",
-    "height": null,
     "key": "blocked",
     "width": "1.393637364547723%",
     "x": "5.032740337254453%",
@@ -20,7 +18,6 @@ Array [
   },
   Object {
     "fill": "#DCC9E5",
-    "height": null,
     "key": "dns",
     "width": "0.08112649939155132%",
     "x": "6.426377701802176%",
@@ -28,7 +25,6 @@ Array [
   },
   Object {
     "fill": "#E78057",
-    "height": null,
     "key": "ssl",
     "width": "0.13907399895694514%",
     "x": "6.507504201193727%",
@@ -36,7 +32,6 @@ Array [
   },
   Object {
     "fill": "#DB8553",
-    "height": null,
     "key": "connect",
     "width": "0.24337949817465396%",
     "x": "6.646578200150673%",
@@ -44,7 +39,6 @@ Array [
   },
   Object {
     "fill": "#7CA0BF",
-    "height": null,
     "key": "wait",
     "width": "4.557570840818236%",
     "x": "6.889957698325326%",
@@ -52,7 +46,6 @@ Array [
   },
   Object {
     "fill": "#65B955",
-    "height": null,
     "key": "receive",
     "width": "40.826910818798225%",
     "x": "11.447528539143562%",
@@ -1101,6 +1094,8 @@ Object {
 }
 `;
 
+exports[`utils getTotalTimeOfEntry should return totalTimeOfEntry 1`] = `1571042831631.4531`;
+
 exports[`utils getUrlInfo 1`] = `
 Object {
   "domain": "developer.mozilla.org",
@@ -1940,7 +1935,7 @@ Object {
     },
   ],
   "finishTime": 116.44500002544373,
-  "totalNetworkTime": 53.271999994060025,
+  "totalNetworkTime": 116.445068359375,
   "totalRequests": 5,
   "totalTransferredSize": 130535,
   "totalUncompressedSize": 355292,

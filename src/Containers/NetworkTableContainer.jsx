@@ -8,10 +8,13 @@ import { useNetwork } from './../state/network/Context';
 import ImportHar from './../Components/ImportHAR';
 import Styles from './NetworkTableContainer.styles.scss';
 import ErrorMessage from './../Components/ErrorMessage';
+import { useTheme } from '../state/theme/Context';
 
 const context = classNames.bind(Styles);
+
 const NetworkTableContainer = () => {
   const { state, actions } = useNetwork();
+  const { showImportHAR } = useTheme();
   const actualData = state.get('actualData');
   const data = state.get('data');
   const totalNetworkTime = state.get('totalNetworkTime');
@@ -33,7 +36,7 @@ const NetworkTableContainer = () => {
   if (!actualData.size) {
     return (
       <section className={Styles['table-container']}>
-        <ImportHar showButton={false} />
+        {showImportHAR && <ImportHar showButton={false} />}
       </section>
     );
   }
