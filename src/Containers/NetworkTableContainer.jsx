@@ -26,6 +26,10 @@ const NetworkTableContainer = () => {
   const containerClassName = context('table-container', {
     'limited-cols': !showAllCols,
   });
+  const handleReqSelect = (index) => {
+    actions.updateScrollToIndex(index);
+    actions.selectRequest(index);
+  };
 
   if (error) {
     return (
@@ -53,7 +57,7 @@ const NetworkTableContainer = () => {
             <NetworkTableRow
               key={rowInfo.index}
               maxTime={totalNetworkTime}
-              onSelect={actions.selectRequest}
+              onSelect={handleReqSelect}
               payload={rowInfo}
               scrollHighlight={[scrollToIndex, selectedReqIndex].includes(rowInfo.index)}
               showAllCols={showAllCols}

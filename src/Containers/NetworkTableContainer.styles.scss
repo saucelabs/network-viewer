@@ -2,11 +2,12 @@
 
 .table-container {
   flex: 1 1 auto;
-  height: calc(100% - 100px);
+  height: auto;
   overflow: auto;
 
   &.limited-cols {
     max-width: $name-col-width;
+    height: 100%;
 
     .table {
       td, th {
