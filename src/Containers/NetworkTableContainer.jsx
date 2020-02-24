@@ -28,9 +28,8 @@ const NetworkTableContainer = ({ onRequestSelect }) => {
     'limited-cols': !showAllCols,
   });
   const handleReqSelect = (payload) => {
-    const { index } = payload;
-    actions.updateScrollToIndex(index);
-    actions.selectRequest(index);
+    actions.updateScrollToIndex(payload.index);
+    actions.selectRequest(payload);
     onRequestSelect(payload);
   };
 
