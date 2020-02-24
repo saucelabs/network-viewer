@@ -16,7 +16,6 @@ $cell-height: 32px;
 .value-cell {
   width: 8%;
   box-sizing: border-box;
-  @extend %ellipsis;
   height: $cell-height;
 
   &.filename {
@@ -28,8 +27,10 @@ $cell-height: 32px;
     max-width: 10%;
   }
 
-  label {
-    cursor: inherit;
+  .value-text {
+    @extend %ellipsis;
+    display: inline-block;
+    width: 100%;
   }
 }
 
@@ -76,4 +77,5 @@ tbody {
   font-size: $font-size-small;
   padding: $size-m / 2;
   opacity: 1;
+  word-break: break-all;
 }

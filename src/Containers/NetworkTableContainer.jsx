@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames/bind';
+import PropTypes from 'prop-types';
 
 import NetworkTableHeader from './../Components/NetworkTable/NetworkTableHeader';
 import NetworkTableFooter from './../Components/NetworkTable/NetworkTableFooter';
@@ -12,7 +13,7 @@ import { useTheme } from '../state/theme/Context';
 
 const context = classNames.bind(Styles);
 
-const NetworkTableContainer = () => {
+const NetworkTableContainer = ({ onRequestSelect }) => {
   const { state, actions } = useNetwork();
   const { showImportHAR } = useTheme();
   const actualData = state.get('actualData');
@@ -26,6 +27,12 @@ const NetworkTableContainer = () => {
   const containerClassName = context('table-container', {
     'limited-cols': !showAllCols,
   });
+  const handleReqSelect = (payload) => {
+    const { index } = payload;
+    actions.updateScrollToIndex(index);
+    actions.selectRequest(index);
+    onRequestSelect(payload);
+  };
 
   if (error) {
     return (
@@ -53,7 +60,7 @@ const NetworkTableContainer = () => {
             <NetworkTableRow
               key={rowInfo.index}
               maxTime={totalNetworkTime}
-              onSelect={actions.selectRequest}
+              onSelect={handleReqSelect}
               payload={rowInfo}
               scrollHighlight={[scrollToIndex, selectedReqIndex].includes(rowInfo.index)}
               showAllCols={showAllCols}
@@ -67,6 +74,14 @@ const NetworkTableContainer = () => {
       </table>
     </section>
   );
+};
+
+NetworkTableContainer.propTypes = {
+  onRequestSelect: PropTypes.func,
+};
+
+NetworkTableContainer.defaultProps = {
+  onRequestSelect: () => {},
 };
 
 export default NetworkTableContainer;

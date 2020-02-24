@@ -11,7 +11,9 @@ const NetworkProvider = (props) => {
   const { data, file, fetchOptions, scrollTimeStamp } = props;
   const [state, dispatch] = useReducer(reducer, initialState);
   const value = useMemo(() => [state, dispatch], [state]);
+  const scrollToIndex = state.get('scrollToIndex');
 
+  // Update data onChange of network data
   useEffect(() => {
     if (data && data.log && data.log.entries) {
       updateData(dispatch)({
@@ -21,24 +23,32 @@ const NetworkProvider = (props) => {
     }
   }, [data]);
 
+  // Fetch HAR file onChange of file prop
   useEffect(() => {
     if (file) {
       fetchFile(dispatch)(file, fetchOptions);
     }
   }, [file]);
 
+  // Find nearby request-rowId and update scrollIndex on scrollTimeStamp receive
   useEffect(() => {
     if (scrollTimeStamp) {
       const matchedRowId = findIndexByTimeStamp(state.get('data'), scrollTimeStamp);
       if (matchedRowId) {
         updateScrollToIndex(dispatch)(matchedRowId);
-        document.getElementById(ROW_ID_PREFIX + matchedRowId).scrollIntoView({
-          alignToTop: true,
-          behavior: 'smooth',
-        });
       }
     }
   }, [scrollTimeStamp]);
+
+  // Scroll to request row onChange of scrollToIndex
+  useEffect(() => {
+    if (scrollToIndex) {
+      document.getElementById(ROW_ID_PREFIX + scrollToIndex).scrollIntoView({
+        alignToTop: true,
+        behavior: 'smooth',
+      });
+    }
+  }, [scrollToIndex]);
 
   return (
     <NetworkContext.Provider

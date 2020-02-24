@@ -18,7 +18,7 @@ const NetworkTableRow = ({
   onSelect,
 }) => {
   const handleSelectRequest = () => {
-    onSelect(payload.index);
+    onSelect(payload);
   };
 
   const rowProps = {

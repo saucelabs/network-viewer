@@ -16,6 +16,17 @@ const NetworkCellValue = ({ datakey, unit, payload }) => {
   const formatedValue = formatValue(datakey, payload[datakey], unit);
   const title = datakey === VIEWER_FIELDS.file.key ? payload.url : formatedValue;
 
+  if (datakey !== VIEWER_FIELDS.file.key) {
+    return (
+      <td className={context('value-cell', datakey)}>
+        <span className={Styles['value-text']}>
+          {formatedValue}
+        </span>
+      </td>
+    );
+  }
+
+  // Render popover only for file column value
   return (
     <td className={context('value-cell', datakey)}>
       <Popover
@@ -24,6 +35,7 @@ const NetworkCellValue = ({ datakey, unit, payload }) => {
         preferPlace="below"
       >
         <span
+          className={Styles['value-text']}
           onMouseOut={hidePopover}
           onMouseOver={displayPopover}
         >
