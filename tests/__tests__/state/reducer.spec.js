@@ -77,7 +77,7 @@ describe('network reducer', () => {
 
     state = reducer(newState, {
       type: types.SELECT_REQUEST,
-      payload: 0,
+      payload: preparedMockData.get(0),
     });
     expect(state.get('selectedReqIndex')).toBe(0);
     expect(state.get('reqDetail')).toMatchSnapshot();
