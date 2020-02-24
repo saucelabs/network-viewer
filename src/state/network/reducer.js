@@ -123,8 +123,8 @@ const reducer = (state = initialState, { type, payload }) => {
     case types.SELECT_REQUEST: {
       return state.withMutations((newState) => {
         newState
-          .set('selectedReqIndex', payload)
-          .set('reqDetail', state.getIn(['data', payload]));
+          .set('selectedReqIndex', payload ? payload.index : null)
+          .set('reqDetail', payload);
       });
     }
     default:
