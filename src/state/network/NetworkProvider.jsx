@@ -43,10 +43,12 @@ const NetworkProvider = (props) => {
   // Scroll to request row onChange of scrollToIndex
   useEffect(() => {
     if (scrollToIndex) {
-      document.getElementById(ROW_ID_PREFIX + scrollToIndex).scrollIntoView({
-        alignToTop: true,
-        behavior: 'smooth',
-      });
+      setTimeout(() => {
+        document.getElementById(ROW_ID_PREFIX + scrollToIndex).scrollIntoView({
+          alignToTop: true,
+          behavior: 'smooth',
+        });
+      }, 300);
     }
   }, [scrollToIndex]);
 
