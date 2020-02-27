@@ -13,6 +13,7 @@ const NetworkViewer = ({
   scrollTimeStamp,
   options,
   onRequestSelect,
+  scrollRequestPosition,
 }) => (
   <section className={Styles['network-viewer']}>
     <ThemeProvider options={options}>
@@ -20,6 +21,7 @@ const NetworkViewer = ({
         data={data}
         fetchOptions={fetchOptions}
         file={file}
+        scrollRequestPosition={scrollRequestPosition}
         scrollTimeStamp={scrollTimeStamp}
       >
         <MainContainer onRequestSelect={onRequestSelect} />
@@ -34,6 +36,7 @@ NetworkViewer.propTypes = {
   file: PropTypes.string,
   onRequestSelect: PropTypes.func,
   options: PropTypes.object,
+  scrollRequestPosition: PropTypes.oneOf(['before', 'after', 'near']),
   scrollTimeStamp: PropTypes.number,
 };
 
@@ -43,6 +46,7 @@ NetworkViewer.defaultProps = {
   file: null,
   onRequestSelect: () => {},
   options: null,
+  scrollRequestPosition: 'near',
   scrollTimeStamp: null,
 };
 

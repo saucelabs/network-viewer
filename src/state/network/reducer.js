@@ -24,6 +24,7 @@ const initialState = new Map({
   loading: false,
   scrollToIndex: null,
   selectedReqIndex: null,
+  showReqDetail: false,
   reqDetail: null,
 });
 
@@ -118,13 +119,18 @@ const reducer = (state = initialState, { type, payload }) => {
       });
     }
     case types.UPDATE_SCROLL_TO_INDEX: {
-      return state.set('scrollToIndex', payload);
+      return state.withMutations((newState) => {
+        newState
+          .set('selectedReqIndex', payload ? payload.index : null)
+          .set('reqDetail', payload);
+      });
     }
     case types.SELECT_REQUEST: {
       return state.withMutations((newState) => {
         newState
           .set('selectedReqIndex', payload ? payload.index : null)
-          .set('reqDetail', payload);
+          .set('reqDetail', payload)
+          .set('showReqDetail', !!payload);
       });
     }
     default:

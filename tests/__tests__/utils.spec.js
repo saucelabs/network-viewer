@@ -181,4 +181,16 @@ describe('utils', () => {
       expect(utils.getTotalTimeOfEntry(networkDataMock.log.entries[0])).toMatchSnapshot();
     });
   });
+
+  it('findIndexNearTimestamp', () => {
+    expect(utils.findIndexNearTimestamp(preparedMockData, 1571042841141)).toMatchSnapshot();
+  });
+
+  it('findIndexBeforeTimestamp', () => {
+    expect(utils.findIndexBeforeTimestamp(preparedMockData, 1571042835643)).toMatchSnapshot();
+  });
+
+  it('findIndexAfterTimestamp', () => {
+    expect(utils.findIndexAfterTimestamp(preparedMockData, 1571042835643)).toMatchSnapshot();
+  });
 });
