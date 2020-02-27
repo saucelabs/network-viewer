@@ -14,10 +14,12 @@ const NetworkViewer = ({
   options,
   onRequestSelect,
   scrollRequestPosition,
+  autoHighlightChange,
 }) => (
   <section className={Styles['network-viewer']}>
     <ThemeProvider options={options}>
       <NetworkProvider
+        autoHighlightChange={autoHighlightChange}
         data={data}
         fetchOptions={fetchOptions}
         file={file}
@@ -31,6 +33,7 @@ const NetworkViewer = ({
 );
 
 NetworkViewer.propTypes = {
+  autoHighlightChange: PropTypes.bool,
   data: PropTypes.object,
   fetchOptions: PropTypes.object,
   file: PropTypes.string,
@@ -41,6 +44,7 @@ NetworkViewer.propTypes = {
 };
 
 NetworkViewer.defaultProps = {
+  autoHighlightChange: false,
   data: null,
   fetchOptions: null,
   file: null,

@@ -8,7 +8,14 @@ import { findRequestIndex } from '../../utils';
 import { ROW_ID_PREFIX } from '../../constants';
 
 const NetworkProvider = (props) => {
-  const { data, file, fetchOptions, scrollTimeStamp, scrollRequestPosition } = props;
+  const {
+    data,
+    file,
+    fetchOptions,
+    scrollTimeStamp,
+    scrollRequestPosition,
+    autoHighlightChange,
+  } = props;
   const [state, dispatch] = useReducer(reducer, initialState);
   const value = useMemo(() => [state, dispatch], [state]);
   const selectedReqIndex = state.get('selectedReqIndex');
@@ -32,8 +39,10 @@ const NetworkProvider = (props) => {
 
   // Find nearby request-rowId and update scrollIndex on scrollTimeStamp receive
   useEffect(() => {
-    if (scrollTimeStamp) {
-      const requestData = state.get('data');
+    const requestData = state.get('data');
+    const showReqDetail = state.get('showReqDetail');
+    const shouldChangeHighlight = showReqDetail ? autoHighlightChange : true;
+    if (scrollTimeStamp && shouldChangeHighlight) {
       const reqIndex = findRequestIndex({
         data: requestData,
         timestamp: scrollTimeStamp,
@@ -68,6 +77,7 @@ const NetworkProvider = (props) => {
 };
 
 NetworkProvider.propTypes = {
+  autoHighlightChange: PropTypes.bool,
   data: PropTypes.object,
   fetchOptions: PropTypes.object,
   file: PropTypes.string,
@@ -76,6 +86,7 @@ NetworkProvider.propTypes = {
 };
 
 NetworkProvider.defaultProps = {
+  autoHighlightChange: false,
   data: null,
   fetchOptions: null,
   file: null,
