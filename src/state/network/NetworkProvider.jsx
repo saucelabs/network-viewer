@@ -18,7 +18,10 @@ const NetworkProvider = (props) => {
   } = props;
   const [state, dispatch] = useReducer(reducer, initialState);
   const value = useMemo(() => [state, dispatch], [state]);
-  const selectedReqIndex = state.get('selectedReqIndex');
+  const selectedReqIndex = value[0].get('selectedReqIndex');
+  const requestData = value[0].get('data');
+  const showReqDetail = value[0].get('showReqDetail');
+  const actualData = value[0].get('actualData');
 
   // Update data onChange of network data
   useEffect(() => {
@@ -39,8 +42,6 @@ const NetworkProvider = (props) => {
 
   // Find nearby request-rowId and update scrollIndex on scrollTimeStamp receive
   useEffect(() => {
-    const requestData = state.get('data');
-    const showReqDetail = state.get('showReqDetail');
     const shouldChangeHighlight = showReqDetail ? autoHighlightChange : true;
     if (scrollTimeStamp && shouldChangeHighlight) {
       const reqIndex = findRequestIndex({
@@ -52,7 +53,7 @@ const NetworkProvider = (props) => {
         updateScrollToIndex(dispatch)(requestData.get(reqIndex));
       }
     }
-  }, [scrollTimeStamp]);
+  }, [scrollTimeStamp, actualData]);
 
   // Scroll to request row onChange of scrollToIndex
   // setTimeout is required when reqDetail is visible,
