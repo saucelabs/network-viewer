@@ -202,7 +202,7 @@ Array [
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "33.3 KB",
-    "startedDateTime": 1571042831641,
+    "startedDateTime": 1571042845641,
     "status": 200,
     "time": 53.14699999871664,
     "timings": Object {
@@ -213,7 +213,7 @@ Array [
       "receive": 1.9629999878816307,
       "send": 0.40400000000000014,
       "ssl": -1,
-      "startTime": 49,
+      "startTime": 14049,
       "wait": 35.81200000759028,
     },
     "transferredSize": 34538,
@@ -537,7 +537,7 @@ Array [
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "33 KB",
-    "startedDateTime": 1571042831641,
+    "startedDateTime": 1571042835641,
     "status": 400,
     "time": 40.115000010700896,
     "timings": Object {
@@ -548,7 +548,7 @@ Array [
       "receive": 7.124000025214627,
       "send": 0.2370000000000001,
       "ssl": -1,
-      "startTime": 49,
+      "startTime": 4049,
       "wait": 18.80099998585507,
     },
     "transferredSize": 34271,
@@ -696,7 +696,7 @@ Array [
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "33.3 KB",
-    "startedDateTime": 1571042831641,
+    "startedDateTime": 1571042845641,
     "status": 200,
     "time": 53.14699999871664,
     "timings": Object {
@@ -707,7 +707,7 @@ Array [
       "receive": 1.9629999878816307,
       "send": 0.40400000000000014,
       "ssl": -1,
-      "startTime": 49,
+      "startTime": 14049,
       "wait": 35.81200000759028,
     },
     "transferredSize": 34538,
@@ -855,7 +855,7 @@ Array [
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "2.8 KB",
-    "startedDateTime": 1571042831643,
+    "startedDateTime": 1571042853643,
     "status": 200,
     "time": 51.217000000178814,
     "timings": Object {
@@ -866,7 +866,7 @@ Array [
       "receive": 1.951000012923032,
       "send": 0.21299999999999986,
       "ssl": -1,
-      "startTime": 51,
+      "startTime": 22051,
       "wait": 36.02600000113249,
     },
     "transferredSize": 1418,
@@ -1014,7 +1014,7 @@ Array [
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "142.9 KB",
-    "startedDateTime": 1571042831644,
+    "startedDateTime": 1571042865644,
     "status": 200,
     "time": 53.195000014966354,
     "timings": Object {
@@ -1025,7 +1025,7 @@ Array [
       "receive": 1.2719999940600246,
       "send": 0.5390000000000001,
       "ssl": -1,
-      "startTime": 52,
+      "startTime": 34052,
       "wait": 37.96100001042895,
     },
     "transferredSize": 29483,
@@ -1035,6 +1035,12 @@ Array [
   },
 ]
 `;
+
+exports[`utils findIndexAfterTimestamp 1`] = `2`;
+
+exports[`utils findIndexBeforeTimestamp 1`] = `1`;
+
+exports[`utils findIndexNearTimestamp 1`] = `2`;
 
 exports[`utils getContent 1`] = `
 "{
@@ -1089,7 +1095,7 @@ Object {
   "receive": 1.951000012923032,
   "send": 0.21299999999999986,
   "ssl": -1,
-  "startTime": 51,
+  "startTime": 22051,
   "wait": 36.02600000113249,
 }
 `;
@@ -1437,7 +1443,7 @@ Object {
       "method": "GET",
       "serverIPAddress": "13.227.143.46",
       "size": "33 KB",
-      "startedDateTime": 1571042831641,
+      "startedDateTime": 1571042835641,
       "status": 400,
       "time": 40.115000010700896,
       "timings": Object {
@@ -1448,7 +1454,7 @@ Object {
         "receive": 7.124000025214627,
         "send": 0.2370000000000001,
         "ssl": -1,
-        "startTime": 49,
+        "startTime": 4049,
         "wait": 18.80099998585507,
       },
       "transferredSize": 34271,
@@ -1596,7 +1602,7 @@ Object {
       "method": "GET",
       "serverIPAddress": "13.227.143.46",
       "size": "33.3 KB",
-      "startedDateTime": 1571042831641,
+      "startedDateTime": 1571042845641,
       "status": 200,
       "time": 53.14699999871664,
       "timings": Object {
@@ -1607,7 +1613,7 @@ Object {
         "receive": 1.9629999878816307,
         "send": 0.40400000000000014,
         "ssl": -1,
-        "startTime": 49,
+        "startTime": 14049,
         "wait": 35.81200000759028,
       },
       "transferredSize": 34538,
@@ -1755,7 +1761,7 @@ Object {
       "method": "GET",
       "serverIPAddress": "13.227.143.46",
       "size": "2.8 KB",
-      "startedDateTime": 1571042831643,
+      "startedDateTime": 1571042853643,
       "status": 200,
       "time": 51.217000000178814,
       "timings": Object {
@@ -1766,7 +1772,7 @@ Object {
         "receive": 1.951000012923032,
         "send": 0.21299999999999986,
         "ssl": -1,
-        "startTime": 51,
+        "startTime": 22051,
         "wait": 36.02600000113249,
       },
       "transferredSize": 1418,
@@ -1914,7 +1920,7 @@ Object {
       "method": "GET",
       "serverIPAddress": "13.227.143.46",
       "size": "142.9 KB",
-      "startedDateTime": 1571042831644,
+      "startedDateTime": 1571042865644,
       "status": 200,
       "time": 53.195000014966354,
       "timings": Object {
@@ -1925,7 +1931,7 @@ Object {
         "receive": 1.2719999940600246,
         "send": 0.5390000000000001,
         "ssl": -1,
-        "startTime": 52,
+        "startTime": 34052,
         "wait": 37.96100001042895,
       },
       "transferredSize": 29483,
@@ -1934,8 +1940,8 @@ Object {
       "url": "https://developer.mozilla.org/static/build/styles/react-mdn.c66d8d89d98e.css",
     },
   ],
-  "finishTime": 116.44500002544373,
-  "totalNetworkTime": 116.445068359375,
+  "finishTime": 34116.445000025444,
+  "totalNetworkTime": 34116.445068359375,
   "totalRequests": 5,
   "totalTransferredSize": 130535,
   "totalUncompressedSize": 355292,
@@ -2255,7 +2261,7 @@ Array [
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "142.9 KB",
-    "startedDateTime": 1571042831644,
+    "startedDateTime": 1571042865644,
     "status": 200,
     "time": 53.195000014966354,
     "timings": Object {
@@ -2266,7 +2272,7 @@ Array [
       "receive": 1.2719999940600246,
       "send": 0.5390000000000001,
       "ssl": -1,
-      "startTime": 52,
+      "startTime": 34052,
       "wait": 37.96100001042895,
     },
     "transferredSize": 29483,
@@ -2414,7 +2420,7 @@ Array [
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "2.8 KB",
-    "startedDateTime": 1571042831643,
+    "startedDateTime": 1571042853643,
     "status": 200,
     "time": 51.217000000178814,
     "timings": Object {
@@ -2425,7 +2431,7 @@ Array [
       "receive": 1.951000012923032,
       "send": 0.21299999999999986,
       "ssl": -1,
-      "startTime": 51,
+      "startTime": 22051,
       "wait": 36.02600000113249,
     },
     "transferredSize": 1418,
@@ -2573,7 +2579,7 @@ Array [
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "33 KB",
-    "startedDateTime": 1571042831641,
+    "startedDateTime": 1571042835641,
     "status": 400,
     "time": 40.115000010700896,
     "timings": Object {
@@ -2584,7 +2590,7 @@ Array [
       "receive": 7.124000025214627,
       "send": 0.2370000000000001,
       "ssl": -1,
-      "startTime": 49,
+      "startTime": 4049,
       "wait": 18.80099998585507,
     },
     "transferredSize": 34271,
@@ -2732,7 +2738,7 @@ Array [
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "33.3 KB",
-    "startedDateTime": 1571042831641,
+    "startedDateTime": 1571042845641,
     "status": 200,
     "time": 53.14699999871664,
     "timings": Object {
@@ -2743,7 +2749,7 @@ Array [
       "receive": 1.9629999878816307,
       "send": 0.40400000000000014,
       "ssl": -1,
-      "startTime": 49,
+      "startTime": 14049,
       "wait": 35.81200000759028,
     },
     "transferredSize": 34538,

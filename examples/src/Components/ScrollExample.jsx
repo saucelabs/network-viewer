@@ -23,6 +23,7 @@ const ScrollExample = () => {
   return (
     <NetworkViewer
       data={data}
+      scrollRequestPosition="near"
       scrollTimeStamp={scrollTimeStamp}
     />
   );
