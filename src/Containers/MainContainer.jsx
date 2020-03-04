@@ -15,8 +15,7 @@ const MainContainer = ({ onRequestSelect }) => {
   const { state } = useNetwork();
   const { showTimeline } = useTheme();
   const loading = state.get('loading');
-  const selectedReqIndex = state.get('selectedReqIndex');
-  const shouldShowDetail = selectedReqIndex || selectedReqIndex === 0;
+  const showReqDetail = state.get('showReqDetail');
 
   return (
     <>
@@ -28,7 +27,7 @@ const MainContainer = ({ onRequestSelect }) => {
         <FilterContainer />
         <section className={Styles['main-container']}>
           <NetworkTableContainer onRequestSelect={onRequestSelect} />
-          {shouldShowDetail && <ReqDetailContainer />}
+          {showReqDetail && <ReqDetailContainer />}
         </section>
       </LoaderContainer>
     </>
