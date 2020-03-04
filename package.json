@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/saucelabs/network-viewer#readme",
   "dependencies": {
+    "axios": "^0.19.2",
     "react-dropzone": "10.1.10",
     "react-flexbox-grid": "2.1.2",
     "react-popover": "0.5.10"
