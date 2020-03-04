@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { HEADERS_TITLES } from './../../../constants';
-import IconCaretUp from './../../../Icons/IconCaretUp';
+import IconCaretUp from './../../../icons/IconCaretUp';
 import Styles from './../Headers.styles.scss';
 
 const ENCODE_TEXT = {
