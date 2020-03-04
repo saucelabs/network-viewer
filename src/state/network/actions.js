@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 import {
   UPDATE_DATA, UPDATE_SEARCH, UPDATE_SORT, UPDATE_FILTER,
   FETCH_FILE, UPDATE_ERROR_MESSAGE, UPDATE_SCROLL_TO_INDEX, SELECT_REQUEST,
@@ -47,9 +49,9 @@ export const selectRequest = (dispatch) => (payload) => dispatch({
   type: SELECT_REQUEST, payload,
 });
 
-export const fetchFile = (dispatch) => (file, fetchOptions) => {
+export const fetchFile = (dispatch) => (file) => {
   fetchFileRequest(dispatch)();
-  fetch(file, fetchOptions)
+  axios.get(file)
     .then((response) => {
       if (!response.ok) {
         throw new Error(response.statusText);
