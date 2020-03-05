@@ -49,9 +49,9 @@ export const selectRequest = (dispatch) => (payload) => dispatch({
   type: SELECT_REQUEST, payload,
 });
 
-export const fetchFile = (dispatch) => (file) => {
+export const fetchFile = (dispatch) => (file, options = { withCredentials: true }) => {
   fetchFileRequest(dispatch)();
-  axios.get(file)
+  axios.get(file, options)
     .then((response) => {
       if (!response.ok) {
         throw new Error(response.statusText);
