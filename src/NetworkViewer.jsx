@@ -46,7 +46,7 @@ NetworkViewer.propTypes = {
 NetworkViewer.defaultProps = {
   autoHighlightChange: false,
   data: null,
-  fetchOptions: null,
+  fetchOptions: { withCredentials: true },
   file: null,
   onRequestSelect: () => {},
   options: null,

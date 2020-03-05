@@ -89,7 +89,7 @@ NetworkProvider.propTypes = {
 NetworkProvider.defaultProps = {
   autoHighlightChange: false,
   data: null,
-  fetchOptions: null,
+  fetchOptions: { withCredentials: true },
   file: null,
   scrollRequestPosition: 'near',
   scrollTimeStamp: null,
