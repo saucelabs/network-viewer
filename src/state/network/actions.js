@@ -52,13 +52,7 @@ export const selectRequest = (dispatch) => (payload) => dispatch({
 export const fetchFile = (dispatch) => (file, options = { withCredentials: true }) => {
   fetchFileRequest(dispatch)();
   axios.get(file, options)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(response.statusText);
-      }
-      return response.json();
-    })
-    .then((data) => {
+    .then(({ data }) => {
       if (data && data.log) {
         updateData(dispatch)(data.log);
       }
