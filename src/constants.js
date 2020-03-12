@@ -161,6 +161,7 @@ export const TIME_CHART_SVG_PROPS = {
   height: '20',
   viewBox: '0 0 250 20',
   version: '1.1',
+  preserveAspectRatio: 'xMinYMin meet',
 };
 
 export const TIME_CHART_DEFAULT_PROPS = {

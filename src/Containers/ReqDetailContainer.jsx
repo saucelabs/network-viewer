@@ -43,12 +43,6 @@ const ReqDetailContainer = () => {
         >
           <Response data={reqDetail} />
         </Tab>
-        <Tab
-          eventKey="timing"
-          name="Timing"
-        >
-          <p>Timing soon</p>
-        </Tab>
       </Tabs>
     </div>
   );

@@ -9,7 +9,7 @@ const LoadedData = () => (
   <NetworkViewer
     data={data}
     options={{
-      showTimeline: true,
+      showTimeline: false,
       showImportHAR: false,
     }}
   />
