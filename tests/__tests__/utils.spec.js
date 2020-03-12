@@ -29,6 +29,7 @@ describe('utils', () => {
   it('prepareViewerData', () => {
     const { entries } = networkDataMock.log;
     expect(utils.prepareViewerData(entries)).toMatchSnapshot();
+    expect(utils.prepareViewerData([])).toMatchSnapshot();
   });
 
   it('sortBy', () => {
