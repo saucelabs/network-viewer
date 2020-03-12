@@ -314,7 +314,7 @@ export const findIndexNearTimestamp = (data, exactTimestamp) => (
 export const findIndexBeforeTimestamp = (data, exactTimestamp) => {
   const resultIndex = data.reverse()
     .findIndex(({ startedDateTime }) => startedDateTime <= exactTimestamp);
-  return resultIndex < 0 ? resultIndex : data.size - (resultIndex + 1);
+  return resultIndex < 0 ? 0 : data.size - (resultIndex + 1);
 };
 
 export const findIndexAfterTimestamp = (data, exactTimestamp) => (
