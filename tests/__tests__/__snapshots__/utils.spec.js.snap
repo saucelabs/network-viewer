@@ -1948,6 +1948,17 @@ Object {
 }
 `;
 
+exports[`utils prepareViewerData 2`] = `
+Object {
+  "data": Array [],
+  "finishTime": 0,
+  "totalNetworkTime": 0,
+  "totalRequests": 0,
+  "totalTransferredSize": 0,
+  "totalUncompressedSize": 0,
+}
+`;
+
 exports[`utils sortBy 1`] = `
 Array [
   Object {

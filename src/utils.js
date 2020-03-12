@@ -141,6 +141,17 @@ export const getTotalTimeOfEntry = ({ startedDateTime, time, timings }) => (
 );
 
 export const prepareViewerData = (entries) => {
+  if (!entries.length) {
+    return {
+      totalNetworkTime: 0,
+      data: [],
+      totalRequests: 0,
+      totalTransferredSize: 0,
+      totalUncompressedSize: 0,
+      finishTime: 0,
+    };
+  }
+
   const firstEntryTime = entries[0].startedDateTime;
   let endTime = getTotalTimeOfEntry(entries[entries.length - 1]);
   let totalTransferredSize = 0;
