@@ -2,6 +2,7 @@
 
 .checkbox-container {
   padding: 2px 0 0 $size-xxl;
+  text-align: right;
 
   @media (max-width: $md) {
     padding: 2px 0 0 0;
@@ -13,6 +14,8 @@
     font-weight: normal;
     color: $brand-primary-gray;
     cursor: pointer;
+    text-transform: none;
+    margin: 0;
   }
 
   .checkbox {
@@ -20,7 +23,7 @@
     cursor: pointer;
 
     @media (max-width: $md) {
-      margin-right: 2px;
+      margin-right: $size-xs;
     }
   }
 }

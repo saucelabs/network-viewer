@@ -22,6 +22,10 @@ $tab-height: 35px;
     border: 0;
     border-bottom: 2px solid transparent;
 
+    &:hover {
+      text-decoration: none;
+    }
+
     &.active {
       border: 0;
       color: $white-20;

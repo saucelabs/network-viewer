@@ -36,6 +36,10 @@
     margin-left: $size-xs * 2;
     font-size: $font-size-small;
   }
+
+  &:focus, span:focus {
+    outline: none;
+  }
 }
 
 .header-detail {
