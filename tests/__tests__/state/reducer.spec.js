@@ -54,6 +54,20 @@ describe('network reducer', () => {
     expect(state.get('dataSummary')).toMatchSnapshot();
   });
 
+  it('UPDATE_ERROR_FILTER', () => {
+    const newState = initialState.merge(new Map({
+      actualData: preparedMockData,
+    }));
+
+    state = reducer(newState, {
+      type: types.UPDATE_ERROR_FILTER,
+      payload: true,
+    });
+    expect(state.get('data').toJS()).toMatchSnapshot();
+    expect(state.get('errorFilter')).toMatchSnapshot();
+    expect(state.get('dataSummary')).toMatchSnapshot();
+  });
+
   it('UPDATE_SORT', () => {
     const newState = initialState.merge(new Map({
       data: preparedMockData,

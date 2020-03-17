@@ -7,7 +7,7 @@ import NetworkTableFooter from './../../../../src/Components/NetworkTable/Networ
 describe('NetworkTableFooter', () => {
   it('renders without crashing', () => {
     mount(
-      <table>
+      <div>
         <NetworkTableFooter
           dataSummary={new Map({
             totalRequests: 20,
@@ -20,7 +20,7 @@ describe('NetworkTableFooter', () => {
           })}
           showAllInfo
         />
-      </table>,
+      </div>,
     );
   });
 });

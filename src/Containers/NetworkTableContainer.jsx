@@ -3,7 +3,6 @@ import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
 
 import NetworkTableHeader from './../Components/NetworkTable/NetworkTableHeader';
-import NetworkTableFooter from './../Components/NetworkTable/NetworkTableFooter';
 import NetworkTableRow from './../Components/NetworkTable/NetworkTableRow';
 import { useNetwork } from './../state/network/Context';
 import ImportHar from './../Components/ImportHAR';
@@ -20,7 +19,6 @@ const NetworkTableContainer = ({ onRequestSelect }) => {
   const data = state.get('data');
   const totalNetworkTime = state.get('totalNetworkTime');
   const error = state.get('error');
-  const dataSummary = state.get('dataSummary');
   const selectedReqIndex = state.get('selectedReqIndex');
   const showReqDetail = state.get('showReqDetail');
   const showAllCols = !showReqDetail;
@@ -66,10 +64,6 @@ const NetworkTableContainer = ({ onRequestSelect }) => {
             />
           ))}
         </tbody>
-        <NetworkTableFooter
-          dataSummary={dataSummary}
-          showAllInfo={showAllCols}
-        />
       </table>
     </section>
   );

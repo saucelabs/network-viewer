@@ -102,13 +102,6 @@ export const FILTERS = [
       value: ['manifest.json'],
     },
   },
-  {
-    name: 'Error',
-    filterBy: {
-      name: 'error',
-      value: ['error'],
-    },
-  },
 ];
 
 export const FETCH_FILE_LOAD_TEXT = 'Please wait, Fetching file is in progress.';
@@ -217,5 +210,5 @@ export const MAX_COLOR_CONTENT_SIZE = 100000; // 100kB
 export const TIMELINE_DATA_POINT_HEIGHT = 2;
 export const NETWORK_VIEWER_DEFAULT_OPTIONS = {
   showImportHAR: true,
-  showTimeline: true,
+  showTimeline: false,
 };

@@ -8,29 +8,29 @@ import { formatSize, formatTime } from './../../utils';
 const context = classNames.bind(Styles);
 
 const NetworkTableFooter = ({ dataSummary, showAllInfo }) => (
-  <tfoot>
-    <tr className={context('footer')}>
-      {showAllInfo ? (
-        <td colSpan={8}>
-          <span>{`${dataSummary.get('totalRequests')} requests`}</span>
-          <span>{`${formatSize(dataSummary.get('totalTransferredSize'))} transferred`}</span>
-          <span>{`${formatSize(dataSummary.get('totalUncompressedSize'))} resources`}</span>
-          <span>{`Finished: ${formatTime(dataSummary.get('finish'))}`}</span>
-          <span>{`DOMContentLoaded: ${formatTime(dataSummary.get('timings').DOMContentLoaded)}`}</span>
-          <span>{`Load: ${formatTime(dataSummary.get('timings').onLoad)}`}</span>
-        </td>
-      ) : (
-        <td colSpan={1}>
-          <span>{`${dataSummary.get('totalRequests')} requests`}</span>
-        </td>
-      )}
-    </tr>
-  </tfoot>
+  <div className={context('footer')}>
+    {showAllInfo ? (
+      <>
+        <span>{`${dataSummary.get('totalRequests')} requests`}</span>
+        <span>{`${formatSize(dataSummary.get('totalTransferredSize'))} transferred`}</span>
+        <span>{`${formatSize(dataSummary.get('totalUncompressedSize'))} resources`}</span>
+        <span>{`Finished: ${formatTime(dataSummary.get('finish'))}`}</span>
+        <span>{`DOMContentLoaded: ${formatTime(dataSummary.get('timings').DOMContentLoaded)}`}</span>
+        <span>{`Load: ${formatTime(dataSummary.get('timings').onLoad)}`}</span>
+      </>
+    ) : (
+      <span>{`${dataSummary.get('totalRequests')} requests`}</span>
+    )}
+  </div>
 );
 
 NetworkTableFooter.propTypes = {
   dataSummary: PropTypes.object.isRequired,
-  showAllInfo: PropTypes.bool.isRequired,
+  showAllInfo: PropTypes.bool,
+};
+
+NetworkTableFooter.defaultProps = {
+  showAllInfo: true,
 };
 
 export default NetworkTableFooter;

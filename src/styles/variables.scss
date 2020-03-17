@@ -99,10 +99,11 @@ $size-xxxl: $size-base * 11; // 44px;
   brandBlue: $brand-blue;
 }
 
-// widths
+// width/height of container
 $name-col-width: 250px;
 $filter-row-height: 42px;
 $timeline-height: 100px;
+$footer-height: 34px;
 
 // borders
 $border: 1px solid $white-80;

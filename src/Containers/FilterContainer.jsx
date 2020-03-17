@@ -9,6 +9,7 @@ import { FILTERS } from './../constants';
 import Styles from './FilterContainer.styles.scss';
 import Button from './../Components/Common/Button';
 import { useTheme } from '../state/theme/Context';
+import ErrorFilter from '../Components/Filters/ErrorFilter';
 
 const context = classNames.bind(Styles);
 
@@ -16,6 +17,8 @@ const FilterContainer = () => {
   const { state, actions } = useNetwork();
   const { showImportHAR } = useTheme();
   const filter = state.get('filter');
+  const filterByError = state.get('errorFilter');
+
   return (
     <section className={Styles['filters-container']}>
       <Row>
@@ -54,6 +57,10 @@ const FilterContainer = () => {
                 </Button>
               );
             })}
+            <ErrorFilter
+              isError={filterByError}
+              onChange={actions.updateErrorFilter}
+            />
             {showImportHAR && <ImportHar className={Styles['filter-button']} />}
           </div>
         </Col>
