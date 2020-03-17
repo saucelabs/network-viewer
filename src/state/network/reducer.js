@@ -20,6 +20,7 @@ const initialState = new Map({
     name: null,
     value: null,
   },
+  errorFilter: false,
   error: null,
   loading: false,
   scrollToIndex: null,
@@ -63,6 +64,7 @@ const reducer = (state = initialState, { type, payload }) => {
           data: state.get('actualData'),
           filter: state.get('filter'),
           search: payload,
+          errorFilter: state.get('errorFilter'),
         });
         const summary = getSummary(data);
         newState
@@ -79,10 +81,28 @@ const reducer = (state = initialState, { type, payload }) => {
           data: state.get('actualData'),
           filter: payload,
           search: state.get('search'),
+          errorFilter: state.get('errorFilter'),
         });
         const summary = getSummary(data);
         newState
           .set('filter', payload)
+          .set('data', data)
+          .setIn(['dataSummary', 'totalRequests'], summary.totalRequests)
+          .setIn(['dataSummary', 'totalTransferredSize'], summary.totalTransferredSize)
+          .setIn(['dataSummary', 'totalUncompressedSize'], summary.totalUncompressedSize);
+      });
+    }
+    case types.UPDATE_ERROR_FILTER: {
+      return state.withMutations((newState) => {
+        const data = filterData({
+          data: state.get('actualData'),
+          filter: state.get('filter'),
+          search: state.get('search'),
+          errorFilter: payload,
+        });
+        const summary = getSummary(data);
+        newState
+          .set('errorFilter', payload)
           .set('data', data)
           .setIn(['dataSummary', 'totalRequests'], summary.totalRequests)
           .setIn(['dataSummary', 'totalTransferredSize'], summary.totalTransferredSize)

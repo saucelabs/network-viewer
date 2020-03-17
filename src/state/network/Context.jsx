@@ -20,6 +20,7 @@ export const useNetwork = () => {
     updateErrorMessage: actions.updateErrorMessage,
     selectRequest: actions.selectRequest,
     updateScrollToIndex: actions.updateScrollToIndex,
+    updateErrorFilter: actions.updateErrorFilter,
   })(dispatch, state);
 
   return {

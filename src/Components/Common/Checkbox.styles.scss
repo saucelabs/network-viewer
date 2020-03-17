@@ -1,0 +1,26 @@
+@import "./../../styles/variables.scss";
+
+.checkbox-container {
+  padding: 2px 0 0 $size-xxl;
+
+  @media (max-width: $md) {
+    padding: 2px 0 0 0;
+    min-width: 100px;
+  }
+
+  .checkbox-label {
+    font-style: normal;
+    font-weight: normal;
+    color: $brand-primary-gray;
+    cursor: pointer;
+  }
+
+  .checkbox {
+    margin-right: $size-s;
+    cursor: pointer;
+
+    @media (max-width: $md) {
+      margin-right: 2px;
+    }
+  }
+}

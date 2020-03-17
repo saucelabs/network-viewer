@@ -3,6 +3,7 @@ import axios from 'axios';
 import {
   UPDATE_DATA, UPDATE_SEARCH, UPDATE_SORT, UPDATE_FILTER,
   FETCH_FILE, UPDATE_ERROR_MESSAGE, UPDATE_SCROLL_TO_INDEX, SELECT_REQUEST,
+  UPDATE_ERROR_FILTER,
 } from './types';
 
 export const updateData = (dispatch) => (payload) => dispatch({
@@ -22,6 +23,11 @@ export const updateSort = (dispatch) => (payload) => dispatch({
 
 export const updateFilter = (dispatch) => (payload) => dispatch({
   type: UPDATE_FILTER,
+  payload,
+});
+
+export const updateErrorFilter = (dispatch) => (payload) => dispatch({
+  type: UPDATE_ERROR_FILTER,
   payload,
 });
 

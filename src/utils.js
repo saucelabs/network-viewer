@@ -215,17 +215,21 @@ export const filterCondition = ({ filter, info }) => {
 };
 
 export const filterData = ({
-  data, filter, search,
+  data,
+  errorFilter,
+  filter = {},
+  search = {},
 }) => {
   const trimmedSearch = search.value && search.value.trim();
 
-  return !trimmedSearch && !filter.name ?
+  return !trimmedSearch && !filter.name && !errorFilter ?
     data :
     data.filter((info) => {
       const isSearchMatched = trimmedSearch ?
         info[search.name] && info[search.name].includes(trimmedSearch) : true;
+      const isErrorMatched = errorFilter ? filterCondition({ filter: { name: 'error' }, info }) : true;
       const isFilterMatched = filter.name ? filterCondition({ filter, info }) : true;
-      return isSearchMatched && isFilterMatched;
+      return isSearchMatched && isErrorMatched && isFilterMatched;
     });
 };
 

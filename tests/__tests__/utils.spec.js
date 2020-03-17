@@ -41,11 +41,19 @@ describe('utils', () => {
       data: preparedMockData,
       search: { name: 'url', value: 'e96c15f68c68' },
       filter: {},
+      errorFilter: false,
     }).toJS()).toMatchSnapshot();
     expect(utils.filterData({
       data: preparedMockData,
       filter: { key: 'type', value: ['html'] },
       search: {},
+      errorFilter: false,
+    }).toJS()).toMatchSnapshot();
+    expect(utils.filterData({
+      data: preparedMockData,
+      errorFilter: true,
+      search: {},
+      filter: {},
     }).toJS()).toMatchSnapshot();
   });
 
