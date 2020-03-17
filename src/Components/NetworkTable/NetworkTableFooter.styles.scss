@@ -1,18 +1,24 @@
 @import "./../../styles/variables.scss";
 
 .footer {
-  border-top: 2px solid $white-90;
+  border-top: $border;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: $white-97;
+  padding: $size-xs * 2;
+  display: inline-flex;
+  vertical-align: middle;
+
   span {
-    &:after {
-      content: "";
-      border-left: 1px solid $white-90;
-      margin: $size-m;
-    } 
+    flex: 1 1 auto;
+    justify-content: center;
+    display: inline-flex;
+    align-items: center;
+    border-right: 1px solid $white-80;
+
     &:last-child {
-      &:after {
-        content: "";
-        border-left: none;
-      }
+      border-right: none;
     }
   }
 }
