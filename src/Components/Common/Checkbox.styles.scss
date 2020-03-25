@@ -1,13 +1,9 @@
 @import "./../../styles/variables.scss";
 
 .checkbox-container {
-  padding: 2px 0 0 $size-xxl;
+  padding: 2px 0 0 ($size-xs * 6);
   text-align: right;
-
-  @media (max-width: $md) {
-    padding: 2px 0 0 0;
-    min-width: 100px;
-  }
+  min-width: 110px;
 
   .checkbox-label {
     font-style: normal;
@@ -19,11 +15,7 @@
   }
 
   .checkbox {
-    margin-right: $size-s;
+    margin-right: $size-xs;
     cursor: pointer;
-
-    @media (max-width: $md) {
-      margin-right: $size-xs;
-    }
   }
 }
