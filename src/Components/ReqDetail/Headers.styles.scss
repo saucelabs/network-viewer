@@ -59,4 +59,8 @@
     font-weight: bold;
     padding-right: $size-m / 2;
   }
+
+  .info-value {
+    word-break: break-all;
+  }
 }
