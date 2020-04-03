@@ -61,10 +61,13 @@ const NetworkProvider = (props) => {
   useEffect(() => {
     if (selectedReqIndex) {
       setTimeout(() => {
-        document.getElementById(ROW_ID_PREFIX + selectedReqIndex).scrollIntoView({
-          alignToTop: true,
-          behavior: 'smooth',
-        });
+        const element = document.getElementById(ROW_ID_PREFIX + selectedReqIndex);
+        if (element) {
+          element.scrollIntoView({
+            alignToTop: true,
+            behavior: 'smooth',
+          });
+        }
       }, 300);
     }
   }, [selectedReqIndex]);
