@@ -10,7 +10,7 @@ import './app.css';
 const App = () => (
   <section className="app-container">
     <Tabs
-      defaultSelectedKey="preloaded"
+      defaultSelectedKey="default"
       tabsContainerClassName="tab-container"
     >
       <Tab
