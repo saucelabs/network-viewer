@@ -15,6 +15,7 @@ const NetworkProvider = (props) => {
     scrollTimeStamp,
     scrollRequestPosition,
     autoHighlightChange,
+    onDataLoaded,
   } = props;
   const [state, dispatch] = useReducer(reducer, initialState);
   const value = useMemo(() => [state, dispatch], [state]);
@@ -39,6 +40,12 @@ const NetworkProvider = (props) => {
       fetchFile(dispatch)(file, fetchOptions);
     }
   }, [file]);
+
+  useEffect(() => {
+    if (actualData.size) {
+      onDataLoaded(actualData);
+    }
+  }, [actualData]);
 
   // Find nearby request-rowId and update scrollIndex on scrollTimeStamp receive
   useEffect(() => {
@@ -85,6 +92,7 @@ NetworkProvider.propTypes = {
   data: PropTypes.object,
   fetchOptions: PropTypes.object,
   file: PropTypes.string,
+  onDataLoaded: PropTypes.func,
   scrollRequestPosition: PropTypes.oneOf(['before', 'after', 'near']),
   scrollTimeStamp: PropTypes.number,
 };
@@ -94,6 +102,7 @@ NetworkProvider.defaultProps = {
   data: null,
   fetchOptions: { withCredentials: true },
   file: null,
+  onDataLoaded: null,
   scrollRequestPosition: 'near',
   scrollTimeStamp: null,
 };

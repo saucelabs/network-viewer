@@ -61,7 +61,7 @@ const FilterContainer = () => {
               isError={filterByError}
               onChange={actions.updateErrorFilter}
             />
-            {showImportHAR && <ImportHar className={Styles['filter-button']} />}
+            {showImportHAR && <ImportHar className={Styles['import-har-button']} />}
           </div>
         </Col>
       </Row>

@@ -1,0 +1,17 @@
+@import './../../../src/styles/variables';
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: $white-97;
+  border-top: 1px solid $white-80;
+  text-align: center;
+
+  .link {
+    margin-left: $size-xs;
+    text-decoration: none;
+  }
+}
