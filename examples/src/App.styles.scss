@@ -22,5 +22,10 @@
       font-size: $font-size-h4;
       font-weight: normal;
     }
+
+    .example-url {
+      padding-left: $size-xs;
+      text-decoration: none;
+    }
   }
 }
