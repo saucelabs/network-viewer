@@ -32,7 +32,7 @@ const MainContainer = ({ onRequestSelect }) => {
           <NetworkTableContainer onRequestSelect={onRequestSelect} />
           {showReqDetail && <ReqDetailContainer />}
         </section>
-        {actualData?.size ? <NetworkTableFooter dataSummary={dataSummary} /> : null}
+        {actualData.size ? <NetworkTableFooter dataSummary={dataSummary} /> : null}
       </LoaderContainer>
     </>
   );

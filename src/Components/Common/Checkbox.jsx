@@ -1,10 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames/bind';
 
 import Styles from './Checkbox.styles.scss';
 
-const Checkbox = ({ isChecked, onChange, children, title }) => (
-  <div className={Styles['checkbox-container']}>
+const context = classNames.bind(Styles);
+
+const Checkbox = ({
+  containerClassName,
+  isChecked,
+  onChange,
+  children,
+  title,
+}) => (
+  <div className={context('checkbox-container', containerClassName)}>
     <label
       className={Styles['checkbox-label']}
       title={title}
@@ -22,12 +31,14 @@ const Checkbox = ({ isChecked, onChange, children, title }) => (
 
 Checkbox.propTypes = {
   children: PropTypes.any.isRequired,
+  containerClassName: PropTypes.string,
   isChecked: PropTypes.bool,
   onChange: PropTypes.func.isRequired,
   title: PropTypes.string,
 };
 
 Checkbox.defaultProps = {
+  containerClassName: '',
   isChecked: false,
   title: '',
 };
