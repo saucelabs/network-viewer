@@ -20,7 +20,10 @@
     "release:minor": "np minor",
     "release:major": "np major"
   },
-  "author": "The Sauce Labs Performance Team <Performance@saucelabs.com>",
+  "author": "The Sauce Labs Insights Team <insights@saucelabs.com>",
+  "contributors": [
+    "Farhan Chauhan <farhan687@gmail.com>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/saucelabs/network-viewer/issues"
