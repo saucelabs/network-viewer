@@ -11,7 +11,7 @@
     "lib:js": "rimraf lib && cross-env NODE_ENV=commonjs babel ./src -d ./lib --config-file=./config/babel/babel-build-lib.js",
     "lib:css": "node-sass --output-style compact -q ./src -o ./lib && postcss -r --config=./config/postcss.config.js ./lib/*.css",
     "build:lib": "npm run lib:js && npm run lib:css",
-    "build:examples": "webpack --mode production",
+    "build:examples": "NODE_ENV=production webpack --mode production",
     "deploy": "gh-pages -d examples/dist",
     "publish-demo": "npm run build:examples && npm run deploy",
     "prepublishOnly": "npm prune && run-s build:*",
