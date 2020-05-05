@@ -21,7 +21,7 @@ Main features of Network-Viewer are:
 
 ## How to use
 ### import/Upload HAR file
-Use web-application https://saucelabs.github.io/network-viewer/ and import HAR file
+Visit https://saucelabs.github.io/network-viewer/ and Import HAR file
 
 ### Fetch HAR file
 - `file=HAR_FILE_URL` as queryString to pass HAR file url
@@ -56,7 +56,7 @@ after: find request exactAfter the timestamp |
 | scrollTimeStamp   | Number   | null   |  | Find and highlight network request by timestamp |
 
 
-### dev build
+## Dev build
 
 ```sh
 $ git clone https://github.com/saucelabs/network-viewer.git
