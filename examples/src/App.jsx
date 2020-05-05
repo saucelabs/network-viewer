@@ -27,7 +27,8 @@ const App = () => {
   }, []);
 
   const handleURLSubmit = (fetchInfo) => {
-    const newURL = `${document.location.origin}/?${stringify(fetchInfo)}`;
+    const { origin, pathname } = document.location;
+    const newURL = `${origin}${pathname}?${stringify(fetchInfo)}`;
     document.location.href = newURL;
   };
 
