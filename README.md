@@ -6,7 +6,9 @@ Network-Viewer is a **Redefined** HAR viewer human friendly view of requests whi
 The main purpose of this web application is to help you to view HAR files with many features like filters, search, timline charts etc.
 
 ### Demo
-[Example URL](https://saucelabs.github.io/network-viewer/?file=https%3A%2F%2Fraw.githubusercontent.com%2Fsaucelabs%2Fnetwork-viewer%2Fmaster%2Fexamples%2Fsrc%2Fdata%2Fnetwork.har&isCORSEnabled=false)
+[Example](https://saucelabs.github.io/network-viewer/?file=https%3A%2F%2Fraw.githubusercontent.com%2Fsaucelabs%2Fnetwork-viewer%2Fmaster%2Fexamples%2Fsrc%2Fdata%2Fnetwork.har&isCORSEnabled=false)
+
+![](https://i.imgur.com/wryjs8l.png)
 
 ## Features
 Main features of Network-Viewer are:
