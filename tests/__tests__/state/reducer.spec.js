@@ -96,4 +96,15 @@ describe('network reducer', () => {
     expect(state.get('selectedReqIndex')).toBe(0);
     expect(state.get('reqDetail')).toMatchSnapshot();
   });
+
+  it('RESET', () => {
+    const newState = initialState.merge(new Map({
+      data: preparedMockData,
+    }));
+
+    state = reducer(newState, {
+      type: types.RESET,
+    });
+    expect(state).toEqual(initialState);
+  });
 });
