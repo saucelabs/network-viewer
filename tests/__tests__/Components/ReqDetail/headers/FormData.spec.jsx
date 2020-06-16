@@ -19,6 +19,7 @@ describe('FormData', () => {
   };
 
   it('renders without crashing', () => {
-    shallow(<FormData {...props} />);
+    const element = shallow(<FormData {...props} />);
+    expect(element).toMatchSnapshot();
   });
 });

@@ -6,7 +6,7 @@ import Tab from './../../../../src/Components/Common/Tab';
 
 describe('Tabs', () => {
   it('renders without crashing', () => {
-    shallow(
+    const element = shallow(
       <Tabs>
         <Tab
           key="foo"
@@ -16,5 +16,6 @@ describe('Tabs', () => {
         </Tab>
       </Tabs>,
     );
+    expect(element).toMatchSnapshot();
   });
 });

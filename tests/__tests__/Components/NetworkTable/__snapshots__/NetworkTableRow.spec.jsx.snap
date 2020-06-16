@@ -1,0 +1,326 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NetworkTableRow renders without crashing 1`] = `
+<table>
+  <tbody>
+    <NetworkTableRow
+      maxTime={5000}
+      onSelect={[Function]}
+      payload={
+        Object {
+          "domain": "developer.mozilla.org",
+          "filename": "slice",
+          "index": 0,
+          "method": "GET",
+          "size": 135.04,
+          "startedDateTime": "2019-10-14T08:47:11.592Z",
+          "status": 200,
+          "timings": Object {
+            "_blocked_queueing": 4.382999992230907,
+            "blocked": 5.496999992230907,
+            "connect": -1,
+            "dns": -1,
+            "receive": 3.252000024076551,
+            "send": 0.2819999999999998,
+            "ssl": -1,
+            "startTime": 0,
+            "wait": 26.03899999633059,
+          },
+          "type": "html",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+        }
+      }
+      scrollHighlight={false}
+      showAllCols={true}
+    >
+      <tr
+        className="network-table-row info"
+        id="network-viewer-table-row-0"
+        onClick={[Function]}
+      >
+        <NetworkCellValue
+          datakey="filename"
+          key="file"
+          payload={
+            Object {
+              "domain": "developer.mozilla.org",
+              "filename": "slice",
+              "index": 0,
+              "method": "GET",
+              "size": 135.04,
+              "startedDateTime": "2019-10-14T08:47:11.592Z",
+              "status": 200,
+              "timings": Object {
+                "_blocked_queueing": 4.382999992230907,
+                "blocked": 5.496999992230907,
+                "connect": -1,
+                "dns": -1,
+                "receive": 3.252000024076551,
+                "send": 0.2819999999999998,
+                "ssl": -1,
+                "startTime": 0,
+                "wait": 26.03899999633059,
+              },
+              "type": "html",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+            }
+          }
+          unit={null}
+        >
+          <td
+            className="value-cell filename"
+          >
+            <Popover
+              appendTarget={<body />}
+              body={
+                <span>
+                  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+                </span>
+              }
+              enterExitTransitionDurationMs={500}
+              isOpen={false}
+              offset={4}
+              onOuterAction={[Function]}
+              place={null}
+              preferPlace="below"
+              refreshIntervalMs={200}
+              tipSize={7}
+            >
+              <span
+                onMouseOut={[Function]}
+                onMouseOver={[Function]}
+              >
+                slice
+              </span>
+              <Portal
+                containerInfo={<body />}
+              />
+            </Popover>
+          </td>
+        </NetworkCellValue>
+        <NetworkCellValue
+          datakey="status"
+          key="status"
+          payload={
+            Object {
+              "domain": "developer.mozilla.org",
+              "filename": "slice",
+              "index": 0,
+              "method": "GET",
+              "size": 135.04,
+              "startedDateTime": "2019-10-14T08:47:11.592Z",
+              "status": 200,
+              "timings": Object {
+                "_blocked_queueing": 4.382999992230907,
+                "blocked": 5.496999992230907,
+                "connect": -1,
+                "dns": -1,
+                "receive": 3.252000024076551,
+                "send": 0.2819999999999998,
+                "ssl": -1,
+                "startTime": 0,
+                "wait": 26.03899999633059,
+              },
+              "type": "html",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+            }
+          }
+          unit={null}
+        >
+          <td
+            className="value-cell status"
+          >
+            <span>
+              200
+            </span>
+          </td>
+        </NetworkCellValue>
+        <NetworkCellValue
+          datakey="method"
+          key="method"
+          payload={
+            Object {
+              "domain": "developer.mozilla.org",
+              "filename": "slice",
+              "index": 0,
+              "method": "GET",
+              "size": 135.04,
+              "startedDateTime": "2019-10-14T08:47:11.592Z",
+              "status": 200,
+              "timings": Object {
+                "_blocked_queueing": 4.382999992230907,
+                "blocked": 5.496999992230907,
+                "connect": -1,
+                "dns": -1,
+                "receive": 3.252000024076551,
+                "send": 0.2819999999999998,
+                "ssl": -1,
+                "startTime": 0,
+                "wait": 26.03899999633059,
+              },
+              "type": "html",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+            }
+          }
+          unit={null}
+        >
+          <td
+            className="value-cell method"
+          >
+            <span>
+              GET
+            </span>
+          </td>
+        </NetworkCellValue>
+        <NetworkCellValue
+          datakey="domain"
+          key="domain"
+          payload={
+            Object {
+              "domain": "developer.mozilla.org",
+              "filename": "slice",
+              "index": 0,
+              "method": "GET",
+              "size": 135.04,
+              "startedDateTime": "2019-10-14T08:47:11.592Z",
+              "status": 200,
+              "timings": Object {
+                "_blocked_queueing": 4.382999992230907,
+                "blocked": 5.496999992230907,
+                "connect": -1,
+                "dns": -1,
+                "receive": 3.252000024076551,
+                "send": 0.2819999999999998,
+                "ssl": -1,
+                "startTime": 0,
+                "wait": 26.03899999633059,
+              },
+              "type": "html",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+            }
+          }
+          unit={null}
+        >
+          <td
+            className="value-cell domain"
+          >
+            <span>
+              developer.mozilla.org
+            </span>
+          </td>
+        </NetworkCellValue>
+        <NetworkCellValue
+          datakey="type"
+          key="type"
+          payload={
+            Object {
+              "domain": "developer.mozilla.org",
+              "filename": "slice",
+              "index": 0,
+              "method": "GET",
+              "size": 135.04,
+              "startedDateTime": "2019-10-14T08:47:11.592Z",
+              "status": 200,
+              "timings": Object {
+                "_blocked_queueing": 4.382999992230907,
+                "blocked": 5.496999992230907,
+                "connect": -1,
+                "dns": -1,
+                "receive": 3.252000024076551,
+                "send": 0.2819999999999998,
+                "ssl": -1,
+                "startTime": 0,
+                "wait": 26.03899999633059,
+              },
+              "type": "html",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+            }
+          }
+          unit={null}
+        >
+          <td
+            className="value-cell type"
+          >
+            <span>
+              html
+            </span>
+          </td>
+        </NetworkCellValue>
+        <NetworkCellValue
+          datakey="size"
+          key="size"
+          payload={
+            Object {
+              "domain": "developer.mozilla.org",
+              "filename": "slice",
+              "index": 0,
+              "method": "GET",
+              "size": 135.04,
+              "startedDateTime": "2019-10-14T08:47:11.592Z",
+              "status": 200,
+              "timings": Object {
+                "_blocked_queueing": 4.382999992230907,
+                "blocked": 5.496999992230907,
+                "connect": -1,
+                "dns": -1,
+                "receive": 3.252000024076551,
+                "send": 0.2819999999999998,
+                "ssl": -1,
+                "startTime": 0,
+                "wait": 26.03899999633059,
+              },
+              "type": "html",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+            }
+          }
+          unit={null}
+        >
+          <td
+            className="value-cell size"
+          >
+            <span>
+              135.04
+            </span>
+          </td>
+        </NetworkCellValue>
+        <NetworkCellValue
+          datakey="time"
+          key="time"
+          payload={
+            Object {
+              "domain": "developer.mozilla.org",
+              "filename": "slice",
+              "index": 0,
+              "method": "GET",
+              "size": 135.04,
+              "startedDateTime": "2019-10-14T08:47:11.592Z",
+              "status": 200,
+              "timings": Object {
+                "_blocked_queueing": 4.382999992230907,
+                "blocked": 5.496999992230907,
+                "connect": -1,
+                "dns": -1,
+                "receive": 3.252000024076551,
+                "send": 0.2819999999999998,
+                "ssl": -1,
+                "startTime": 0,
+                "wait": 26.03899999633059,
+              },
+              "type": "html",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+            }
+          }
+          unit={null}
+        >
+          <td
+            className="value-cell time"
+          >
+            <span />
+          </td>
+        </NetworkCellValue>
+        <td />
+      </tr>
+    </NetworkTableRow>
+  </tbody>
+</table>
+`;

@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImportHAR renders without crashing 1`] = `
+<NetworkProvider
+  autoHighlightChange={false}
+  data={null}
+  fetchOptions={
+    Object {
+      "withCredentials": true,
+    }
+  }
+  file={null}
+  onDataLoaded={null}
+  scrollRequestPosition="near"
+  scrollTimeStamp={null}
+>
+  <ImportHar
+    className={null}
+    showButton={true}
+  >
+    <div
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragEnter={[Function]}
+      onDragLeave={[Function]}
+      onDragOver={[Function]}
+      onDrop={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      tabIndex={0}
+    >
+      <input
+        accept=".har"
+        autoComplete="off"
+        multiple={false}
+        onChange={[Function]}
+        onClick={[Function]}
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+        tabIndex={-1}
+        type="file"
+      />
+      <Button
+        category="default"
+        className={null}
+        disabled={false}
+        href={null}
+        material={true}
+        raised={true}
+        size="sm"
+        type="button"
+      >
+        <button
+          className="btn btn-sm btn-md-default btn-md-default-raised btn-md-raised"
+          disabled={false}
+          href={null}
+          type="button"
+        >
+          Import HAR
+        </button>
+      </Button>
+    </div>
+  </ImportHar>
+</NetworkProvider>
+`;

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Response renders without crashing 1`] = `
+<div>
+  <p
+    key="foo-0"
+  >
+    <span>
+      foo:
+    </span>
+    <span>
+      bar
+    </span>
+  </p>
+</div>
+`;

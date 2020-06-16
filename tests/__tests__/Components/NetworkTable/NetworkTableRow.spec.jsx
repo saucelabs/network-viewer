@@ -36,12 +36,13 @@ describe('NetworkTableRow', () => {
   };
 
   it('renders without crashing', () => {
-    mount(
+    const element = mount(
       <table>
         <tbody>
           <NetworkTableRow {...props} />
         </tbody>
       </table>,
     );
+    expect(element).toMatchSnapshot();
   });
 });

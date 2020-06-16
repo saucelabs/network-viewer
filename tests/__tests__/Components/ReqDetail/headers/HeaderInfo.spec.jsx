@@ -11,6 +11,7 @@ describe('HeaderInfo', () => {
   };
 
   it('renders without crashing', () => {
-    shallow(<HeaderInfo {...props} />);
+    const element = shallow(<HeaderInfo {...props} />);
+    expect(element).toMatchSnapshot();
   });
 });

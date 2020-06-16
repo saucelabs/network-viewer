@@ -1,0 +1,380 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Headers renders without crashing 1`] = `
+<Headers
+  data={
+    Object {
+      "domain": "developer.mozilla.org",
+      "filename": "slice",
+      "headers": Object {
+        "queryString": Array [],
+        "request": Array [
+          Object {
+            "name": "Connection",
+            "value": "keep-alive",
+          },
+        ],
+        "response": Array [
+          Object {
+            "name": "Connection",
+            "value": "keep-alive",
+          },
+        ],
+      },
+      "index": 0,
+      "method": "GET",
+      "serverIPAddress": ":80",
+      "size": 135.04,
+      "startedDateTime": "2019-10-14T08:47:11.592Z",
+      "status": 200,
+      "timings": Object {
+        "_blocked_queueing": 4.382999992230907,
+        "blocked": 5.496999992230907,
+        "connect": -1,
+        "dns": -1,
+        "receive": 3.252000024076551,
+        "send": 0.2819999999999998,
+        "ssl": -1,
+        "startTime": 0,
+        "wait": 26.03899999633059,
+      },
+      "type": "html",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+    }
+  }
+  maxTime={5000}
+>
+  <section>
+    <HeaderInfo
+      component={[Function]}
+      data={
+        Object {
+          "domain": "developer.mozilla.org",
+          "filename": "slice",
+          "headers": Object {
+            "queryString": Array [],
+            "request": Array [
+              Object {
+                "name": "Connection",
+                "value": "keep-alive",
+              },
+            ],
+            "response": Array [
+              Object {
+                "name": "Connection",
+                "value": "keep-alive",
+              },
+            ],
+          },
+          "index": 0,
+          "method": "GET",
+          "serverIPAddress": ":80",
+          "size": 135.04,
+          "startedDateTime": "2019-10-14T08:47:11.592Z",
+          "status": 200,
+          "timings": Object {
+            "_blocked_queueing": 4.382999992230907,
+            "blocked": 5.496999992230907,
+            "connect": -1,
+            "dns": -1,
+            "receive": 3.252000024076551,
+            "send": 0.2819999999999998,
+            "ssl": -1,
+            "startTime": 0,
+            "wait": 26.03899999633059,
+          },
+          "type": "html",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+        }
+      }
+      eventKey="general"
+      supportEncode={false}
+    >
+      <div
+        className="header-info active"
+      >
+        <HeaderTitle
+          eventKey="general"
+          isURLEncoded={true}
+          onChangeEncode={[Function]}
+          onClick={[Function]}
+          supportEncode={false}
+        >
+          <div>
+            <span
+              onClick={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <IconCaretUp
+                className=""
+              >
+                <svg
+                  className=""
+                  height="8"
+                  preserveAspectRatio="xMidYMid"
+                  viewBox="0 0 13 8"
+                  width="13"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <path
+                      d="M11.547,8.008 C11.547,8.008 6.500,2.919 6.500,2.919 C6.500,2.919 1.453,8.008 1.453,8.008 C1.453,8.008 0.011,6.554 0.011,6.554 C0.011,6.554 6.500,0.011 6.500,0.011 C6.500,0.011 12.989,6.554 12.989,6.554 C12.989,6.554 11.547,8.008 11.547,8.008 Z"
+                      fillRule="evenodd"
+                    />
+                  </g>
+                </svg>
+              </IconCaretUp>
+              General
+            </span>
+          </div>
+        </HeaderTitle>
+        <ChildComponent>
+          <div>
+            <p
+              key="url"
+            >
+              <span>
+                Request URL:
+              </span>
+              <span>
+                https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+              </span>
+            </p>
+            <p
+              key="method"
+            >
+              <span>
+                Request Method:
+              </span>
+              <span>
+                GET
+              </span>
+            </p>
+            <p
+              key="status"
+            >
+              <span>
+                Status Code:
+              </span>
+              <span>
+                200
+              </span>
+            </p>
+            <p
+              key="serverIPAddress"
+            >
+              <span>
+                Remote Address:
+              </span>
+              <span>
+                :80
+              </span>
+            </p>
+          </div>
+        </ChildComponent>
+      </div>
+    </HeaderInfo>
+    <HeaderInfo
+      component={[Function]}
+      data={
+        Object {
+          "domain": "developer.mozilla.org",
+          "filename": "slice",
+          "headers": Object {
+            "queryString": Array [],
+            "request": Array [
+              Object {
+                "name": "Connection",
+                "value": "keep-alive",
+              },
+            ],
+            "response": Array [
+              Object {
+                "name": "Connection",
+                "value": "keep-alive",
+              },
+            ],
+          },
+          "index": 0,
+          "method": "GET",
+          "serverIPAddress": ":80",
+          "size": 135.04,
+          "startedDateTime": "2019-10-14T08:47:11.592Z",
+          "status": 200,
+          "timings": Object {
+            "_blocked_queueing": 4.382999992230907,
+            "blocked": 5.496999992230907,
+            "connect": -1,
+            "dns": -1,
+            "receive": 3.252000024076551,
+            "send": 0.2819999999999998,
+            "ssl": -1,
+            "startTime": 0,
+            "wait": 26.03899999633059,
+          },
+          "type": "html",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+        }
+      }
+      eventKey="response"
+      supportEncode={false}
+    >
+      <div
+        className="header-info active"
+      >
+        <HeaderTitle
+          eventKey="response"
+          isURLEncoded={true}
+          onChangeEncode={[Function]}
+          onClick={[Function]}
+          supportEncode={false}
+        >
+          <div>
+            <span
+              onClick={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <IconCaretUp
+                className=""
+              >
+                <svg
+                  className=""
+                  height="8"
+                  preserveAspectRatio="xMidYMid"
+                  viewBox="0 0 13 8"
+                  width="13"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <path
+                      d="M11.547,8.008 C11.547,8.008 6.500,2.919 6.500,2.919 C6.500,2.919 1.453,8.008 1.453,8.008 C1.453,8.008 0.011,6.554 0.011,6.554 C0.011,6.554 6.500,0.011 6.500,0.011 C6.500,0.011 12.989,6.554 12.989,6.554 C12.989,6.554 11.547,8.008 11.547,8.008 Z"
+                      fillRule="evenodd"
+                    />
+                  </g>
+                </svg>
+              </IconCaretUp>
+              Response Headers
+            </span>
+          </div>
+        </HeaderTitle>
+        <ChildComponent>
+          <div>
+            <p
+              key="Connection-0"
+            >
+              <span>
+                Connection:
+              </span>
+              <span>
+                keep-alive
+              </span>
+            </p>
+          </div>
+        </ChildComponent>
+      </div>
+    </HeaderInfo>
+    <HeaderInfo
+      component={[Function]}
+      data={
+        Object {
+          "domain": "developer.mozilla.org",
+          "filename": "slice",
+          "headers": Object {
+            "queryString": Array [],
+            "request": Array [
+              Object {
+                "name": "Connection",
+                "value": "keep-alive",
+              },
+            ],
+            "response": Array [
+              Object {
+                "name": "Connection",
+                "value": "keep-alive",
+              },
+            ],
+          },
+          "index": 0,
+          "method": "GET",
+          "serverIPAddress": ":80",
+          "size": 135.04,
+          "startedDateTime": "2019-10-14T08:47:11.592Z",
+          "status": 200,
+          "timings": Object {
+            "_blocked_queueing": 4.382999992230907,
+            "blocked": 5.496999992230907,
+            "connect": -1,
+            "dns": -1,
+            "receive": 3.252000024076551,
+            "send": 0.2819999999999998,
+            "ssl": -1,
+            "startTime": 0,
+            "wait": 26.03899999633059,
+          },
+          "type": "html",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+        }
+      }
+      eventKey="request"
+      supportEncode={false}
+    >
+      <div
+        className="header-info active"
+      >
+        <HeaderTitle
+          eventKey="request"
+          isURLEncoded={true}
+          onChangeEncode={[Function]}
+          onClick={[Function]}
+          supportEncode={false}
+        >
+          <div>
+            <span
+              onClick={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <IconCaretUp
+                className=""
+              >
+                <svg
+                  className=""
+                  height="8"
+                  preserveAspectRatio="xMidYMid"
+                  viewBox="0 0 13 8"
+                  width="13"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <path
+                      d="M11.547,8.008 C11.547,8.008 6.500,2.919 6.500,2.919 C6.500,2.919 1.453,8.008 1.453,8.008 C1.453,8.008 0.011,6.554 0.011,6.554 C0.011,6.554 6.500,0.011 6.500,0.011 C6.500,0.011 12.989,6.554 12.989,6.554 C12.989,6.554 11.547,8.008 11.547,8.008 Z"
+                      fillRule="evenodd"
+                    />
+                  </g>
+                </svg>
+              </IconCaretUp>
+              Request Headers
+            </span>
+          </div>
+        </HeaderTitle>
+        <ChildComponent>
+          <div>
+            <p
+              key="Connection-0"
+            >
+              <span>
+                Connection:
+              </span>
+              <span>
+                keep-alive
+              </span>
+            </p>
+          </div>
+        </ChildComponent>
+      </div>
+    </HeaderInfo>
+  </section>
+</Headers>
+`;

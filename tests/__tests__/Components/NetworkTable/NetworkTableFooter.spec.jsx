@@ -6,7 +6,7 @@ import NetworkTableFooter from './../../../../src/Components/NetworkTable/Networ
 
 describe('NetworkTableFooter', () => {
   it('renders without crashing', () => {
-    mount(
+    const element = mount(
       <div>
         <NetworkTableFooter
           dataSummary={new Map({
@@ -22,5 +22,6 @@ describe('NetworkTableFooter', () => {
         />
       </div>,
     );
+    expect(element).toMatchSnapshot();
   });
 });

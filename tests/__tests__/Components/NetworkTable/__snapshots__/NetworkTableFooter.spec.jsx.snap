@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NetworkTableFooter renders without crashing 1`] = `
+<div>
+  <NetworkTableFooter
+    dataSummary={
+      Immutable.Map {
+        "totalRequests": 20,
+        "totalTransferredSize": 2034,
+        "totalUncompressedSize": 1035,
+        "timings": Object {
+          "DOMContentLoaded": 2000,
+          "onLoad": 999,
+        },
+      }
+    }
+    showAllInfo={true}
+  >
+    <div
+      className="footer"
+    >
+      <span>
+        20 requests
+      </span>
+      <span>
+        2 KB transferred
+      </span>
+      <span>
+        1 KB resources
+      </span>
+      <span>
+        Finished: NaNm
+      </span>
+      <span>
+        DOMContentLoaded: 2s
+      </span>
+      <span>
+        Load: 999ms
+      </span>
+    </div>
+  </NetworkTableFooter>
+</div>
+`;

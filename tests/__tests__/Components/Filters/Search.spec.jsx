@@ -11,6 +11,7 @@ describe('Search', () => {
   };
 
   it('renders without crashing', () => {
-    shallow(<Search {...params} />);
+    const element = shallow(<Search {...params} />);
+    expect(element).toMatchSnapshot();
   });
 });

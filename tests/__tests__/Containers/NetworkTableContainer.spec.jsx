@@ -6,10 +6,11 @@ import NetworkProvider from './../../../src/state/network/NetworkProvider';
 
 describe('NetworkTableContainer', () => {
   it('renders without crashing', () => {
-    mount(
+    const element = mount(
       <NetworkProvider>
         <NetworkTableContainer />
       </NetworkProvider>,
     );
+    expect(element).toMatchSnapshot();
   });
 });

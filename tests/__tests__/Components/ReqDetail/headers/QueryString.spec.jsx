@@ -17,6 +17,7 @@ describe('QueryString', () => {
   };
 
   it('renders without crashing', () => {
-    shallow(<QueryString {...props} />);
+    const element = shallow(<QueryString {...props} />);
+    expect(element).toMatchSnapshot();
   });
 });

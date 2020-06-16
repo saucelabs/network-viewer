@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimelineContainer renders without crashing 1`] = `
+<NetworkProvider
+  autoHighlightChange={false}
+  data={null}
+  fetchOptions={
+    Object {
+      "withCredentials": true,
+    }
+  }
+  file={null}
+  onDataLoaded={null}
+  scrollRequestPosition="near"
+  scrollTimeStamp={null}
+>
+  <TimelineContainer />
+</NetworkProvider>
+`;

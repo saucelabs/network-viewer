@@ -6,10 +6,11 @@ import NetworkProvider from './../../../../src/state/network/NetworkProvider';
 
 describe('ImportHAR', () => {
   it('renders without crashing', () => {
-    mount(
+    const element = mount(
       <NetworkProvider>
         <ImportHAR />
       </NetworkProvider>,
     );
+    expect(element).toMatchSnapshot();
   });
 });

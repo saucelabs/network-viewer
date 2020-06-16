@@ -5,10 +5,11 @@ import NetworkTableHeader from './../../../../src/Components/NetworkTable/Networ
 
 describe('NetworkTableHeader', () => {
   it('renders without crashing', () => {
-    mount(
+    const element = mount(
       <table>
         <NetworkTableHeader showAllCols />
       </table>,
     );
+    expect(element).toMatchSnapshot();
   });
 });

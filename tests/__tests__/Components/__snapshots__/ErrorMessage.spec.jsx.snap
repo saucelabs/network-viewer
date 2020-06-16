@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorMessage renders without crashing 1`] = `
+<div>
+  <h4>
+    Error message title
+  </h4>
+</div>
+`;

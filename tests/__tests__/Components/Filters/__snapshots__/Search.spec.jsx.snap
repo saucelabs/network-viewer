@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search renders without crashing 1`] = `
+<div>
+  <Dropdown
+    className={null}
+    items={
+      Array [
+        "url",
+        "body",
+      ]
+    }
+    onChange={[Function]}
+    selected="url"
+  />
+  <input
+    onChange={[Function]}
+    placeholder="Filter"
+    type="text"
+    value="test"
+  />
+</div>
+`;

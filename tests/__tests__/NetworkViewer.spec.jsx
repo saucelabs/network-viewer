@@ -4,5 +4,6 @@ import { shallow } from 'enzyme';
 import NetworkViewer from './../../src/NetworkViewer';
 
 it('renders without crashing', () => {
-  shallow(<NetworkViewer />);
+  const element = shallow(<NetworkViewer />);
+  expect(element).toMatchSnapshot();
 });

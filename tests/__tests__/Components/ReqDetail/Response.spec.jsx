@@ -5,10 +5,12 @@ import Response from './../../../../src/Components/ReqDetail/Response';
 
 describe('Response', () => {
   it('renders without crashing for no content', () => {
-    shallow(<Response data={{}} />);
+    const element = shallow(<Response data={{}} />);
+    expect(element).toMatchSnapshot();
   });
 
   it('renders without crashing for content', () => {
-    shallow(<Response data={{ body: '{"foo": "bar"}' }} />);
+    const element = shallow(<Response data={{ body: '{"foo": "bar"}' }} />);
+    expect(element).toMatchSnapshot();
   });
 });

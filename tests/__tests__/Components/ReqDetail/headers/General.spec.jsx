@@ -9,6 +9,7 @@ describe('General', () => {
   };
 
   it('renders without crashing', () => {
-    shallow(<General {...props} />);
+    const element = shallow(<General {...props} />);
+    expect(element).toMatchSnapshot();
   });
 });

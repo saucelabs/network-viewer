@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimelineChartDatapoint renders without crashing 1`] = `
+<svg>
+  <TimelineDatapoint
+    cx={234}
+    cy={0}
+    index={5}
+    maxTime={17000}
+    payload={
+      Object {
+        "timings": Object {
+          "startTime": 1200,
+        },
+      }
+    }
+  >
+    <g>
+      <rect
+        fill="#ccc"
+        height={2}
+        key="queueing"
+        width="0%"
+        x="7.0588235294117645%"
+        y={55}
+      />
+      <rect
+        fill="#A1000C"
+        height={2}
+        key="blocked"
+        width="0%"
+        x="14.117647058823529%"
+        y={55}
+      />
+      <rect
+        fill="#DCC9E5"
+        height={2}
+        key="dns"
+        width="0%"
+        x="21.176470588235293%"
+        y={55}
+      />
+      <rect
+        fill="#E78057"
+        height={2}
+        key="ssl"
+        width="0%"
+        x="28.235294117647058%"
+        y={55}
+      />
+      <rect
+        fill="#DB8553"
+        height={2}
+        key="connect"
+        width="0%"
+        x="35.294117647058826%"
+        y={55}
+      />
+      <rect
+        fill="#3C96C4"
+        height={2}
+        key="send"
+        width="0%"
+        x="42.352941176470594%"
+        y={55}
+      />
+      <rect
+        fill="#7CA0BF"
+        height={2}
+        key="wait"
+        width="0%"
+        x="49.41176470588236%"
+        y={55}
+      />
+      <rect
+        fill="#65B955"
+        height={2}
+        key="receive"
+        width="0%"
+        x="56.47058823529413%"
+        y={55}
+      />
+    </g>
+  </TimelineDatapoint>
+</svg>
+`;

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<section
+  className="network-viewer"
+>
+  <ThemeProvider
+    options={null}
+  >
+    <NetworkProvider
+      autoHighlightChange={false}
+      data={null}
+      fetchOptions={
+        Object {
+          "withCredentials": true,
+        }
+      }
+      file={null}
+      onDataLoaded={null}
+      scrollRequestPosition="near"
+      scrollTimeStamp={null}
+    >
+      <MainContainer
+        onRequestSelect={[Function]}
+      />
+    </NetworkProvider>
+  </ThemeProvider>
+</section>
+`;

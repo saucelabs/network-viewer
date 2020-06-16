@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimelineChart renders without crashing 1`] = `
+<TimelineChart
+  chartData={Array []}
+  totalNetworkTime={17000}
+>
+  <div>
+    <ResponsiveContainer
+      debounce={0}
+      height={100}
+      width="100%"
+    >
+      <div
+        className="recharts-responsive-container"
+        style={
+          Object {
+            "height": 100,
+            "maxHeight": undefined,
+            "minHeight": undefined,
+            "minWidth": undefined,
+            "width": "100%",
+          }
+        }
+      >
+        <ScatterChart
+          barCategoryGap="10%"
+          barGap={4}
+          height={100}
+          layout="horizontal"
+          margin={
+            Object {
+              "bottom": 5,
+              "left": 5,
+              "right": 5,
+              "top": 5,
+            }
+          }
+          reverseStackOrder={false}
+          stackOffset="none"
+          width={0}
+        />
+        <ResizeDetector
+          handleHeight={true}
+          handleWidth={true}
+          onResize={[Function]}
+          refreshRate={1000}
+          resizableElementId=""
+          skipOnMount={false}
+        >
+          <div
+            style={
+              Object {
+                "display": "none",
+                "height": 0,
+                "position": "absolute",
+                "visibility": "hidden",
+                "width": 0,
+              }
+            }
+          />
+        </ResizeDetector>
+      </div>
+    </ResponsiveContainer>
+  </div>
+</TimelineChart>
+`;
