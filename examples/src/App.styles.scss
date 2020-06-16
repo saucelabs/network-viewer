@@ -10,22 +10,4 @@
       height: 100%;
     }
   }
-
-  .app-info {
-    margin: 1rem;
-    color: $brand-primary-gray;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .app-info-text {
-      font-size: $font-size-h4;
-      font-weight: normal;
-    }
-
-    .example-url {
-      padding-left: $size-xs;
-      text-decoration: none;
-    }
-  }
 }

@@ -1,0 +1,19 @@
+@import "./../../styles/variables";
+
+.input-har-container {
+  margin: 1rem;
+  color: $brand-primary-gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .input-har-text {
+    font-size: $font-size-h4;
+    font-weight: normal;
+  }
+
+  .example-url {
+    padding-left: $size-xs;
+    text-decoration: none;
+  }
+}

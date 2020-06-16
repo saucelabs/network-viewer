@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col } from 'react-flexbox-grid';
 import classNames from 'classnames/bind';
 
-import ImportHar from './../Components/ImportHAR';
+import ImportHar from './../Components/Import/ImportHAR';
 import Search from './../Components/Filters/Search';
 import { useNetwork } from './../state/network/Context';
 import { FILTERS } from './../constants';
@@ -10,6 +10,7 @@ import Styles from './FilterContainer.styles.scss';
 import Button from './../Components/Common/Button';
 import { useTheme } from '../state/theme/Context';
 import ErrorFilter from '../Components/Filters/ErrorFilter';
+import Reset from '../Components/Import/Reset';
 
 const context = classNames.bind(Styles);
 
@@ -61,7 +62,15 @@ const FilterContainer = () => {
               isError={filterByError}
               onChange={actions.updateErrorFilter}
             />
-            {showImportHAR && <ImportHar className={Styles['import-har-button']} />}
+            {showImportHAR && (
+              <>
+                <ImportHar className={Styles['addon-action-button']} />
+                <Reset
+                  className={Styles['addon-action-button']}
+                  onReset={actions.resetState}
+                />
+              </>
+            )}
           </div>
         </Col>
       </Row>
