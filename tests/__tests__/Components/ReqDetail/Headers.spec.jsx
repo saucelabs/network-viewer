@@ -37,8 +37,9 @@ describe('Headers', () => {
   };
 
   it('renders without crashing', () => {
-    mount(
+    const element = mount(
       <Headers {...props} />,
     );
+    expect(element).toMatchSnapshot();
   });
 });

@@ -5,7 +5,7 @@ import TimelineChartDatapoint from './../../../../src/Components/TimelineChart/T
 
 describe('TimelineChartDatapoint', () => {
   it('renders without crashing', () => {
-    mount(
+    const element = mount(
       <svg>
         <TimelineChartDatapoint
           cx={234}
@@ -17,6 +17,8 @@ describe('TimelineChartDatapoint', () => {
             },
           }}
         />
-      </svg>);
+      </svg>,
+    );
+    expect(element).toMatchSnapshot();
   });
 });

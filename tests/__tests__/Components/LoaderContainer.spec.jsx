@@ -10,10 +10,11 @@ describe('LoaderContainer', () => {
   };
 
   it('renders without crashing', () => {
-    shallow(
+    const element = shallow(
       <LoaderContainer {...props}>
         <p>Loaded</p>
       </LoaderContainer>,
     );
+    expect(element).toHaveLength(1);
   });
 });

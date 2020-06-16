@@ -1,58 +1,58 @@
 import axios from 'axios';
 
-import {
-  UPDATE_DATA, UPDATE_SEARCH, UPDATE_SORT, UPDATE_FILTER,
-  FETCH_FILE, UPDATE_ERROR_MESSAGE, UPDATE_SCROLL_TO_INDEX, SELECT_REQUEST,
-  UPDATE_ERROR_FILTER,
-} from './types';
+import * as types from './types';
 
 export const updateData = (dispatch) => (payload) => dispatch({
-  type: UPDATE_DATA,
+  type: types.UPDATE_DATA,
   payload,
 });
 
 export const updateSearch = (dispatch) => (payload) => dispatch({
-  type: UPDATE_SEARCH,
+  type: types.UPDATE_SEARCH,
   payload,
 });
 
 export const updateSort = (dispatch) => (payload) => dispatch({
-  type: UPDATE_SORT,
+  type: types.UPDATE_SORT,
   payload,
 });
 
 export const updateFilter = (dispatch) => (payload) => dispatch({
-  type: UPDATE_FILTER,
+  type: types.UPDATE_FILTER,
   payload,
 });
 
 export const updateErrorFilter = (dispatch) => (payload) => dispatch({
-  type: UPDATE_ERROR_FILTER,
+  type: types.UPDATE_ERROR_FILTER,
   payload,
 });
 
 export const fetchFileRequest = (dispatch) => (payload) => dispatch({
-  type: FETCH_FILE.REQUEST, payload,
+  type: types.FETCH_FILE.REQUEST, payload,
 });
 
 export const fetchFileSuccess = (dispatch) => (payload) => dispatch({
-  type: FETCH_FILE.SUCCESS, payload,
+  type: types.FETCH_FILE.SUCCESS, payload,
 });
 
 export const fetchFileFailure = (dispatch) => (payload) => dispatch({
-  type: FETCH_FILE.FAILURE, payload,
+  type: types.FETCH_FILE.FAILURE, payload,
 });
 
 export const updateErrorMessage = (dispatch) => (payload) => dispatch({
-  type: UPDATE_ERROR_MESSAGE, payload,
+  type: types.UPDATE_ERROR_MESSAGE, payload,
 });
 
 export const updateScrollToIndex = (dispatch) => (payload) => dispatch({
-  type: UPDATE_SCROLL_TO_INDEX, payload,
+  type: types.UPDATE_SCROLL_TO_INDEX, payload,
 });
 
 export const selectRequest = (dispatch) => (payload) => dispatch({
-  type: SELECT_REQUEST, payload,
+  type: types.SELECT_REQUEST, payload,
+});
+
+export const resetState = (dispatch) => (payload) => dispatch({
+  type: types.RESET, payload,
 });
 
 export const fetchFile = (dispatch) => (file, options = { withCredentials: true }) => {

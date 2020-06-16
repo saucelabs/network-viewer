@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs renders without crashing 1`] = `
+<Fragment>
+  <nav
+    className="nav-tabs"
+  />
+  <section
+    className=""
+  />
+</Fragment>
+`;

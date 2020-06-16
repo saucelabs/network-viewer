@@ -153,6 +153,9 @@ const reducer = (state = initialState, { type, payload }) => {
           .set('showReqDetail', !!payload);
       });
     }
+    case types.RESET: {
+      return initialState;
+    }
     default:
       return state;
   }

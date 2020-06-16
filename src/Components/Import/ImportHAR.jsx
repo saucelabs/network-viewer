@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDropzone } from 'react-dropzone';
 
-import { useNetwork } from './../state/network/Context';
+import { useNetwork } from './../../state/network/Context';
 import Styles from './ImportHAR.styles.scss';
-import Button from './Common/Button';
+import Button from './../Common/Button';
 
 const DROP_FILE_CONFIG = {
   accept: '.har',

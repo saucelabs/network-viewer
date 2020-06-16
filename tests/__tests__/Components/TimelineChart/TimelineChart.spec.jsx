@@ -5,9 +5,10 @@ import TimelineChart from './../../../../src/Components/TimelineChart/TimelineCh
 
 describe('TimelineChart', () => {
   it('renders without crashing', () => {
-    mount(<TimelineChart
+    const element = mount(<TimelineChart
       chartData={[]}
       totalNetworkTime={17000}
     />);
+    expect(element).toMatchSnapshot();
   });
 });

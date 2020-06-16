@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReqDetailContainer renders without crashing 1`] = `
+<NetworkProvider
+  autoHighlightChange={false}
+  data={null}
+  fetchOptions={
+    Object {
+      "withCredentials": true,
+    }
+  }
+  file={null}
+  onDataLoaded={null}
+  scrollRequestPosition="near"
+  scrollTimeStamp={null}
+>
+  <ReqDetailContainer>
+    <div>
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        <IconCloseSign
+          className=""
+        >
+          <svg
+            className=""
+            height="16"
+            viewBox="0 0 17 16"
+            width="17"
+          >
+            <g
+              fill="none"
+              fillRule="evenodd"
+              stroke="#ACB2B8"
+              strokeLinecap="round"
+              transform="translate(1)"
+            >
+              <path
+                d="M0 0L15.2460858 15.2460858M15.2460858 0L0 15.2460858"
+              />
+            </g>
+          </svg>
+        </IconCloseSign>
+      </button>
+      <Tabs
+        activeClassName={null}
+        defaultSelectedKey="headers"
+        navLinkClassName={null}
+        navTabsClassName={null}
+        onUpdate={null}
+        selectedKey={null}
+        tabsContainerClassName={null}
+      >
+        <nav
+          className="nav-tabs"
+        >
+          <a
+            className="tab-item undefined"
+            key="headers"
+            onClick={[Function]}
+            role="tab"
+            tabIndex={0}
+          >
+            Headers
+          </a>
+          <a
+            className="tab-item"
+            key="response"
+            onClick={[Function]}
+            role="tab"
+            tabIndex={1}
+          >
+            Response
+          </a>
+        </nav>
+        <section
+          className=""
+        >
+          <Headers
+            data={null}
+          />
+        </section>
+      </Tabs>
+    </div>
+  </ReqDetailContainer>
+</NetworkProvider>
+`;

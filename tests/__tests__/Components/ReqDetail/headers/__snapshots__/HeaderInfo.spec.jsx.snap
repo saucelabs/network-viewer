@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderInfo renders without crashing 1`] = `
+<div
+  className="header-info active"
+>
+  <HeaderTitle
+    eventKey="general"
+    isURLEncoded={true}
+    onChangeEncode={[Function]}
+    onClick={[Function]}
+    supportEncode={false}
+  />
+  <ChildComponent />
+</div>
+`;

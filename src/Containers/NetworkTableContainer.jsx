@@ -5,10 +5,11 @@ import PropTypes from 'prop-types';
 import NetworkTableHeader from './../Components/NetworkTable/NetworkTableHeader';
 import NetworkTableRow from './../Components/NetworkTable/NetworkTableRow';
 import { useNetwork } from './../state/network/Context';
-import ImportHar from './../Components/ImportHAR';
+import ImportHar from './../Components/Import/ImportHAR';
 import Styles from './NetworkTableContainer.styles.scss';
 import ErrorMessage from './../Components/ErrorMessage';
 import { useTheme } from '../state/theme/Context';
+import InputHAR from '../Components/Import/InputHAR';
 
 const context = classNames.bind(Styles);
 
@@ -40,7 +41,12 @@ const NetworkTableContainer = ({ onRequestSelect }) => {
   if (!actualData.size) {
     return (
       <section className={Styles['table-container']}>
-        {showImportHAR && <ImportHar showButton={false} />}
+        {showImportHAR && (
+          <>
+            <ImportHar showButton={false} />
+            <InputHAR />
+          </>
+        )}
       </section>
     );
   }

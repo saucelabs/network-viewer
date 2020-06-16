@@ -11,3 +11,4 @@ export const FETCH_FILE = {
   SUCCESS: 'FETCH_FILE_SUCCESS',
   FAILURE: 'FETCH_FILE_FAILURE',
 };
+export const RESET = 'RESET';

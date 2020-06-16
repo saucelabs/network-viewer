@@ -17,6 +17,7 @@ describe('Response', () => {
   };
 
   it('renders without crashing', () => {
-    shallow(<Response {...props} />);
+    const element = shallow(<Response {...props} />);
+    expect(element).toMatchSnapshot();
   });
 });

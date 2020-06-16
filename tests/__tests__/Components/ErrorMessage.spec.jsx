@@ -9,6 +9,7 @@ describe('ErrorMessage', () => {
   };
 
   it('renders without crashing', () => {
-    shallow(<ErrorMessage {...props} />);
+    const element = shallow(<ErrorMessage {...props} />);
+    expect(element).toMatchSnapshot();
   });
 });

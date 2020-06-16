@@ -1,0 +1,36 @@
+@import "./../../styles/variables";
+
+.url-input-container {
+  margin: 0;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+  max-width: $md;
+
+  .postpend-button {
+    display: flex;
+    margin-left: -1px;
+    height: auto;
+  }
+
+  .input {
+    border-radius: .2rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: $filter-button-height;
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+    margin-bottom: 0;
+    color: $white-39;
+    background-color: $white-100;
+    background-clip: padding-box;
+    border: $border;
+  }
+}
+

@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NetworkTableHeader renders without crashing 1`] = `
+<table>
+  <NetworkTableHeader
+    showAllCols={true}
+  >
+    <thead>
+      <tr>
+        <th
+          className="value-cell filename"
+          key="file"
+        >
+          File
+        </th>
+        <th
+          className="value-cell status"
+          key="status"
+        >
+          Status
+        </th>
+        <th
+          className="value-cell method"
+          key="method"
+        >
+          Method
+        </th>
+        <th
+          className="value-cell domain"
+          key="domain"
+        >
+          Domain
+        </th>
+        <th
+          className="value-cell type"
+          key="type"
+        >
+          Type
+        </th>
+        <th
+          className="value-cell size"
+          key="size"
+        >
+          Size
+        </th>
+        <th
+          className="value-cell time"
+          key="time"
+        >
+          Time
+        </th>
+        <th>
+          Waterfall
+        </th>
+      </tr>
+    </thead>
+  </NetworkTableHeader>
+</table>
+`;
