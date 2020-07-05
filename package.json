@@ -10,7 +10,7 @@
     "lint:fix": "npm run test:lint --quiet --fix",
     "build:lib": "rollup --config ./config/rollup.config.js",
     "build:examples": "cd examples && npm run build",
-    "watch:build": "rollup --config ./config/rollup.config.js -w",
+    "watch:lib": "rollup --config ./config/rollup.config.js -w",
     "watch:examples": "cd examples && npm run start",
     "deploy": "gh-pages -d examples/build",
     "publish-demo": "npm run build:examples && npm run deploy",

@@ -64,8 +64,15 @@ after: find request exactAfter the timestamp |
 $ git clone https://github.com/saucelabs/network-viewer.git
 $ cd network-viewer
 $ npm install
-$ npm start
+$ npm run watch:lib
 ```
+
+Open another tab to run examples
+
+```sh
+$ npm run watch:examples
+```
+
 and then browse to (http://localhost:3000)[http://localhost:3000]
 
 
