@@ -42,7 +42,7 @@ const NetworkProvider = (props) => {
   }, [file]);
 
   useEffect(() => {
-    if (actualData.size) {
+    if (actualData.size && onDataLoaded) {
       onDataLoaded(actualData);
     }
   }, [actualData]);

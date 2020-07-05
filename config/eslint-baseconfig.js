@@ -79,7 +79,6 @@ module.exports = {
         devDependencies: [
           './tests/**/*',
           './config/**/*',
-          './webpack.config.js',
         ],
       },
     ],

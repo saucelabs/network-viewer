@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import classNames from 'classnames/bind';
 
-import NetworkViewer from './../../src/NetworkViewer';
-import Styles from './App.styles.scss';
+import { NetworkViewer } from 'network-viewer';
+import Styles from './App.module.scss';
 import Footer from './Components/Footer';
 import { parseQueryString } from './utils';
+import 'network-viewer/lib/index.css'
 
 const contextClassNames = classNames.bind(Styles);
 
