@@ -71,7 +71,7 @@ typings/
 
 # production
 /build
-/examples/dist
+/examples
 
 # misc
 .DS_Store
@@ -87,7 +87,7 @@ yarn.lock
 
 # config
 config
-webpack.config.js
+rollup.config.js
 
 # other
 public
