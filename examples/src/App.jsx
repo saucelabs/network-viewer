@@ -5,7 +5,6 @@ import { NetworkViewer } from 'network-viewer';
 import Styles from './App.module.scss';
 import Footer from './Components/Footer';
 import { parseQueryString } from './utils';
-import 'network-viewer/lib/index.css'
 
 const contextClassNames = classNames.bind(Styles);
 

@@ -69,9 +69,11 @@ typings/
 # testing
 /coverage
 
-# production
+# code
 /build
 /examples
+/src
+/tests
 
 # misc
 .DS_Store
