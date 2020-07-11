@@ -73,6 +73,8 @@ typings/
 /build
 /lib
 /examples/build
+/es6
+/umd
 
 # misc
 .DS_Store

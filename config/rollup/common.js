@@ -5,13 +5,13 @@ import postcss from 'rollup-plugin-postcss';
 import nodeResolve from '@rollup/plugin-node-resolve';
 import json from '@rollup/plugin-json';
 import autoprefixer from 'autoprefixer';
-import smartAsset from 'rollup-plugin-smart-asset';
 import svgr from '@svgr/rollup';
 import cssnano from 'cssnano';
+import filesize from 'rollup-plugin-filesize';
 
-import pkg from './../package.json';
+import pkg from './../../package.json';
 
-const EXTENSIONS = [
+export const EXTENSIONS = [
   '.ts',
   '.tsx',
   '.js',
@@ -30,14 +30,49 @@ const externaldep = []
 const externalPredicate = new RegExp(`^(${externaldep.join('|')})($|/)`);
 const externalTest = externaldep.length === 0 ? () => false : (id) => externalPredicate.test(id);
 
+export const postcssPlugin = (options = {}) => (
+  postcss({
+    plugins: [
+      autoprefixer(),
+      cssnano({
+        preset: 'default',
+      }),
+    ].filter(Boolean),
+    autoModules: true,
+    modules: { generateScopedName: '[name]__[local]__[hash:base64:5]' },
+    ...options,
+  })
+);
+
+export const defaultPlugins = [
+  nodeResolve({
+    mainFields: ['module', 'jsnext', 'main'],
+    browser: true,
+    extensions: ['.mjs', '.js', '.jsx', '.json', '.node'],
+  }),
+  commonjs({
+    include: /\/node_modules\//,
+  }),
+  json(),
+  svgr(),
+  babel({
+    extensions: EXTENSIONS,
+    exclude: '/node_modules/**',
+    babelHelpers: 'bundled',
+    passPerPreset: true,
+  }),
+  external(),
+  filesize(),
+];
+
 export default {
   input: './src/index.js',
-  output: [{
-    sourcemap: true,
-    file: pkg.main,
-    format: 'cjs',
-  },
-  ],
+  // output: [{
+  //   sourcemap: true,
+  //   file: pkg.main,
+  //   format: 'cjs',
+  // }],
+  // preserveModules: true,
   external: (id) => {
     if (id === 'babel-plugin-transform-async-to-promises/helpers') {
       return false;
@@ -47,41 +82,4 @@ export default {
   treeshake: {
     propertyReadSideEffects: false,
   },
-  plugins: [
-    postcss({
-      plugins: [
-        autoprefixer(),
-        cssnano({
-          preset: 'default',
-        }),
-      ].filter(Boolean),
-      autoModules: true,
-      modules: { generateScopedName: '[name]__[local]__[hash:base64:5]' },
-      inject: false,
-      extract: true,
-    }),
-    nodeResolve({
-      mainFields: ['module', 'jsnext', 'main'],
-      browser: true,
-      extensions: ['.mjs', '.js', '.jsx', '.json', '.node'],
-    }),
-    commonjs({
-      include: /\/node_modules\//,
-    }),
-    json(),
-    smartAsset({
-      url: 'copy',
-      useHash: true,
-      keepName: true,
-      keepImport: true,
-    }),
-    svgr(),
-    babel({
-      extensions: EXTENSIONS,
-      exclude: '/node_modules/**',
-      babelHelpers: 'bundled',
-      passPerPreset: true,
-    }),
-    external(),
-  ],
 };
