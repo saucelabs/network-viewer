@@ -1,17 +1,15 @@
 import replace from '@rollup/plugin-replace';
 
-import { defaultPlugins, postcssPlugin } from './common';
+import common, { defaultPlugins, postcssPlugin } from './common';
 
 export default {
-  input: './src/index.js',
-  output: [
-    {
-      dir: './umd',
-      format: 'umd',
-      sourcemap: 'inline',
-      name: 'networkViewer',
-    },
-  ],
+  input: common.input,
+  output: [{
+    dir: './umd',
+    format: 'umd',
+    sourcemap: 'inline',
+    name: 'networkViewer',
+  }],
   plugins: [
     ...defaultPlugins,
     postcssPlugin(),

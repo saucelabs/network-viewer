@@ -67,12 +67,6 @@ export const defaultPlugins = [
 
 export default {
   input: './src/index.js',
-  // output: [{
-  //   sourcemap: true,
-  //   file: pkg.main,
-  //   format: 'cjs',
-  // }],
-  // preserveModules: true,
   external: (id) => {
     if (id === 'babel-plugin-transform-async-to-promises/helpers') {
       return false;
