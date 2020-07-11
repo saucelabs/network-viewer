@@ -17,7 +17,7 @@
     "watch:examples": "cd examples && npm run start",
     "deploy": "gh-pages -d examples/build",
     "publish-demo": "npm run build:examples && npm run deploy",
-    "prepublishOnly": "npm prune && npm run build:all",
+    "prepublishOnly": "npm prune && npm run build",
     "release": "npm run release:patch",
     "release:patch": "np patch",
     "release:minor": "np minor",
