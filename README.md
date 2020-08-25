@@ -1,7 +1,8 @@
-# Network-Viewer
+Network-Viewer [![Build Status](https://travis-ci.org/saucelabs/network-viewer.svg?branch=master)](https://travis-ci.org/saucelabs/network-viewer)
+==============
 
 ## Introduction
-Network-Viewer is a **Redefined** HAR viewer human friendly view of requests which is build with [React](https://facebook.github.io/react/).
+Network-Viewer is a **redefined** HAR viewer human friendly view of requests which is build with [React](https://facebook.github.io/react/).
 
 The main purpose of this web application is to help you to view HAR files with many features like filters, search, timline charts etc.
 
@@ -22,20 +23,20 @@ Main features of Network-Viewer are:
 - Request Detail section is available on click of request, response content is available for JSON and XML responses.
 
 ## How to use
-### import/Upload HAR file
-Visit https://saucelabs.github.io/network-viewer/ and Import HAR file
+### Import/Upload HAR file
+Visit https://opensource.saucelabs.com/network-viewer/ and Import your HAR file via drag&drop.
 
 ### Fetch HAR file
 - `file=HAR_FILE_URL` as queryString to pass HAR file url
 - `isCORSEnabled=true`as queryString to enable CORS support (by default CORS is disabled)
 
 ### Use it as react library
-```
+```sh
 $ npm install network-viewer
 ```
 
 Example
-```
+```js
 import { NetworkViewer } from 'network-viewer';
 <NetworkViewer />
 ```
@@ -68,11 +69,11 @@ $ npm start
 ```
 
 #### Build library
-```
+```sh
 $ npm run build:lib
 ```
 
 #### Build examples
-```
+```sh
 $ npm run build:examples
 ```
