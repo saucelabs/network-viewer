@@ -3,6 +3,7 @@ import { List } from 'immutable';
 
 import * as utils from './../../src/utils';
 import networkDataMock from './../__fixtures__/network.json';
+import interceptErrorNetworkDataMock from './../__fixtures__/network_intercept_error.json';
 import preparedMockData from './../__fixtures__/preparedData';
 
 describe('utils', () => {
@@ -30,6 +31,10 @@ describe('utils', () => {
     const { entries } = networkDataMock.log;
     expect(utils.prepareViewerData(entries)).toMatchSnapshot();
     expect(utils.prepareViewerData([])).toMatchSnapshot();
+  });
+
+  it('prepareViewerData when intercept error exists', () => {
+    expect(utils.prepareViewerData(interceptErrorNetworkDataMock.log.entries)).toMatchSnapshot();
   });
 
   it('sortBy', () => {
@@ -201,5 +206,24 @@ describe('utils', () => {
 
   it('findIndexAfterTimestamp', () => {
     expect(utils.findIndexAfterTimestamp(preparedMockData, 1571042835643)).toMatchSnapshot();
+  });
+
+  it('getStatusClass', () => {
+    expect(utils.getStatusClass({ status: 200 })).toBe('info');
+    expect(utils.getStatusClass({ status: 503 })).toBe('error');
+    expect(utils.getStatusClass({ status: 0, error: 'ERR' })).toBe('error');
+    expect(utils.getStatusClass({ status: 0 })).toBe('pending');
+  });
+
+  it('formatValue', () => {
+    expect(utils.formatValue('status', 200)).toBe(200);
+    expect(utils.formatValue('status', 0, '', { error: 'ERR' })).toBe('(failed)');
+    expect(utils.formatValue('status', 0)).toBe('Pending');
+    expect(utils.formatValue('status', 0)).toBe('Pending');
+  });
+
+  it('getInterceptError', () => {
+    expect(utils.getInterceptError({ response: { _error: 'ERR_TIMED_OUT' } })).toBe('ERR_TIMED_OUT');
+    expect(utils.getInterceptError({ response: { } })).toBe(null);
   });
 });

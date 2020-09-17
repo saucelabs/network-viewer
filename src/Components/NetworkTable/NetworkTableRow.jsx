@@ -24,7 +24,7 @@ const NetworkTableRow = ({
   const rowProps = {
     className: context(
       'network-table-row',
-      getStatusClass(payload.status), {
+      getStatusClass(payload), {
         highlight: scrollHighlight,
       }),
     id: ROW_ID_PREFIX + payload.index,
