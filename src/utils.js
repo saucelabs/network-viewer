@@ -140,6 +140,10 @@ export const getTotalTimeOfEntry = ({ startedDateTime, time, timings }) => (
   new Date(startedDateTime).getTime() + time + timings._blocked_queueing
 );
 
+export const getInterceptError = ({ response }) => (
+  response && response._error ? response._error : null
+);
+
 export const prepareViewerData = (entries) => {
   if (!entries.length) {
     return {
@@ -177,6 +181,7 @@ export const prepareViewerData = (entries) => {
         headers: getHeaders(entry),
         transferredSize: getEntryTransferredSize(entry),
         uncompressedSize: getEntryUncompressedSize(entry),
+        error: getInterceptError(entry),
         ...getUrlInfo(entry.request.url),
       };
     });
@@ -207,7 +212,7 @@ export const sortBy = (data, key, isAsc = true) => data.sort((prev, next) => {
 export const filterCondition = ({ filter, info }) => {
   switch (filter.name) {
     case 'error':
-      return info.status >= 400;
+      return info.status >= 400 || info.error;
     case 'type':
     default:
       return filter.value.includes(info[filter.name]);
@@ -269,21 +274,24 @@ export const prepareTooltipData = (data) => ({
   ),
 });
 
-export const getStatusClass = (status) => {
-  if (status === 0) {
+export const getStatusClass = ({ status, error }) => {
+  if (status === 0 && !error) {
     return 'pending';
   }
-  if (status >= 400) {
+  if (status >= 400 || error) {
     return 'error';
   }
   return 'info';
 };
 
-export const formatValue = (key, value, unit) => {
+export const formatValue = (key, value, unit, request = {}) => {
   switch (key) {
     case 'time':
-      return value === 0 ? 'Pending' : parseTime(value);
+      return value === 0 && !request.error ? 'Pending' : parseTime(value);
     case 'status':
+      if (request.error) {
+        return '(failed)';
+      }
       return value === 0 ? 'Pending' : value;
     default:
       return !unit ? value : `${value} ${unit}`;

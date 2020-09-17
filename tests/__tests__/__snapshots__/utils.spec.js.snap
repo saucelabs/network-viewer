@@ -65,6 +65,7 @@ Array [
   Object {
     "body": "",
     "domain": "developer.mozilla.org",
+    "error": null,
     "filename": "ZillaSlab-Bold.subset.e96c15f68c68.woff2",
     "headers": Object {
       "postData": undefined,
@@ -229,6 +230,7 @@ Array [
   Object {
     "body": "",
     "domain": "developer.mozilla.org",
+    "error": null,
     "filename": "slice",
     "headers": Object {
       "postData": undefined,
@@ -400,6 +402,7 @@ Array [
   Object {
     "body": "",
     "domain": "developer.mozilla.org",
+    "error": null,
     "filename": "ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
     "headers": Object {
       "postData": undefined,
@@ -559,6 +562,7 @@ Array [
   Object {
     "body": "",
     "domain": "developer.mozilla.org",
+    "error": null,
     "filename": "ZillaSlab-Bold.subset.e96c15f68c68.woff2",
     "headers": Object {
       "postData": undefined,
@@ -718,6 +722,7 @@ Array [
   Object {
     "body": ".logo{display:block;grid-area:I;width:200px;height:44px;margin-right:24px}",
     "domain": "developer.mozilla.org",
+    "error": null,
     "filename": "react-header.2a659f6ad280.css",
     "headers": Object {
       "postData": undefined,
@@ -877,6 +882,7 @@ Array [
   Object {
     "body": "",
     "domain": "developer.mozilla.org",
+    "error": null,
     "filename": "react-mdn.c66d8d89d98e.css",
     "headers": Object {
       "postData": undefined,
@@ -1041,6 +1047,7 @@ Array [
   Object {
     "body": "",
     "domain": "developer.mozilla.org",
+    "error": null,
     "filename": "ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
     "headers": Object {
       "postData": undefined,
@@ -1299,6 +1306,7 @@ Object {
     Object {
       "body": "",
       "domain": "developer.mozilla.org",
+      "error": null,
       "filename": "slice",
       "headers": Object {
         "postData": undefined,
@@ -1470,6 +1478,7 @@ Object {
     Object {
       "body": "",
       "domain": "developer.mozilla.org",
+      "error": null,
       "filename": "ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
       "headers": Object {
         "postData": undefined,
@@ -1629,6 +1638,7 @@ Object {
     Object {
       "body": "",
       "domain": "developer.mozilla.org",
+      "error": null,
       "filename": "ZillaSlab-Bold.subset.e96c15f68c68.woff2",
       "headers": Object {
         "postData": undefined,
@@ -1788,6 +1798,7 @@ Object {
     Object {
       "body": ".logo{display:block;grid-area:I;width:200px;height:44px;margin-right:24px}",
       "domain": "developer.mozilla.org",
+      "error": null,
       "filename": "react-header.2a659f6ad280.css",
       "headers": Object {
         "postData": undefined,
@@ -1947,6 +1958,7 @@ Object {
     Object {
       "body": "",
       "domain": "developer.mozilla.org",
+      "error": null,
       "filename": "react-mdn.c66d8d89d98e.css",
       "headers": Object {
         "postData": undefined,
@@ -2123,11 +2135,949 @@ Object {
 }
 `;
 
+exports[`utils prepareViewerData when intercept error exists 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "body": undefined,
+      "domain": "www.json.org",
+      "error": null,
+      "filename": "https://www.json.org/",
+      "headers": Object {
+        "postData": undefined,
+        "queryString": Array [],
+        "request": Array [
+          Object {
+            "name": ":authority",
+            "value": "www.json.org",
+          },
+          Object {
+            "name": ":method",
+            "value": "GET",
+          },
+          Object {
+            "name": ":path",
+            "value": "/",
+          },
+          Object {
+            "name": ":scheme",
+            "value": "https",
+          },
+          Object {
+            "name": "accept",
+            "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+          },
+          Object {
+            "name": "accept-encoding",
+            "value": "gzip, deflate, br",
+          },
+          Object {
+            "name": "accept-language",
+            "value": "en-US,en;q=0.9",
+          },
+          Object {
+            "name": "cache-control",
+            "value": "no-cache",
+          },
+          Object {
+            "name": "pragma",
+            "value": "no-cache",
+          },
+          Object {
+            "name": "sec-fetch-dest",
+            "value": "document",
+          },
+          Object {
+            "name": "sec-fetch-mode",
+            "value": "navigate",
+          },
+          Object {
+            "name": "sec-fetch-site",
+            "value": "none",
+          },
+          Object {
+            "name": "sec-fetch-user",
+            "value": "?1",
+          },
+          Object {
+            "name": "upgrade-insecure-requests",
+            "value": "1",
+          },
+          Object {
+            "name": "user-agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36",
+          },
+        ],
+        "response": Array [
+          Object {
+            "name": "content-encoding",
+            "value": "gzip",
+          },
+          Object {
+            "name": "content-type",
+            "value": "text/html",
+          },
+          Object {
+            "name": "date",
+            "value": "Wed, 16 Sep 2020 12:55:36 GMT",
+          },
+          Object {
+            "name": "etag",
+            "value": "W/\\"106-5988862f8ccc0\\"",
+          },
+          Object {
+            "name": "last-modified",
+            "value": "Sat, 30 Nov 2019 04:00:27 GMT",
+          },
+          Object {
+            "name": "server",
+            "value": "Apache",
+          },
+          Object {
+            "name": "status",
+            "value": "200",
+          },
+        ],
+      },
+      "index": 0,
+      "method": "GET",
+      "serverIPAddress": ":80",
+      "size": "262 B",
+      "startedDateTime": 1600260937093,
+      "status": 200,
+      "time": 306.29300000000603,
+      "timings": Object {
+        "_blocked_queueing": 7.4600000000017985,
+        "blocked": 87.0090000000018,
+        "connect": 139.756,
+        "dns": 0.014999999999986358,
+        "receive": 7.4600000000017985,
+        "send": 1.6730000000000018,
+        "ssl": 85.43700000000001,
+        "startTime": 0,
+        "wait": 70.38000000000244,
+      },
+      "transferredSize": 262,
+      "type": "html",
+      "uncompressedSize": 262,
+      "url": "https://www.json.org/",
+    },
+    Object {
+      "body": undefined,
+      "domain": "www.json.org",
+      "error": null,
+      "filename": "json-en.html",
+      "headers": Object {
+        "postData": undefined,
+        "queryString": Array [],
+        "request": Array [
+          Object {
+            "name": ":authority",
+            "value": "www.json.org",
+          },
+          Object {
+            "name": ":method",
+            "value": "GET",
+          },
+          Object {
+            "name": ":path",
+            "value": "/json-en.html",
+          },
+          Object {
+            "name": ":scheme",
+            "value": "https",
+          },
+          Object {
+            "name": "accept",
+            "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+          },
+          Object {
+            "name": "accept-encoding",
+            "value": "gzip, deflate, br",
+          },
+          Object {
+            "name": "accept-language",
+            "value": "en-US,en;q=0.9",
+          },
+          Object {
+            "name": "cache-control",
+            "value": "no-cache",
+          },
+          Object {
+            "name": "pragma",
+            "value": "no-cache",
+          },
+          Object {
+            "name": "referer",
+            "value": "https://www.json.org/",
+          },
+          Object {
+            "name": "sec-fetch-dest",
+            "value": "document",
+          },
+          Object {
+            "name": "sec-fetch-mode",
+            "value": "navigate",
+          },
+          Object {
+            "name": "sec-fetch-site",
+            "value": "same-origin",
+          },
+          Object {
+            "name": "upgrade-insecure-requests",
+            "value": "1",
+          },
+          Object {
+            "name": "user-agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36",
+          },
+        ],
+        "response": Array [
+          Object {
+            "name": "content-encoding",
+            "value": "gzip",
+          },
+          Object {
+            "name": "content-type",
+            "value": "text/html",
+          },
+          Object {
+            "name": "date",
+            "value": "Wed, 16 Sep 2020 12:55:37 GMT",
+          },
+          Object {
+            "name": "etag",
+            "value": "W/\\"685e-59d342586ba40\\"",
+          },
+          Object {
+            "name": "last-modified",
+            "value": "Tue, 28 Jan 2020 14:36:17 GMT",
+          },
+          Object {
+            "name": "server",
+            "value": "Apache",
+          },
+          Object {
+            "name": "status",
+            "value": "200",
+          },
+        ],
+      },
+      "index": 1,
+      "method": "GET",
+      "serverIPAddress": ":80",
+      "size": "26.1 KB",
+      "startedDateTime": 1600260937547,
+      "status": 200,
+      "time": 95.31199999999984,
+      "timings": Object {
+        "_blocked_queueing": 9.427000000002295,
+        "blocked": 9.927000000002295,
+        "connect": -1,
+        "dns": -1,
+        "receive": 9.427000000002295,
+        "send": 0.31200000000000006,
+        "ssl": -1,
+        "startTime": 454,
+        "wait": 75.64599999999525,
+      },
+      "transferredSize": 26718,
+      "type": "html",
+      "uncompressedSize": 26718,
+      "url": "https://www.json.org/json-en.html",
+    },
+    Object {
+      "body": undefined,
+      "domain": "www.json.org",
+      "error": null,
+      "filename": "favicon.ico",
+      "headers": Object {
+        "postData": undefined,
+        "queryString": Array [],
+        "request": Array [
+          Object {
+            "name": "Referer",
+            "value": "https://www.json.org/",
+          },
+          Object {
+            "name": "Sec-Fetch-Dest",
+            "value": "image",
+          },
+          Object {
+            "name": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36",
+          },
+        ],
+        "response": Array [
+          Object {
+            "name": "accept-ranges",
+            "value": "bytes",
+          },
+          Object {
+            "name": "content-length",
+            "value": "989",
+          },
+          Object {
+            "name": "content-type",
+            "value": "image/vnd.microsoft.icon",
+          },
+          Object {
+            "name": "date",
+            "value": "Wed, 16 Sep 2020 12:55:37 GMT",
+          },
+          Object {
+            "name": "etag",
+            "value": "\\"3dd-4b788cfa56180\\"",
+          },
+          Object {
+            "name": "last-modified",
+            "value": "Fri, 27 Jan 2012 21:02:14 GMT",
+          },
+          Object {
+            "name": "server",
+            "value": "Apache",
+          },
+          Object {
+            "name": "status",
+            "value": "200",
+          },
+        ],
+      },
+      "index": 2,
+      "method": "GET",
+      "serverIPAddress": ":80",
+      "size": "989 B",
+      "startedDateTime": 1600260937545,
+      "status": 200,
+      "time": 88.92100000000625,
+      "timings": Object {
+        "_blocked_queueing": 10.395000000002597,
+        "blocked": 10.908000000002597,
+        "connect": -1,
+        "dns": -1,
+        "receive": 10.395000000002597,
+        "send": 0.6789999999999999,
+        "ssl": -1,
+        "startTime": 452,
+        "wait": 66.93900000000106,
+      },
+      "transferredSize": 989,
+      "type": "vnd.microsoft.icon",
+      "uncompressedSize": 989,
+      "url": "https://www.json.org/favicon.ico",
+    },
+    Object {
+      "body": undefined,
+      "domain": "www.json.org",
+      "error": null,
+      "filename": "json160.gif",
+      "headers": Object {
+        "postData": undefined,
+        "queryString": Array [],
+        "request": Array [
+          Object {
+            "name": "Referer",
+            "value": "https://www.json.org/json-en.html",
+          },
+          Object {
+            "name": "Sec-Fetch-Dest",
+            "value": "image",
+          },
+          Object {
+            "name": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36",
+          },
+        ],
+        "response": Array [
+          Object {
+            "name": "accept-ranges",
+            "value": "bytes",
+          },
+          Object {
+            "name": "content-length",
+            "value": "11975",
+          },
+          Object {
+            "name": "content-type",
+            "value": "image/gif",
+          },
+          Object {
+            "name": "date",
+            "value": "Wed, 16 Sep 2020 12:55:37 GMT",
+          },
+          Object {
+            "name": "etag",
+            "value": "\\"2ec7-40c2c3ef23e40\\"",
+          },
+          Object {
+            "name": "last-modified",
+            "value": "Tue, 07 Feb 2006 03:48:01 GMT",
+          },
+          Object {
+            "name": "server",
+            "value": "Apache",
+          },
+          Object {
+            "name": "status",
+            "value": "200",
+          },
+        ],
+      },
+      "index": 3,
+      "method": "GET",
+      "serverIPAddress": ":80",
+      "size": "11.7 KB",
+      "startedDateTime": 1600260937654,
+      "status": 200,
+      "time": 302.09499999999423,
+      "timings": Object {
+        "_blocked_queueing": 23.804999999995857,
+        "blocked": 25.839999999995857,
+        "connect": -1,
+        "dns": -1,
+        "receive": 23.804999999995857,
+        "send": 0.2729999999999997,
+        "ssl": -1,
+        "startTime": 561,
+        "wait": 252.17700000000252,
+      },
+      "transferredSize": 11975,
+      "type": "gif",
+      "uncompressedSize": 11975,
+      "url": "https://www.json.org/img/json160.gif",
+    },
+    Object {
+      "body": undefined,
+      "domain": "www.json.org",
+      "error": null,
+      "filename": "object.png",
+      "headers": Object {
+        "postData": undefined,
+        "queryString": Array [],
+        "request": Array [
+          Object {
+            "name": "Referer",
+            "value": "https://www.json.org/json-en.html",
+          },
+          Object {
+            "name": "Sec-Fetch-Dest",
+            "value": "image",
+          },
+          Object {
+            "name": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36",
+          },
+        ],
+        "response": Array [
+          Object {
+            "name": "content-length",
+            "value": "2",
+          },
+          Object {
+            "name": "x-intercept-header",
+            "value": "foobar",
+          },
+        ],
+      },
+      "index": 4,
+      "method": "GET",
+      "serverIPAddress": ":80",
+      "size": "2 B",
+      "startedDateTime": 1600260937655,
+      "status": 503,
+      "time": 3.172000000006392,
+      "timings": Object {
+        "_blocked_queueing": 1.586000000003196,
+        "blocked": 1.586000000003196,
+        "connect": -1,
+        "dns": -1,
+        "receive": 1.586000000003196,
+        "send": 0,
+        "ssl": -1,
+        "startTime": 562,
+        "wait": 0,
+      },
+      "transferredSize": 2,
+      "type": "",
+      "uncompressedSize": 2,
+      "url": "https://www.json.org/img/object.png",
+    },
+    Object {
+      "body": undefined,
+      "domain": "www.json.org",
+      "error": "net::ERR_FAILED",
+      "filename": "array.png",
+      "headers": Object {
+        "postData": undefined,
+        "queryString": Array [],
+        "request": Array [
+          Object {
+            "name": "Referer",
+            "value": "https://www.json.org/json-en.html",
+          },
+          Object {
+            "name": "Sec-Fetch-Dest",
+            "value": "image",
+          },
+          Object {
+            "name": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36",
+          },
+        ],
+        "response": Array [],
+      },
+      "index": 5,
+      "method": "GET",
+      "serverIPAddress": ":80",
+      "size": 0,
+      "startedDateTime": 1600260937655,
+      "status": 0,
+      "time": 0,
+      "timings": Object {
+        "_blocked_queueing": -1,
+        "blocked": -1,
+        "connect": -1,
+        "dns": -1,
+        "receive": 0,
+        "send": 0,
+        "ssl": -1,
+        "startTime": 562,
+        "wait": 0,
+      },
+      "transferredSize": -1,
+      "type": "",
+      "uncompressedSize": -1,
+      "url": "https://www.json.org/img/array.png",
+    },
+    Object {
+      "body": undefined,
+      "domain": "www.json.org",
+      "error": "net::ERR_TIMED_OUT",
+      "filename": "value.png",
+      "headers": Object {
+        "postData": undefined,
+        "queryString": Array [],
+        "request": Array [
+          Object {
+            "name": "Referer",
+            "value": "https://www.json.org/json-en.html",
+          },
+          Object {
+            "name": "Sec-Fetch-Dest",
+            "value": "image",
+          },
+          Object {
+            "name": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36",
+          },
+        ],
+        "response": Array [],
+      },
+      "index": 6,
+      "method": "GET",
+      "serverIPAddress": ":80",
+      "size": 0,
+      "startedDateTime": 1600260937655,
+      "status": 0,
+      "time": 0,
+      "timings": Object {
+        "_blocked_queueing": -1,
+        "blocked": -1,
+        "connect": -1,
+        "dns": -1,
+        "receive": 0,
+        "send": 0,
+        "ssl": -1,
+        "startTime": 562,
+        "wait": 0,
+      },
+      "transferredSize": -1,
+      "type": "",
+      "uncompressedSize": -1,
+      "url": "https://www.json.org/img/value.png",
+    },
+    Object {
+      "body": undefined,
+      "domain": "www.json.org",
+      "error": null,
+      "filename": "string.png",
+      "headers": Object {
+        "postData": undefined,
+        "queryString": Array [],
+        "request": Array [
+          Object {
+            "name": "Referer",
+            "value": "https://www.json.org/json-en.html",
+          },
+          Object {
+            "name": "Sec-Fetch-Dest",
+            "value": "image",
+          },
+          Object {
+            "name": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36",
+          },
+        ],
+        "response": Array [
+          Object {
+            "name": "accept-ranges",
+            "value": "bytes",
+          },
+          Object {
+            "name": "content-length",
+            "value": "50177",
+          },
+          Object {
+            "name": "content-type",
+            "value": "image/png",
+          },
+          Object {
+            "name": "date",
+            "value": "Wed, 16 Sep 2020 12:55:37 GMT",
+          },
+          Object {
+            "name": "etag",
+            "value": "\\"c401-5938216511f40\\"",
+          },
+          Object {
+            "name": "last-modified",
+            "value": "Fri, 27 Sep 2019 05:23:33 GMT",
+          },
+          Object {
+            "name": "server",
+            "value": "Apache",
+          },
+          Object {
+            "name": "status",
+            "value": "200",
+          },
+        ],
+      },
+      "index": 7,
+      "method": "GET",
+      "serverIPAddress": ":80",
+      "size": "49 KB",
+      "startedDateTime": 1600260937655,
+      "status": 200,
+      "time": 320.935999999989,
+      "timings": Object {
+        "_blocked_queueing": 27.562999999993565,
+        "blocked": 28.945999999993564,
+        "connect": -1,
+        "dns": -1,
+        "receive": 27.562999999993565,
+        "send": 0.6100000000000001,
+        "ssl": -1,
+        "startTime": 562,
+        "wait": 263.8170000000019,
+      },
+      "transferredSize": 50177,
+      "type": "png",
+      "uncompressedSize": 50177,
+      "url": "https://www.json.org/img/string.png",
+    },
+    Object {
+      "body": undefined,
+      "domain": "www.json.org",
+      "error": "net::ERR_ADDRESS_UNREACHABLE",
+      "filename": "number.png",
+      "headers": Object {
+        "postData": undefined,
+        "queryString": Array [],
+        "request": Array [
+          Object {
+            "name": "Referer",
+            "value": "https://www.json.org/json-en.html",
+          },
+          Object {
+            "name": "Sec-Fetch-Dest",
+            "value": "image",
+          },
+          Object {
+            "name": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36",
+          },
+        ],
+        "response": Array [],
+      },
+      "index": 8,
+      "method": "GET",
+      "serverIPAddress": ":80",
+      "size": 0,
+      "startedDateTime": 1600260937655,
+      "status": 0,
+      "time": 0,
+      "timings": Object {
+        "_blocked_queueing": -1,
+        "blocked": -1,
+        "connect": -1,
+        "dns": -1,
+        "receive": 0,
+        "send": 0,
+        "ssl": -1,
+        "startTime": 562,
+        "wait": 0,
+      },
+      "transferredSize": -1,
+      "type": "",
+      "uncompressedSize": -1,
+      "url": "https://www.json.org/img/number.png",
+    },
+    Object {
+      "body": undefined,
+      "domain": "www.json.org",
+      "error": null,
+      "filename": "whitespace.png",
+      "headers": Object {
+        "postData": undefined,
+        "queryString": Array [],
+        "request": Array [
+          Object {
+            "name": "Referer",
+            "value": "https://www.json.org/json-en.html",
+          },
+          Object {
+            "name": "Sec-Fetch-Dest",
+            "value": "image",
+          },
+          Object {
+            "name": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36",
+          },
+        ],
+        "response": Array [
+          Object {
+            "name": "accept-ranges",
+            "value": "bytes",
+          },
+          Object {
+            "name": "content-length",
+            "value": "18495",
+          },
+          Object {
+            "name": "content-type",
+            "value": "image/png",
+          },
+          Object {
+            "name": "date",
+            "value": "Wed, 16 Sep 2020 12:55:37 GMT",
+          },
+          Object {
+            "name": "etag",
+            "value": "\\"483f-593822804fb80\\"",
+          },
+          Object {
+            "name": "last-modified",
+            "value": "Fri, 27 Sep 2019 05:28:30 GMT",
+          },
+          Object {
+            "name": "server",
+            "value": "Apache",
+          },
+          Object {
+            "name": "status",
+            "value": "200",
+          },
+        ],
+      },
+      "index": 9,
+      "method": "GET",
+      "serverIPAddress": ":80",
+      "size": "18.1 KB",
+      "startedDateTime": 1600260937655,
+      "status": 200,
+      "time": 322.5669999999994,
+      "timings": Object {
+        "_blocked_queueing": 27.54600000000096,
+        "blocked": 28.725000000000957,
+        "connect": -1,
+        "dns": -1,
+        "receive": 27.54600000000096,
+        "send": 0.524,
+        "ssl": -1,
+        "startTime": 562,
+        "wait": 265.7719999999975,
+      },
+      "transferredSize": 18495,
+      "type": "png",
+      "uncompressedSize": 18495,
+      "url": "https://www.json.org/img/whitespace.png",
+    },
+    Object {
+      "body": undefined,
+      "domain": "www.json.org",
+      "error": null,
+      "filename": "Programma-Bold.woff2",
+      "headers": Object {
+        "postData": undefined,
+        "queryString": Array [],
+        "request": Array [
+          Object {
+            "name": "Origin",
+            "value": "https://www.json.org",
+          },
+          Object {
+            "name": "Referer",
+            "value": "https://www.json.org/json-en.html",
+          },
+          Object {
+            "name": "Sec-Fetch-Dest",
+            "value": "font",
+          },
+          Object {
+            "name": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36",
+          },
+        ],
+        "response": Array [
+          Object {
+            "name": "accept-ranges",
+            "value": "bytes",
+          },
+          Object {
+            "name": "content-length",
+            "value": "34300",
+          },
+          Object {
+            "name": "date",
+            "value": "Wed, 16 Sep 2020 12:55:37 GMT",
+          },
+          Object {
+            "name": "etag",
+            "value": "\\"85fc-5abd968f9af40\\"",
+          },
+          Object {
+            "name": "last-modified",
+            "value": "Sat, 01 Aug 2020 23:39:01 GMT",
+          },
+          Object {
+            "name": "server",
+            "value": "Apache",
+          },
+          Object {
+            "name": "status",
+            "value": "200",
+          },
+        ],
+      },
+      "index": 10,
+      "method": "GET",
+      "serverIPAddress": ":80",
+      "size": "33.5 KB",
+      "startedDateTime": 1600260937670,
+      "status": 200,
+      "time": 277.3339999999962,
+      "timings": Object {
+        "_blocked_queueing": 13.084999999996683,
+        "blocked": 14.118999999996683,
+        "connect": -1,
+        "dns": -1,
+        "receive": 13.084999999996683,
+        "send": 0.43399999999999994,
+        "ssl": -1,
+        "startTime": 577,
+        "wait": 249.69600000000284,
+      },
+      "transferredSize": 34300,
+      "type": "",
+      "uncompressedSize": 34300,
+      "url": "https://www.json.org/Programma-Bold.woff2",
+    },
+    Object {
+      "body": undefined,
+      "domain": "www.json.org",
+      "error": null,
+      "filename": "favicon.gif",
+      "headers": Object {
+        "postData": undefined,
+        "queryString": Array [],
+        "request": Array [
+          Object {
+            "name": "Referer",
+            "value": "https://www.json.org/json-en.html",
+          },
+          Object {
+            "name": "Sec-Fetch-Dest",
+            "value": "image",
+          },
+          Object {
+            "name": "User-Agent",
+            "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36",
+          },
+        ],
+        "response": Array [
+          Object {
+            "name": "accept-ranges",
+            "value": "bytes",
+          },
+          Object {
+            "name": "content-length",
+            "value": "311",
+          },
+          Object {
+            "name": "content-type",
+            "value": "image/gif",
+          },
+          Object {
+            "name": "date",
+            "value": "Wed, 16 Sep 2020 12:55:37 GMT",
+          },
+          Object {
+            "name": "etag",
+            "value": "\\"137-4b7890a0efe80\\"",
+          },
+          Object {
+            "name": "last-modified",
+            "value": "Fri, 27 Jan 2012 21:18:34 GMT",
+          },
+          Object {
+            "name": "server",
+            "value": "Apache",
+          },
+          Object {
+            "name": "status",
+            "value": "200",
+          },
+        ],
+      },
+      "index": 11,
+      "method": "GET",
+      "serverIPAddress": ":80",
+      "size": "311 B",
+      "startedDateTime": 1600260937991,
+      "status": 200,
+      "time": 79.49900000000554,
+      "timings": Object {
+        "_blocked_queueing": 4.764000000001545,
+        "blocked": 5.294000000001545,
+        "connect": -1,
+        "dns": -1,
+        "receive": 4.764000000001545,
+        "send": 0.2859999999999999,
+        "ssl": -1,
+        "startTime": 898,
+        "wait": 69.15500000000245,
+      },
+      "transferredSize": 311,
+      "type": "gif",
+      "uncompressedSize": 311,
+      "url": "https://www.json.org/favicon.gif",
+    },
+  ],
+  "finishTime": 982.2630000000071,
+  "totalNetworkTime": 982.262939453125,
+  "totalRequests": 12,
+  "totalTransferredSize": 143226,
+  "totalUncompressedSize": 143226,
+}
+`;
+
 exports[`utils sortBy 1`] = `
 Array [
   Object {
     "body": "",
     "domain": "developer.mozilla.org",
+    "error": null,
     "filename": "slice",
     "headers": Object {
       "postData": undefined,
@@ -2299,6 +3249,7 @@ Array [
   Object {
     "body": "",
     "domain": "developer.mozilla.org",
+    "error": null,
     "filename": "react-mdn.c66d8d89d98e.css",
     "headers": Object {
       "postData": undefined,
@@ -2458,6 +3409,7 @@ Array [
   Object {
     "body": ".logo{display:block;grid-area:I;width:200px;height:44px;margin-right:24px}",
     "domain": "developer.mozilla.org",
+    "error": null,
     "filename": "react-header.2a659f6ad280.css",
     "headers": Object {
       "postData": undefined,
@@ -2617,6 +3569,7 @@ Array [
   Object {
     "body": "",
     "domain": "developer.mozilla.org",
+    "error": null,
     "filename": "ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
     "headers": Object {
       "postData": undefined,
@@ -2776,6 +3729,7 @@ Array [
   Object {
     "body": "",
     "domain": "developer.mozilla.org",
+    "error": null,
     "filename": "ZillaSlab-Bold.subset.e96c15f68c68.woff2",
     "headers": Object {
       "postData": undefined,

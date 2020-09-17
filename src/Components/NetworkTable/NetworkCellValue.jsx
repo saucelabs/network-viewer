@@ -13,24 +13,37 @@ const NetworkCellValue = ({ datakey, unit, payload }) => {
   const [isOpen, updateOpen] = useState(false);
   const displayPopover = () => updateOpen(true);
   const hidePopover = () => updateOpen(false);
-  const formatedValue = formatValue(datakey, payload[datakey], unit);
-  const title = datakey === VIEWER_FIELDS.file.key ? payload.url : formatedValue;
+  const formattedValue = formatValue(datakey, payload[datakey], unit, payload);
+  const shouldDisplayTooltip = (
+    datakey === VIEWER_FIELDS.file.key ||
+    payload.error
+  );
 
-  if (datakey !== VIEWER_FIELDS.file.key) {
+  const getTitle = () => {
+    if (datakey === VIEWER_FIELDS.file.key) {
+      return payload.url;
+    }
+    if (payload.error) {
+      return payload.error;
+    }
+
+    return formattedValue;
+  };
+
+  if (!shouldDisplayTooltip) {
     return (
       <td className={context('value-cell', datakey)}>
         <span className={Styles['value-text']}>
-          {formatedValue}
+          {formattedValue}
         </span>
       </td>
     );
   }
 
-  // Render popover only for file column value
   return (
     <td className={context('value-cell', datakey)}>
       <Popover
-        body={<span className={Styles['url-tooltip']}>{title}</span>}
+        body={<span className={Styles['url-tooltip']}>{getTitle()}</span>}
         isOpen={isOpen}
         preferPlace="below"
       >
@@ -39,7 +52,7 @@ const NetworkCellValue = ({ datakey, unit, payload }) => {
           onMouseOut={hidePopover}
           onMouseOver={displayPopover}
         >
-          {formatedValue}
+          {formattedValue}
         </span>
       </Popover>
     </td>

@@ -15,7 +15,7 @@ const General = ({ data }) => (
           {`${name}:`}
         </span>
         <span className={Styles['info-value']}>
-          {data[key]}
+          {key === 'status' && data.error ? data.error : data[key]}
         </span>
       </p>
     ))}

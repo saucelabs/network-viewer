@@ -1,5 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`General renders intercept error 1`] = `
+<div>
+  <p
+    key="url"
+  >
+    <span>
+      Request URL:
+    </span>
+    <span />
+  </p>
+  <p
+    key="method"
+  >
+    <span>
+      Request Method:
+    </span>
+    <span />
+  </p>
+  <p
+    key="status"
+  >
+    <span>
+      Status Code:
+    </span>
+    <span>
+      ERR_TIMED_OUT
+    </span>
+  </p>
+  <p
+    key="serverIPAddress"
+  >
+    <span>
+      Remote Address:
+    </span>
+    <span />
+  </p>
+</div>
+`;
+
 exports[`General renders without crashing 1`] = `
 <div>
   <p
