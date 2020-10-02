@@ -1,4 +1,4 @@
-Network-Viewer [![Build Status](https://travis-ci.org/saucelabs/network-viewer.svg?branch=master)](https://travis-ci.org/saucelabs/network-viewer)
+Network-Viewer [![npm version](https://badge.fury.io/js/network-viewer.svg)](https://www.npmjs.com/package/network-viewer) [![Build Status](https://travis-ci.org/saucelabs/network-viewer.svg?branch=master)](https://travis-ci.org/saucelabs/network-viewer)
 ==============
 
 ## Introduction
@@ -20,7 +20,7 @@ Main features of Network-Viewer are:
 - **Search** request by URL or body content
 - Filter request by **XHR, JS, CSS, Image, Media, Font, Doc, WebSocket, Manifest**
 - **Errors Only** filter to filter request by error status (where status code is greater than or equal to 400)
-- **WaterFall** chart to display timeline of request which includes 
+- **WaterFall** chart to display timeline of request which includes
 - **Stats** at footer to show number of requests, data transfered size, resoruces size, and time metrics like Page Load, DOMContentLoaded and Finished time
 - Request Detail section is available on click of request, response content is available for JSON and XML responses.
 
