@@ -16,6 +16,7 @@ exports[`renders without crashing 1`] = `
         }
       }
       file={null}
+      onDataError={null}
       onDataLoaded={null}
       scrollRequestPosition="near"
       scrollTimeStamp={null}
