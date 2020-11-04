@@ -17,11 +17,8 @@ describe('NetworkProvider', () => {
   });
 
   describe('onDataLoaded', () => {
-    it('calls callback', () => {
-      const actualData = new List(['entry']);
-      const initialState = defaultState.set('actualData', actualData);
+    it('does not call the callback', () => {
       const props = {
-        initialState,
         onDataLoaded: jest.fn(),
       };
 
@@ -31,16 +28,32 @@ describe('NetworkProvider', () => {
         </NetworkProvider>,
       );
 
-      expect(props.onDataLoaded).toHaveBeenCalledWith(actualData);
+      expect(props.onDataLoaded).not.toHaveBeenCalled();
+    });
+
+    describe('when gets actualData', () => {
+      it('calls the callback', () => {
+        const actualData = new List(['entry']);
+        const initialState = defaultState.set('actualData', actualData);
+        const props = {
+          initialState,
+          onDataLoaded: jest.fn(),
+        };
+
+        mount(
+          <NetworkProvider {...props}>
+            <div />
+          </NetworkProvider>,
+        );
+
+        expect(props.onDataLoaded).toHaveBeenCalledWith(actualData);
+      });
     });
   });
 
   describe('onDataError', () => {
-    it('calls callback', () => {
-      const error = new Error('Something failed!');
-      const initialState = defaultState.set('error', error);
+    it('does not call the callback', () => {
       const props = {
-        initialState,
         onDataError: jest.fn(),
       };
 
@@ -50,7 +63,26 @@ describe('NetworkProvider', () => {
         </NetworkProvider>,
       );
 
-      expect(props.onDataError).toHaveBeenCalledWith(error);
+      expect(props.onDataError).not.toHaveBeenCalled();
+    });
+
+    describe('when gets error', () => {
+      it('calls the callback', () => {
+        const error = new Error('Something failed!');
+        const initialState = defaultState.set('error', error);
+        const props = {
+          initialState,
+          onDataError: jest.fn(),
+        };
+
+        mount(
+          <NetworkProvider {...props}>
+            <div />
+          </NetworkProvider>,
+        );
+
+        expect(props.onDataError).toHaveBeenCalledWith(error);
+      });
     });
   });
 });
