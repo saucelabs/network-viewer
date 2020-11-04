@@ -10,6 +10,34 @@ exports[`NetworkTableContainer renders without crashing 1`] = `
     }
   }
   file={null}
+  initialState={
+    Immutable.Map {
+      "errorFilter": false,
+      "search": Object {
+        "name": "url",
+        "value": "",
+      },
+      "error": null,
+      "scrollToIndex": null,
+      "data": Immutable.List [],
+      "selectedReqIndex": null,
+      "reqDetail": null,
+      "showReqDetail": false,
+      "totalNetworkTime": null,
+      "actualData": Immutable.List [],
+      "filter": Object {
+        "name": null,
+        "value": null,
+      },
+      "dataSummary": Immutable.Map {},
+      "loading": false,
+      "sort": Object {
+        "isAcs": true,
+        "key": "startedDateTime",
+      },
+    }
+  }
+  onDataError={null}
   onDataLoaded={null}
   scrollRequestPosition="near"
   scrollTimeStamp={null}
