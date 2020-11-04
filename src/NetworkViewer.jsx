@@ -19,6 +19,7 @@ const NetworkViewer = ({
   scrollRequestPosition,
   autoHighlightChange,
   onDataLoaded,
+  onDataError,
   containerClassName,
 }) => (
   <section className={contextClassNames('network-viewer', containerClassName)}>
@@ -28,6 +29,7 @@ const NetworkViewer = ({
         data={data}
         fetchOptions={fetchOptions}
         file={file}
+        onDataError={onDataError}
         onDataLoaded={onDataLoaded}
         scrollRequestPosition={scrollRequestPosition}
         scrollTimeStamp={scrollTimeStamp}
@@ -44,6 +46,7 @@ NetworkViewer.propTypes = {
   data: PropTypes.object,
   fetchOptions: PropTypes.object,
   file: PropTypes.string,
+  onDataError: PropTypes.func,
   onDataLoaded: PropTypes.func,
   onRequestSelect: PropTypes.func,
   options: PropTypes.object,
@@ -57,6 +60,7 @@ NetworkViewer.defaultProps = {
   data: null,
   fetchOptions: { withCredentials: true },
   file: null,
+  onDataError: null,
   onDataLoaded: null,
   onRequestSelect: () => {},
   options: null,

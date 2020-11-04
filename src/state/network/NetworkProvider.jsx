@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer, useMemo } from 'react';
 import PropTypes from 'prop-types';
 
-import { reducer, initialState } from './reducer';
+import { reducer, initialState as defaultState } from './reducer';
 import { updateData, fetchFile, updateScrollToIndex } from './actions';
 import { NetworkContext } from './Context';
 import { findRequestIndex } from '../../utils';
@@ -12,17 +12,21 @@ const NetworkProvider = (props) => {
     data,
     file,
     fetchOptions,
+    initialState,
     scrollTimeStamp,
     scrollRequestPosition,
     autoHighlightChange,
     onDataLoaded,
+    onDataError,
   } = props;
+
   const [state, dispatch] = useReducer(reducer, initialState);
   const value = useMemo(() => [state, dispatch], [state]);
   const selectedReqIndex = value[0].get('selectedReqIndex');
   const requestData = value[0].get('data');
   const showReqDetail = value[0].get('showReqDetail');
   const actualData = value[0].get('actualData');
+  const error = value[0].get('error');
 
   // Update data onChange of network data
   useEffect(() => {
@@ -46,6 +50,12 @@ const NetworkProvider = (props) => {
       onDataLoaded(actualData);
     }
   }, [actualData]);
+
+  useEffect(() => {
+    if (error && onDataError) {
+      onDataError(error);
+    }
+  }, [error]);
 
   // Find nearby request-rowId and update scrollIndex on scrollTimeStamp receive
   useEffect(() => {
@@ -92,6 +102,8 @@ NetworkProvider.propTypes = {
   data: PropTypes.object,
   fetchOptions: PropTypes.object,
   file: PropTypes.string,
+  initialState: PropTypes.object,
+  onDataError: PropTypes.func,
   onDataLoaded: PropTypes.func,
   scrollRequestPosition: PropTypes.oneOf(['before', 'after', 'near']),
   scrollTimeStamp: PropTypes.number,
@@ -102,6 +114,8 @@ NetworkProvider.defaultProps = {
   data: null,
   fetchOptions: { withCredentials: true },
   file: null,
+  initialState: defaultState,
+  onDataError: null,
   onDataLoaded: null,
   scrollRequestPosition: 'near',
   scrollTimeStamp: null,

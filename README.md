@@ -52,6 +52,7 @@ import { NetworkViewer } from 'network-viewer';
 | fetchOptions   | Object   | { withCredentials: true }   |  | axios request option can be set here to fetch HAR file  |
 | file   | String   | null   |  | HAR file URL to fetch requests  |
 | onDataLoaded   | Func   | null   | (data) => {}  | This function will receive loaded data on file is being fetched  |
+| onDataError   | Func   | null   | (error) => {}  | This function is called when loading data fails  |
 | onRequestSelect   | Func   | null   | (requestDetail) => {}  | This function will receive request detail on request select  |
 | options   | Object   | {showImportHAR: true, showTimeline: false}   |  | showImportHar: to show/hide import button and modal, showTimeline: to show/hide top timeline of requests |
 | scrollRequestPosition   | String   | near   | before, after, near  | to find and highlight network request by timestamp,

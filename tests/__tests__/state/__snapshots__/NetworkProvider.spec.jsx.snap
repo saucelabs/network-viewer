@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TimelineContainer renders without crashing 1`] = `
-<NetworkProvider
+exports[`NetworkProvider renders without crashing 1`] = `
+<ContextProvider
   autoHighlightChange={false}
   data={null}
   fetchOptions={
@@ -41,7 +41,37 @@ exports[`TimelineContainer renders without crashing 1`] = `
   onDataLoaded={null}
   scrollRequestPosition="near"
   scrollTimeStamp={null}
+  value={
+    Array [
+      Immutable.Map {
+        "errorFilter": false,
+        "search": Object {
+          "name": "url",
+          "value": "",
+        },
+        "error": null,
+        "scrollToIndex": null,
+        "data": Immutable.List [],
+        "selectedReqIndex": null,
+        "reqDetail": null,
+        "showReqDetail": false,
+        "totalNetworkTime": null,
+        "actualData": Immutable.List [],
+        "filter": Object {
+          "name": null,
+          "value": null,
+        },
+        "dataSummary": Immutable.Map {},
+        "loading": false,
+        "sort": Object {
+          "isAcs": true,
+          "key": "startedDateTime",
+        },
+      },
+      [Function],
+    ]
+  }
 >
-  <TimelineContainer />
-</NetworkProvider>
+  <div />
+</ContextProvider>
 `;
