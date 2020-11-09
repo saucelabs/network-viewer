@@ -18,10 +18,11 @@
     "deploy": "gh-pages -d examples/build",
     "publish-demo": "npm run build:examples && npm run deploy",
     "prepublishOnly": "npm prune && npm run build",
-    "release": "npm run release:patch",
-    "release:patch": "np patch",
-    "release:minor": "np minor",
-    "release:major": "np major"
+    "release": "release-it --github.release",
+    "release:ci": "npm run release -- --ci --npm.skipChecks --no-git.requireCleanWorkingDir",
+    "release:patch": "npm run release -- patch",
+    "release:minor": "npm run release -- minor",
+    "release:major": "npm run release -- major"
   },
   "author": "The Sauce Labs Insights Team <insights@saucelabs.com>",
   "contributors": [
