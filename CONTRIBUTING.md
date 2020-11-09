@@ -8,6 +8,7 @@ There are multiple ways of getting involved:
 - [Report a bug](#report-a-bug)
 - [Suggest a feature](#suggest-a-feature)
 - [Contribute code](#contribute-code)
+- [Release package](#release-package)
 
 Below are a few guidelines we would like you to follow.
 If you need help, please reach out to us by opening an issue.
@@ -86,6 +87,18 @@ All contributions (including pull requests) must agree to the Developer Certific
 
 ```
 git commit -s -m "adding X to change Y"
+```
+
+## Release Package
+
+Ensure you have publish rights for the [NPM package](https://www.npmjs.com/package/network-viewer). You can release new version simply by running a manual action called `Manual NPM Publish`. Remember to set *releaseType* to one of `patch`, `minor` or `major`.
+
+If you want to do it on your local machine (**less preferred way**), pull the latest commits from the `master` branch and run the release script:
+
+```sh
+$ npm run release # patch release
+$ npm run release:minor # minor release
+$ npm run release:major # major release
 ```
 
 **Have fun, and happy hacking!**

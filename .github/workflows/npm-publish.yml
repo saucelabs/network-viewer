@@ -1,0 +1,71 @@
+name: Manual NPM Publish
+
+on:
+  workflow_dispatch:
+    inputs:
+      releaseType:
+        description: 'Release type - major, minor or patch'
+        required: true
+        default: 'patch'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v2
+      - name: Setup Node version
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10.15.1
+      - name: Install dependencies
+        run: npm ci
+      - name: Run tests
+        run: npm test
+
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v2
+      - name: Setup Node version
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10.15.1
+      - name: Install dependencies
+        run: npm ci
+      - name: Build package
+        run: npm run build
+      - name: Upload built package
+        uses: actions/upload-artifact@v2
+        with:
+          name: compiled-package
+          path: build/
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v2
+      - name: Setup Node version
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10.15.1
+          registry-url: https://registry.npmjs.org/
+      - name: Setup Git
+        run: |
+          git config --global user.name "oss-sauce-bot"
+          git config --global user.email "66365630+oss-sauce-bot@users.noreply.github.com"
+      - name: Install dependencies
+        run: npm ci
+      - name: Download built package
+        uses: actions/download-artifact@v2
+        with:
+          name: compiled-package
+      - name: Release
+        run: npm run release:ci -- ${{github.event.inputs.releaseType}}
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

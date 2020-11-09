@@ -18,10 +18,11 @@
     "deploy": "gh-pages -d examples/build",
     "publish-demo": "npm run build:examples && npm run deploy",
     "prepublishOnly": "npm prune && npm run build",
-    "release": "npm run release:patch",
-    "release:patch": "np patch",
-    "release:minor": "np minor",
-    "release:major": "np major"
+    "release": "release-it --github.release",
+    "release:ci": "npm run release -- --ci --npm.skipChecks --no-git.requireCleanWorkingDir",
+    "release:patch": "npm run release -- patch",
+    "release:minor": "npm run release -- minor",
+    "release:major": "npm run release -- major"
   },
   "author": "The Sauce Labs Insights Team <insights@saucelabs.com>",
   "contributors": [
@@ -89,7 +90,6 @@
     "kind-of": "^6.0.3",
     "node-forge": "^0.10.0",
     "node-sass": "^4.13.1",
-    "np": "^6.2.4",
     "npm-run-all": "^4.1.5",
     "postcss": "^7.0.32",
     "postcss-cli": "^7.1.1",
@@ -99,6 +99,7 @@
     "react-scripts": "^3.4.3",
     "react-test-renderer": "^16.13.1",
     "recharts": "1.8.5",
+    "release-it": "^14.2.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.18.2",
     "rollup-plugin-filesize": "^9.0.2",
