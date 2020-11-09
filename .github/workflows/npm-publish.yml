@@ -41,7 +41,10 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: compiled-package
-          path: build/
+          path: |
+            es6/
+            lib/
+            umd/
 
   release:
     needs: build
