@@ -34,9 +34,9 @@
   },
   "homepage": "https://github.com/saucelabs/network-viewer#readme",
   "files": [
-    "./es6/**/*",
-    "./lib/**/*",
-    "./umd/**/*"
+    "es6/",
+    "lib/",
+    "umd/"
   ],
   "dependencies": {
     "axios": "0.19.2",
