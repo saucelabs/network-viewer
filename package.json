@@ -12,6 +12,7 @@
     "build:es6": "rollup --config ./config/rollup/es6.js",
     "build:umd": "rollup --config ./config/rollup/umd.js",
     "build:examples": "cd examples && npm run build",
+    "build:package:ci": "run-s build:lib build:es6 build:umd",
     "build": "run-s build:*",
     "watch:lib": "rollup --config ./config/rollup/lib.js -w",
     "watch:examples": "cd examples && npm run start",
@@ -33,6 +34,11 @@
     "url": "https://github.com/saucelabs/network-viewer/issues"
   },
   "homepage": "https://github.com/saucelabs/network-viewer#readme",
+  "files": [
+    "./es6",
+    "./lib",
+    "./umd"
+  ],
   "dependencies": {
     "axios": "0.19.2",
     "classnames": ">=2.2.6",
