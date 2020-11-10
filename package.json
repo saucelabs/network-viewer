@@ -18,7 +18,6 @@
     "watch:examples": "cd examples && npm run start",
     "deploy": "gh-pages -d examples/build",
     "publish-demo": "npm run build:examples && npm run deploy",
-    "prepublishOnly": "npm prune && npm run build",
     "release": "release-it --github.release",
     "release:ci": "npm run release -- --ci --npm.skipChecks --no-git.requireCleanWorkingDir",
     "release:patch": "npm run release -- patch",
