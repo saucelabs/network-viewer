@@ -1273,6 +1273,8 @@ Object {
 
 exports[`utils getTotalTimeOfEntry should return totalTimeOfEntry 1`] = `1571042831631.4531`;
 
+exports[`utils getTotalTimeOfEntry should return work without _blocked_queueing in timings 1`] = `1571042831627.07`;
+
 exports[`utils getUrlInfo 1`] = `
 Object {
   "domain": "developer.mozilla.org",

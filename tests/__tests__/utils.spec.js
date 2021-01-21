@@ -194,6 +194,13 @@ describe('utils', () => {
     it('should return totalTimeOfEntry', () => {
       expect(utils.getTotalTimeOfEntry(networkDataMock.log.entries[0])).toMatchSnapshot();
     });
+
+    it('should return work without _blocked_queueing in timings', () => {
+      // eslint-disable-next-line camelcase
+      const { _blocked_queueing, ...timings } = networkDataMock.log.entries[0].timings;
+      const entry = { ...networkDataMock.log.entries[0], timings };
+      expect(utils.getTotalTimeOfEntry(entry)).toMatchSnapshot();
+    });
   });
 
   it('findIndexNearTimestamp', () => {
