@@ -137,7 +137,7 @@ export const getHeaders = (entry) => ({
 });
 
 export const getTotalTimeOfEntry = ({ startedDateTime, time, timings }) => (
-  new Date(startedDateTime).getTime() + time + timings._blocked_queueing
+  new Date(startedDateTime).getTime() + time + (timings._blocked_queueing || 0)
 );
 
 export const getInterceptError = ({ response }) => (
