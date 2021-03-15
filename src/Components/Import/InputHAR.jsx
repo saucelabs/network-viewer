@@ -4,7 +4,7 @@ import { stringify } from 'qs';
 import Styles from './InputHAR.styles.scss';
 import URLInput from './URLInput';
 
-const SAMPLE_HAR_URL = 'https://raw.githubusercontent.com/saucelabs/network-viewer/master/examples/src/data/network.har';
+const SAMPLE_HAR_URL = 'https://raw.githubusercontent.com/saucelabs/network-viewer/main/examples/src/data/network.har';
 
 const InputHAR = () => {
   const handleURLSubmit = (fetchInfo) => {

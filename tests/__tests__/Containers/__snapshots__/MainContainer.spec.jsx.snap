@@ -562,11 +562,11 @@ exports[`MainContainer renders without crashing 1`] = `
                     For Example use this har file
                   </span>
                   <a
-                    href="https://raw.githubusercontent.com/saucelabs/network-viewer/master/examples/src/data/network.har"
+                    href="https://raw.githubusercontent.com/saucelabs/network-viewer/main/examples/src/data/network.har"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    https://raw.githubusercontent.com/saucelabs/network-viewer/master/examples/src/data/network.har
+                    https://raw.githubusercontent.com/saucelabs/network-viewer/main/examples/src/data/network.har
                   </a>
                 </p>
               </div>

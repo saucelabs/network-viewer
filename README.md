@@ -1,4 +1,4 @@
-Network-Viewer [![npm version](https://badge.fury.io/js/network-viewer.svg)](https://www.npmjs.com/package/network-viewer) [![Build Status](https://travis-ci.org/saucelabs/network-viewer.svg?branch=master)](https://travis-ci.org/saucelabs/network-viewer)
+Network-Viewer [![npm version](https://badge.fury.io/js/network-viewer.svg)](https://www.npmjs.com/package/network-viewer) [![Test](https://github.com/saucelabs/network-viewer/actions/workflows/test.yml/badge.svg)](https://github.com/saucelabs/network-viewer/actions/workflows/test.yml)
 ==============
 
 ## Introduction
@@ -6,10 +6,10 @@ Network-Viewer is a **redefined** HAR viewer human friendly view of requests whi
 
 The main purpose of this web application is to help you to view HAR files with many features like filters, search, timline charts etc.
 
-If you are interested contributing to this library, please have a look into our [Contributing Guidelines](https://github.com/saucelabs/network-viewer/blob/master/CONTRIBUTING.md). We love to see any kind of contributions 😊!
+If you are interested contributing to this library, please have a look into our [Contributing Guidelines](https://github.com/saucelabs/network-viewer/blob/main/CONTRIBUTING.md). We love to see any kind of contributions 😊!
 
 ### Demo
-[Example](https://saucelabs.github.io/network-viewer/?file=https%3A%2F%2Fraw.githubusercontent.com%2Fsaucelabs%2Fnetwork-viewer%2Fmaster%2Fexamples%2Fsrc%2Fdata%2Fnetwork.har&isCORSEnabled=false)
+[Example](https://saucelabs.github.io/network-viewer/?file=https%3A%2F%2Fraw.githubusercontent.com%2Fsaucelabs%2Fnetwork-viewer%2Fmain%2Fexamples%2Fsrc%2Fdata%2Fnetwork.har&isCORSEnabled=false)
 
 ![](https://i.imgur.com/wryjs8l.png)
 

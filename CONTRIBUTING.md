@@ -64,7 +64,7 @@ create a new one that you would like work on and discuss your ideas and use case
 It is always best to discuss your plans beforehand, to ensure that your contribution is in line with our goals.
 
 - Fork the repository on GitHub
-- Create a topic branch from where you want to base your work. This is usually master.
+- Create a topic branch from where you want to base your work. This is usually `main`.
 - Open a new pull request, label it `work in progress` and outline what you will be contributing
 - Make commits of logical units.
 - Make sure you sign-off on your commits `git commit -s -m "adding X to change Y"`
@@ -93,7 +93,7 @@ git commit -s -m "adding X to change Y"
 
 Ensure you have publish rights for the [NPM package](https://www.npmjs.com/package/network-viewer). You can release new version simply by running a manual action called `Manual NPM Publish`. Remember to set *releaseType* to one of `patch`, `minor` or `major`.
 
-If you want to do it on your local machine (**less preferred way**), pull the latest commits from the `master` branch and run the release script:
+If you want to do it on your local machine (**less preferred way**), pull the latest commits from the `main` branch and run the release script:
 
 ```sh
 $ npm run release # patch release
