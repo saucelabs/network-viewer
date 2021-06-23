@@ -60,7 +60,12 @@ export const parseSize = ({ bodySize, _transferSize, headers, content }) => {
   return formatSize(contentInfo.value);
 };
 
-export const getContentType = (headers) => {
+export const getContentType = (entry) => {
+  if (entry._resourceType) {
+    return entry._resourceType.toLowerCase();
+  }
+
+  const { headers } = entry.response;
   const contentInfo = headers.find(({ name }) => ['content-type', 'Content-Type'].includes(name));
   if (!contentInfo) {
     return '';
@@ -173,7 +178,7 @@ export const prepareViewerData = (entries) => {
         method: entry.request.method,
         size: parseSize(entry.response),
         startedDateTime: new Date(entry.startedDateTime).getTime(),
-        type: entry._resourceType || getContentType(entry.response.headers),
+        type: getContentType(entry),
         timings: getTimings(entry, firstEntryTime),
         body: getContent(entry.response.content),
         time: entry.time,

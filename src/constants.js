@@ -43,7 +43,7 @@ export const FILTERS = [
     name: 'XHR',
     filterBy: {
       name: 'type',
-      value: ['xhr', 'XHR'],
+      value: ['xhr', 'XHR', 'fetch'],
     },
   },
   {
