@@ -1221,7 +1221,9 @@ exports[`utils getContent 1`] = `
 
 exports[`utils getContent 2`] = `undefined`;
 
-exports[`utils getContentType 1`] = `"html"`;
+exports[`utils getContentType 1`] = `"document"`;
+
+exports[`utils getContentType 2`] = `"html"`;
 
 exports[`utils getHeaders 1`] = `
 Object {

@@ -18,8 +18,14 @@ describe('utils', () => {
   });
 
   it('getContentType', () => {
-    const { headers } = networkDataMock.log.entries[0].response;
-    expect(utils.getContentType(headers)).toMatchSnapshot();
+    const entry = networkDataMock.log.entries[0];
+    expect(utils.getContentType(entry)).toMatchSnapshot();
+
+    const entryWithoutResourceType = {
+      ...entry,
+      _resourceType: null,
+    };
+    expect(utils.getContentType(entryWithoutResourceType)).toMatchSnapshot();
   });
 
   it('getTimings', () => {
