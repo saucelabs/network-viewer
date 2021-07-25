@@ -38,8 +38,10 @@ export const postcssPlugin = (options = {}) => (
         preset: 'default',
       }),
     ].filter(Boolean),
-    autoModules: true,
-    modules: { generateScopedName: '[name]__[local]__[hash:base64:5]' },
+    autoModules: false,
+    modules: {
+      generateScopedName: '[name]__[local]___[hash:base64:5]',
+    },
     ...options,
   })
 );
