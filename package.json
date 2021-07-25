@@ -54,7 +54,7 @@
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.1",
+    "@babel/cli": "^7.14.8",
     "@babel/core": "^7.10.2",
     "@babel/plugin-external-helpers": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
@@ -104,7 +104,7 @@
     "react-scripts": "^4.0.3",
     "react-test-renderer": "^16.13.1",
     "recharts": "1.8.5",
-    "release-it": "^14.2.1",
+    "release-it": "^14.10.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.53.3",
     "rollup-plugin-filesize": "^9.1.1",
