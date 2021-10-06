@@ -5,4 +5,5 @@
   flex-wrap: wrap;
   flex-direction: row;
   height: calc(100% - #{$filter-row-height + $footer-height});
+  position: relative;
 }

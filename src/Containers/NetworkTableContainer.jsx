@@ -22,9 +22,8 @@ const NetworkTableContainer = ({ onRequestSelect }) => {
   const error = state.get('error');
   const selectedReqIndex = state.get('selectedReqIndex');
   const showReqDetail = state.get('showReqDetail');
-  const showAllCols = !showReqDetail;
   const containerClassName = context('table-container', {
-    'limited-cols': !showAllCols,
+    'limited-cols': showReqDetail,
   });
   const handleReqSelect = (payload) => {
     actions.updateScrollToIndex(payload.index);
@@ -54,10 +53,7 @@ const NetworkTableContainer = ({ onRequestSelect }) => {
   return (
     <section className={containerClassName}>
       <table className={Styles.table}>
-        <NetworkTableHeader
-          maxTime={totalNetworkTime}
-          showAllCols={showAllCols}
-        />
+        <NetworkTableHeader />
         <tbody className={Styles['table-content']}>
           {Array.from(data).map((rowInfo) => (
             <NetworkTableRow
@@ -66,7 +62,6 @@ const NetworkTableContainer = ({ onRequestSelect }) => {
               onSelect={handleReqSelect}
               payload={rowInfo}
               scrollHighlight={selectedReqIndex === rowInfo.index}
-              showAllCols={showAllCols}
             />
           ))}
         </tbody>

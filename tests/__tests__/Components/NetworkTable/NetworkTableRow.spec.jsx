@@ -31,7 +31,6 @@ describe('NetworkTableRow', () => {
     },
     maxTime: 5000,
     scrollHighlight: false,
-    showAllCols: true,
     onSelect: NOOP,
   };
 

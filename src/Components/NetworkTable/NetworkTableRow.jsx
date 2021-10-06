@@ -14,7 +14,6 @@ const NetworkTableRow = ({
   payload,
   maxTime,
   scrollHighlight,
-  showAllCols,
   onSelect,
 }) => {
   const handleSelectRequest = () => {
@@ -30,17 +29,6 @@ const NetworkTableRow = ({
     id: ROW_ID_PREFIX + payload.index,
     onClick: handleSelectRequest,
   };
-
-  if (!showAllCols) {
-    return (
-      <tr {...rowProps}>
-        <NetworkCellValue
-          datakey="filename"
-          payload={payload}
-        />
-      </tr>
-    );
-  }
 
   return (
     <tr {...rowProps}>
@@ -69,7 +57,6 @@ NetworkTableRow.propTypes = {
   onSelect: PropTypes.func.isRequired,
   payload: PropTypes.object.isRequired,
   scrollHighlight: PropTypes.bool.isRequired,
-  showAllCols: PropTypes.bool.isRequired,
 };
 
 export default NetworkTableRow;

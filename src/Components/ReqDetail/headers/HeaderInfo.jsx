@@ -7,26 +7,32 @@ import HeaderTitle from './HeaderTitle';
 
 const context = classNames.bind(Styles);
 
-const HeaderInfo = ({ eventKey, data, component, supportEncode }) => {
+const HeaderInfo = ({
+  eventKey,
+  data,
+  component,
+  isEncodeEnable,
+  isParseEnable,
+}) => {
   const [isVisible, updateVisibleStates] = useState(true);
-  const [isURLEncoded, updateEncode] = useState(true);
+  const [isPayloadTransformed, updateTransform] = useState(true);
 
-  const handleEncodeChange = () => updateEncode(!isURLEncoded);
+  const handlePayloadTransform = () => updateTransform(!isPayloadTransformed);
   const ChildComponent = () => component({
     data,
-    isURLEncoded,
-    onChangeEncode: handleEncodeChange,
+    isPayloadTransformed,
+    onChangeEncode: handlePayloadTransform,
   });
 
   return (
     <div className={context('header-info', { active: isVisible })}>
       <HeaderTitle
         eventKey={eventKey}
-        isURLEncoded={isURLEncoded}
-        onChangeEncode={handleEncodeChange}
+        isEncodeEnable={isEncodeEnable}
+        isParseEnable={isParseEnable}
+        isPayloadTransformed={isPayloadTransformed}
         onClick={() => updateVisibleStates(!isVisible)}
-        supportEncode={supportEncode}
-
+        onPayloadTransform={handlePayloadTransform}
       />
       {isVisible && <ChildComponent /> }
     </div>
@@ -37,12 +43,14 @@ HeaderInfo.propTypes = {
   component: PropTypes.func.isRequired,
   data: PropTypes.object,
   eventKey: PropTypes.string.isRequired,
-  supportEncode: PropTypes.bool,
+  isEncodeEnable: PropTypes.bool,
+  isParseEnable: PropTypes.bool,
 };
 
 HeaderInfo.defaultProps = {
   data: null,
-  supportEncode: false,
+  isEncodeEnable: false,
+  isParseEnable: false,
 };
 
 export default HeaderInfo;

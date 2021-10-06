@@ -2,9 +2,7 @@
 
 exports[`NetworkTableHeader renders without crashing 1`] = `
 <table>
-  <NetworkTableHeader
-    showAllCols={true}
-  >
+  <NetworkTableHeader>
     <thead>
       <tr>
         <th

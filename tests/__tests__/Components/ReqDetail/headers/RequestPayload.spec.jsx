@@ -1,17 +1,14 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import FormData from './../../../../../src/Components/ReqDetail/headers/FormData';
+import RequestPayload from './../../../../../src/Components/ReqDetail/headers/RequestPayload';
 
-describe('FormData', () => {
+describe('RequestPayload', () => {
   const props = {
     data: {
       headers: {
         postData: {
-          params: [{
-            name: 'foo',
-            value: 'bar',
-          }],
+          text: "{ 'name': 'foo' }",
         },
       },
     },
@@ -19,7 +16,7 @@ describe('FormData', () => {
   };
 
   it('renders without crashing', () => {
-    const element = shallow(<FormData {...props} />);
+    const element = shallow(<RequestPayload {...props} />);
     expect(element).toMatchSnapshot();
   });
 });

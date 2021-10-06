@@ -7,6 +7,9 @@ exports[`Headers renders without crashing 1`] = `
       "domain": "developer.mozilla.org",
       "filename": "slice",
       "headers": Object {
+        "postData": Object {
+          "text": "{\\"hello\\": \\"foo\\"}",
+        },
         "queryString": Array [],
         "request": Array [
           Object {
@@ -52,6 +55,9 @@ exports[`Headers renders without crashing 1`] = `
           "domain": "developer.mozilla.org",
           "filename": "slice",
           "headers": Object {
+            "postData": Object {
+              "text": "{\\"hello\\": \\"foo\\"}",
+            },
             "queryString": Array [],
             "request": Array [
               Object {
@@ -88,17 +94,19 @@ exports[`Headers renders without crashing 1`] = `
         }
       }
       eventKey="general"
-      supportEncode={false}
+      isEncodeEnable={false}
+      isParseEnable={false}
     >
       <div
         className="header-info active"
       >
         <HeaderTitle
           eventKey="general"
-          isURLEncoded={true}
-          onChangeEncode={[Function]}
+          isEncodeEnable={false}
+          isParseEnable={false}
+          isPayloadTransformed={true}
           onClick={[Function]}
-          supportEncode={false}
+          onPayloadTransform={[Function]}
         >
           <div>
             <span
@@ -182,6 +190,9 @@ exports[`Headers renders without crashing 1`] = `
           "domain": "developer.mozilla.org",
           "filename": "slice",
           "headers": Object {
+            "postData": Object {
+              "text": "{\\"hello\\": \\"foo\\"}",
+            },
             "queryString": Array [],
             "request": Array [
               Object {
@@ -218,17 +229,19 @@ exports[`Headers renders without crashing 1`] = `
         }
       }
       eventKey="response"
-      supportEncode={false}
+      isEncodeEnable={false}
+      isParseEnable={false}
     >
       <div
         className="header-info active"
       >
         <HeaderTitle
           eventKey="response"
-          isURLEncoded={true}
-          onChangeEncode={[Function]}
+          isEncodeEnable={false}
+          isParseEnable={false}
+          isPayloadTransformed={true}
           onClick={[Function]}
-          supportEncode={false}
+          onPayloadTransform={[Function]}
         >
           <div>
             <span
@@ -282,6 +295,9 @@ exports[`Headers renders without crashing 1`] = `
           "domain": "developer.mozilla.org",
           "filename": "slice",
           "headers": Object {
+            "postData": Object {
+              "text": "{\\"hello\\": \\"foo\\"}",
+            },
             "queryString": Array [],
             "request": Array [
               Object {
@@ -318,17 +334,19 @@ exports[`Headers renders without crashing 1`] = `
         }
       }
       eventKey="request"
-      supportEncode={false}
+      isEncodeEnable={false}
+      isParseEnable={false}
     >
       <div
         className="header-info active"
       >
         <HeaderTitle
           eventKey="request"
-          isURLEncoded={true}
-          onChangeEncode={[Function]}
+          isEncodeEnable={false}
+          isParseEnable={false}
+          isPayloadTransformed={true}
           onClick={[Function]}
-          supportEncode={false}
+          onPayloadTransform={[Function]}
         >
           <div>
             <span
@@ -371,6 +389,115 @@ exports[`Headers renders without crashing 1`] = `
                 keep-alive
               </span>
             </p>
+          </div>
+        </ChildComponent>
+      </div>
+    </HeaderInfo>
+    <HeaderInfo
+      component={[Function]}
+      data={
+        Object {
+          "domain": "developer.mozilla.org",
+          "filename": "slice",
+          "headers": Object {
+            "postData": Object {
+              "text": "{\\"hello\\": \\"foo\\"}",
+            },
+            "queryString": Array [],
+            "request": Array [
+              Object {
+                "name": "Connection",
+                "value": "keep-alive",
+              },
+            ],
+            "response": Array [
+              Object {
+                "name": "Connection",
+                "value": "keep-alive",
+              },
+            ],
+          },
+          "index": 0,
+          "method": "GET",
+          "serverIPAddress": ":80",
+          "size": 135.04,
+          "startedDateTime": "2019-10-14T08:47:11.592Z",
+          "status": 200,
+          "timings": Object {
+            "_blocked_queueing": 4.382999992230907,
+            "blocked": 5.496999992230907,
+            "connect": -1,
+            "dns": -1,
+            "receive": 3.252000024076551,
+            "send": 0.2819999999999998,
+            "ssl": -1,
+            "startTime": 0,
+            "wait": 26.03899999633059,
+          },
+          "type": "html",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+        }
+      }
+      eventKey="requestPayload"
+      isEncodeEnable={false}
+      isParseEnable={true}
+    >
+      <div
+        className="header-info active"
+      >
+        <HeaderTitle
+          eventKey="requestPayload"
+          isEncodeEnable={false}
+          isParseEnable={true}
+          isPayloadTransformed={true}
+          onClick={[Function]}
+          onPayloadTransform={[Function]}
+        >
+          <div>
+            <span
+              onClick={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <IconCaretUp
+                className=""
+              >
+                <svg
+                  className=""
+                  height="8"
+                  preserveAspectRatio="xMidYMid"
+                  viewBox="0 0 13 8"
+                  width="13"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <path
+                      d="M11.547,8.008 C11.547,8.008 6.500,2.919 6.500,2.919 C6.500,2.919 1.453,8.008 1.453,8.008 C1.453,8.008 0.011,6.554 0.011,6.554 C0.011,6.554 6.500,0.011 6.500,0.011 C6.500,0.011 12.989,6.554 12.989,6.554 C12.989,6.554 11.547,8.008 11.547,8.008 Z"
+                      fillRule="evenodd"
+                    />
+                  </g>
+                </svg>
+              </IconCaretUp>
+              Request Payload
+            </span>
+            <span
+              onClick={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              view source
+            </span>
+          </div>
+        </HeaderTitle>
+        <ChildComponent>
+          <div>
+            <div>
+              <pre>
+                {
+  "hello": "foo"
+}
+              </pre>
+            </div>
           </div>
         </ChildComponent>
       </div>

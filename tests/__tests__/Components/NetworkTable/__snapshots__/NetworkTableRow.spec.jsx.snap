@@ -31,7 +31,6 @@ exports[`NetworkTableRow renders without crashing 1`] = `
         }
       }
       scrollHighlight={false}
-      showAllCols={true}
     >
       <tr
         className="network-table-row info"

@@ -6,10 +6,11 @@ exports[`HeaderInfo renders without crashing 1`] = `
 >
   <HeaderTitle
     eventKey="general"
-    isURLEncoded={true}
-    onChangeEncode={[Function]}
+    isEncodeEnable={false}
+    isParseEnable={false}
+    isPayloadTransformed={true}
     onClick={[Function]}
-    supportEncode={false}
+    onPayloadTransform={[Function]}
   />
   <ChildComponent />
 </div>

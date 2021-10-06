@@ -1285,6 +1285,8 @@ Object {
 }
 `;
 
+exports[`utils parseRequestPayload 1`] = `"{'name':'foo'}"`;
+
 exports[`utils parseSize 1`] = `"135 KB"`;
 
 exports[`utils prepareTooltipData 1`] = `

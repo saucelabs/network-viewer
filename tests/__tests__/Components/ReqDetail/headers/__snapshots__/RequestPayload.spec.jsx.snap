@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RequestPayload renders without crashing 1`] = `
+<div>
+  <div>
+    <pre>
+      { 'name': 'foo' }
+    </pre>
+  </div>
+</div>
+`;

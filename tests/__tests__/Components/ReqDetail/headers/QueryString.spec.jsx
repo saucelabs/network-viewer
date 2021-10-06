@@ -13,7 +13,7 @@ describe('QueryString', () => {
         }],
       },
     },
-    isURLEncoded: true,
+    isPayloadTransformed: true,
   };
 
   it('renders without crashing', () => {

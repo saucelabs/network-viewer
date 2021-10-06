@@ -378,3 +378,13 @@ export const getSummary = (data) => (
     totalRequests: data.size,
   })
 );
+
+export const parseRequestPayload = (text) => {
+  let parsedJson = text;
+  try {
+    parsedJson = JSON.stringify(JSON.parse(text), null, 2);
+  } catch (err) {
+    parsedJson = text;
+  }
+  return parsedJson;
+};

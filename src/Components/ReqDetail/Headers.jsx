@@ -8,6 +8,7 @@ import QueryString from './headers/QueryString';
 import FormData from './headers/FormData';
 import HeaderInfo from './headers/HeaderInfo';
 import Styles from './Headers.styles.scss';
+import RequestPayload from './headers/RequestPayload';
 
 const Headers = ({ data }) => (!data ? null : (
   <section className={Styles['headers-container']}>
@@ -31,7 +32,7 @@ const Headers = ({ data }) => (!data ? null : (
         component={QueryString}
         data={data}
         eventKey="queryString"
-        supportEncode
+        isEncodeEnable
       />
     )}
     {data.headers.postData && data.headers.postData.params && (
@@ -39,7 +40,15 @@ const Headers = ({ data }) => (!data ? null : (
         component={FormData}
         data={data}
         eventKey="formData"
-        supportEncode
+        isEncodeEnable
+      />
+    )}
+    {data.headers.postData && data.headers.postData.text && (
+      <HeaderInfo
+        component={RequestPayload}
+        data={data}
+        eventKey="requestPayload"
+        isParseEnable
       />
     )}
   </section>

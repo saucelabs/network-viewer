@@ -204,6 +204,10 @@ export const HEADERS_TITLES = Object.freeze({
     key: 'formaData',
     name: 'Form Data',
   }),
+  requestPayload: Object.freeze({
+    key: 'requestPayload',
+    name: 'Request Payload',
+  }),
 });
 
 export const MAX_COLOR_CONTENT_SIZE = 100000; // 100kB
@@ -212,3 +216,14 @@ export const NETWORK_VIEWER_DEFAULT_OPTIONS = {
   showImportHAR: true,
   showTimeline: false,
 };
+
+export const PAYLOAD_CAPTIONS = Object.freeze({
+  encode: Object.freeze({
+    true: 'URL encoded',
+    false: 'decoded',
+  }),
+  parse: Object.freeze({
+    true: 'source',
+    false: 'parsed',
+  }),
+});
