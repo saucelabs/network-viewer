@@ -12,6 +12,16 @@
       td, th {
         border-right: 0;
       }
+
+      thead tr th:first-child,
+      td:nth-child(1) {
+        width: 100%;
+     }
+
+      th:nth-child(1) ~ th,
+      td:nth-child(1) ~ td {
+        display: none;
+      }   
     }
   }
 

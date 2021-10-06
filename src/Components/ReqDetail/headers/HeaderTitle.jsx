@@ -1,55 +1,57 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { HEADERS_TITLES } from './../../../constants';
+import { HEADERS_TITLES, PAYLOAD_CAPTIONS } from './../../../constants';
 import IconCaretUp from './../../../icons/IconCaretUp';
 import Styles from './../Headers.styles.scss';
-
-const ENCODE_TEXT = {
-  true: 'URL encoded',
-  false: 'decoded',
-};
 
 const HeaderTitle = ({
   onClick,
   eventKey,
-  supportEncode,
-  onChangeEncode,
-  isURLEncoded,
-}) => (
-  <div className={Styles['header-title']}>
-    <span
-      onClick={() => onClick(HEADERS_TITLES[eventKey].key)}
-      role="button"
-      tabIndex={0}
-    >
-      <IconCaretUp className={Styles['caret-icon']} />
-      {HEADERS_TITLES[eventKey].name}
-    </span>
-    {supportEncode && (
+  isEncodeEnabled,
+  onPayloadTransform,
+  isPayloadTransformed,
+  isParseEnabled,
+}) => {
+  const payloadStatus = PAYLOAD_CAPTIONS[isParseEnabled ? 'parse' : 'encode'][isPayloadTransformed];
+
+  return (
+    <div className={Styles['header-title']}>
       <span
-        className={Styles['encode-url']}
-        onClick={onChangeEncode}
+        onClick={() => onClick(HEADERS_TITLES[eventKey].key)}
         role="button"
         tabIndex={0}
       >
-        {`view ${ENCODE_TEXT[isURLEncoded]}`}
+        <IconCaretUp className={Styles['caret-icon']} />
+        {HEADERS_TITLES[eventKey].name}
       </span>
-    )}
-  </div>
-);
+      {(isEncodeEnabled || isParseEnabled) && (
+        <span
+          className={Styles['encode-url']}
+          onClick={onPayloadTransform}
+          role="button"
+          tabIndex={0}
+        >
+          {`view ${payloadStatus}`}
+        </span>
+      )}
+    </div>
+  );
+};
 
 HeaderTitle.propTypes = {
   eventKey: PropTypes.string.isRequired,
-  isURLEncoded: PropTypes.bool,
-  onChangeEncode: PropTypes.func.isRequired,
+  isEncodeEnabled: PropTypes.bool,
+  isParseEnabled: PropTypes.bool,
+  isPayloadTransformed: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
-  supportEncode: PropTypes.bool,
+  onPayloadTransform: PropTypes.func.isRequired,
 };
 
 HeaderTitle.defaultProps = {
-  isURLEncoded: true,
-  supportEncode: false,
+  isEncodeEnabled: false,
+  isParseEnabled: false,
+  isPayloadTransformed: true,
 };
 
 export default HeaderTitle;

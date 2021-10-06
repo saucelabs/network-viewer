@@ -7,7 +7,7 @@ describe('HeaderTitle', () => {
   const props = {
     eventKey: 'general',
     onClick: () => {},
-    onChangeEncode: () => {},
+    onPayloadTransform: () => {},
   };
 
   it('renders without crashing', () => {

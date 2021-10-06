@@ -239,4 +239,9 @@ describe('utils', () => {
     expect(utils.getInterceptError({ response: { _error: 'ERR_TIMED_OUT' } })).toBe('ERR_TIMED_OUT');
     expect(utils.getInterceptError({ response: { } })).toBe(null);
   });
+
+  it('parseRequestPayload', () => {
+    expect(utils.parseRequestPayload("{'name':'foo'}")).toMatchSnapshot();
+    expect(utils.parseRequestPayload('foo')).toBe('foo');
+  });
 });

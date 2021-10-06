@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Styles from './../Headers.styles.scss';
 
-const QueryString = ({ data, isURLEncoded }) => (
+const QueryString = ({ data, isPayloadTransformed }) => (
   <div className={Styles['header-detail']}>
     {data.headers.queryString.map(({ name, value }, index) => (
       <p
@@ -14,7 +14,7 @@ const QueryString = ({ data, isURLEncoded }) => (
           {`${name}:`}
         </span>
         <span className={Styles['info-value']}>
-          {isURLEncoded ? decodeURIComponent(value) : value}
+          {isPayloadTransformed ? decodeURIComponent(value) : value}
         </span>
       </p>
     ))}
@@ -23,7 +23,7 @@ const QueryString = ({ data, isURLEncoded }) => (
 
 QueryString.propTypes = {
   data: PropTypes.object,
-  isURLEncoded: PropTypes.bool.isRequired,
+  isPayloadTransformed: PropTypes.bool.isRequired,
 };
 
 QueryString.defaultProps = {

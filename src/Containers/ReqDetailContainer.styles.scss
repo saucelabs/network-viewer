@@ -8,7 +8,8 @@ $tab-height: 35px;
   height: 100%;
   overflow: auto;
   background: $white-100;
-  position: relative;
+  position: absolute;
+  right: 0;
   width: calc(100% - #{$name-col-width});
   border-left: $border;
 

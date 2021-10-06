@@ -7,7 +7,7 @@ describe('NetworkTableHeader', () => {
   it('renders without crashing', () => {
     const element = mount(
       <table>
-        <NetworkTableHeader showAllCols />
+        <NetworkTableHeader />
       </table>,
     );
     expect(element).toMatchSnapshot();

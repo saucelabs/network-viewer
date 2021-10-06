@@ -31,6 +31,9 @@ describe('Headers', () => {
         response: [{ name: 'Connection', value: 'keep-alive' }],
         request: [{ name: 'Connection', value: 'keep-alive' }],
         queryString: [],
+        postData: {
+          text: '{"hello": "foo"}',
+        },
       },
     },
     maxTime: 5000,
