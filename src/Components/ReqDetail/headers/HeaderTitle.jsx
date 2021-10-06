@@ -8,45 +8,49 @@ import Styles from './../Headers.styles.scss';
 const HeaderTitle = ({
   onClick,
   eventKey,
-  isEncodeEnable,
+  isEncodeEnabled,
   onPayloadTransform,
   isPayloadTransformed,
-  isParseEnable,
-}) => (
-  <div className={Styles['header-title']}>
-    <span
-      onClick={() => onClick(HEADERS_TITLES[eventKey].key)}
-      role="button"
-      tabIndex={0}
-    >
-      <IconCaretUp className={Styles['caret-icon']} />
-      {HEADERS_TITLES[eventKey].name}
-    </span>
-    {(isEncodeEnable || isParseEnable) && (
+  isParseEnabled,
+}) => {
+  const payloadStatus = PAYLOAD_CAPTIONS[isParseEnabled ? 'parse' : 'encode'][isPayloadTransformed];
+
+  return (
+    <div className={Styles['header-title']}>
       <span
-        className={Styles['encode-url']}
-        onClick={onPayloadTransform}
+        onClick={() => onClick(HEADERS_TITLES[eventKey].key)}
         role="button"
         tabIndex={0}
       >
-        {`view ${PAYLOAD_CAPTIONS[isParseEnable ? 'parse' : 'encode'][isPayloadTransformed]}`}
+        <IconCaretUp className={Styles['caret-icon']} />
+        {HEADERS_TITLES[eventKey].name}
       </span>
-    )}
-  </div>
-);
+      {(isEncodeEnabled || isParseEnabled) && (
+        <span
+          className={Styles['encode-url']}
+          onClick={onPayloadTransform}
+          role="button"
+          tabIndex={0}
+        >
+          {`view ${payloadStatus}`}
+        </span>
+      )}
+    </div>
+  );
+};
 
 HeaderTitle.propTypes = {
   eventKey: PropTypes.string.isRequired,
-  isEncodeEnable: PropTypes.bool,
-  isParseEnable: PropTypes.bool,
+  isEncodeEnabled: PropTypes.bool,
+  isParseEnabled: PropTypes.bool,
   isPayloadTransformed: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
   onPayloadTransform: PropTypes.func.isRequired,
 };
 
 HeaderTitle.defaultProps = {
-  isEncodeEnable: false,
-  isParseEnable: false,
+  isEncodeEnabled: false,
+  isParseEnabled: false,
   isPayloadTransformed: true,
 };
 

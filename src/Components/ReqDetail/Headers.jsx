@@ -32,7 +32,7 @@ const Headers = ({ data }) => (!data ? null : (
         component={QueryString}
         data={data}
         eventKey="queryString"
-        isEncodeEnable
+        isEncodeEnabled
       />
     )}
     {data.headers.postData && data.headers.postData.params && (
@@ -40,7 +40,7 @@ const Headers = ({ data }) => (!data ? null : (
         component={FormData}
         data={data}
         eventKey="formData"
-        isEncodeEnable
+        isEncodeEnabled
       />
     )}
     {data.headers.postData && data.headers.postData.text && (
@@ -48,7 +48,7 @@ const Headers = ({ data }) => (!data ? null : (
         component={RequestPayload}
         data={data}
         eventKey="requestPayload"
-        isParseEnable
+        isParseEnabled
       />
     )}
   </section>

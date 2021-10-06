@@ -11,8 +11,8 @@ const HeaderInfo = ({
   eventKey,
   data,
   component,
-  isEncodeEnable,
-  isParseEnable,
+  isEncodeEnabled,
+  isParseEnabled,
 }) => {
   const [isVisible, updateVisibleStates] = useState(true);
   const [isPayloadTransformed, updateTransform] = useState(true);
@@ -28,8 +28,8 @@ const HeaderInfo = ({
     <div className={context('header-info', { active: isVisible })}>
       <HeaderTitle
         eventKey={eventKey}
-        isEncodeEnable={isEncodeEnable}
-        isParseEnable={isParseEnable}
+        isEncodeEnabled={isEncodeEnabled}
+        isParseEnabled={isParseEnabled}
         isPayloadTransformed={isPayloadTransformed}
         onClick={() => updateVisibleStates(!isVisible)}
         onPayloadTransform={handlePayloadTransform}
@@ -43,14 +43,14 @@ HeaderInfo.propTypes = {
   component: PropTypes.func.isRequired,
   data: PropTypes.object,
   eventKey: PropTypes.string.isRequired,
-  isEncodeEnable: PropTypes.bool,
-  isParseEnable: PropTypes.bool,
+  isEncodeEnabled: PropTypes.bool,
+  isParseEnabled: PropTypes.bool,
 };
 
 HeaderInfo.defaultProps = {
   data: null,
-  isEncodeEnable: false,
-  isParseEnable: false,
+  isEncodeEnabled: false,
+  isParseEnabled: false,
 };
 
 export default HeaderInfo;

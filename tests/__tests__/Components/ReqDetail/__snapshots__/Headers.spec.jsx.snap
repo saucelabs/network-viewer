@@ -94,16 +94,16 @@ exports[`Headers renders without crashing 1`] = `
         }
       }
       eventKey="general"
-      isEncodeEnable={false}
-      isParseEnable={false}
+      isEncodeEnabled={false}
+      isParseEnabled={false}
     >
       <div
         className="header-info active"
       >
         <HeaderTitle
           eventKey="general"
-          isEncodeEnable={false}
-          isParseEnable={false}
+          isEncodeEnabled={false}
+          isParseEnabled={false}
           isPayloadTransformed={true}
           onClick={[Function]}
           onPayloadTransform={[Function]}
@@ -229,16 +229,16 @@ exports[`Headers renders without crashing 1`] = `
         }
       }
       eventKey="response"
-      isEncodeEnable={false}
-      isParseEnable={false}
+      isEncodeEnabled={false}
+      isParseEnabled={false}
     >
       <div
         className="header-info active"
       >
         <HeaderTitle
           eventKey="response"
-          isEncodeEnable={false}
-          isParseEnable={false}
+          isEncodeEnabled={false}
+          isParseEnabled={false}
           isPayloadTransformed={true}
           onClick={[Function]}
           onPayloadTransform={[Function]}
@@ -334,16 +334,16 @@ exports[`Headers renders without crashing 1`] = `
         }
       }
       eventKey="request"
-      isEncodeEnable={false}
-      isParseEnable={false}
+      isEncodeEnabled={false}
+      isParseEnabled={false}
     >
       <div
         className="header-info active"
       >
         <HeaderTitle
           eventKey="request"
-          isEncodeEnable={false}
-          isParseEnable={false}
+          isEncodeEnabled={false}
+          isParseEnabled={false}
           isPayloadTransformed={true}
           onClick={[Function]}
           onPayloadTransform={[Function]}
@@ -439,16 +439,16 @@ exports[`Headers renders without crashing 1`] = `
         }
       }
       eventKey="requestPayload"
-      isEncodeEnable={false}
-      isParseEnable={true}
+      isEncodeEnabled={false}
+      isParseEnabled={true}
     >
       <div
         className="header-info active"
       >
         <HeaderTitle
           eventKey="requestPayload"
-          isEncodeEnable={false}
-          isParseEnable={true}
+          isEncodeEnabled={false}
+          isParseEnabled={true}
           isPayloadTransformed={true}
           onClick={[Function]}
           onPayloadTransform={[Function]}

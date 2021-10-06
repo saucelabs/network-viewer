@@ -6,8 +6,8 @@ exports[`HeaderInfo renders without crashing 1`] = `
 >
   <HeaderTitle
     eventKey="general"
-    isEncodeEnable={false}
-    isParseEnable={false}
+    isEncodeEnabled={false}
+    isParseEnabled={false}
     isPayloadTransformed={true}
     onClick={[Function]}
     onPayloadTransform={[Function]}
