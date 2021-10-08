@@ -27,14 +27,14 @@ const Headers = ({ data }) => (!data ? null : (
       data={data}
       eventKey="request"
     />
-    {data.headers.queryString && data.headers.queryString.size && (
+    {(data.headers.queryString && data.headers.queryString.length) ? (
       <HeaderInfo
         component={QueryString}
         data={data}
         eventKey="queryString"
         isEncodeEnabled
       />
-    )}
+    ) : null}
     {data.headers.postData && data.headers.postData.params && (
       <HeaderInfo
         component={FormData}
