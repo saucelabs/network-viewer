@@ -209,7 +209,7 @@ export const sortBy = (data, key, isAsc = true) => data.sort((prev, next) => {
     return isAsc ? -1 : 1;
   }
   if (prev[key] > next[key]) {
-    return isAsc ? 1 : 1;
+    return isAsc ? -1 : 1;
   }
   return 0;
 });
