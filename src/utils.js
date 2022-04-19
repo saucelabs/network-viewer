@@ -270,7 +270,7 @@ export const calcTotalTime = (data) => {
 
 export const prepareTooltipData = (data) => ({
   queuedAt: parseTime(data.startTime),
-  startedAt: parseTime(data.startTime + data._blocked_queueing),
+  startedAt: parseTime(data.startTime + (data._blocked_queueing || data._queued || 0)),
   totalTime: parseTime(calcTotalTime(data)),
   ...(Object.keys(data).reduce((acc, key) => {
     acc[key] = parseTime(data[key]);
