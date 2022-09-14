@@ -108,7 +108,7 @@ export const FETCH_FILE_LOAD_TEXT = 'Please wait, Fetching file is in progress.'
 
 export const TIMINGS = {
   queueing: {
-    dataKey: '_blocked_queueing',
+    dataKey: ['_blocked_queueing', '_queued'],
     fill: '#ccc',
     name: 'Queueing',
   },

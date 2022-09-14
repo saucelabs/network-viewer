@@ -62,7 +62,7 @@ const TimeChartTooltip = ({ data }) => {
                     {TIMINGS[key].name}
                   </td>
                   <td className={Styles['waterfall-tooltip-value']}>
-                    {tooltipData[TIMINGS[key].dataKey]}
+                    {Array.isArray(TIMINGS[key].dataKey) ? tooltipData[TIMINGS[key].dataKey.find(key => tooltipData[key])] : tooltipData[TIMINGS[key].dataKey]}
                   </td>
                 </tr>
               ))}

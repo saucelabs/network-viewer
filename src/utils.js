@@ -142,7 +142,7 @@ export const getHeaders = (entry) => ({
 });
 
 export const getTotalTimeOfEntry = ({ startedDateTime, time, timings }) => (
-  new Date(startedDateTime).getTime() + time + (timings._blocked_queueing || 0)
+  new Date(startedDateTime).getTime() + time + (timings._blocked_queueing || timings._queued || 0)
 );
 
 export const getInterceptError = ({ response }) => (
@@ -263,7 +263,7 @@ export const parseTime = (time) => {
 
 export const calcTotalTime = (data) => {
   const total = Object.keys(data)
-    .filter((key) => !['_blocked_queueing', 'startTime'].includes(key))
+    .filter((key) => !['_blocked_queueing', '_queued', 'startTime'].includes(key))
     .reduce((acc, key) => acc + data[key], 0);
   return total;
 };
@@ -311,7 +311,8 @@ export const calcChartAttributes = (data, maxTime, cx, index, cy = null) => {
 
   Object.keys(TIMINGS).forEach((key) => {
     const timingInfo = TIMINGS[key];
-    const value = data[timingInfo.dataKey];
+    const dataKey = Array.isArray(timingInfo.dataKey) ? timingInfo.dataKey.find(key => data[key]) : timingInfo.dataKey
+    const value = data[dataKey];
     if (value <= 0) {
       return;
     }
