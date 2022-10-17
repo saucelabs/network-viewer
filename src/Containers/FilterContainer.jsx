@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'react-flexbox-grid';
+import { Row, Col } from 'react-styled-flexboxgrid';
 import classNames from 'classnames/bind';
 
 import ImportHar from './../Components/Import/ImportHAR';

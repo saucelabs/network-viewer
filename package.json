@@ -44,7 +44,7 @@
     "immutable": ">=3.8.2",
     "qs": "^6.9.4",
     "react-dropzone": "11.0.1",
-    "react-flexbox-grid": "2.1.2",
+    "react-styled-flexboxgrid": "3.2.1",
     "react-popover": "0.5.10",
     "recharts": ">=1.8.5"
   },
