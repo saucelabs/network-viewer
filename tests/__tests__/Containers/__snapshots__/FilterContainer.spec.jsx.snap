@@ -46,7 +46,7 @@ exports[`FilterContainer renders without crashing 1`] = `
     <section>
       <Row>
         <div
-          className="row"
+          className="sc-bwzfXH FqmtD"
         >
           <Col
             md={5}
@@ -54,7 +54,7 @@ exports[`FilterContainer renders without crashing 1`] = `
             xs={12}
           >
             <div
-              className="col-md-5 col-sm-4 col-xs-12"
+              className="sc-htpNat cDbBBt"
             >
               <Search
                 name="url"
@@ -115,7 +115,7 @@ exports[`FilterContainer renders without crashing 1`] = `
             xs={12}
           >
             <div
-              className="col-md-7 col-sm-8 col-xs-12"
+              className="sc-htpNat dizpnI"
             >
               <div>
                 <Button
