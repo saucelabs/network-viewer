@@ -46,11 +46,11 @@
     "react-dropzone": "11.0.1",
     "react-styled-flexboxgrid": "3.2.1",
     "react-popover": "0.5.10",
-    "recharts": ">=1.8.5"
+    "recharts": ">=1.8.5",
+    "styled-components": "3.0.1"
   },
   "peerDependencies": {
     "prop-types": "^15.7.2",
-    "styled-components": "3.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
