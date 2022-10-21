@@ -28,18 +28,29 @@ export const formatTime = (time) => {
 };
 
 export const getUrlInfo = (url) => {
-  const urlInfo = new URL(url);
-  const pathSplit = urlInfo.pathname.split('/');
-  const fileName = (
-    pathSplit[pathSplit.length - 1].trim() ?
-      pathSplit[pathSplit.length - 1] : pathSplit[pathSplit.length - 2]
-  ) + urlInfo.search;
+  // If there's an invalid URL (resource identifier, etc) the constructor would throw an exception.
+  // Return a 'placeholder' object with default values in the event the passed value cannot be
+  // parsed.
+  try {
+    const urlInfo = new URL(url);
+    const pathSplit = urlInfo.pathname.split('/');
+    const fileName = (
+      pathSplit[pathSplit.length - 1].trim() ?
+        pathSplit[pathSplit.length - 1] : pathSplit[pathSplit.length - 2]
+    ) + urlInfo.search;
 
-  return {
-    domain: urlInfo.host,
-    filename: fileName || urlInfo.href,
-    url: urlInfo.href,
-  };
+    return {
+      domain: urlInfo.host,
+      filename: fileName || urlInfo.href,
+      url: urlInfo.href,
+    };
+  } catch (er) {
+    return {
+      domain: 'N/A',
+      filename: url ?? 'N/A',
+      url,
+    };
+  }
 };
 
 export const parseSize = ({ bodySize, _transferSize, headers, content }) => {
@@ -311,7 +322,7 @@ export const calcChartAttributes = (data, maxTime, cx, index, cy = null) => {
 
   Object.keys(TIMINGS).forEach((key) => {
     const timingInfo = TIMINGS[key];
-    const dataKey = Array.isArray(timingInfo.dataKey) ? timingInfo.dataKey.find(key => data[key]) : timingInfo.dataKey
+    const dataKey = Array.isArray(timingInfo.dataKey) ? timingInfo.dataKey.find((key) => data[key]) : timingInfo.dataKey;
     const value = data[dataKey];
     if (value <= 0) {
       return;
