@@ -12,6 +12,17 @@ describe('utils', () => {
     expect(utils.getUrlInfo(url)).toMatchSnapshot();
   });
 
+  it('getUrlInfo non standard url / resource identifier', () => {
+    const resourceName = 'ResourceIdentifierString';
+    const urlInfo = utils.getUrlInfo(resourceName);
+
+    expect(urlInfo).toEqual({
+      domain: 'N/A',
+      filename: resourceName,
+      url: resourceName,
+    });
+  });
+
   it('parseSize', () => {
     const { response } = networkDataMock.log.entries[0];
     expect(utils.parseSize(response)).toMatchSnapshot();
