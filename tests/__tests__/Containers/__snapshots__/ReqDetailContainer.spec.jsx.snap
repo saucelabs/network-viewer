@@ -45,6 +45,7 @@ exports[`ReqDetailContainer renders without crashing 1`] = `
   <ReqDetailContainer>
     <div>
       <button
+        aria-label="Close button"
         onClick={[Function]}
         type="button"
       >
