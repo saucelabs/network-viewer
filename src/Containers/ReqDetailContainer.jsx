@@ -18,6 +18,7 @@ const ReqDetailContainer = () => {
   return (
     <div className={Styles['req-detail-container']}>
       <button
+        aria-label="Close button"
         className={Styles['close-button']}
         onClick={handleCloseClick}
         type="button"

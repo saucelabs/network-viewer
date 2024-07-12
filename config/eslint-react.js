@@ -33,7 +33,7 @@ const config = deepMerge(baseConfig, {
       when: 'always',
     }],
     'react/jsx-sort-props': 2,
-    'react/jsx-sort-default-props': [2, {
+    'react/sort-default-props': [2, {
       ignoreCase: true,
     }],
     'react/jsx-tag-spacing': [2, {
