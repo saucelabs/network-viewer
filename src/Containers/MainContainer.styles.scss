@@ -4,6 +4,6 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  height: calc(100% - #{$filters-container-height});
+  height: calc(100% - #{$filters-container-height + $footer-height});
   position: relative;
 }
