@@ -33,12 +33,8 @@ const URLInput = ({ onSubmit }) => {
         value={url}
       />
       <Button
-        category="default"
         className={Styles['postpend-button']}
-        material
         onClick={handleSubmit}
-        raised
-        size="sm"
       >
         GO
       </Button>

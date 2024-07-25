@@ -80,6 +80,8 @@ module.exports = {
           './tests/**/*',
           './config/**/*',
         ],
+        optionalDependencies: false,
+        peerDependencies: false,
       },
     ],
     'import/no-named-as-default': 0,

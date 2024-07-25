@@ -1,9 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 
 import Styles from './Dropdown.styles.scss';
 import Button from './Button';
+import IconChevronDown from '../../icons/IconChevronDown';
+import IconChevronUp from '../../icons/IconChevronUp';
 
 const context = classNames.bind(Styles);
 
@@ -38,35 +40,39 @@ const Dropdown = ({ items, selected, onChange, className }) => {
     };
   }, []);
 
+  useEffect(() => {
+    setSelection(selected);
+  }, [selected]);
+
   return (
     <span
       ref={dropdownItemsRef}
       className={context('dropdown-container', className, { expanded: isExpand })}
     >
       <Button
-        category="default"
         className={context('dropdown-toggle', { active: isExpand })}
-        material
         onClick={() => updateToggle(!isExpand)}
-        raised={isExpand}
-        size="sm"
       >
-        {selectedKey}
+        {`Status: ${selectedKey.name}`}
+        {isExpand}
+        {isExpand ?
+          <IconChevronDown className={Styles.icn} /> :
+          <IconChevronUp className={Styles.icn} />}
       </Button>
       {isExpand && (
         <ul className={Styles.list}>
-          {items.map((text, index) => (
+          {items.map((item, index) => (
             <li
-              key={text}
-              className={context('list-item', { active: text === selectedKey })}
+              key={item.value}
+              className={context('list-item', { active: item.value === selectedKey.value })}
             >
               <span
                 className={Styles['item-text']}
-                onClick={() => handleItemSelection(text)}
+                onClick={() => handleItemSelection(item)}
                 role="button"
                 tabIndex={index}
               >
-                {text}
+                {item.name}
               </span>
             </li>
           ))}
@@ -80,7 +86,7 @@ Dropdown.propTypes = {
   className: PropTypes.string,
   items: PropTypes.array.isRequired,
   onChange: PropTypes.func.isRequired,
-  selected: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  selected: PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.object]),
 };
 
 Dropdown.defaultProps = {

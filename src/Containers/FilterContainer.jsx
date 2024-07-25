@@ -1,5 +1,4 @@
 import React from 'react';
-import { Row, Col } from 'react-styled-flexboxgrid';
 import classNames from 'classnames/bind';
 
 import ImportHar from './../Components/Import/ImportHAR';
@@ -22,59 +21,45 @@ const FilterContainer = () => {
 
   return (
     <section className={Styles['filters-container']}>
-      <Row>
-        <Col
-          md={5}
-          sm={4}
-          xs={12}
-        >
-          <Search
-            {...state.get('search')}
-            onChange={actions.updateSearch}
+      <div className={Styles['filter-row']}>
+        <Search />
+      </div>
+
+      <div className={Styles['type-filter-row']}>
+        <>
+          {FILTERS.map(({ name, filterBy }) => {
+            const selectedFilter = filterBy.value === filter.value;
+            const buttonStyle = context('filter-button', {
+              'selected-filter': selectedFilter,
+            });
+            return (
+              <Button
+                key={name}
+                className={buttonStyle}
+                onClick={() => actions.updateFilter(filterBy)}
+                size="sm"
+              >
+                {name}
+              </Button>
+            );
+          })}
+          <ErrorFilter
+            isError={filterByError}
+            onChange={actions.updateErrorFilter}
           />
-        </Col>
-        <Col
-          md={7}
-          sm={8}
-          xs={12}
-        >
-          <div className={Styles['filters-button-group']}>
-            {FILTERS.map(({ name, filterBy }) => {
-              const selectedFilter = filterBy.value === filter.value;
-              const buttonStyle = context('filter-button', {
-                'selected-filter': selectedFilter,
-              });
-              return (
-                <Button
-                  key={name}
-                  category="default"
-                  className={buttonStyle}
-                  material
-                  onClick={() => actions.updateFilter(filterBy)}
-                  raised={selectedFilter}
-                  size="sm"
-                >
-                  {name}
-                </Button>
-              );
-            })}
-            <ErrorFilter
-              isError={filterByError}
-              onChange={actions.updateErrorFilter}
-            />
-            {showImportHAR && (
-              <>
-                <ImportHar className={Styles['addon-action-button']} />
-                <Reset
-                  className={Styles['addon-action-button']}
-                  onReset={actions.resetState}
-                />
-              </>
-            )}
-          </div>
-        </Col>
-      </Row>
+          {showImportHAR && (
+            <>
+              <ImportHar className={Styles['addon-action-button']} />
+              <Reset
+                className={Styles['addon-action-button']}
+                onReset={actions.resetState}
+              />
+            </>
+          )}
+        </>
+      </div>
     </section>
+
   );
 };
 
