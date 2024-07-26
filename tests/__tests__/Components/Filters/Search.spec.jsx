@@ -1,7 +1,8 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 import Search from './../../../../src/Components/Filters/Search';
+import NetworkProvider from '../../../../src/state/network/NetworkProvider';
 
 describe('Search', () => {
   const params = {
@@ -11,7 +12,11 @@ describe('Search', () => {
   };
 
   it('renders without crashing', () => {
-    const element = shallow(<Search {...params} />);
+    const element = mount(
+      <NetworkProvider>
+        <Search {...params} />
+      </NetworkProvider>,
+    );
     expect(element).toMatchSnapshot();
   });
 });

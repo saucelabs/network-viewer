@@ -1,23 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Search renders without crashing 1`] = `
-<div>
-  <Dropdown
-    className={null}
-    items={
-      Array [
-        "url",
-        "body",
-      ]
+<NetworkProvider
+  autoHighlightChange={false}
+  data={null}
+  fetchOptions={
+    Object {
+      "withCredentials": true,
     }
+  }
+  file={null}
+  initialState={
+    Immutable.Map {
+      "errorFilter": false,
+      "search": Object {
+        "name": "url",
+        "value": "",
+      },
+      "error": null,
+      "scrollToIndex": null,
+      "data": Immutable.List [],
+      "selectedReqIndex": null,
+      "reqDetail": null,
+      "showReqDetail": false,
+      "totalNetworkTime": null,
+      "actualData": Immutable.List [],
+      "filter": Object {
+        "name": null,
+        "value": null,
+      },
+      "dataSummary": Immutable.Map {},
+      "loading": false,
+      "sort": Object {
+        "isAcs": true,
+        "key": "startedDateTime",
+      },
+    }
+  }
+  onDataError={null}
+  onDataLoaded={null}
+  scrollRequestPosition="near"
+  scrollTimeStamp={null}
+>
+  <Search
+    name="url"
     onChange={[Function]}
-    selected="url"
-  />
-  <input
-    onChange={[Function]}
-    placeholder="Filter"
-    type="text"
     value="test"
-  />
-</div>
+  >
+    <input
+      onChange={[Function]}
+      placeholder="Search by full URL"
+      type="text"
+      value=""
+    />
+  </Search>
+</NetworkProvider>
 `;

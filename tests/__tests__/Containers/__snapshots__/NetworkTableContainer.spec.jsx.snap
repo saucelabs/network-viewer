@@ -122,18 +122,15 @@ exports[`NetworkTableContainer renders without crashing 1`] = `
                 value=""
               />
               <Button
-                category="default"
                 className={null}
                 disabled={false}
                 href={null}
-                material={true}
                 onClick={[Function]}
-                raised={true}
-                size="sm"
                 type="button"
+                variant="default"
               >
                 <button
-                  className="btn btn-sm btn-md-default btn-md-default-raised btn-md-raised"
+                  className="btn"
                   disabled={false}
                   href={null}
                   onClick={[Function]}
