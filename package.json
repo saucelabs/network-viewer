@@ -1,6 +1,6 @@
 {
   "name": "network-viewer",
-  "version": "1.1.14",
+  "version": "2.0.0",
   "main": "./lib/index.js",
   "scripts": {
     "start": "concurrently -n 'library,example' -c 'bgBlue.bold,bgGreen.bold' 'npm run watch:lib' 'npm run watch:examples'",
