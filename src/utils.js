@@ -1,4 +1,4 @@
-import { TIMINGS, TIMELINE_DATA_POINT_HEIGHT } from './constants';
+import { TIMINGS, TIMELINE_DATA_POINT_HEIGHT, FILTER_OPTION } from './constants';
 
 /* eslint no-underscore-dangle: 0 */
 
@@ -185,6 +185,7 @@ export const prepareViewerData = (entries) => {
       endTime = endTime < lastTimeOfEntry ? lastTimeOfEntry : endTime;
       return {
         index,
+        connection: entry.connection,
         status: entry.response.status,
         method: entry.request.method,
         size: parseSize(entry.response),
@@ -225,33 +226,42 @@ export const sortBy = (data, key, isAsc = true) => data.sort((prev, next) => {
   return 0;
 });
 
-export const filterCondition = ({ filter, info }) => {
-  switch (filter.name) {
-    case 'error':
-      return info.status >= 400 || info.error;
-    case 'type':
+const applyFilter = (filterOption, filter, entry) => {
+  switch (filterOption) {
+    case FILTER_OPTION.STATUS:
+      return entry.status && entry.status.toString().startsWith(filter.value);
+    case FILTER_OPTION.TYPE:
+      return entry.type && filter.value.includes(entry.type);
+    case FILTER_OPTION.URL:
+      return entry.url && entry.url.includes(filter.value);
+    case FILTER_OPTION.BODY:
+      return entry.body && entry.body.includes(filter.value);
     default:
-      return filter.value.includes(info[filter.name]);
+      return true;
   }
 };
 
 export const filterData = ({
   data,
-  errorFilter,
-  filter = {},
   search = {},
+  statusFilter = {},
+  typeFilter = {},
 }) => {
   const trimmedSearch = search.value && search.value.trim();
 
-  return !trimmedSearch && !filter.name && !errorFilter ?
-    data :
-    data.filter((info) => {
-      const isSearchMatched = trimmedSearch ?
-        info[search.name] && info[search.name].includes(trimmedSearch) : true;
-      const isErrorMatched = errorFilter ? filterCondition({ filter: { name: 'error' }, info }) : true;
-      const isFilterMatched = filter.name ? filterCondition({ filter, info }) : true;
-      return isSearchMatched && isErrorMatched && isFilterMatched;
-    });
+  if (!trimmedSearch && !statusFilter.value && !typeFilter.value) {
+    return data;
+  }
+
+  const filters = [
+    { option: FILTER_OPTION.STATUS, filter: statusFilter },
+    { option: FILTER_OPTION.TYPE, filter: typeFilter },
+    { option: search.name, filter: { value: trimmedSearch } },
+  ];
+
+  return data.filter((entry) => filters.every(
+    ({ option, filter }) => !filter.value || applyFilter(option, filter, entry),
+  ));
 };
 
 export const actionsWrapper = (actions = {}) => (dispatch, state) => Object.keys(actions)

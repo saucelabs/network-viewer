@@ -2,8 +2,10 @@ import { Map, List } from 'immutable';
 
 import { filterData, sortBy, prepareViewerData, calculateTimings, getSummary } from './../../utils';
 import * as types from './types';
+import { DEFAULT_STATUS_FILTER } from '../../constants';
 
 const initialState = new Map({
+  rawData: null,
   data: new List(),
   actualData: new List(),
   totalNetworkTime: null,
@@ -13,14 +15,14 @@ const initialState = new Map({
     isAcs: true,
   },
   search: {
-    name: 'url',
+    name: 'URL',
     value: '',
   },
-  filter: {
+  statusFilter: DEFAULT_STATUS_FILTER,
+  typeFilter: {
     name: null,
     value: null,
   },
-  errorFilter: false,
   error: null,
   loading: false,
   scrollToIndex: null,
@@ -45,6 +47,7 @@ const reducer = (state = initialState, { type, payload }) => {
         const sortedData = new List(sortBy(data, sort.key, sort.isAcs));
         newState
           .set('error', null)
+          .set('rawData', payload)
           .set('data', sortedData)
           .set('actualData', sortedData)
           .set('totalNetworkTime', totalNetworkTime)
@@ -62,9 +65,9 @@ const reducer = (state = initialState, { type, payload }) => {
       return state.withMutations((newState) => {
         const data = filterData({
           data: state.get('actualData'),
-          filter: state.get('filter'),
+          statusFilter: state.get('statusFilter'),
+          typeFilter: state.get('typeFilter'),
           search: payload,
-          errorFilter: state.get('errorFilter'),
         });
         const summary = getSummary(data);
         newState
@@ -75,34 +78,34 @@ const reducer = (state = initialState, { type, payload }) => {
           .setIn(['dataSummary', 'totalUncompressedSize'], summary.totalUncompressedSize);
       });
     }
-    case types.UPDATE_FILTER: {
+    case types.UPDATE_STATUS_FILTER: {
       return state.withMutations((newState) => {
         const data = filterData({
           data: state.get('actualData'),
-          filter: payload,
+          statusFilter: payload,
+          typeFilter: state.get('typeFilter'),
           search: state.get('search'),
-          errorFilter: state.get('errorFilter'),
         });
         const summary = getSummary(data);
         newState
-          .set('filter', payload)
+          .set('statusFilter', payload)
           .set('data', data)
           .setIn(['dataSummary', 'totalRequests'], summary.totalRequests)
           .setIn(['dataSummary', 'totalTransferredSize'], summary.totalTransferredSize)
           .setIn(['dataSummary', 'totalUncompressedSize'], summary.totalUncompressedSize);
       });
     }
-    case types.UPDATE_ERROR_FILTER: {
+    case types.UPDATE_TYPE_FILTER: {
       return state.withMutations((newState) => {
         const data = filterData({
           data: state.get('actualData'),
-          filter: state.get('filter'),
+          statusFilter: state.get('statusFilter'),
+          typeFilter: payload,
           search: state.get('search'),
-          errorFilter: payload,
         });
         const summary = getSummary(data);
         newState
-          .set('errorFilter', payload)
+          .set('typeFilter', payload)
           .set('data', data)
           .setIn(['dataSummary', 'totalRequests'], summary.totalRequests)
           .setIn(['dataSummary', 'totalTransferredSize'], summary.totalTransferredSize)

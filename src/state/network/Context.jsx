@@ -10,17 +10,17 @@ export const useNetwork = () => {
   if (!context) {
     throw new Error('useNetwork must be used within a NetworkProvider');
   }
-  const [state, dispatch] = context;
+  const [state, dispatch, callbacks] = context;
 
   const wrappedActions = actionsWrapper({
     updateData: actions.updateData,
     updateSearch: actions.updateSearch,
     updateSort: actions.updateSort,
-    updateFilter: actions.updateFilter,
+    updateStatusFilter: actions.updateStatusFilter,
+    updateTypeFilter: actions.updateTypeFilter,
     updateErrorMessage: actions.updateErrorMessage,
     selectRequest: actions.selectRequest,
     updateScrollToIndex: actions.updateScrollToIndex,
-    updateErrorFilter: actions.updateErrorFilter,
     resetState: actions.resetState,
   })(dispatch, state);
 
@@ -28,5 +28,6 @@ export const useNetwork = () => {
     state,
     dispatch,
     actions: wrappedActions,
+    callbacks,
   };
 };

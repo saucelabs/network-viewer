@@ -15,7 +15,10 @@ const NetworkViewer = ({
   fetchOptions,
   scrollTimeStamp,
   options,
+  onPause,
   onRequestSelect,
+  onResume,
+  onReset,
   scrollRequestPosition,
   autoHighlightChange,
   onDataLoaded,
@@ -31,6 +34,9 @@ const NetworkViewer = ({
         file={file}
         onDataError={onDataError}
         onDataLoaded={onDataLoaded}
+        onPause={onPause}
+        onReset={onReset}
+        onResume={onResume}
         scrollRequestPosition={scrollRequestPosition}
         scrollTimeStamp={scrollTimeStamp}
       >
@@ -48,7 +54,10 @@ NetworkViewer.propTypes = {
   file: PropTypes.string,
   onDataError: PropTypes.func,
   onDataLoaded: PropTypes.func,
+  onPause: PropTypes.func,
   onRequestSelect: PropTypes.func,
+  onReset: PropTypes.func,
+  onResume: PropTypes.func,
   options: PropTypes.object,
   scrollRequestPosition: PropTypes.oneOf(['before', 'after', 'near']),
   scrollTimeStamp: PropTypes.number,
@@ -62,7 +71,10 @@ NetworkViewer.defaultProps = {
   file: null,
   onDataError: null,
   onDataLoaded: null,
+  onPause: null,
   onRequestSelect: () => {},
+  onReset: null,
+  onResume: null,
   options: null,
   scrollRequestPosition: 'near',
   scrollTimeStamp: null,

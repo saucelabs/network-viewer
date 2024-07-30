@@ -3,6 +3,7 @@
 exports[`network reducer SELECT_REQUEST 1`] = `
 Object {
   "body": "",
+  "connection": "1767214",
   "domain": "developer.mozilla.org",
   "error": null,
   "filename": "slice",
@@ -179,6 +180,7 @@ exports[`network reducer UPDATE_DATA 1`] = `
 Array [
   Object {
     "body": "",
+    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "slice",
@@ -351,6 +353,7 @@ Array [
   },
   Object {
     "body": "",
+    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
@@ -511,6 +514,7 @@ Array [
   },
   Object {
     "body": "",
+    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "ZillaSlab-Bold.subset.e96c15f68c68.woff2",
@@ -671,6 +675,7 @@ Array [
   },
   Object {
     "body": ".logo{display:block;grid-area:I;width:200px;height:44px;margin-right:24px}",
+    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "react-header.2a659f6ad280.css",
@@ -831,6 +836,7 @@ Array [
   },
   Object {
     "body": "",
+    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "react-mdn.c66d8d89d98e.css",
@@ -994,185 +1000,23 @@ Array [
 
 exports[`network reducer UPDATE_DATA 2`] = `5`;
 
-exports[`network reducer UPDATE_ERROR_FILTER 1`] = `
-Array [
-  Object {
-    "body": "",
-    "domain": "developer.mozilla.org",
-    "error": null,
-    "filename": "ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
-    "headers": Object {
-      "postData": undefined,
-      "queryString": Array [],
-      "request": Array [
-        Object {
-          "name": ":authority",
-          "value": "developer.mozilla.org",
-        },
-        Object {
-          "name": ":method",
-          "value": "GET",
-        },
-        Object {
-          "name": ":path",
-          "value": "/static/fonts/locales/ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
-        },
-        Object {
-          "name": ":scheme",
-          "value": "https",
-        },
-        Object {
-          "name": "accept",
-          "value": "*/*",
-        },
-        Object {
-          "name": "accept-encoding",
-          "value": "gzip, deflate, br",
-        },
-        Object {
-          "name": "accept-language",
-          "value": "en-US,en;q=0.9,hi;q=0.8,gu;q=0.7",
-        },
-        Object {
-          "name": "cache-control",
-          "value": "no-cache",
-        },
-        Object {
-          "name": "cookie",
-          "value": "dwf_sg_task_completion=False; _ga=GA1.2.789560889.1565775320; lux_uid=157104094808128608; _gid=GA1.2.1726533372.1571040950; _gat=1",
-        },
-        Object {
-          "name": "origin",
-          "value": "https://developer.mozilla.org",
-        },
-        Object {
-          "name": "pragma",
-          "value": "no-cache",
-        },
-        Object {
-          "name": "referer",
-          "value": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
-        },
-        Object {
-          "name": "sec-fetch-mode",
-          "value": "cors",
-        },
-        Object {
-          "name": "sec-fetch-site",
-          "value": "same-origin",
-        },
-        Object {
-          "name": "user-agent",
-          "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36",
-        },
-      ],
-      "response": Array [
-        Object {
-          "name": "access-control-allow-origin",
-          "value": "*",
-        },
-        Object {
-          "name": "age",
-          "value": "917494",
-        },
-        Object {
-          "name": "cache-control",
-          "value": "max-age=315360000, public, immutable",
-        },
-        Object {
-          "name": "content-length",
-          "value": "33808",
-        },
-        Object {
-          "name": "content-type",
-          "value": "font/woff2",
-        },
-        Object {
-          "name": "date",
-          "value": "Thu, 03 Oct 2019 00:24:53 GMT",
-        },
-        Object {
-          "name": "last-modified",
-          "value": "Wed, 02 Oct 2019 22:49:47 GMT",
-        },
-        Object {
-          "name": "server",
-          "value": "meinheld/0.6.1",
-        },
-        Object {
-          "name": "status",
-          "value": "200",
-        },
-        Object {
-          "name": "strict-transport-security",
-          "value": "max-age=63072000",
-        },
-        Object {
-          "name": "via",
-          "value": "1.1 59d2fae2830d603c79da39156799a1fc.cloudfront.net (CloudFront)",
-        },
-        Object {
-          "name": "x-amz-cf-id",
-          "value": "NDheE_R8KWFX1eCHU5t37BMmlPLd91b46q5XT9NlhcKeq853stfRuw==",
-        },
-        Object {
-          "name": "x-amz-cf-pop",
-          "value": "BOM50-C1",
-        },
-        Object {
-          "name": "x-cache",
-          "value": "Hit from cloudfront",
-        },
-        Object {
-          "name": "x-content-type-options",
-          "value": "nosniff",
-        },
-        Object {
-          "name": "x-xss-protection",
-          "value": "1; mode=block",
-        },
-      ],
-    },
-    "index": 1,
-    "method": "GET",
-    "serverIPAddress": "13.227.143.46",
-    "size": "33 KB",
-    "startedDateTime": 1571042835641,
-    "status": 400,
-    "time": 40.115000010700896,
-    "timings": Object {
-      "_blocked_queueing": 12.528999999631196,
-      "blocked": 13.952999999631196,
-      "connect": -1,
-      "dns": -1,
-      "receive": 7.124000025214627,
-      "send": 0.2370000000000001,
-      "ssl": -1,
-      "startTime": 4049,
-      "wait": 18.80099998585507,
-    },
-    "transferredSize": 34271,
-    "type": "font",
-    "uncompressedSize": 33808,
-    "url": "https://developer.mozilla.org/static/fonts/locales/ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
-  },
-]
-`;
+exports[`network reducer UPDATE_FILTER 1`] = `Array []`;
 
-exports[`network reducer UPDATE_ERROR_FILTER 2`] = `true`;
+exports[`network reducer UPDATE_FILTER 2`] = `undefined`;
 
-exports[`network reducer UPDATE_ERROR_FILTER 3`] = `
+exports[`network reducer UPDATE_FILTER 3`] = `
 Immutable.Map {
-  "totalRequests": 1,
-  "totalTransferredSize": 34271,
-  "totalUncompressedSize": 33808,
+  "totalRequests": 0,
+  "totalTransferredSize": 0,
+  "totalUncompressedSize": 0,
 }
 `;
 
-exports[`network reducer UPDATE_FILTER 1`] = `
+exports[`network reducer UPDATE_SEARCH 1`] = `
 Array [
   Object {
     "body": "",
+    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "slice",
@@ -1345,6 +1189,7 @@ Array [
   },
   Object {
     "body": "",
+    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
@@ -1505,6 +1350,7 @@ Array [
   },
   Object {
     "body": "",
+    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "ZillaSlab-Bold.subset.e96c15f68c68.woff2",
@@ -1665,6 +1511,7 @@ Array [
   },
   Object {
     "body": ".logo{display:block;grid-area:I;width:200px;height:44px;margin-right:24px}",
+    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "react-header.2a659f6ad280.css",
@@ -1825,6 +1672,7 @@ Array [
   },
   Object {
     "body": "",
+    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "react-mdn.c66d8d89d98e.css",
@@ -1986,25 +1834,6 @@ Array [
 ]
 `;
 
-exports[`network reducer UPDATE_FILTER 2`] = `
-Object {
-  "key": "type",
-  "value": Array [
-    "html",
-  ],
-}
-`;
-
-exports[`network reducer UPDATE_FILTER 3`] = `
-Immutable.Map {
-  "totalRequests": 5,
-  "totalTransferredSize": 130535,
-  "totalUncompressedSize": 355292,
-}
-`;
-
-exports[`network reducer UPDATE_SEARCH 1`] = `Array []`;
-
 exports[`network reducer UPDATE_SEARCH 2`] = `
 Object {
   "key": "url",
@@ -2014,9 +1843,9 @@ Object {
 
 exports[`network reducer UPDATE_SEARCH 3`] = `
 Immutable.Map {
-  "totalRequests": 0,
-  "totalTransferredSize": 0,
-  "totalUncompressedSize": 0,
+  "totalRequests": 5,
+  "totalTransferredSize": 130535,
+  "totalUncompressedSize": 355292,
 }
 `;
 
@@ -2024,6 +1853,7 @@ exports[`network reducer UPDATE_SORT 1`] = `
 Array [
   Object {
     "body": "",
+    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "slice",
@@ -2196,6 +2026,7 @@ Array [
   },
   Object {
     "body": "",
+    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "react-mdn.c66d8d89d98e.css",
@@ -2356,6 +2187,7 @@ Array [
   },
   Object {
     "body": ".logo{display:block;grid-area:I;width:200px;height:44px;margin-right:24px}",
+    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "react-header.2a659f6ad280.css",
@@ -2516,6 +2348,7 @@ Array [
   },
   Object {
     "body": "",
+    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
@@ -2676,6 +2509,7 @@ Array [
   },
   Object {
     "body": "",
+    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "ZillaSlab-Bold.subset.e96c15f68c68.woff2",

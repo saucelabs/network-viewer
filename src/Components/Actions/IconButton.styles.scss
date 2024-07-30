@@ -1,0 +1,12 @@
+@import "./../../styles/variables";
+
+.icon-button {
+  padding: $size-xs $size-xs-s;
+  height: $filter-button-height;
+
+  .action-icon {
+    fill: $brand-primary-dark-gray;
+    height: $size-s;
+    width: $size-s;
+  }
+}
