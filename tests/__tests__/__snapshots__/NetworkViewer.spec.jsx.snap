@@ -24,7 +24,7 @@ exports[`renders without crashing 1`] = `
           },
           "error": null,
           "statusFilter": Object {
-            "name": "All",
+            "name": "-",
             "value": null,
           },
           "scrollToIndex": null,

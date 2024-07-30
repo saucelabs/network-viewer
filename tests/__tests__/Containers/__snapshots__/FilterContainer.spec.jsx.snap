@@ -18,7 +18,7 @@ exports[`FilterContainer renders without crashing 1`] = `
       },
       "error": null,
       "statusFilter": Object {
-        "name": "All",
+        "name": "-",
         "value": null,
       },
       "scrollToIndex": null,
@@ -58,7 +58,7 @@ exports[`FilterContainer renders without crashing 1`] = `
             items={
               Array [
                 Object {
-                  "name": "All",
+                  "name": "-",
                   "value": null,
                 },
                 Object {
@@ -86,7 +86,7 @@ exports[`FilterContainer renders without crashing 1`] = `
             onChange={[Function]}
             selected={
               Object {
-                "name": "All",
+                "name": "-",
                 "value": null,
               }
             }
@@ -109,7 +109,7 @@ exports[`FilterContainer renders without crashing 1`] = `
                   onClick={[Function]}
                   type="button"
                 >
-                  Status: All
+                  Status: -
                   <IconChevronUp
                     className=""
                   >
