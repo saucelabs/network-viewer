@@ -22,7 +22,7 @@ const FilterContainer = () => {
   return (
     <section className={Styles['filters-container']}>
       <div className={Styles['filter-row']}>
-        <Search />
+        <Search {...state.get('search')} />
       </div>
 
       <div className={Styles['type-filter-row']}>

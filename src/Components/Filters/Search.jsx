@@ -1,15 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Styles from './Search.styles.scss';
 import { useNetwork } from '../../state/network/Context';
 
-const Search = () => {
-  const { state, actions } = useNetwork();
-  const search = state.get('search');
+const Search = ({ name, value }) => {
+  const { actions } = useNetwork();
 
   const handleInputChange = ({ target }) => {
     actions.updateSearch({
-      name: search.name,
+      name,
       value: target.value,
     });
   };
@@ -20,9 +20,18 @@ const Search = () => {
       onChange={handleInputChange}
       placeholder="Search by full URL"
       type="text"
-      value={search.value}
+      value={value}
     />
   );
+};
+
+Search.propTypes = {
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string,
+};
+
+Search.defaultProps = {
+  value: '',
 };
 
 export default Search;
