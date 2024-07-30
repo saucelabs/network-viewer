@@ -51,7 +51,7 @@ exports[`Search renders without crashing 1`] = `
       onChange={[Function]}
       placeholder="Search by full URL"
       type="text"
-      value=""
+      value="test"
     />
   </Search>
 </NetworkProvider>

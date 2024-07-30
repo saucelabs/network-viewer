@@ -52,7 +52,10 @@ exports[`MainContainer renders without crashing 1`] = `
       <FilterContainer>
         <section>
           <div>
-            <Search>
+            <Search
+              name="url"
+              value=""
+            >
               <input
                 onChange={[Function]}
                 placeholder="Search by full URL"
