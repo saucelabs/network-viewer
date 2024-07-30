@@ -79,7 +79,7 @@ describe('network reducer', () => {
       type: types.SELECT_REQUEST,
       payload: preparedMockData.get(0),
     });
-    expect(state.get('selectedReqIndex')).toBe(0);
+    expect(state.get('selectedReqIndex')).toBe(1767214);
     expect(state.get('reqDetail')).toMatchSnapshot();
   });
 

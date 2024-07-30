@@ -60,7 +60,6 @@ exports[`utils filterData 1`] = `
 Array [
   Object {
     "body": "",
-    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "slice",
@@ -208,7 +207,7 @@ Array [
         },
       ],
     },
-    "index": 0,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "135 KB",
@@ -233,7 +232,6 @@ Array [
   },
   Object {
     "body": "",
-    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
@@ -369,7 +367,7 @@ Array [
         },
       ],
     },
-    "index": 1,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "33 KB",
@@ -394,7 +392,6 @@ Array [
   },
   Object {
     "body": "",
-    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "ZillaSlab-Bold.subset.e96c15f68c68.woff2",
@@ -530,7 +527,7 @@ Array [
         },
       ],
     },
-    "index": 2,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "33.3 KB",
@@ -555,7 +552,6 @@ Array [
   },
   Object {
     "body": ".logo{display:block;grid-area:I;width:200px;height:44px;margin-right:24px}",
-    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "react-header.2a659f6ad280.css",
@@ -691,7 +687,7 @@ Array [
         },
       ],
     },
-    "index": 3,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "2.8 KB",
@@ -716,7 +712,6 @@ Array [
   },
   Object {
     "body": "",
-    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "react-mdn.c66d8d89d98e.css",
@@ -852,7 +847,7 @@ Array [
         },
       ],
     },
-    "index": 4,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "142.9 KB",
@@ -882,7 +877,6 @@ exports[`utils filterData 2`] = `
 Array [
   Object {
     "body": "",
-    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "slice",
@@ -1030,7 +1024,7 @@ Array [
         },
       ],
     },
-    "index": 0,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "135 KB",
@@ -1055,7 +1049,6 @@ Array [
   },
   Object {
     "body": "",
-    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
@@ -1191,7 +1184,7 @@ Array [
         },
       ],
     },
-    "index": 1,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "33 KB",
@@ -1216,7 +1209,6 @@ Array [
   },
   Object {
     "body": "",
-    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "ZillaSlab-Bold.subset.e96c15f68c68.woff2",
@@ -1352,7 +1344,7 @@ Array [
         },
       ],
     },
-    "index": 2,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "33.3 KB",
@@ -1377,7 +1369,6 @@ Array [
   },
   Object {
     "body": ".logo{display:block;grid-area:I;width:200px;height:44px;margin-right:24px}",
-    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "react-header.2a659f6ad280.css",
@@ -1513,7 +1504,7 @@ Array [
         },
       ],
     },
-    "index": 3,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "2.8 KB",
@@ -1538,7 +1529,6 @@ Array [
   },
   Object {
     "body": "",
-    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "react-mdn.c66d8d89d98e.css",
@@ -1674,7 +1664,7 @@ Array [
         },
       ],
     },
-    "index": 4,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "142.9 KB",
@@ -1704,7 +1694,6 @@ exports[`utils filterData 3`] = `
 Array [
   Object {
     "body": "",
-    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "slice",
@@ -1852,7 +1841,7 @@ Array [
         },
       ],
     },
-    "index": 0,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "135 KB",
@@ -1877,7 +1866,6 @@ Array [
   },
   Object {
     "body": "",
-    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
@@ -2013,7 +2001,7 @@ Array [
         },
       ],
     },
-    "index": 1,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "33 KB",
@@ -2038,7 +2026,6 @@ Array [
   },
   Object {
     "body": "",
-    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "ZillaSlab-Bold.subset.e96c15f68c68.woff2",
@@ -2174,7 +2161,7 @@ Array [
         },
       ],
     },
-    "index": 2,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "33.3 KB",
@@ -2199,7 +2186,6 @@ Array [
   },
   Object {
     "body": ".logo{display:block;grid-area:I;width:200px;height:44px;margin-right:24px}",
-    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "react-header.2a659f6ad280.css",
@@ -2335,7 +2321,7 @@ Array [
         },
       ],
     },
-    "index": 3,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "2.8 KB",
@@ -2360,7 +2346,6 @@ Array [
   },
   Object {
     "body": "",
-    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "react-mdn.c66d8d89d98e.css",
@@ -2496,7 +2481,7 @@ Array [
         },
       ],
     },
-    "index": 4,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "142.9 KB",
@@ -2526,7 +2511,7 @@ exports[`utils findIndexAfterTimestamp 1`] = `2`;
 
 exports[`utils findIndexBeforeTimestamp 1`] = `1`;
 
-exports[`utils findIndexNearTimestamp 1`] = `2`;
+exports[`utils findIndexNearTimestamp 1`] = `1767214`;
 
 exports[`utils getContent 1`] = `
 "{
@@ -2626,7 +2611,6 @@ Object {
   "data": Array [
     Object {
       "body": "",
-      "connection": "1767214",
       "domain": "developer.mozilla.org",
       "error": null,
       "filename": "slice",
@@ -2774,7 +2758,7 @@ Object {
           },
         ],
       },
-      "index": 0,
+      "index": 1767214,
       "method": "GET",
       "serverIPAddress": "13.227.143.46",
       "size": "135 KB",
@@ -2799,7 +2783,6 @@ Object {
     },
     Object {
       "body": "",
-      "connection": "1767214",
       "domain": "developer.mozilla.org",
       "error": null,
       "filename": "ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
@@ -2935,7 +2918,7 @@ Object {
           },
         ],
       },
-      "index": 1,
+      "index": 1767214,
       "method": "GET",
       "serverIPAddress": "13.227.143.46",
       "size": "33 KB",
@@ -2960,7 +2943,6 @@ Object {
     },
     Object {
       "body": "",
-      "connection": "1767214",
       "domain": "developer.mozilla.org",
       "error": null,
       "filename": "ZillaSlab-Bold.subset.e96c15f68c68.woff2",
@@ -3096,7 +3078,7 @@ Object {
           },
         ],
       },
-      "index": 2,
+      "index": 1767214,
       "method": "GET",
       "serverIPAddress": "13.227.143.46",
       "size": "33.3 KB",
@@ -3121,7 +3103,6 @@ Object {
     },
     Object {
       "body": ".logo{display:block;grid-area:I;width:200px;height:44px;margin-right:24px}",
-      "connection": "1767214",
       "domain": "developer.mozilla.org",
       "error": null,
       "filename": "react-header.2a659f6ad280.css",
@@ -3257,7 +3238,7 @@ Object {
           },
         ],
       },
-      "index": 3,
+      "index": 1767214,
       "method": "GET",
       "serverIPAddress": "13.227.143.46",
       "size": "2.8 KB",
@@ -3282,7 +3263,6 @@ Object {
     },
     Object {
       "body": "",
-      "connection": "1767214",
       "domain": "developer.mozilla.org",
       "error": null,
       "filename": "react-mdn.c66d8d89d98e.css",
@@ -3418,7 +3398,7 @@ Object {
           },
         ],
       },
-      "index": 4,
+      "index": 1767214,
       "method": "GET",
       "serverIPAddress": "13.227.143.46",
       "size": "142.9 KB",
@@ -3466,7 +3446,6 @@ Object {
   "data": Array [
     Object {
       "body": undefined,
-      "connection": undefined,
       "domain": "www.json.org",
       "error": null,
       "filename": "https://www.json.org/",
@@ -3591,7 +3570,6 @@ Object {
     },
     Object {
       "body": undefined,
-      "connection": undefined,
       "domain": "www.json.org",
       "error": null,
       "filename": "json-en.html",
@@ -3716,7 +3694,6 @@ Object {
     },
     Object {
       "body": undefined,
-      "connection": undefined,
       "domain": "www.json.org",
       "error": null,
       "filename": "favicon.ico",
@@ -3797,7 +3774,6 @@ Object {
     },
     Object {
       "body": undefined,
-      "connection": undefined,
       "domain": "www.json.org",
       "error": null,
       "filename": "json160.gif",
@@ -3878,7 +3854,6 @@ Object {
     },
     Object {
       "body": undefined,
-      "connection": undefined,
       "domain": "www.json.org",
       "error": null,
       "filename": "object.png",
@@ -3935,7 +3910,6 @@ Object {
     },
     Object {
       "body": undefined,
-      "connection": undefined,
       "domain": "www.json.org",
       "error": "net::ERR_FAILED",
       "filename": "array.png",
@@ -3983,7 +3957,6 @@ Object {
     },
     Object {
       "body": undefined,
-      "connection": undefined,
       "domain": "www.json.org",
       "error": "net::ERR_TIMED_OUT",
       "filename": "value.png",
@@ -4031,7 +4004,6 @@ Object {
     },
     Object {
       "body": undefined,
-      "connection": undefined,
       "domain": "www.json.org",
       "error": null,
       "filename": "string.png",
@@ -4112,7 +4084,6 @@ Object {
     },
     Object {
       "body": undefined,
-      "connection": undefined,
       "domain": "www.json.org",
       "error": "net::ERR_ADDRESS_UNREACHABLE",
       "filename": "number.png",
@@ -4160,7 +4131,6 @@ Object {
     },
     Object {
       "body": undefined,
-      "connection": undefined,
       "domain": "www.json.org",
       "error": null,
       "filename": "whitespace.png",
@@ -4241,7 +4211,6 @@ Object {
     },
     Object {
       "body": undefined,
-      "connection": undefined,
       "domain": "www.json.org",
       "error": null,
       "filename": "Programma-Bold.woff2",
@@ -4322,7 +4291,6 @@ Object {
     },
     Object {
       "body": undefined,
-      "connection": undefined,
       "domain": "www.json.org",
       "error": null,
       "filename": "favicon.gif",
@@ -4414,7 +4382,6 @@ exports[`utils sortBy 1`] = `
 Array [
   Object {
     "body": "",
-    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "slice",
@@ -4562,7 +4529,7 @@ Array [
         },
       ],
     },
-    "index": 0,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "135 KB",
@@ -4587,7 +4554,6 @@ Array [
   },
   Object {
     "body": "",
-    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "react-mdn.c66d8d89d98e.css",
@@ -4723,7 +4689,7 @@ Array [
         },
       ],
     },
-    "index": 4,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "142.9 KB",
@@ -4748,7 +4714,6 @@ Array [
   },
   Object {
     "body": ".logo{display:block;grid-area:I;width:200px;height:44px;margin-right:24px}",
-    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "react-header.2a659f6ad280.css",
@@ -4884,7 +4849,7 @@ Array [
         },
       ],
     },
-    "index": 3,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "2.8 KB",
@@ -4909,7 +4874,6 @@ Array [
   },
   Object {
     "body": "",
-    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
@@ -5045,7 +5009,7 @@ Array [
         },
       ],
     },
-    "index": 1,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "33 KB",
@@ -5070,7 +5034,6 @@ Array [
   },
   Object {
     "body": "",
-    "connection": "1767214",
     "domain": "developer.mozilla.org",
     "error": null,
     "filename": "ZillaSlab-Bold.subset.e96c15f68c68.woff2",
@@ -5206,7 +5169,7 @@ Array [
         },
       ],
     },
-    "index": 2,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "33.3 KB",

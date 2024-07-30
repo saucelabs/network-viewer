@@ -9,6 +9,7 @@ const ResetButton = () => {
   const { actions, callbacks } = useNetwork();
 
   const handleReset = () => {
+    window.history.pushState({}, document.title, '/');
     actions.resetState();
     callbacks.onReset();
   };

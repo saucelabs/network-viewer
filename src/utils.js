@@ -184,8 +184,7 @@ export const prepareViewerData = (entries) => {
       const lastTimeOfEntry = getTotalTimeOfEntry(entry);
       endTime = endTime < lastTimeOfEntry ? lastTimeOfEntry : endTime;
       return {
-        index,
-        connection: entry.connection,
+        index: +entry.connection || index,
         status: entry.response.status,
         method: entry.request.method,
         size: parseSize(entry.response),
