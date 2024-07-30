@@ -2,47 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Styles from './Search.styles.scss';
-import Dropdown from './../Common/Dropdown';
+import { useNetwork } from '../../state/network/Context';
 
-const SEARCH_CATEGORY = ['url', 'body'];
+const Search = ({ name, value }) => {
+  const { actions } = useNetwork();
 
-const Search = ({ name, value, onChange }) => {
   const handleInputChange = ({ target }) => {
-    onChange({
+    actions.updateSearch({
       name,
       value: target.value,
     });
   };
 
-  const handleDropdownChange = (selectedKey) => {
-    onChange({
-      name: selectedKey,
-      value,
-    });
-  };
-
   return (
-    <div className={Styles['search-container']}>
-      <Dropdown
-        className={Styles['prepend-dropdown']}
-        items={SEARCH_CATEGORY}
-        onChange={handleDropdownChange}
-        selected="url"
-      />
-      <input
-        className={Styles.input}
-        onChange={handleInputChange}
-        placeholder="Filter"
-        type="text"
-        value={value}
-      />
-    </div>
+    <input
+      className={Styles['search-input']}
+      onChange={handleInputChange}
+      placeholder="Search by full URL"
+      type="text"
+      value={value}
+    />
   );
 };
 
 Search.propTypes = {
   name: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
   value: PropTypes.string,
 };
 

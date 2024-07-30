@@ -46,13 +46,7 @@ const ImportHar = ({ showButton, className }) => {
     <div {...getRootProps()}>
       <input {...getInputProps()} />
       {showButton ? (
-        <Button
-          category="default"
-          className={className}
-          material
-          raised
-          size="sm"
-        >
+        <Button className={className}>
           Import HAR
         </Button>
       ) : (

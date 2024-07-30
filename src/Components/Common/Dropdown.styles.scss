@@ -4,62 +4,72 @@
   position: relative;
 
   .dropdown-toggle {
-    border: $border;
-    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    width: 7.5rem;
 
+    font-weight: 500;
+    font-size: $font-size-h5;
+    color: $brand-primary-dark-gray;
+
+    &:hover,
     &.active {
-      border-color: transparent;
+      background: $white-100;
     }
 
-    &::after {
-      display: inline-block;
-      margin-left: .255em;
-      vertical-align: .255em;
-      content: "";
-      border-top: .3em solid;
-      border-right: .3em solid transparent;
-      border-bottom: 0;
-      border-left: .3em solid transparent;
-      box-sizing: border-box;
+    &.active {
+      border-radius: $border-radius-base $border-radius-base 0 0;
+    }
+
+    .icn {
+      height: $size-s;
+      width: $size-s;
+      pointer-events: none;
     }
   }
 
   .list {
+    position: absolute;
     z-index: 1000;
     float: left;
-    min-width: 10rem;
+    top: 0px;
+    left: 1px;
     margin: .125rem 0 0;
-    font-size: 1rem;
-    color: #212529;
+    padding: 0;
+    border: $border;
+    border-radius: 0 0 $size-xs $size-xs;
+    width: 7.5rem;
+
+    will-change: transform;
+    transform: translate3d(-1px, 23px, 0px);
+
     text-align: left;
     list-style: none;
     background-color: $white-100;
     background-clip: padding-box;
-    border: $border;
-    border-radius: .25rem;
-    position: absolute;
-    will-change: transform;
-    top: 0px;
-    left: 0px;
-    transform: translate3d(-1px, 23px, 0px);
-    list-style: none;
-    padding: 0;
   }
 
   .list-item {
-    padding: 0;
     display: block;
     width: 100%;
+    padding: 0;
     clear: both;
-    font-weight: 400;
     text-align: inherit;
     white-space: nowrap;
     background: transparent;
     border: 0;
 
+    font-weight: 500;
+    font-size: $font-size-h5;
+    color: $brand-primary-dark-gray;
+
     &.active {
-      background: $brand-primary-gray;
-      color: $white-100;
+      background: $bg-blue-50;
+      color: $brand-primary-dark-gray;
+    }
+
+    &:not(.active):hover {
+      background: $bg-gray-90;
     }
   }
 
@@ -67,6 +77,5 @@
     display: block;
     cursor: pointer;
     padding: .25rem 1.5rem;
-    text-transform: uppercase;
   }
 }

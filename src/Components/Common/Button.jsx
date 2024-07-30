@@ -7,21 +7,15 @@ import Styles from './Button.styles.scss';
 const context = classNames.bind(Styles);
 
 const Button = ({
-  category,
   children,
   className,
   disabled,
   href,
-  material,
-  raised,
-  size,
+  variant,
   ...props
 }) => {
   const combinedClasses = context('btn', className, {
-    [`btn-${size}`]: size,
-    [material ? `btn-md-${category}` : `btn-${category}`]: true,
-    [`btn-md-${category}-raised`]: raised,
-    'btn-md-raised': raised,
+    'text-variant': variant === 'text',
   });
 
   const TagName = href && !disabled ? 'a' : 'button';
@@ -38,28 +32,20 @@ const Button = ({
 };
 
 Button.propTypes = {
-  category: PropTypes.oneOf([
-    'default',
-  ]),
   children: PropTypes.node.isRequired,
   className: PropTypes.any,
   disabled: PropTypes.bool,
   href: PropTypes.string,
-  material: PropTypes.bool,
-  raised: PropTypes.bool,
-  size: PropTypes.oneOf([false, 'sm']),
   type: PropTypes.oneOf(['submit', 'reset', 'button', 'menu']),
+  variant: PropTypes.oneOf(['default', 'text']),
 };
 
 Button.defaultProps = {
-  category: 'default',
   className: null,
   disabled: false,
   href: null,
-  material: false,
-  raised: false,
-  size: false,
   type: 'button',
+  variant: 'default',
 };
 
 export default Button;

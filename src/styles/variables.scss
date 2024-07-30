@@ -1,9 +1,12 @@
-$brand-blue: #1395f0;
+$brand-blue: #0E75DD;
 $brand-danger: #eb3f47;
 $brand-success: #70be44;
 $brand-warning: #f68d38;
-$brand-primary-gray: #7f8892;
+$brand-primary-dark-gray: #1E2127;
+$brand-primary-gray: #6D7584;
 $dark-gray: #5c7288;
+$bg-blue-50: #e6f1fd;
+$bg-gray-90: #F7F8FA;
 
 $white-0: #000;
 $white-100: #fff;
@@ -31,7 +34,7 @@ $white-20: lighten($white-0, 20%);   // #333
 $white-18: lighten($white-0, 18%);   // #2e2e2e
 $white-13: lighten($white-0, 13.5%); // #222
 $white-6: lighten($white-0, 6.5%);   // #111
-$gray-ligther: #d8dde3;
+$gray-lighter: #d8dde3;
 
 $time-blocked: #a1000c;
 $time-dns: #dcc9e5;
@@ -63,6 +66,7 @@ $border-size: 4px;
 $size-base: 4px;
 
 $size-xs: $size-base; // 4px;
+$size-xs-s: $size-base * 2; // 8px;
 $size-s: $size-base * 3; // 12px;
 $size-m: $size-base * 4; // 16px;
 $size-l: $size-base * 5; // 20px;
@@ -101,10 +105,10 @@ $size-xxxl: $size-base * 11; // 44px;
 
 // width/height of container
 $name-col-width: 300px;
-$filter-row-height: 42px;
+$filters-container-height: 102px;
 $timeline-height: 100px;
 $footer-height: 34px;
 
 // borders
-$border: 1px solid $white-80;
-$border-dashed: 2px dashed $white-80;
+$border: 1px solid #B6BECC;
+$border-dashed: 2px dashed #B6BECC;

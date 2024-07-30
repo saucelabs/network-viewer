@@ -8,16 +8,15 @@
     "build": "SKIP_PREFLIGHT_CHECK=true node ../node_modules/react-scripts/bin/react-scripts.js build"
   },
   "dependencies": {
+    "classnames": "file:../node_modules/classnames",
     "network-viewer": "file:..",
     "react": "file:../node_modules/react",
     "react-dom": "file:../node_modules/react-dom",
-    "react-scripts": "file:../node_modules/react-scripts"
+    "react-scripts": "file:../node_modules/react-scripts",
+    "qs": "file:../node_modules/qs"
   },
   "devDependencies": {
     "@babel/plugin-syntax-object-rest-spread": "^7.8.3"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": [
     ">0.2%",

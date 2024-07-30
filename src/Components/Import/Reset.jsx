@@ -15,12 +15,8 @@ const Reset = ({ className, onReset }) => {
 
   return (
     <Button
-      category="default"
       className={className}
-      material
       onClick={handleReset}
-      raised
-      size="sm"
     >
       Reset
     </Button>
