@@ -14,7 +14,10 @@ import InputHAR from '../Components/Import/InputHAR';
 const context = classNames.bind(Styles);
 
 const NetworkTableContainer = ({ onRequestSelect }) => {
-  const { state, actions } = useNetwork();
+  const {
+    state,
+    actions,
+  } = useNetwork();
   const { showImportHar } = useTheme();
   const actualData = state.get('actualData');
   const data = state.get('data');
@@ -37,15 +40,11 @@ const NetworkTableContainer = ({ onRequestSelect }) => {
     );
   }
 
-  if (!actualData.size) {
+  if (!actualData.size && showImportHar) {
     return (
       <section className={Styles['table-container']}>
-        {showImportHar && (
-          <>
-            <ImportHar showButton={false} />
-            <InputHAR />
-          </>
-        )}
+        <ImportHar showButton={false} />
+        <InputHAR />
       </section>
     );
   }
@@ -55,15 +54,16 @@ const NetworkTableContainer = ({ onRequestSelect }) => {
       <table className={Styles.table}>
         <NetworkTableHeader />
         <tbody className={Styles['table-content']}>
-          {Array.from(data).map((rowInfo) => (
-            <NetworkTableRow
-              key={rowInfo.index}
-              maxTime={totalNetworkTime}
-              onSelect={handleReqSelect}
-              payload={rowInfo}
-              scrollHighlight={selectedReqIndex === rowInfo.index}
-            />
-          ))}
+          {Array.from(data)
+            .map((rowInfo) => (
+              <NetworkTableRow
+                key={rowInfo.index}
+                maxTime={totalNetworkTime}
+                onSelect={handleReqSelect}
+                payload={rowInfo}
+                scrollHighlight={selectedReqIndex === rowInfo.index}
+              />
+            ))}
         </tbody>
       </table>
     </section>
@@ -75,7 +75,8 @@ NetworkTableContainer.propTypes = {
 };
 
 NetworkTableContainer.defaultProps = {
-  onRequestSelect: () => {},
+  onRequestSelect: () => {
+  },
 };
 
 export default NetworkTableContainer;
