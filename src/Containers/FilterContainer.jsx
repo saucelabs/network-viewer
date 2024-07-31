@@ -24,9 +24,9 @@ const FilterContainer = () => {
       <div className={Styles['filter-row']}>
         <StatusFilter />
         <Search {...state.get('search')} />
-        {showPauseResume && <PauseResumeButton {...state.get('rawData')} />}
+        {showPauseResume && <PauseResumeButton />}
         <ResetButton />
-        {showExportHar && <ExportHarButton />}
+        {showExportHar && <ExportHarButton rawData={state.get('rawData')} />}
         {showImportHar && <ImportHAR />}
       </div>
 

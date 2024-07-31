@@ -2,10 +2,10 @@ import { Map, List } from 'immutable';
 
 import { filterData, sortBy, prepareViewerData, calculateTimings, getSummary } from './../../utils';
 import * as types from './types';
-import { DEFAULT_STATUS_FILTER } from '../../constants';
+import { DEFAULT_STATUS_FILTER, EMPTY_NETWORK_HAR } from '../../constants';
 
 const initialState = new Map({
-  rawData: null,
+  rawData: EMPTY_NETWORK_HAR,
   data: new List(),
   actualData: new List(),
   totalNetworkTime: null,
@@ -46,12 +46,12 @@ const reducer = (state = initialState, {
           totalTransferredSize,
           totalUncompressedSize,
           finishTime,
-        } = prepareViewerData(payload.entries);
+        } = prepareViewerData(payload.log.entries);
         const filteredData = filterData({
           data,
           statusFilter: state.get('statusFilter'),
           typeFilter: state.get('typeFilter'),
-          search: payload,
+          search: state.get('search'),
         });
         const sortedData = new List(sortBy(filteredData, sort.key, sort.isAcs));
         newState
@@ -65,7 +65,7 @@ const reducer = (state = initialState, {
             totalTransferredSize,
             totalUncompressedSize,
             finishTime,
-            timings: calculateTimings(payload.pages),
+            timings: calculateTimings(payload.log.pages),
             finish: finishTime,
           }));
       });

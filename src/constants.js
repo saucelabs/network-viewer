@@ -264,3 +264,15 @@ export const PAYLOAD_CAPTIONS = Object.freeze({
     false: 'parsed',
   }),
 });
+
+export const EMPTY_NETWORK_HAR = Object.freeze({
+  log: {
+    version: '',
+    creator: {
+      name: '',
+      version: '',
+    },
+    entries: [],
+    pages: [],
+  },
+});

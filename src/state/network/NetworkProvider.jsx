@@ -24,7 +24,11 @@ const NetworkProvider = (props) => {
   } = props;
 
   const [state, dispatch] = useReducer(reducer, initialState);
-  const callbacks = { onPause, onResume, onReset };
+  const callbacks = {
+    onPause,
+    onResume,
+    onReset,
+  };
   const value = useMemo(() => [state, dispatch, callbacks], [state]);
   const selectedReqIndex = value[0].get('selectedReqIndex');
   const requestData = value[0].get('data');
@@ -35,10 +39,7 @@ const NetworkProvider = (props) => {
   // Update data onChange of network data
   useEffect(() => {
     if (data && data.log && data.log.entries) {
-      updateData(dispatch)({
-        entries: data.log.entries,
-        pages: data.log.pages,
-      });
+      updateData(dispatch)(data);
     }
   }, [data]);
 

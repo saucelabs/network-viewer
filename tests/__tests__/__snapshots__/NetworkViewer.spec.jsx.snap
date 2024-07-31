@@ -36,7 +36,17 @@ exports[`renders without crashing 1`] = `
             "name": null,
             "value": null,
           },
-          "rawData": null,
+          "rawData": Object {
+            "log": Object {
+              "creator": Object {
+                "name": "",
+                "version": "",
+              },
+              "entries": Array [],
+              "pages": Array [],
+              "version": "",
+            },
+          },
           "totalNetworkTime": null,
           "actualData": Immutable.List [],
           "dataSummary": Immutable.Map {},
