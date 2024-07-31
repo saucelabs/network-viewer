@@ -128,7 +128,7 @@ exports[`NetworkTableContainer renders without crashing 1`] = `
                 type="text"
                 value=""
               />
-              <Button
+              <ForwardRef
                 className={null}
                 disabled={false}
                 href={null}
@@ -145,7 +145,7 @@ exports[`NetworkTableContainer renders without crashing 1`] = `
                 >
                   GO
                 </button>
-              </Button>
+              </ForwardRef>
             </div>
           </URLInput>
           <p>
