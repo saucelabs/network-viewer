@@ -18,10 +18,14 @@ const NetworkProvider = (props) => {
     autoHighlightChange,
     onDataLoaded,
     onDataError,
+    onPause,
+    onResume,
+    onReset,
   } = props;
 
   const [state, dispatch] = useReducer(reducer, initialState);
-  const value = useMemo(() => [state, dispatch], [state]);
+  const callbacks = { onPause, onResume, onReset };
+  const value = useMemo(() => [state, dispatch, callbacks], [state]);
   const selectedReqIndex = value[0].get('selectedReqIndex');
   const requestData = value[0].get('data');
   const showReqDetail = value[0].get('showReqDetail');
@@ -105,6 +109,9 @@ NetworkProvider.propTypes = {
   initialState: PropTypes.object,
   onDataError: PropTypes.func,
   onDataLoaded: PropTypes.func,
+  onPause: PropTypes.func,
+  onReset: PropTypes.func,
+  onResume: PropTypes.func,
   scrollRequestPosition: PropTypes.oneOf(['before', 'after', 'near']),
   scrollTimeStamp: PropTypes.number,
 };
@@ -117,6 +124,9 @@ NetworkProvider.defaultProps = {
   initialState: defaultState,
   onDataError: null,
   onDataLoaded: null,
+  onPause: null,
+  onReset: null,
+  onResume: null,
   scrollRequestPosition: 'near',
   scrollTimeStamp: null,
 };

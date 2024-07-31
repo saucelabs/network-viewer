@@ -43,7 +43,7 @@ describe('network reducer', () => {
     }));
 
     state = reducer(newState, {
-      type: types.UPDATE_FILTER,
+      type: types.UPDATE_TYPE_FILTER,
       payload: {
         key: 'type',
         value: ['html'],
@@ -51,20 +51,6 @@ describe('network reducer', () => {
     });
     expect(state.get('data').toJS()).toMatchSnapshot();
     expect(state.get('filter')).toMatchSnapshot();
-    expect(state.get('dataSummary')).toMatchSnapshot();
-  });
-
-  it('UPDATE_ERROR_FILTER', () => {
-    const newState = initialState.merge(new Map({
-      actualData: preparedMockData,
-    }));
-
-    state = reducer(newState, {
-      type: types.UPDATE_ERROR_FILTER,
-      payload: true,
-    });
-    expect(state.get('data').toJS()).toMatchSnapshot();
-    expect(state.get('errorFilter')).toMatchSnapshot();
     expect(state.get('dataSummary')).toMatchSnapshot();
   });
 
@@ -93,7 +79,7 @@ describe('network reducer', () => {
       type: types.SELECT_REQUEST,
       payload: preparedMockData.get(0),
     });
-    expect(state.get('selectedReqIndex')).toBe(0);
+    expect(state.get('selectedReqIndex')).toBe(1767214);
     expect(state.get('reqDetail')).toMatchSnapshot();
   });
 

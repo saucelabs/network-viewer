@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import NetworkTableHeader from './../Components/NetworkTable/NetworkTableHeader';
 import NetworkTableRow from './../Components/NetworkTable/NetworkTableRow';
 import { useNetwork } from './../state/network/Context';
-import ImportHar from './../Components/Import/ImportHAR';
+import ImportHar from '../Components/Import/ImportHAR';
 import Styles from './NetworkTableContainer.styles.scss';
 import ErrorMessage from './../Components/ErrorMessage';
 import { useTheme } from '../state/theme/Context';
@@ -15,7 +15,7 @@ const context = classNames.bind(Styles);
 
 const NetworkTableContainer = ({ onRequestSelect }) => {
   const { state, actions } = useNetwork();
-  const { showImportHAR } = useTheme();
+  const { showImportHar } = useTheme();
   const actualData = state.get('actualData');
   const data = state.get('data');
   const totalNetworkTime = state.get('totalNetworkTime');
@@ -40,7 +40,7 @@ const NetworkTableContainer = ({ onRequestSelect }) => {
   if (!actualData.size) {
     return (
       <section className={Styles['table-container']}>
-        {showImportHAR && (
+        {showImportHar && (
           <>
             <ImportHar showButton={false} />
             <InputHAR />

@@ -17,13 +17,13 @@ export const updateSort = (dispatch) => (payload) => dispatch({
   payload,
 });
 
-export const updateFilter = (dispatch) => (payload) => dispatch({
-  type: types.UPDATE_FILTER,
+export const updateStatusFilter = (dispatch) => (payload) => dispatch({
+  type: types.UPDATE_STATUS_FILTER,
   payload,
 });
 
-export const updateErrorFilter = (dispatch) => (payload) => dispatch({
-  type: types.UPDATE_ERROR_FILTER,
+export const updateTypeFilter = (dispatch) => (payload) => dispatch({
+  type: types.UPDATE_TYPE_FILTER,
   payload,
 });
 

@@ -29,12 +29,19 @@ export const VIEWER_FIELDS = Object.freeze({
   }),
 });
 
+export const FILTER_OPTION = Object.freeze({
+  STATUS: 'STATUS',
+  TYPE: 'TYPE',
+  URL: 'URL',
+  BODY: 'BODY',
+});
+
 export const DEFAULT_FILTER = {
   name: null,
   value: null,
 };
 
-export const FILTERS = [
+export const TYPE_FILTERS = [
   {
     name: 'All',
     filterBy: DEFAULT_FILTER,
@@ -101,6 +108,34 @@ export const FILTERS = [
       name: 'type',
       value: ['manifest.json'],
     },
+  },
+];
+
+export const DEFAULT_STATUS_FILTER = {
+  name: '-',
+  value: null,
+};
+export const STATUS_FILTERS = [
+  DEFAULT_STATUS_FILTER,
+  {
+    name: '1xx',
+    value: '1',
+  },
+  {
+    name: '2xx',
+    value: '2',
+  },
+  {
+    name: '3xx',
+    value: '3',
+  },
+  {
+    name: '4xx',
+    value: '4',
+  },
+  {
+    name: '5xx',
+    value: '5',
   },
 ];
 
@@ -213,7 +248,9 @@ export const HEADERS_TITLES = Object.freeze({
 export const MAX_COLOR_CONTENT_SIZE = 100000; // 100kB
 export const TIMELINE_DATA_POINT_HEIGHT = 2;
 export const NETWORK_VIEWER_DEFAULT_OPTIONS = {
-  showImportHAR: true,
+  showPauseResume: false,
+  showExportHar: false,
+  showImportHar: true,
   showTimeline: false,
 };
 

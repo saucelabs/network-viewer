@@ -56,176 +56,7 @@ Array [
 
 exports[`utils calcTotalTime 1`] = `1238.0000000000173`;
 
-exports[`utils filterCondition 1`] = `true`;
-
-exports[`utils filterCondition 2`] = `true`;
-
 exports[`utils filterData 1`] = `
-Array [
-  Object {
-    "body": "",
-    "domain": "developer.mozilla.org",
-    "error": null,
-    "filename": "ZillaSlab-Bold.subset.e96c15f68c68.woff2",
-    "headers": Object {
-      "postData": undefined,
-      "queryString": Array [],
-      "request": Array [
-        Object {
-          "name": ":authority",
-          "value": "developer.mozilla.org",
-        },
-        Object {
-          "name": ":method",
-          "value": "GET",
-        },
-        Object {
-          "name": ":path",
-          "value": "/static/fonts/locales/ZillaSlab-Bold.subset.e96c15f68c68.woff2",
-        },
-        Object {
-          "name": ":scheme",
-          "value": "https",
-        },
-        Object {
-          "name": "accept",
-          "value": "*/*",
-        },
-        Object {
-          "name": "accept-encoding",
-          "value": "gzip, deflate, br",
-        },
-        Object {
-          "name": "accept-language",
-          "value": "en-US,en;q=0.9,hi;q=0.8,gu;q=0.7",
-        },
-        Object {
-          "name": "cache-control",
-          "value": "no-cache",
-        },
-        Object {
-          "name": "cookie",
-          "value": "dwf_sg_task_completion=False; _ga=GA1.2.789560889.1565775320; lux_uid=157104094808128608; _gid=GA1.2.1726533372.1571040950; _gat=1",
-        },
-        Object {
-          "name": "origin",
-          "value": "https://developer.mozilla.org",
-        },
-        Object {
-          "name": "pragma",
-          "value": "no-cache",
-        },
-        Object {
-          "name": "referer",
-          "value": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
-        },
-        Object {
-          "name": "sec-fetch-mode",
-          "value": "cors",
-        },
-        Object {
-          "name": "sec-fetch-site",
-          "value": "same-origin",
-        },
-        Object {
-          "name": "user-agent",
-          "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36",
-        },
-      ],
-      "response": Array [
-        Object {
-          "name": "access-control-allow-origin",
-          "value": "*",
-        },
-        Object {
-          "name": "age",
-          "value": "917494",
-        },
-        Object {
-          "name": "cache-control",
-          "value": "max-age=315360000, public, immutable",
-        },
-        Object {
-          "name": "content-length",
-          "value": "34064",
-        },
-        Object {
-          "name": "content-type",
-          "value": "font/woff2",
-        },
-        Object {
-          "name": "date",
-          "value": "Thu, 03 Oct 2019 00:24:53 GMT",
-        },
-        Object {
-          "name": "last-modified",
-          "value": "Wed, 02 Oct 2019 22:49:47 GMT",
-        },
-        Object {
-          "name": "server",
-          "value": "meinheld/0.6.1",
-        },
-        Object {
-          "name": "status",
-          "value": "200",
-        },
-        Object {
-          "name": "strict-transport-security",
-          "value": "max-age=63072000",
-        },
-        Object {
-          "name": "via",
-          "value": "1.1 59d2fae2830d603c79da39156799a1fc.cloudfront.net (CloudFront)",
-        },
-        Object {
-          "name": "x-amz-cf-id",
-          "value": "hZNN1UZHTvk36MivQKkcq9zRnI8brUPulJSD4oU63iEjlehkYvzWrw==",
-        },
-        Object {
-          "name": "x-amz-cf-pop",
-          "value": "BOM50-C1",
-        },
-        Object {
-          "name": "x-cache",
-          "value": "Hit from cloudfront",
-        },
-        Object {
-          "name": "x-content-type-options",
-          "value": "nosniff",
-        },
-        Object {
-          "name": "x-xss-protection",
-          "value": "1; mode=block",
-        },
-      ],
-    },
-    "index": 2,
-    "method": "GET",
-    "serverIPAddress": "13.227.143.46",
-    "size": "33.3 KB",
-    "startedDateTime": 1571042845641,
-    "status": 200,
-    "time": 53.14699999871664,
-    "timings": Object {
-      "_blocked_queueing": 13.034000003244728,
-      "blocked": 14.968000003244727,
-      "connect": -1,
-      "dns": -1,
-      "receive": 1.9629999878816307,
-      "send": 0.40400000000000014,
-      "ssl": -1,
-      "startTime": 14049,
-      "wait": 35.81200000759028,
-    },
-    "transferredSize": 34538,
-    "type": "font",
-    "uncompressedSize": 34064,
-    "url": "https://developer.mozilla.org/static/fonts/locales/ZillaSlab-Bold.subset.e96c15f68c68.woff2",
-  },
-]
-`;
-
-exports[`utils filterData 2`] = `
 Array [
   Object {
     "body": "",
@@ -376,7 +207,7 @@ Array [
         },
       ],
     },
-    "index": 0,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "135 KB",
@@ -536,7 +367,7 @@ Array [
         },
       ],
     },
-    "index": 1,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "33 KB",
@@ -696,7 +527,7 @@ Array [
         },
       ],
     },
-    "index": 2,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "33.3 KB",
@@ -856,7 +687,7 @@ Array [
         },
       ],
     },
-    "index": 3,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "2.8 KB",
@@ -1016,7 +847,7 @@ Array [
         },
       ],
     },
-    "index": 4,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "142.9 KB",
@@ -1042,8 +873,180 @@ Array [
 ]
 `;
 
-exports[`utils filterData 3`] = `
+exports[`utils filterData 2`] = `
 Array [
+  Object {
+    "body": "",
+    "domain": "developer.mozilla.org",
+    "error": null,
+    "filename": "slice",
+    "headers": Object {
+      "postData": undefined,
+      "queryString": Array [],
+      "request": Array [
+        Object {
+          "name": ":authority",
+          "value": "developer.mozilla.org",
+        },
+        Object {
+          "name": ":method",
+          "value": "GET",
+        },
+        Object {
+          "name": ":path",
+          "value": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+        },
+        Object {
+          "name": ":scheme",
+          "value": "https",
+        },
+        Object {
+          "name": "accept",
+          "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3",
+        },
+        Object {
+          "name": "accept-encoding",
+          "value": "gzip, deflate, br",
+        },
+        Object {
+          "name": "accept-language",
+          "value": "en-US,en;q=0.9,hi;q=0.8,gu;q=0.7",
+        },
+        Object {
+          "name": "cache-control",
+          "value": "no-cache",
+        },
+        Object {
+          "name": "cookie",
+          "value": "dwf_sg_task_completion=False; _ga=GA1.2.789560889.1565775320; lux_uid=157104094808128608; _gid=GA1.2.1726533372.1571040950; _gat=1",
+        },
+        Object {
+          "name": "pragma",
+          "value": "no-cache",
+        },
+        Object {
+          "name": "sec-fetch-mode",
+          "value": "navigate",
+        },
+        Object {
+          "name": "sec-fetch-site",
+          "value": "none",
+        },
+        Object {
+          "name": "sec-fetch-user",
+          "value": "?1",
+        },
+        Object {
+          "name": "upgrade-insecure-requests",
+          "value": "1",
+        },
+        Object {
+          "name": "user-agent",
+          "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36",
+        },
+      ],
+      "response": Array [
+        Object {
+          "name": "access-control-allow-origin",
+          "value": "*",
+        },
+        Object {
+          "name": "age",
+          "value": "12",
+        },
+        Object {
+          "name": "cache-control",
+          "value": "s-maxage=300, public, max-age=0",
+        },
+        Object {
+          "name": "content-encoding",
+          "value": "gzip",
+        },
+        Object {
+          "name": "content-language",
+          "value": "en-US",
+        },
+        Object {
+          "name": "content-type",
+          "value": "text/html; charset=utf-8",
+        },
+        Object {
+          "name": "date",
+          "value": "Mon, 14 Oct 2019 08:46:58 GMT",
+        },
+        Object {
+          "name": "server",
+          "value": "meinheld/0.6.1",
+        },
+        Object {
+          "name": "status",
+          "value": "200",
+        },
+        Object {
+          "name": "strict-transport-security",
+          "value": "max-age=63072000",
+        },
+        Object {
+          "name": "vary",
+          "value": "Accept-Encoding,Cookie",
+        },
+        Object {
+          "name": "via",
+          "value": "1.1 59d2fae2830d603c79da39156799a1fc.cloudfront.net (CloudFront)",
+        },
+        Object {
+          "name": "x-amz-cf-id",
+          "value": "hp7HGv6bxUKNasYTt2s-GKVavl5WKuLzXdCOX5uhGbFVGKxtFBUJvA==",
+        },
+        Object {
+          "name": "x-amz-cf-pop",
+          "value": "BOM50-C1",
+        },
+        Object {
+          "name": "x-cache",
+          "value": "Hit from cloudfront",
+        },
+        Object {
+          "name": "x-content-type-options",
+          "value": "nosniff",
+        },
+        Object {
+          "name": "x-frame-options",
+          "value": "DENY",
+        },
+        Object {
+          "name": "x-kuma-revision",
+          "value": "1565195",
+        },
+        Object {
+          "name": "x-xss-protection",
+          "value": "1; mode=block",
+        },
+      ],
+    },
+    "index": 1767214,
+    "method": "GET",
+    "serverIPAddress": "13.227.143.46",
+    "size": "135 KB",
+    "startedDateTime": 1571042831592,
+    "status": 200,
+    "time": 35.07000001263805,
+    "timings": Object {
+      "_blocked_queueing": 4.382999992230907,
+      "blocked": 5.496999992230907,
+      "connect": -1,
+      "dns": -1,
+      "receive": 3.252000024076551,
+      "send": 0.2819999999999998,
+      "ssl": -1,
+      "startTime": 0,
+      "wait": 26.03899999633059,
+    },
+    "transferredSize": 30825,
+    "type": "document",
+    "uncompressedSize": 138279,
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+  },
   Object {
     "body": "",
     "domain": "developer.mozilla.org",
@@ -1181,7 +1184,7 @@ Array [
         },
       ],
     },
-    "index": 1,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "33 KB",
@@ -1204,6 +1207,1303 @@ Array [
     "uncompressedSize": 33808,
     "url": "https://developer.mozilla.org/static/fonts/locales/ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
   },
+  Object {
+    "body": "",
+    "domain": "developer.mozilla.org",
+    "error": null,
+    "filename": "ZillaSlab-Bold.subset.e96c15f68c68.woff2",
+    "headers": Object {
+      "postData": undefined,
+      "queryString": Array [],
+      "request": Array [
+        Object {
+          "name": ":authority",
+          "value": "developer.mozilla.org",
+        },
+        Object {
+          "name": ":method",
+          "value": "GET",
+        },
+        Object {
+          "name": ":path",
+          "value": "/static/fonts/locales/ZillaSlab-Bold.subset.e96c15f68c68.woff2",
+        },
+        Object {
+          "name": ":scheme",
+          "value": "https",
+        },
+        Object {
+          "name": "accept",
+          "value": "*/*",
+        },
+        Object {
+          "name": "accept-encoding",
+          "value": "gzip, deflate, br",
+        },
+        Object {
+          "name": "accept-language",
+          "value": "en-US,en;q=0.9,hi;q=0.8,gu;q=0.7",
+        },
+        Object {
+          "name": "cache-control",
+          "value": "no-cache",
+        },
+        Object {
+          "name": "cookie",
+          "value": "dwf_sg_task_completion=False; _ga=GA1.2.789560889.1565775320; lux_uid=157104094808128608; _gid=GA1.2.1726533372.1571040950; _gat=1",
+        },
+        Object {
+          "name": "origin",
+          "value": "https://developer.mozilla.org",
+        },
+        Object {
+          "name": "pragma",
+          "value": "no-cache",
+        },
+        Object {
+          "name": "referer",
+          "value": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+        },
+        Object {
+          "name": "sec-fetch-mode",
+          "value": "cors",
+        },
+        Object {
+          "name": "sec-fetch-site",
+          "value": "same-origin",
+        },
+        Object {
+          "name": "user-agent",
+          "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36",
+        },
+      ],
+      "response": Array [
+        Object {
+          "name": "access-control-allow-origin",
+          "value": "*",
+        },
+        Object {
+          "name": "age",
+          "value": "917494",
+        },
+        Object {
+          "name": "cache-control",
+          "value": "max-age=315360000, public, immutable",
+        },
+        Object {
+          "name": "content-length",
+          "value": "34064",
+        },
+        Object {
+          "name": "content-type",
+          "value": "font/woff2",
+        },
+        Object {
+          "name": "date",
+          "value": "Thu, 03 Oct 2019 00:24:53 GMT",
+        },
+        Object {
+          "name": "last-modified",
+          "value": "Wed, 02 Oct 2019 22:49:47 GMT",
+        },
+        Object {
+          "name": "server",
+          "value": "meinheld/0.6.1",
+        },
+        Object {
+          "name": "status",
+          "value": "200",
+        },
+        Object {
+          "name": "strict-transport-security",
+          "value": "max-age=63072000",
+        },
+        Object {
+          "name": "via",
+          "value": "1.1 59d2fae2830d603c79da39156799a1fc.cloudfront.net (CloudFront)",
+        },
+        Object {
+          "name": "x-amz-cf-id",
+          "value": "hZNN1UZHTvk36MivQKkcq9zRnI8brUPulJSD4oU63iEjlehkYvzWrw==",
+        },
+        Object {
+          "name": "x-amz-cf-pop",
+          "value": "BOM50-C1",
+        },
+        Object {
+          "name": "x-cache",
+          "value": "Hit from cloudfront",
+        },
+        Object {
+          "name": "x-content-type-options",
+          "value": "nosniff",
+        },
+        Object {
+          "name": "x-xss-protection",
+          "value": "1; mode=block",
+        },
+      ],
+    },
+    "index": 1767214,
+    "method": "GET",
+    "serverIPAddress": "13.227.143.46",
+    "size": "33.3 KB",
+    "startedDateTime": 1571042845641,
+    "status": 200,
+    "time": 53.14699999871664,
+    "timings": Object {
+      "_blocked_queueing": 13.034000003244728,
+      "blocked": 14.968000003244727,
+      "connect": -1,
+      "dns": -1,
+      "receive": 1.9629999878816307,
+      "send": 0.40400000000000014,
+      "ssl": -1,
+      "startTime": 14049,
+      "wait": 35.81200000759028,
+    },
+    "transferredSize": 34538,
+    "type": "font",
+    "uncompressedSize": 34064,
+    "url": "https://developer.mozilla.org/static/fonts/locales/ZillaSlab-Bold.subset.e96c15f68c68.woff2",
+  },
+  Object {
+    "body": ".logo{display:block;grid-area:I;width:200px;height:44px;margin-right:24px}",
+    "domain": "developer.mozilla.org",
+    "error": null,
+    "filename": "react-header.2a659f6ad280.css",
+    "headers": Object {
+      "postData": undefined,
+      "queryString": Array [],
+      "request": Array [
+        Object {
+          "name": ":authority",
+          "value": "developer.mozilla.org",
+        },
+        Object {
+          "name": ":method",
+          "value": "GET",
+        },
+        Object {
+          "name": ":path",
+          "value": "/static/build/styles/react-header.2a659f6ad280.css",
+        },
+        Object {
+          "name": ":scheme",
+          "value": "https",
+        },
+        Object {
+          "name": "accept",
+          "value": "text/css,*/*;q=0.1",
+        },
+        Object {
+          "name": "accept-encoding",
+          "value": "gzip, deflate, br",
+        },
+        Object {
+          "name": "accept-language",
+          "value": "en-US,en;q=0.9,hi;q=0.8,gu;q=0.7",
+        },
+        Object {
+          "name": "cache-control",
+          "value": "no-cache",
+        },
+        Object {
+          "name": "cookie",
+          "value": "dwf_sg_task_completion=False; _ga=GA1.2.789560889.1565775320; lux_uid=157104094808128608; _gid=GA1.2.1726533372.1571040950; _gat=1",
+        },
+        Object {
+          "name": "pragma",
+          "value": "no-cache",
+        },
+        Object {
+          "name": "referer",
+          "value": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+        },
+        Object {
+          "name": "sec-fetch-mode",
+          "value": "no-cors",
+        },
+        Object {
+          "name": "sec-fetch-site",
+          "value": "same-origin",
+        },
+        Object {
+          "name": "user-agent",
+          "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36",
+        },
+      ],
+      "response": Array [
+        Object {
+          "name": "access-control-allow-origin",
+          "value": "*",
+        },
+        Object {
+          "name": "age",
+          "value": "401339",
+        },
+        Object {
+          "name": "cache-control",
+          "value": "max-age=315360000, public, immutable",
+        },
+        Object {
+          "name": "content-encoding",
+          "value": "gzip",
+        },
+        Object {
+          "name": "content-type",
+          "value": "text/css; charset=\\"utf-8\\"",
+        },
+        Object {
+          "name": "date",
+          "value": "Tue, 08 Oct 2019 18:12:50 GMT",
+        },
+        Object {
+          "name": "last-modified",
+          "value": "Tue, 08 Oct 2019 16:42:42 GMT",
+        },
+        Object {
+          "name": "server",
+          "value": "meinheld/0.6.1",
+        },
+        Object {
+          "name": "status",
+          "value": "200",
+        },
+        Object {
+          "name": "strict-transport-security",
+          "value": "max-age=63072000",
+        },
+        Object {
+          "name": "vary",
+          "value": "Accept-Encoding",
+        },
+        Object {
+          "name": "via",
+          "value": "1.1 59d2fae2830d603c79da39156799a1fc.cloudfront.net (CloudFront)",
+        },
+        Object {
+          "name": "x-amz-cf-id",
+          "value": "S1HIsotVeNy7zyERZ4zu3qeexivSsexk2ThORlvRYRl2DQiaW3dxqQ==",
+        },
+        Object {
+          "name": "x-amz-cf-pop",
+          "value": "BOM50-C1",
+        },
+        Object {
+          "name": "x-cache",
+          "value": "Hit from cloudfront",
+        },
+        Object {
+          "name": "x-content-type-options",
+          "value": "nosniff",
+        },
+        Object {
+          "name": "x-xss-protection",
+          "value": "1; mode=block",
+        },
+      ],
+    },
+    "index": 1767214,
+    "method": "GET",
+    "serverIPAddress": "13.227.143.46",
+    "size": "2.8 KB",
+    "startedDateTime": 1571042853643,
+    "status": 200,
+    "time": 51.217000000178814,
+    "timings": Object {
+      "_blocked_queueing": 11.349999986123294,
+      "blocked": 13.026999986123293,
+      "connect": -1,
+      "dns": -1,
+      "receive": 1.951000012923032,
+      "send": 0.21299999999999986,
+      "ssl": -1,
+      "startTime": 22051,
+      "wait": 36.02600000113249,
+    },
+    "transferredSize": 1418,
+    "type": "stylesheet",
+    "uncompressedSize": 2829,
+    "url": "https://developer.mozilla.org/static/build/styles/react-header.2a659f6ad280.css",
+  },
+  Object {
+    "body": "",
+    "domain": "developer.mozilla.org",
+    "error": null,
+    "filename": "react-mdn.c66d8d89d98e.css",
+    "headers": Object {
+      "postData": undefined,
+      "queryString": Array [],
+      "request": Array [
+        Object {
+          "name": ":authority",
+          "value": "developer.mozilla.org",
+        },
+        Object {
+          "name": ":method",
+          "value": "GET",
+        },
+        Object {
+          "name": ":path",
+          "value": "/static/build/styles/react-mdn.c66d8d89d98e.css",
+        },
+        Object {
+          "name": ":scheme",
+          "value": "https",
+        },
+        Object {
+          "name": "accept",
+          "value": "text/css,*/*;q=0.1",
+        },
+        Object {
+          "name": "accept-encoding",
+          "value": "gzip, deflate, br",
+        },
+        Object {
+          "name": "accept-language",
+          "value": "en-US,en;q=0.9,hi;q=0.8,gu;q=0.7",
+        },
+        Object {
+          "name": "cache-control",
+          "value": "no-cache",
+        },
+        Object {
+          "name": "cookie",
+          "value": "dwf_sg_task_completion=False; _ga=GA1.2.789560889.1565775320; lux_uid=157104094808128608; _gid=GA1.2.1726533372.1571040950; _gat=1",
+        },
+        Object {
+          "name": "pragma",
+          "value": "no-cache",
+        },
+        Object {
+          "name": "referer",
+          "value": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+        },
+        Object {
+          "name": "sec-fetch-mode",
+          "value": "no-cors",
+        },
+        Object {
+          "name": "sec-fetch-site",
+          "value": "same-origin",
+        },
+        Object {
+          "name": "user-agent",
+          "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36",
+        },
+      ],
+      "response": Array [
+        Object {
+          "name": "access-control-allow-origin",
+          "value": "*",
+        },
+        Object {
+          "name": "age",
+          "value": "281810",
+        },
+        Object {
+          "name": "cache-control",
+          "value": "max-age=315360000, public, immutable",
+        },
+        Object {
+          "name": "content-encoding",
+          "value": "gzip",
+        },
+        Object {
+          "name": "content-type",
+          "value": "text/css; charset=\\"utf-8\\"",
+        },
+        Object {
+          "name": "date",
+          "value": "Fri, 11 Oct 2019 02:28:46 GMT",
+        },
+        Object {
+          "name": "last-modified",
+          "value": "Fri, 11 Oct 2019 02:12:43 GMT",
+        },
+        Object {
+          "name": "server",
+          "value": "meinheld/0.6.1",
+        },
+        Object {
+          "name": "status",
+          "value": "200",
+        },
+        Object {
+          "name": "strict-transport-security",
+          "value": "max-age=63072000",
+        },
+        Object {
+          "name": "vary",
+          "value": "Accept-Encoding",
+        },
+        Object {
+          "name": "via",
+          "value": "1.1 59d2fae2830d603c79da39156799a1fc.cloudfront.net (CloudFront)",
+        },
+        Object {
+          "name": "x-amz-cf-id",
+          "value": "uJkBdKxs_8NndbZHTaGq43yER81HDOZgfvAagsSCTE7sEZcfwXteIg==",
+        },
+        Object {
+          "name": "x-amz-cf-pop",
+          "value": "BOM50-C1",
+        },
+        Object {
+          "name": "x-cache",
+          "value": "Hit from cloudfront",
+        },
+        Object {
+          "name": "x-content-type-options",
+          "value": "nosniff",
+        },
+        Object {
+          "name": "x-xss-protection",
+          "value": "1; mode=block",
+        },
+      ],
+    },
+    "index": 1767214,
+    "method": "GET",
+    "serverIPAddress": "13.227.143.46",
+    "size": "142.9 KB",
+    "startedDateTime": 1571042865644,
+    "status": 200,
+    "time": 53.195000014966354,
+    "timings": Object {
+      "_blocked_queueing": 11.250000010477379,
+      "blocked": 13.423000010477379,
+      "connect": -1,
+      "dns": -1,
+      "receive": 1.2719999940600246,
+      "send": 0.5390000000000001,
+      "ssl": -1,
+      "startTime": 34052,
+      "wait": 37.96100001042895,
+    },
+    "transferredSize": 29483,
+    "type": "stylesheet",
+    "uncompressedSize": 146312,
+    "url": "https://developer.mozilla.org/static/build/styles/react-mdn.c66d8d89d98e.css",
+  },
+]
+`;
+
+exports[`utils filterData 3`] = `
+Array [
+  Object {
+    "body": "",
+    "domain": "developer.mozilla.org",
+    "error": null,
+    "filename": "slice",
+    "headers": Object {
+      "postData": undefined,
+      "queryString": Array [],
+      "request": Array [
+        Object {
+          "name": ":authority",
+          "value": "developer.mozilla.org",
+        },
+        Object {
+          "name": ":method",
+          "value": "GET",
+        },
+        Object {
+          "name": ":path",
+          "value": "/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+        },
+        Object {
+          "name": ":scheme",
+          "value": "https",
+        },
+        Object {
+          "name": "accept",
+          "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3",
+        },
+        Object {
+          "name": "accept-encoding",
+          "value": "gzip, deflate, br",
+        },
+        Object {
+          "name": "accept-language",
+          "value": "en-US,en;q=0.9,hi;q=0.8,gu;q=0.7",
+        },
+        Object {
+          "name": "cache-control",
+          "value": "no-cache",
+        },
+        Object {
+          "name": "cookie",
+          "value": "dwf_sg_task_completion=False; _ga=GA1.2.789560889.1565775320; lux_uid=157104094808128608; _gid=GA1.2.1726533372.1571040950; _gat=1",
+        },
+        Object {
+          "name": "pragma",
+          "value": "no-cache",
+        },
+        Object {
+          "name": "sec-fetch-mode",
+          "value": "navigate",
+        },
+        Object {
+          "name": "sec-fetch-site",
+          "value": "none",
+        },
+        Object {
+          "name": "sec-fetch-user",
+          "value": "?1",
+        },
+        Object {
+          "name": "upgrade-insecure-requests",
+          "value": "1",
+        },
+        Object {
+          "name": "user-agent",
+          "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36",
+        },
+      ],
+      "response": Array [
+        Object {
+          "name": "access-control-allow-origin",
+          "value": "*",
+        },
+        Object {
+          "name": "age",
+          "value": "12",
+        },
+        Object {
+          "name": "cache-control",
+          "value": "s-maxage=300, public, max-age=0",
+        },
+        Object {
+          "name": "content-encoding",
+          "value": "gzip",
+        },
+        Object {
+          "name": "content-language",
+          "value": "en-US",
+        },
+        Object {
+          "name": "content-type",
+          "value": "text/html; charset=utf-8",
+        },
+        Object {
+          "name": "date",
+          "value": "Mon, 14 Oct 2019 08:46:58 GMT",
+        },
+        Object {
+          "name": "server",
+          "value": "meinheld/0.6.1",
+        },
+        Object {
+          "name": "status",
+          "value": "200",
+        },
+        Object {
+          "name": "strict-transport-security",
+          "value": "max-age=63072000",
+        },
+        Object {
+          "name": "vary",
+          "value": "Accept-Encoding,Cookie",
+        },
+        Object {
+          "name": "via",
+          "value": "1.1 59d2fae2830d603c79da39156799a1fc.cloudfront.net (CloudFront)",
+        },
+        Object {
+          "name": "x-amz-cf-id",
+          "value": "hp7HGv6bxUKNasYTt2s-GKVavl5WKuLzXdCOX5uhGbFVGKxtFBUJvA==",
+        },
+        Object {
+          "name": "x-amz-cf-pop",
+          "value": "BOM50-C1",
+        },
+        Object {
+          "name": "x-cache",
+          "value": "Hit from cloudfront",
+        },
+        Object {
+          "name": "x-content-type-options",
+          "value": "nosniff",
+        },
+        Object {
+          "name": "x-frame-options",
+          "value": "DENY",
+        },
+        Object {
+          "name": "x-kuma-revision",
+          "value": "1565195",
+        },
+        Object {
+          "name": "x-xss-protection",
+          "value": "1; mode=block",
+        },
+      ],
+    },
+    "index": 1767214,
+    "method": "GET",
+    "serverIPAddress": "13.227.143.46",
+    "size": "135 KB",
+    "startedDateTime": 1571042831592,
+    "status": 200,
+    "time": 35.07000001263805,
+    "timings": Object {
+      "_blocked_queueing": 4.382999992230907,
+      "blocked": 5.496999992230907,
+      "connect": -1,
+      "dns": -1,
+      "receive": 3.252000024076551,
+      "send": 0.2819999999999998,
+      "ssl": -1,
+      "startTime": 0,
+      "wait": 26.03899999633059,
+    },
+    "transferredSize": 30825,
+    "type": "document",
+    "uncompressedSize": 138279,
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+  },
+  Object {
+    "body": "",
+    "domain": "developer.mozilla.org",
+    "error": null,
+    "filename": "ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
+    "headers": Object {
+      "postData": undefined,
+      "queryString": Array [],
+      "request": Array [
+        Object {
+          "name": ":authority",
+          "value": "developer.mozilla.org",
+        },
+        Object {
+          "name": ":method",
+          "value": "GET",
+        },
+        Object {
+          "name": ":path",
+          "value": "/static/fonts/locales/ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
+        },
+        Object {
+          "name": ":scheme",
+          "value": "https",
+        },
+        Object {
+          "name": "accept",
+          "value": "*/*",
+        },
+        Object {
+          "name": "accept-encoding",
+          "value": "gzip, deflate, br",
+        },
+        Object {
+          "name": "accept-language",
+          "value": "en-US,en;q=0.9,hi;q=0.8,gu;q=0.7",
+        },
+        Object {
+          "name": "cache-control",
+          "value": "no-cache",
+        },
+        Object {
+          "name": "cookie",
+          "value": "dwf_sg_task_completion=False; _ga=GA1.2.789560889.1565775320; lux_uid=157104094808128608; _gid=GA1.2.1726533372.1571040950; _gat=1",
+        },
+        Object {
+          "name": "origin",
+          "value": "https://developer.mozilla.org",
+        },
+        Object {
+          "name": "pragma",
+          "value": "no-cache",
+        },
+        Object {
+          "name": "referer",
+          "value": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+        },
+        Object {
+          "name": "sec-fetch-mode",
+          "value": "cors",
+        },
+        Object {
+          "name": "sec-fetch-site",
+          "value": "same-origin",
+        },
+        Object {
+          "name": "user-agent",
+          "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36",
+        },
+      ],
+      "response": Array [
+        Object {
+          "name": "access-control-allow-origin",
+          "value": "*",
+        },
+        Object {
+          "name": "age",
+          "value": "917494",
+        },
+        Object {
+          "name": "cache-control",
+          "value": "max-age=315360000, public, immutable",
+        },
+        Object {
+          "name": "content-length",
+          "value": "33808",
+        },
+        Object {
+          "name": "content-type",
+          "value": "font/woff2",
+        },
+        Object {
+          "name": "date",
+          "value": "Thu, 03 Oct 2019 00:24:53 GMT",
+        },
+        Object {
+          "name": "last-modified",
+          "value": "Wed, 02 Oct 2019 22:49:47 GMT",
+        },
+        Object {
+          "name": "server",
+          "value": "meinheld/0.6.1",
+        },
+        Object {
+          "name": "status",
+          "value": "200",
+        },
+        Object {
+          "name": "strict-transport-security",
+          "value": "max-age=63072000",
+        },
+        Object {
+          "name": "via",
+          "value": "1.1 59d2fae2830d603c79da39156799a1fc.cloudfront.net (CloudFront)",
+        },
+        Object {
+          "name": "x-amz-cf-id",
+          "value": "NDheE_R8KWFX1eCHU5t37BMmlPLd91b46q5XT9NlhcKeq853stfRuw==",
+        },
+        Object {
+          "name": "x-amz-cf-pop",
+          "value": "BOM50-C1",
+        },
+        Object {
+          "name": "x-cache",
+          "value": "Hit from cloudfront",
+        },
+        Object {
+          "name": "x-content-type-options",
+          "value": "nosniff",
+        },
+        Object {
+          "name": "x-xss-protection",
+          "value": "1; mode=block",
+        },
+      ],
+    },
+    "index": 1767214,
+    "method": "GET",
+    "serverIPAddress": "13.227.143.46",
+    "size": "33 KB",
+    "startedDateTime": 1571042835641,
+    "status": 400,
+    "time": 40.115000010700896,
+    "timings": Object {
+      "_blocked_queueing": 12.528999999631196,
+      "blocked": 13.952999999631196,
+      "connect": -1,
+      "dns": -1,
+      "receive": 7.124000025214627,
+      "send": 0.2370000000000001,
+      "ssl": -1,
+      "startTime": 4049,
+      "wait": 18.80099998585507,
+    },
+    "transferredSize": 34271,
+    "type": "font",
+    "uncompressedSize": 33808,
+    "url": "https://developer.mozilla.org/static/fonts/locales/ZillaSlab-Regular.subset.bbc33fb47cf6.woff2",
+  },
+  Object {
+    "body": "",
+    "domain": "developer.mozilla.org",
+    "error": null,
+    "filename": "ZillaSlab-Bold.subset.e96c15f68c68.woff2",
+    "headers": Object {
+      "postData": undefined,
+      "queryString": Array [],
+      "request": Array [
+        Object {
+          "name": ":authority",
+          "value": "developer.mozilla.org",
+        },
+        Object {
+          "name": ":method",
+          "value": "GET",
+        },
+        Object {
+          "name": ":path",
+          "value": "/static/fonts/locales/ZillaSlab-Bold.subset.e96c15f68c68.woff2",
+        },
+        Object {
+          "name": ":scheme",
+          "value": "https",
+        },
+        Object {
+          "name": "accept",
+          "value": "*/*",
+        },
+        Object {
+          "name": "accept-encoding",
+          "value": "gzip, deflate, br",
+        },
+        Object {
+          "name": "accept-language",
+          "value": "en-US,en;q=0.9,hi;q=0.8,gu;q=0.7",
+        },
+        Object {
+          "name": "cache-control",
+          "value": "no-cache",
+        },
+        Object {
+          "name": "cookie",
+          "value": "dwf_sg_task_completion=False; _ga=GA1.2.789560889.1565775320; lux_uid=157104094808128608; _gid=GA1.2.1726533372.1571040950; _gat=1",
+        },
+        Object {
+          "name": "origin",
+          "value": "https://developer.mozilla.org",
+        },
+        Object {
+          "name": "pragma",
+          "value": "no-cache",
+        },
+        Object {
+          "name": "referer",
+          "value": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+        },
+        Object {
+          "name": "sec-fetch-mode",
+          "value": "cors",
+        },
+        Object {
+          "name": "sec-fetch-site",
+          "value": "same-origin",
+        },
+        Object {
+          "name": "user-agent",
+          "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36",
+        },
+      ],
+      "response": Array [
+        Object {
+          "name": "access-control-allow-origin",
+          "value": "*",
+        },
+        Object {
+          "name": "age",
+          "value": "917494",
+        },
+        Object {
+          "name": "cache-control",
+          "value": "max-age=315360000, public, immutable",
+        },
+        Object {
+          "name": "content-length",
+          "value": "34064",
+        },
+        Object {
+          "name": "content-type",
+          "value": "font/woff2",
+        },
+        Object {
+          "name": "date",
+          "value": "Thu, 03 Oct 2019 00:24:53 GMT",
+        },
+        Object {
+          "name": "last-modified",
+          "value": "Wed, 02 Oct 2019 22:49:47 GMT",
+        },
+        Object {
+          "name": "server",
+          "value": "meinheld/0.6.1",
+        },
+        Object {
+          "name": "status",
+          "value": "200",
+        },
+        Object {
+          "name": "strict-transport-security",
+          "value": "max-age=63072000",
+        },
+        Object {
+          "name": "via",
+          "value": "1.1 59d2fae2830d603c79da39156799a1fc.cloudfront.net (CloudFront)",
+        },
+        Object {
+          "name": "x-amz-cf-id",
+          "value": "hZNN1UZHTvk36MivQKkcq9zRnI8brUPulJSD4oU63iEjlehkYvzWrw==",
+        },
+        Object {
+          "name": "x-amz-cf-pop",
+          "value": "BOM50-C1",
+        },
+        Object {
+          "name": "x-cache",
+          "value": "Hit from cloudfront",
+        },
+        Object {
+          "name": "x-content-type-options",
+          "value": "nosniff",
+        },
+        Object {
+          "name": "x-xss-protection",
+          "value": "1; mode=block",
+        },
+      ],
+    },
+    "index": 1767214,
+    "method": "GET",
+    "serverIPAddress": "13.227.143.46",
+    "size": "33.3 KB",
+    "startedDateTime": 1571042845641,
+    "status": 200,
+    "time": 53.14699999871664,
+    "timings": Object {
+      "_blocked_queueing": 13.034000003244728,
+      "blocked": 14.968000003244727,
+      "connect": -1,
+      "dns": -1,
+      "receive": 1.9629999878816307,
+      "send": 0.40400000000000014,
+      "ssl": -1,
+      "startTime": 14049,
+      "wait": 35.81200000759028,
+    },
+    "transferredSize": 34538,
+    "type": "font",
+    "uncompressedSize": 34064,
+    "url": "https://developer.mozilla.org/static/fonts/locales/ZillaSlab-Bold.subset.e96c15f68c68.woff2",
+  },
+  Object {
+    "body": ".logo{display:block;grid-area:I;width:200px;height:44px;margin-right:24px}",
+    "domain": "developer.mozilla.org",
+    "error": null,
+    "filename": "react-header.2a659f6ad280.css",
+    "headers": Object {
+      "postData": undefined,
+      "queryString": Array [],
+      "request": Array [
+        Object {
+          "name": ":authority",
+          "value": "developer.mozilla.org",
+        },
+        Object {
+          "name": ":method",
+          "value": "GET",
+        },
+        Object {
+          "name": ":path",
+          "value": "/static/build/styles/react-header.2a659f6ad280.css",
+        },
+        Object {
+          "name": ":scheme",
+          "value": "https",
+        },
+        Object {
+          "name": "accept",
+          "value": "text/css,*/*;q=0.1",
+        },
+        Object {
+          "name": "accept-encoding",
+          "value": "gzip, deflate, br",
+        },
+        Object {
+          "name": "accept-language",
+          "value": "en-US,en;q=0.9,hi;q=0.8,gu;q=0.7",
+        },
+        Object {
+          "name": "cache-control",
+          "value": "no-cache",
+        },
+        Object {
+          "name": "cookie",
+          "value": "dwf_sg_task_completion=False; _ga=GA1.2.789560889.1565775320; lux_uid=157104094808128608; _gid=GA1.2.1726533372.1571040950; _gat=1",
+        },
+        Object {
+          "name": "pragma",
+          "value": "no-cache",
+        },
+        Object {
+          "name": "referer",
+          "value": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+        },
+        Object {
+          "name": "sec-fetch-mode",
+          "value": "no-cors",
+        },
+        Object {
+          "name": "sec-fetch-site",
+          "value": "same-origin",
+        },
+        Object {
+          "name": "user-agent",
+          "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36",
+        },
+      ],
+      "response": Array [
+        Object {
+          "name": "access-control-allow-origin",
+          "value": "*",
+        },
+        Object {
+          "name": "age",
+          "value": "401339",
+        },
+        Object {
+          "name": "cache-control",
+          "value": "max-age=315360000, public, immutable",
+        },
+        Object {
+          "name": "content-encoding",
+          "value": "gzip",
+        },
+        Object {
+          "name": "content-type",
+          "value": "text/css; charset=\\"utf-8\\"",
+        },
+        Object {
+          "name": "date",
+          "value": "Tue, 08 Oct 2019 18:12:50 GMT",
+        },
+        Object {
+          "name": "last-modified",
+          "value": "Tue, 08 Oct 2019 16:42:42 GMT",
+        },
+        Object {
+          "name": "server",
+          "value": "meinheld/0.6.1",
+        },
+        Object {
+          "name": "status",
+          "value": "200",
+        },
+        Object {
+          "name": "strict-transport-security",
+          "value": "max-age=63072000",
+        },
+        Object {
+          "name": "vary",
+          "value": "Accept-Encoding",
+        },
+        Object {
+          "name": "via",
+          "value": "1.1 59d2fae2830d603c79da39156799a1fc.cloudfront.net (CloudFront)",
+        },
+        Object {
+          "name": "x-amz-cf-id",
+          "value": "S1HIsotVeNy7zyERZ4zu3qeexivSsexk2ThORlvRYRl2DQiaW3dxqQ==",
+        },
+        Object {
+          "name": "x-amz-cf-pop",
+          "value": "BOM50-C1",
+        },
+        Object {
+          "name": "x-cache",
+          "value": "Hit from cloudfront",
+        },
+        Object {
+          "name": "x-content-type-options",
+          "value": "nosniff",
+        },
+        Object {
+          "name": "x-xss-protection",
+          "value": "1; mode=block",
+        },
+      ],
+    },
+    "index": 1767214,
+    "method": "GET",
+    "serverIPAddress": "13.227.143.46",
+    "size": "2.8 KB",
+    "startedDateTime": 1571042853643,
+    "status": 200,
+    "time": 51.217000000178814,
+    "timings": Object {
+      "_blocked_queueing": 11.349999986123294,
+      "blocked": 13.026999986123293,
+      "connect": -1,
+      "dns": -1,
+      "receive": 1.951000012923032,
+      "send": 0.21299999999999986,
+      "ssl": -1,
+      "startTime": 22051,
+      "wait": 36.02600000113249,
+    },
+    "transferredSize": 1418,
+    "type": "stylesheet",
+    "uncompressedSize": 2829,
+    "url": "https://developer.mozilla.org/static/build/styles/react-header.2a659f6ad280.css",
+  },
+  Object {
+    "body": "",
+    "domain": "developer.mozilla.org",
+    "error": null,
+    "filename": "react-mdn.c66d8d89d98e.css",
+    "headers": Object {
+      "postData": undefined,
+      "queryString": Array [],
+      "request": Array [
+        Object {
+          "name": ":authority",
+          "value": "developer.mozilla.org",
+        },
+        Object {
+          "name": ":method",
+          "value": "GET",
+        },
+        Object {
+          "name": ":path",
+          "value": "/static/build/styles/react-mdn.c66d8d89d98e.css",
+        },
+        Object {
+          "name": ":scheme",
+          "value": "https",
+        },
+        Object {
+          "name": "accept",
+          "value": "text/css,*/*;q=0.1",
+        },
+        Object {
+          "name": "accept-encoding",
+          "value": "gzip, deflate, br",
+        },
+        Object {
+          "name": "accept-language",
+          "value": "en-US,en;q=0.9,hi;q=0.8,gu;q=0.7",
+        },
+        Object {
+          "name": "cache-control",
+          "value": "no-cache",
+        },
+        Object {
+          "name": "cookie",
+          "value": "dwf_sg_task_completion=False; _ga=GA1.2.789560889.1565775320; lux_uid=157104094808128608; _gid=GA1.2.1726533372.1571040950; _gat=1",
+        },
+        Object {
+          "name": "pragma",
+          "value": "no-cache",
+        },
+        Object {
+          "name": "referer",
+          "value": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+        },
+        Object {
+          "name": "sec-fetch-mode",
+          "value": "no-cors",
+        },
+        Object {
+          "name": "sec-fetch-site",
+          "value": "same-origin",
+        },
+        Object {
+          "name": "user-agent",
+          "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36",
+        },
+      ],
+      "response": Array [
+        Object {
+          "name": "access-control-allow-origin",
+          "value": "*",
+        },
+        Object {
+          "name": "age",
+          "value": "281810",
+        },
+        Object {
+          "name": "cache-control",
+          "value": "max-age=315360000, public, immutable",
+        },
+        Object {
+          "name": "content-encoding",
+          "value": "gzip",
+        },
+        Object {
+          "name": "content-type",
+          "value": "text/css; charset=\\"utf-8\\"",
+        },
+        Object {
+          "name": "date",
+          "value": "Fri, 11 Oct 2019 02:28:46 GMT",
+        },
+        Object {
+          "name": "last-modified",
+          "value": "Fri, 11 Oct 2019 02:12:43 GMT",
+        },
+        Object {
+          "name": "server",
+          "value": "meinheld/0.6.1",
+        },
+        Object {
+          "name": "status",
+          "value": "200",
+        },
+        Object {
+          "name": "strict-transport-security",
+          "value": "max-age=63072000",
+        },
+        Object {
+          "name": "vary",
+          "value": "Accept-Encoding",
+        },
+        Object {
+          "name": "via",
+          "value": "1.1 59d2fae2830d603c79da39156799a1fc.cloudfront.net (CloudFront)",
+        },
+        Object {
+          "name": "x-amz-cf-id",
+          "value": "uJkBdKxs_8NndbZHTaGq43yER81HDOZgfvAagsSCTE7sEZcfwXteIg==",
+        },
+        Object {
+          "name": "x-amz-cf-pop",
+          "value": "BOM50-C1",
+        },
+        Object {
+          "name": "x-cache",
+          "value": "Hit from cloudfront",
+        },
+        Object {
+          "name": "x-content-type-options",
+          "value": "nosniff",
+        },
+        Object {
+          "name": "x-xss-protection",
+          "value": "1; mode=block",
+        },
+      ],
+    },
+    "index": 1767214,
+    "method": "GET",
+    "serverIPAddress": "13.227.143.46",
+    "size": "142.9 KB",
+    "startedDateTime": 1571042865644,
+    "status": 200,
+    "time": 53.195000014966354,
+    "timings": Object {
+      "_blocked_queueing": 11.250000010477379,
+      "blocked": 13.423000010477379,
+      "connect": -1,
+      "dns": -1,
+      "receive": 1.2719999940600246,
+      "send": 0.5390000000000001,
+      "ssl": -1,
+      "startTime": 34052,
+      "wait": 37.96100001042895,
+    },
+    "transferredSize": 29483,
+    "type": "stylesheet",
+    "uncompressedSize": 146312,
+    "url": "https://developer.mozilla.org/static/build/styles/react-mdn.c66d8d89d98e.css",
+  },
 ]
 `;
 
@@ -1211,7 +2511,7 @@ exports[`utils findIndexAfterTimestamp 1`] = `2`;
 
 exports[`utils findIndexBeforeTimestamp 1`] = `1`;
 
-exports[`utils findIndexNearTimestamp 1`] = `2`;
+exports[`utils findIndexNearTimestamp 1`] = `1767214`;
 
 exports[`utils getContent 1`] = `
 "{
@@ -1458,7 +2758,7 @@ Object {
           },
         ],
       },
-      "index": 0,
+      "index": 1767214,
       "method": "GET",
       "serverIPAddress": "13.227.143.46",
       "size": "135 KB",
@@ -1618,7 +2918,7 @@ Object {
           },
         ],
       },
-      "index": 1,
+      "index": 1767214,
       "method": "GET",
       "serverIPAddress": "13.227.143.46",
       "size": "33 KB",
@@ -1778,7 +3078,7 @@ Object {
           },
         ],
       },
-      "index": 2,
+      "index": 1767214,
       "method": "GET",
       "serverIPAddress": "13.227.143.46",
       "size": "33.3 KB",
@@ -1938,7 +3238,7 @@ Object {
           },
         ],
       },
-      "index": 3,
+      "index": 1767214,
       "method": "GET",
       "serverIPAddress": "13.227.143.46",
       "size": "2.8 KB",
@@ -2098,7 +3398,7 @@ Object {
           },
         ],
       },
-      "index": 4,
+      "index": 1767214,
       "method": "GET",
       "serverIPAddress": "13.227.143.46",
       "size": "142.9 KB",
@@ -3229,7 +4529,7 @@ Array [
         },
       ],
     },
-    "index": 0,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "135 KB",
@@ -3389,7 +4689,7 @@ Array [
         },
       ],
     },
-    "index": 4,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "142.9 KB",
@@ -3549,7 +4849,7 @@ Array [
         },
       ],
     },
-    "index": 3,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "2.8 KB",
@@ -3709,7 +5009,7 @@ Array [
         },
       ],
     },
-    "index": 1,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "33 KB",
@@ -3869,7 +5169,7 @@ Array [
         },
       ],
     },
-    "index": 2,
+    "index": 1767214,
     "method": "GET",
     "serverIPAddress": "13.227.143.46",
     "size": "33.3 KB",

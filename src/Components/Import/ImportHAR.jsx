@@ -5,6 +5,8 @@ import { useDropzone } from 'react-dropzone';
 import { useNetwork } from './../../state/network/Context';
 import Styles from './ImportHAR.styles.scss';
 import Button from './../Common/Button';
+import IconUpload from '../../icons/IconImport';
+import ImportHarButton from '../Actions/ImportHarButton';
 
 const DROP_FILE_CONFIG = {
   accept: '.har',
@@ -45,13 +47,9 @@ const ImportHar = ({ showButton, className }) => {
   return (
     <div {...getRootProps()}>
       <input {...getInputProps()} />
-      {showButton ? (
-        <Button className={className}>
-          Import HAR
-        </Button>
-      ) : (
-        <p className={Styles['drag-drop']}>Drag and drop HAR file here, or click to select file</p>
-      )}
+      {showButton ?
+        (<ImportHarButton />) :
+        (<p className={Styles['drag-drop']}>Drag and drop HAR file here, or click to select file</p>)}
     </div>
   );
 };

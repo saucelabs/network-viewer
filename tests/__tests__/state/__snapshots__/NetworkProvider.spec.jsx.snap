@@ -12,23 +12,27 @@ exports[`NetworkProvider renders without crashing 1`] = `
   file={null}
   initialState={
     Immutable.Map {
-      "errorFilter": false,
       "search": Object {
-        "name": "url",
+        "name": "URL",
         "value": "",
       },
       "error": null,
+      "statusFilter": Object {
+        "name": "-",
+        "value": null,
+      },
       "scrollToIndex": null,
       "data": Immutable.List [],
       "selectedReqIndex": null,
       "reqDetail": null,
       "showReqDetail": false,
-      "totalNetworkTime": null,
-      "actualData": Immutable.List [],
-      "filter": Object {
+      "typeFilter": Object {
         "name": null,
         "value": null,
       },
+      "rawData": null,
+      "totalNetworkTime": null,
+      "actualData": Immutable.List [],
       "dataSummary": Immutable.Map {},
       "loading": false,
       "sort": Object {
@@ -39,28 +43,35 @@ exports[`NetworkProvider renders without crashing 1`] = `
   }
   onDataError={null}
   onDataLoaded={null}
+  onPause={null}
+  onReset={null}
+  onResume={null}
   scrollRequestPosition="near"
   scrollTimeStamp={null}
   value={
     Array [
       Immutable.Map {
-        "errorFilter": false,
         "search": Object {
-          "name": "url",
+          "name": "URL",
           "value": "",
         },
         "error": null,
+        "statusFilter": Object {
+          "name": "-",
+          "value": null,
+        },
         "scrollToIndex": null,
         "data": Immutable.List [],
         "selectedReqIndex": null,
         "reqDetail": null,
         "showReqDetail": false,
-        "totalNetworkTime": null,
-        "actualData": Immutable.List [],
-        "filter": Object {
+        "typeFilter": Object {
           "name": null,
           "value": null,
         },
+        "rawData": null,
+        "totalNetworkTime": null,
+        "actualData": Immutable.List [],
         "dataSummary": Immutable.Map {},
         "loading": false,
         "sort": Object {
@@ -69,6 +80,11 @@ exports[`NetworkProvider renders without crashing 1`] = `
         },
       },
       [Function],
+      Object {
+        "onPause": null,
+        "onReset": null,
+        "onResume": null,
+      },
     ]
   }
 >

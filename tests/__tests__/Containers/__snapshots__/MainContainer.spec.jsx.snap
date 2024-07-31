@@ -12,23 +12,27 @@ exports[`MainContainer renders without crashing 1`] = `
   file={null}
   initialState={
     Immutable.Map {
-      "errorFilter": false,
       "search": Object {
-        "name": "url",
+        "name": "URL",
         "value": "",
       },
       "error": null,
+      "statusFilter": Object {
+        "name": "-",
+        "value": null,
+      },
       "scrollToIndex": null,
       "data": Immutable.List [],
       "selectedReqIndex": null,
       "reqDetail": null,
       "showReqDetail": false,
-      "totalNetworkTime": null,
-      "actualData": Immutable.List [],
-      "filter": Object {
+      "typeFilter": Object {
         "name": null,
         "value": null,
       },
+      "rawData": null,
+      "totalNetworkTime": null,
+      "actualData": Immutable.List [],
       "dataSummary": Immutable.Map {},
       "loading": false,
       "sort": Object {
@@ -39,6 +43,9 @@ exports[`MainContainer renders without crashing 1`] = `
   }
   onDataError={null}
   onDataLoaded={null}
+  onPause={null}
+  onReset={null}
+  onResume={null}
   scrollRequestPosition="near"
   scrollTimeStamp={null}
 >
@@ -52,8 +59,88 @@ exports[`MainContainer renders without crashing 1`] = `
       <FilterContainer>
         <section>
           <div>
+            <StatusFilter>
+              <Dropdown
+                className={null}
+                items={
+                  Array [
+                    Object {
+                      "name": "-",
+                      "value": null,
+                    },
+                    Object {
+                      "name": "1xx",
+                      "value": "1",
+                    },
+                    Object {
+                      "name": "2xx",
+                      "value": "2",
+                    },
+                    Object {
+                      "name": "3xx",
+                      "value": "3",
+                    },
+                    Object {
+                      "name": "4xx",
+                      "value": "4",
+                    },
+                    Object {
+                      "name": "5xx",
+                      "value": "5",
+                    },
+                  ]
+                }
+                onChange={[Function]}
+                selected={
+                  Object {
+                    "name": "-",
+                    "value": null,
+                  }
+                }
+              >
+                <span
+                  className="dropdown-container"
+                >
+                  <Button
+                    className="dropdown-toggle"
+                    disabled={false}
+                    href={null}
+                    onClick={[Function]}
+                    type="button"
+                    variant="default"
+                  >
+                    <button
+                      className="btn dropdown-toggle"
+                      disabled={false}
+                      href={null}
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      Status: -
+                      <IconChevronUp
+                        className=""
+                      >
+                        <svg
+                          className=""
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            clipRule="evenodd"
+                            d="M20.7774 16.7833C21.0742 16.4944 21.0742 16.0261 20.7774 15.7372L12.5374 7.71667C12.2406 7.42778 11.7594 7.42778 11.4626 7.71667L3.22259 15.7372C2.9258 16.0261 2.9258 16.4944 3.22259 16.7833C3.51939 17.0722 4.00059 17.0722 4.29738 16.7833L12 9.2859L19.7026 16.7833C19.9994 17.0722 20.4806 17.0722 20.7774 16.7833Z"
+                            fillRule="evenodd"
+                          />
+                        </svg>
+                      </IconChevronUp>
+                    </button>
+                  </Button>
+                </span>
+              </Dropdown>
+            </StatusFilter>
             <Search
-              name="url"
+              name="URL"
               value=""
             >
               <input
@@ -63,244 +150,58 @@ exports[`MainContainer renders without crashing 1`] = `
                 value=""
               />
             </Search>
-          </div>
-          <div>
-            <Button
-              className="filter-button selected-filter"
-              disabled={false}
-              href={null}
-              key="All"
-              onClick={[Function]}
-              size="sm"
-              type="button"
-              variant="default"
-            >
-              <button
-                className="btn filter-button selected-filter"
+            <ResetButton>
+              <Button
+                className={null}
                 disabled={false}
                 href={null}
                 onClick={[Function]}
-                size="sm"
                 type="button"
+                variant="default"
               >
-                All
-              </button>
-            </Button>
-            <Button
-              className="filter-button"
-              disabled={false}
-              href={null}
-              key="XHR"
-              onClick={[Function]}
-              size="sm"
-              type="button"
-              variant="default"
-            >
-              <button
-                className="btn filter-button"
-                disabled={false}
-                href={null}
-                onClick={[Function]}
-                size="sm"
-                type="button"
-              >
-                XHR
-              </button>
-            </Button>
-            <Button
-              className="filter-button"
-              disabled={false}
-              href={null}
-              key="JS"
-              onClick={[Function]}
-              size="sm"
-              type="button"
-              variant="default"
-            >
-              <button
-                className="btn filter-button"
-                disabled={false}
-                href={null}
-                onClick={[Function]}
-                size="sm"
-                type="button"
-              >
-                JS
-              </button>
-            </Button>
-            <Button
-              className="filter-button"
-              disabled={false}
-              href={null}
-              key="CSS"
-              onClick={[Function]}
-              size="sm"
-              type="button"
-              variant="default"
-            >
-              <button
-                className="btn filter-button"
-                disabled={false}
-                href={null}
-                onClick={[Function]}
-                size="sm"
-                type="button"
-              >
-                CSS
-              </button>
-            </Button>
-            <Button
-              className="filter-button"
-              disabled={false}
-              href={null}
-              key="Img"
-              onClick={[Function]}
-              size="sm"
-              type="button"
-              variant="default"
-            >
-              <button
-                className="btn filter-button"
-                disabled={false}
-                href={null}
-                onClick={[Function]}
-                size="sm"
-                type="button"
-              >
-                Img
-              </button>
-            </Button>
-            <Button
-              className="filter-button"
-              disabled={false}
-              href={null}
-              key="Media"
-              onClick={[Function]}
-              size="sm"
-              type="button"
-              variant="default"
-            >
-              <button
-                className="btn filter-button"
-                disabled={false}
-                href={null}
-                onClick={[Function]}
-                size="sm"
-                type="button"
-              >
-                Media
-              </button>
-            </Button>
-            <Button
-              className="filter-button"
-              disabled={false}
-              href={null}
-              key="Font"
-              onClick={[Function]}
-              size="sm"
-              type="button"
-              variant="default"
-            >
-              <button
-                className="btn filter-button"
-                disabled={false}
-                href={null}
-                onClick={[Function]}
-                size="sm"
-                type="button"
-              >
-                Font
-              </button>
-            </Button>
-            <Button
-              className="filter-button"
-              disabled={false}
-              href={null}
-              key="Doc"
-              onClick={[Function]}
-              size="sm"
-              type="button"
-              variant="default"
-            >
-              <button
-                className="btn filter-button"
-                disabled={false}
-                href={null}
-                onClick={[Function]}
-                size="sm"
-                type="button"
-              >
-                Doc
-              </button>
-            </Button>
-            <Button
-              className="filter-button"
-              disabled={false}
-              href={null}
-              key="WS"
-              onClick={[Function]}
-              size="sm"
-              type="button"
-              variant="default"
-            >
-              <button
-                className="btn filter-button"
-                disabled={false}
-                href={null}
-                onClick={[Function]}
-                size="sm"
-                type="button"
-              >
-                WS
-              </button>
-            </Button>
-            <Button
-              className="filter-button"
-              disabled={false}
-              href={null}
-              key="Manifest"
-              onClick={[Function]}
-              size="sm"
-              type="button"
-              variant="default"
-            >
-              <button
-                className="btn filter-button"
-                disabled={false}
-                href={null}
-                onClick={[Function]}
-                size="sm"
-                type="button"
-              >
-                Manifest
-              </button>
-            </Button>
-            <ErrorFilter
-              isError={false}
-              onChange={[Function]}
-            >
-              <Checkbox
-                containerClassName=""
-                isChecked={false}
-                onChange={[Function]}
-                title="error"
-              >
-                <div
-                  className="checkbox-container"
+                <button
+                  className="btn"
+                  disabled={false}
+                  href={null}
+                  onClick={[Function]}
+                  type="button"
                 >
-                  <label
-                    title="error"
+                  <IconReset
+                    className=""
                   >
-                    <input
-                      checked={false}
-                      onChange={[Function]}
-                      type="checkbox"
-                    />
-                    Errors Only
-                  </label>
-                </div>
-              </Checkbox>
-            </ErrorFilter>
+                    <svg
+                      className=""
+                      height="24"
+                      preserveAspectRatio="xMidYMid"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g
+                        clipPath="url(#refresh_clip0)"
+                      >
+                        <path
+                          d="M10.8803 -6.08475e-05C10.9939 -0.000234689 11.0668 0.12043 11.0135 0.220324L7.15162 7.46004C7.09684 7.56273 6.95057 7.56643 6.89026 7.46665L5.2476 4.74904C3.3255 6.36294 2.0772 8.75571 2.00218 11.4547C1.88511 15.6666 4.6625 19.2912 8.53796 20.4307C9.06765 20.5865 9.3703 21.1405 9.21394 21.6681C9.05759 22.1957 8.50144 22.4972 7.97175 22.3414C3.24816 20.9525 -0.139855 16.537 0.00294616 11.3995C0.0976061 7.99401 1.72376 4.99084 4.20545 3.02489L2.52185 0.239546C2.46154 0.13977 2.53326 0.0127309 2.65 0.012552L10.8803 -6.08475e-05Z"
+                        />
+                        <path
+                          d="M14.5072 1.73094C14.6489 1.1992 15.1964 0.882516 15.7302 1.0236C20.4906 2.28174 24 6.60218 24 11.7416C24 15.6586 21.9615 19.0998 18.8846 21.0722L20.5095 23.7603C20.5698 23.8601 20.4981 23.9871 20.3813 23.9873L12.151 23.9999C12.0374 24.0001 11.9645 23.8794 12.0178 23.7796L15.8797 16.5398C15.9345 16.4371 16.0808 16.4335 16.1411 16.5332L17.8526 19.3647C20.35 17.7411 22 14.9325 22 11.7416C22 7.52812 19.123 3.98143 15.2173 2.94919C14.6835 2.8081 14.3656 2.26267 14.5072 1.73094Z"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath
+                          id="refresh_clip0"
+                        >
+                          <rect
+                            height="24"
+                            width="24"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </IconReset>
+                </button>
+              </Button>
+            </ResetButton>
             <ImportHar
               className={null}
               showButton={true}
@@ -330,47 +231,237 @@ exports[`MainContainer renders without crashing 1`] = `
                   tabIndex={-1}
                   type="file"
                 />
-                <Button
-                  className={null}
-                  disabled={false}
-                  href={null}
-                  type="button"
-                  variant="default"
-                >
-                  <button
-                    className="btn"
+                <ImportHarButton>
+                  <Button
+                    className={null}
                     disabled={false}
                     href={null}
                     type="button"
+                    variant="default"
                   >
-                    Import HAR
-                  </button>
-                </Button>
+                    <button
+                      className="btn"
+                      disabled={false}
+                      href={null}
+                      type="button"
+                    >
+                      <IconUpload
+                        className=""
+                      >
+                        <svg
+                          className=""
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9 16.8C9 16.9105 9.08954 17 9.2 17H14.8C14.9105 17 15 16.9105 15 16.8V8H18.8C18.974 8 19.0651 7.78851 18.9475 7.65731L12.1477 0.0663729C12.0684 -0.0221243 11.932 -0.0221243 11.8527 0.0663729L5.05292 7.65731C4.93539 7.78851 5.0264 8 5.20039 8H9V16.8Z"
+                          />
+                          <path
+                            d="M2.5 19.25C2.5 18.5596 1.94036 18 1.25 18C0.559644 18 0 18.5596 0 19.25V22.75C0 23.4404 0.559644 24 1.25 24H22.75C23.4404 24 24 23.4404 24 22.75V19.25C24 18.5596 23.4404 18 22.75 18C22.0596 18 21.5 18.5596 21.5 19.25V21.5H2.5V19.25Z"
+                          />
+                        </svg>
+                      </IconUpload>
+                    </button>
+                  </Button>
+                </ImportHarButton>
               </div>
             </ImportHar>
-            <Reset
-              className=""
-              onReset={[Function]}
-            >
+          </div>
+          <div>
+            <TypeFilter>
               <Button
-                className=""
+                className="active"
                 disabled={false}
                 href={null}
+                key="All"
                 onClick={[Function]}
                 type="button"
-                variant="default"
+                variant="text"
               >
                 <button
-                  className="btn"
+                  className="btn active text-variant"
                   disabled={false}
                   href={null}
                   onClick={[Function]}
                   type="button"
                 >
-                  Reset
+                  All
                 </button>
               </Button>
-            </Reset>
+              <Button
+                className=""
+                disabled={false}
+                href={null}
+                key="XHR"
+                onClick={[Function]}
+                type="button"
+                variant="text"
+              >
+                <button
+                  className="btn text-variant"
+                  disabled={false}
+                  href={null}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  XHR
+                </button>
+              </Button>
+              <Button
+                className=""
+                disabled={false}
+                href={null}
+                key="JS"
+                onClick={[Function]}
+                type="button"
+                variant="text"
+              >
+                <button
+                  className="btn text-variant"
+                  disabled={false}
+                  href={null}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  JS
+                </button>
+              </Button>
+              <Button
+                className=""
+                disabled={false}
+                href={null}
+                key="CSS"
+                onClick={[Function]}
+                type="button"
+                variant="text"
+              >
+                <button
+                  className="btn text-variant"
+                  disabled={false}
+                  href={null}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  CSS
+                </button>
+              </Button>
+              <Button
+                className=""
+                disabled={false}
+                href={null}
+                key="Img"
+                onClick={[Function]}
+                type="button"
+                variant="text"
+              >
+                <button
+                  className="btn text-variant"
+                  disabled={false}
+                  href={null}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Img
+                </button>
+              </Button>
+              <Button
+                className=""
+                disabled={false}
+                href={null}
+                key="Media"
+                onClick={[Function]}
+                type="button"
+                variant="text"
+              >
+                <button
+                  className="btn text-variant"
+                  disabled={false}
+                  href={null}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Media
+                </button>
+              </Button>
+              <Button
+                className=""
+                disabled={false}
+                href={null}
+                key="Font"
+                onClick={[Function]}
+                type="button"
+                variant="text"
+              >
+                <button
+                  className="btn text-variant"
+                  disabled={false}
+                  href={null}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Font
+                </button>
+              </Button>
+              <Button
+                className=""
+                disabled={false}
+                href={null}
+                key="Doc"
+                onClick={[Function]}
+                type="button"
+                variant="text"
+              >
+                <button
+                  className="btn text-variant"
+                  disabled={false}
+                  href={null}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Doc
+                </button>
+              </Button>
+              <Button
+                className=""
+                disabled={false}
+                href={null}
+                key="WS"
+                onClick={[Function]}
+                type="button"
+                variant="text"
+              >
+                <button
+                  className="btn text-variant"
+                  disabled={false}
+                  href={null}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  WS
+                </button>
+              </Button>
+              <Button
+                className=""
+                disabled={false}
+                href={null}
+                key="Manifest"
+                onClick={[Function]}
+                type="button"
+                variant="text"
+              >
+                <button
+                  className="btn text-variant"
+                  disabled={false}
+                  href={null}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Manifest
+                </button>
+              </Button>
+            </TypeFilter>
           </div>
         </section>
       </FilterContainer>
