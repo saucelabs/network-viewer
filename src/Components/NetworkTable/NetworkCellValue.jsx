@@ -1,18 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import Popover from 'react-popover';
 
 import { formatValue } from '../../utils';
 import Styles from './NetworkTableHeader.styles.scss';
 import { VIEWER_FIELDS } from '../../constants';
+import Tooltip from '../Common/Tooltip/Tooltip';
 
 const context = classNames.bind(Styles);
 
-const NetworkCellValue = ({ datakey, unit, payload }) => {
-  const [isOpen, updateOpen] = useState(false);
-  const displayPopover = () => updateOpen(true);
-  const hidePopover = () => updateOpen(false);
+const NetworkCellValue = ({
+  datakey,
+  unit,
+  payload,
+}) => {
   const formattedValue = formatValue(datakey, payload[datakey], unit, payload);
   const shouldDisplayTooltip = (
     datakey === VIEWER_FIELDS.file.key ||
@@ -42,19 +43,14 @@ const NetworkCellValue = ({ datakey, unit, payload }) => {
 
   return (
     <td className={context('value-cell', datakey)}>
-      <Popover
-        body={<span className={Styles['url-tooltip']}>{getTitle()}</span>}
-        isOpen={isOpen}
-        preferPlace="below"
+      <Tooltip
+        delay={500}
+        title={getTitle()}
       >
-        <span
-          className={Styles['value-text']}
-          onMouseOut={hidePopover}
-          onMouseOver={displayPopover}
-        >
+        <span className={Styles['value-text']}>
           {formattedValue}
         </span>
-      </Popover>
+      </Tooltip>
     </td>
   );
 };

@@ -31,7 +31,10 @@ const initialState = new Map({
   reqDetail: null,
 });
 
-const reducer = (state = initialState, { type, payload }) => {
+const reducer = (state = initialState, {
+  type,
+  payload,
+}) => {
   switch (type) {
     case types.UPDATE_DATA: {
       return state.withMutations((newState) => {
@@ -44,7 +47,13 @@ const reducer = (state = initialState, { type, payload }) => {
           totalUncompressedSize,
           finishTime,
         } = prepareViewerData(payload.entries);
-        const sortedData = new List(sortBy(data, sort.key, sort.isAcs));
+        const filteredData = filterData({
+          data,
+          statusFilter: state.get('statusFilter'),
+          typeFilter: state.get('typeFilter'),
+          search: payload,
+        });
+        const sortedData = new List(sortBy(filteredData, sort.key, sort.isAcs));
         newState
           .set('error', null)
           .set('rawData', payload)

@@ -13,7 +13,11 @@ import { useNetwork } from '../state/network/Context';
 
 const FilterContainer = () => {
   const { state } = useNetwork();
-  const { showImportHar, showExportHar, showPauseResume } = useTheme();
+  const {
+    showImportHar,
+    showExportHar,
+    showPauseResume,
+  } = useTheme();
 
   return (
     <section className={Styles['filters-container']}>

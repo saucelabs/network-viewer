@@ -4,23 +4,28 @@ import Button from '../Common/Button';
 import IconReset from '../../icons/IconReset';
 import Styles from './IconButton.styles.scss';
 import { useNetwork } from '../../state/network/Context';
+import Tooltip from '../Common/Tooltip/Tooltip';
 
 const ResetButton = () => {
-  const { actions, callbacks } = useNetwork();
+  const {
+    actions,
+    callbacks,
+  } = useNetwork();
 
   const handleReset = () => {
-    window.history.pushState({}, document.title, '/');
     actions.resetState();
     callbacks.onReset();
   };
 
   return (
-    <Button
-      className={Styles['icon-button']}
-      onClick={handleReset}
-    >
-      <IconReset className={Styles['action-icon']} />
-    </Button>
+    <Tooltip title="Reset">
+      <Button
+        className={Styles['icon-button']}
+        onClick={handleReset}
+      >
+        <IconReset className={Styles['action-icon']} />
+      </Button>
+    </Tooltip>
   );
 };
 

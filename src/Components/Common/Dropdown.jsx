@@ -9,7 +9,12 @@ import IconChevronUp from '../../icons/IconChevronUp';
 
 const context = classNames.bind(Styles);
 
-const Dropdown = ({ items, selected, onChange, className }) => {
+const Dropdown = ({
+  items,
+  selected,
+  onChange,
+  className,
+}) => {
   const [isExpand, setExpand] = useState(false);
   const [selectedKey, setSelection] = useState(selected !== null ? selected : items[0]);
   const dropdownItemsRef = useRef(null);
@@ -53,11 +58,13 @@ const Dropdown = ({ items, selected, onChange, className }) => {
         className={context('dropdown-toggle', { active: isExpand })}
         onClick={() => updateToggle(!isExpand)}
       >
-        {`Status: ${selectedKey.name}`}
-        {isExpand}
-        {isExpand ?
-          <IconChevronDown className={Styles.icn} /> :
-          <IconChevronUp className={Styles.icn} />}
+        <>
+          {`Status: ${selectedKey.name}`}
+          {isExpand}
+          {isExpand ?
+            <IconChevronDown className={Styles.icn} /> :
+            <IconChevronUp className={Styles.icn} />}
+        </>
       </Button>
       {isExpand && (
         <ul className={Styles.list}>

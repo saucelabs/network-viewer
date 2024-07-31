@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Button from '../Common/Button';
 import Styles from './IconButton.styles.scss';
 import IconDownload from '../../icons/IconDownload';
+import Tooltip from '../Common/Tooltip/Tooltip';
 
 const ExportHarButton = ({ rawData }) => {
   const downloadHar = () => {
@@ -14,12 +15,14 @@ const ExportHarButton = ({ rawData }) => {
   };
 
   return (
-    <Button
-      className={Styles['icon-button']}
-      onClick={downloadHar}
-    >
-      <IconDownload className={Styles['action-icon']} />
-    </Button>
+    <Tooltip title="Export HAR">
+      <Button
+        className={Styles['icon-button']}
+        onClick={downloadHar}
+      >
+        <IconDownload className={Styles['action-icon']} />
+      </Button>
+    </Tooltip>
   );
 };
 
