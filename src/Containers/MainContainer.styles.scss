@@ -1,9 +1,17 @@
 @import "./../styles/variables";
 
+.viewer-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
 .main-container {
   display: flex;
+  flex: 1 1 auto;
   flex-wrap: wrap;
   flex-direction: row;
-  height: calc(100% - #{$filters-container-height + $footer-height});
   position: relative;
+  overflow: auto;
 }

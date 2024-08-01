@@ -26,13 +26,17 @@ const MainContainer = ({ onRequestSelect }) => {
         show={loading}
         text={FETCH_FILE_LOAD_TEXT}
       >
-        {showTimeline && <TimelineContainer />}
-        <FilterContainer />
-        <section className={Styles['main-container']}>
-          <NetworkTableContainer onRequestSelect={onRequestSelect} />
-          {showReqDetail && <ReqDetailContainer />}
-        </section>
-        {actualData.size ? <NetworkTableFooter dataSummary={dataSummary} /> : null}
+        <div className={Styles['viewer-container']}>
+          <div>
+            {showTimeline && <TimelineContainer />}
+            <FilterContainer />
+          </div>
+          <section className={Styles['main-container']}>
+            <NetworkTableContainer onRequestSelect={onRequestSelect} />
+            {showReqDetail && <ReqDetailContainer />}
+          </section>
+          {actualData.size ? <NetworkTableFooter dataSummary={dataSummary} /> : null}
+        </div>
       </LoaderContainer>
     </>
   );
@@ -43,7 +47,8 @@ MainContainer.propTypes = {
 };
 
 MainContainer.defaultProps = {
-  onRequestSelect: () => {},
+  onRequestSelect: () => {
+  },
 };
 
 export default MainContainer;
