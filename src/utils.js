@@ -53,7 +53,12 @@ export const getUrlInfo = (url) => {
   }
 };
 
-export const parseSize = ({ bodySize, _transferSize, headers, content }) => {
+export const parseSize = ({
+  bodySize,
+  _transferSize,
+  headers,
+  content,
+}) => {
   if (content && content.size) {
     return formatSize(content.size);
   }
@@ -85,12 +90,18 @@ export const getContentType = (entry) => {
   return type.length > 1 ? type[1] : type[0];
 };
 
-export const getTimings = ({ startedDateTime, timings }, firstEntryTime) => ({
+export const getTimings = ({
+  startedDateTime,
+  timings,
+}, firstEntryTime) => ({
   ...timings,
   startTime: new Date(startedDateTime).getTime() - new Date(firstEntryTime).getTime(),
 });
 
-export const getContent = ({ mimeType, text }) => {
+export const getContent = ({
+  mimeType,
+  text,
+}) => {
   if (mimeType === 'application/json') {
     let parsedJson = text;
     try {
@@ -105,7 +116,10 @@ export const getContent = ({ mimeType, text }) => {
 };
 
 export const getEntryTransferredSize = ({ response }) => {
-  const { bodySize, _transferSize } = response;
+  const {
+    bodySize,
+    _transferSize,
+  } = response;
   if (_transferSize > -1) {
     return _transferSize;
   }
@@ -117,7 +131,11 @@ export const getEntryTransferredSize = ({ response }) => {
 };
 
 export const getEntryUncompressedSize = ({ response }) => {
-  const { bodySize, _transferSize, content: { size } } = response;
+  const {
+    bodySize,
+    _transferSize,
+    content: { size },
+  } = response;
   if (size > 0) {
     return size;
   }
@@ -132,9 +150,10 @@ export const getEntryUncompressedSize = ({ response }) => {
 
 export const calculateFinishTime = (data) => {
   const finishTimes = data.map(({ timings }) => (
-    Object.values(timings).reduce((acc, durationInMS) => (
-      acc + (durationInMS > -1 ? durationInMS : 0)
-    ), 0)));
+    Object.values(timings)
+      .reduce((acc, durationInMS) => (
+        acc + (durationInMS > -1 ? durationInMS : 0)
+      ), 0)));
   return Math.max(...finishTimes);
 };
 
@@ -152,7 +171,11 @@ export const getHeaders = (entry) => ({
   postData: entry.request.postData,
 });
 
-export const getTotalTimeOfEntry = ({ startedDateTime, time, timings }) => (
+export const getTotalTimeOfEntry = ({
+  startedDateTime,
+  time,
+  timings,
+}) => (
   new Date(startedDateTime).getTime() + time + (timings._blocked_queueing || timings._queued || 0)
 );
 
@@ -215,20 +238,23 @@ export const prepareViewerData = (entries) => {
   };
 };
 
-export const sortBy = (data, key, isAsc = true) => data.sort((prev, next) => {
-  if (prev[key] < next[key]) {
-    return isAsc ? -1 : 1;
-  }
-  if (prev[key] > next[key]) {
-    return isAsc ? 1 : -1;
-  }
-  return 0;
-});
+export const sortBy = (data, key, isAsc = true) => {
+  const direction = isAsc ? 1 : -1;
+  return data.sort((prev, next) => {
+    const entryA = prev[key];
+    const entryB = next[key];
+
+    if (entryA < entryB) return -direction;
+    if (entryA > entryB) return direction;
+    return 0;
+  });
+};
 
 const applyFilter = (filterOption, filter, entry) => {
   switch (filterOption) {
     case FILTER_OPTION.STATUS:
-      return entry.status && entry.status.toString().startsWith(filter.value);
+      return entry.status && entry.status.toString()
+        .startsWith(filter.value);
     case FILTER_OPTION.TYPE:
       return entry.type && filter.value.includes(entry.type);
     case FILTER_OPTION.URL:
@@ -253,13 +279,24 @@ export const filterData = ({
   }
 
   const filters = [
-    { option: FILTER_OPTION.STATUS, filter: statusFilter },
-    { option: FILTER_OPTION.TYPE, filter: typeFilter },
-    { option: search.name, filter: { value: trimmedSearch } },
+    {
+      option: FILTER_OPTION.STATUS,
+      filter: statusFilter,
+    },
+    {
+      option: FILTER_OPTION.TYPE,
+      filter: typeFilter,
+    },
+    {
+      option: search.name,
+      filter: { value: trimmedSearch },
+    },
   ];
 
-  return data.filter((entry) => filters.every(
-    ({ option, filter }) => !filter.value || applyFilter(option, filter, entry),
+  return data.filter((entry) => filters.every(({
+    option,
+    filter,
+  }) => !filter.value || applyFilter(option, filter, entry),
   ));
 };
 
@@ -292,14 +329,18 @@ export const prepareTooltipData = (data) => ({
   queuedAt: parseTime(data.startTime),
   startedAt: parseTime(data.startTime + (data._blocked_queueing || data._queued || 0)),
   totalTime: parseTime(calcTotalTime(data)),
-  ...(Object.keys(data).reduce((acc, key) => {
-    acc[key] = parseTime(data[key]);
-    return acc;
-  }, {})
+  ...(Object.keys(data)
+    .reduce((acc, key) => {
+      acc[key] = parseTime(data[key]);
+      return acc;
+    }, {})
   ),
 });
 
-export const getStatusClass = ({ status, error }) => {
+export const getStatusClass = ({
+  status,
+  error,
+}) => {
   if (status === 0 && !error) {
     return 'pending';
   }
@@ -329,35 +370,53 @@ export const calcChartAttributes = (data, maxTime, cx, index, cy = null) => {
   let previousWidth = 0;
   const chartAttributes = [];
 
-  Object.keys(TIMINGS).forEach((key) => {
-    const timingInfo = TIMINGS[key];
-    const dataKey = Array.isArray(timingInfo.dataKey) ? timingInfo.dataKey.find((key) => data[key]) : timingInfo.dataKey;
-    const value = data[dataKey];
-    if (value <= 0) {
-      return;
-    }
+  Object.keys(TIMINGS)
+    .forEach((key) => {
+      const timingInfo = TIMINGS[key];
+      const dataKey = Array.isArray(timingInfo.dataKey) ?
+        timingInfo.dataKey.find((key) => data[key]) :
+        timingInfo.dataKey;
+      const value = data[dataKey];
+      if (value <= 0) {
+        return;
+      }
 
-    previousX += !previousWidth ? startTimePercent : previousWidth;
-    previousWidth = value > 0 ? (value / maxTime) * 100 : 0;
+      previousX += !previousWidth ? startTimePercent : previousWidth;
+      previousWidth = value > 0 ? (value / maxTime) * 100 : 0;
 
-    chartAttributes.push({
-      width: `${previousWidth}%`,
-      y: index ? ((index % 10) * (TIMELINE_DATA_POINT_HEIGHT + 1)) + 40 : cy,
-      x: `${previousX}%`,
-      fill: timingInfo.fill,
-      key,
+      chartAttributes.push({
+        width: `${previousWidth}%`,
+        y: index ? ((index % 10) * (TIMELINE_DATA_POINT_HEIGHT + 1)) + 40 : cy,
+        x: `${previousX}%`,
+        fill: timingInfo.fill,
+        key,
+      });
     });
-  });
 
   return chartAttributes;
 };
 
 export const findIndexNearTimestamp = (data, exactTimestamp) => (
   data.reduce((
-    { value, index }, { startedDateTime: currentValue, index: currentIndex }) => (
+    {
+      value,
+      index,
+    }, {
+      startedDateTime: currentValue,
+      index: currentIndex,
+    }) => (
     Math.abs(currentValue - exactTimestamp) < Math.abs(value - exactTimestamp) ?
-      { value: currentValue, index: currentIndex } : { value, index }
-  ), { value: 0, index: 0 }).index
+      {
+        value: currentValue,
+        index: currentIndex,
+      } : {
+        value,
+        index,
+      }
+  ), {
+    value: 0,
+    index: 0,
+  }).index
 );
 
 export const findIndexBeforeTimestamp = (data, exactTimestamp) => {
@@ -370,7 +429,11 @@ export const findIndexAfterTimestamp = (data, exactTimestamp) => (
   data.findIndex(({ startedDateTime }) => startedDateTime >= exactTimestamp)
 );
 
-export const findRequestIndex = ({ data, timestamp, position }) => {
+export const findRequestIndex = ({
+  data,
+  timestamp,
+  position,
+}) => {
   switch (position) {
     case 'before':
       return findIndexBeforeTimestamp(data, timestamp);
@@ -383,10 +446,16 @@ export const findRequestIndex = ({ data, timestamp, position }) => {
 };
 
 export const calculateTimings = (pages) => (
-  pages.reduce(({ DOMContentLoaded, onLoad }, { pageTimings }) => ({
+  pages.reduce(({
+    DOMContentLoaded,
+    onLoad,
+  }, { pageTimings }) => ({
     DOMContentLoaded: DOMContentLoaded + pageTimings.onContentLoad,
     onLoad: onLoad + pageTimings.onLoad,
-  }), { DOMContentLoaded: 0, onLoad: 0 }));
+  }), {
+    DOMContentLoaded: 0,
+    onLoad: 0,
+  }));
 
 export const getSummary = (data) => (
   data.reduce((acc, req) => {

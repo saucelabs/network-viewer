@@ -12,7 +12,7 @@ const initialState = new Map({
   dataSummary: new Map(),
   sort: {
     key: 'startedDateTime',
-    isAcs: true,
+    isAsc: true,
   },
   search: {
     name: 'URL',
@@ -38,7 +38,6 @@ const reducer = (state = initialState, {
   switch (type) {
     case types.UPDATE_DATA: {
       return state.withMutations((newState) => {
-        const sort = state.get('sort');
         const {
           data,
           totalNetworkTime,
@@ -47,17 +46,21 @@ const reducer = (state = initialState, {
           totalUncompressedSize,
           finishTime,
         } = prepareViewerData(payload.log.entries);
+
+        const sort = state.get('sort');
+        const sortedData = new List(sortBy(data, sort.key, sort.isAsc));
+
         const filteredData = filterData({
-          data,
+          data: sortedData,
           statusFilter: state.get('statusFilter'),
           typeFilter: state.get('typeFilter'),
           search: state.get('search'),
         });
-        const sortedData = new List(sortBy(filteredData, sort.key, sort.isAcs));
+
         newState
           .set('error', null)
           .set('rawData', payload)
-          .set('data', sortedData)
+          .set('data', filteredData)
           .set('actualData', sortedData)
           .set('totalNetworkTime', totalNetworkTime)
           .set('dataSummary', new Map({
@@ -125,7 +128,7 @@ const reducer = (state = initialState, {
       return state.withMutations((newState) => {
         newState
           .set('sort', payload)
-          .set('data', sortBy(state.get('data'), payload.key, payload.isAcs));
+          .set('data', sortBy(state.get('data'), payload.key, payload.isAsc));
       });
     }
     case types.FETCH_FILE.REQUEST: {

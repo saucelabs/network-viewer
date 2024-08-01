@@ -46,7 +46,7 @@ exports[`FilterContainer renders without crashing 1`] = `
       "dataSummary": Immutable.Map {},
       "loading": false,
       "sort": Object {
-        "isAcs": true,
+        "isAsc": true,
         "key": "startedDateTime",
       },
     }

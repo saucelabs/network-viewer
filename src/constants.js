@@ -223,20 +223,20 @@ export const HEADERS_TITLES = Object.freeze({
     key: 'general',
     name: 'General',
   }),
-  response: Object.freeze({
-    key: 'response',
-    name: 'Response Headers',
-  }),
   request: Object.freeze({
     key: 'request',
     name: 'Request Headers',
+  }),
+  response: Object.freeze({
+    key: 'response',
+    name: 'Response Headers',
   }),
   queryString: Object.freeze({
     key: 'queryString',
     name: 'Query String Parameters',
   }),
   formData: Object.freeze({
-    key: 'formaData',
+    key: 'formData',
     name: 'Form Data',
   }),
   requestPayload: Object.freeze({
@@ -248,9 +248,9 @@ export const HEADERS_TITLES = Object.freeze({
 export const MAX_COLOR_CONTENT_SIZE = 100000; // 100kB
 export const TIMELINE_DATA_POINT_HEIGHT = 2;
 export const NETWORK_VIEWER_DEFAULT_OPTIONS = {
-  showPauseResume: false,
   showExportHar: false,
   showImportHar: true,
+  showPauseResume: false,
   showTimeline: false,
 };
 
