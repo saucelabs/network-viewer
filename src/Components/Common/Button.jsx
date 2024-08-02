@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 
@@ -6,14 +6,14 @@ import Styles from './Button.styles.scss';
 
 const context = classNames.bind(Styles);
 
-const Button = ({
+const Button = forwardRef(({
   children,
   className,
   disabled,
   href,
   variant,
   ...props
-}) => {
+}, ref) => {
   const combinedClasses = context('btn', className, {
     'text-variant': variant === 'text',
   });
@@ -21,6 +21,7 @@ const Button = ({
   const TagName = href && !disabled ? 'a' : 'button';
   return (
     <TagName
+      ref={ref}
       className={combinedClasses}
       disabled={disabled}
       href={href}
@@ -29,7 +30,7 @@ const Button = ({
       {children}
     </TagName>
   );
-};
+});
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,

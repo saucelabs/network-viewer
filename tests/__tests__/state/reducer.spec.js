@@ -11,13 +11,13 @@ describe('network reducer', () => {
   it('UPDATE_DATA', () => {
     state = reducer(initialState, {
       type: types.UPDATE_DATA,
-      payload: {
-        entries: networkDataMock.log.entries,
-        pages: networkDataMock.log.pages,
-      },
+      payload: networkDataMock,
     });
-    expect(state.get('data').toJS()).toMatchSnapshot();
-    expect(state.get('actualData').size).toMatchSnapshot();
+    expect(state.get('data')
+      .toJS())
+      .toMatchSnapshot();
+    expect(state.get('actualData').size)
+      .toMatchSnapshot();
   });
 
   it('UPDATE_SEARCH', () => {
@@ -32,9 +32,13 @@ describe('network reducer', () => {
         value: 'e96c15f68c68',
       },
     });
-    expect(state.get('data').toJS()).toMatchSnapshot();
-    expect(state.get('search')).toMatchSnapshot();
-    expect(state.get('dataSummary')).toMatchSnapshot();
+    expect(state.get('data')
+      .toJS())
+      .toMatchSnapshot();
+    expect(state.get('search'))
+      .toMatchSnapshot();
+    expect(state.get('dataSummary'))
+      .toMatchSnapshot();
   });
 
   it('UPDATE_FILTER', () => {
@@ -49,9 +53,13 @@ describe('network reducer', () => {
         value: ['html'],
       },
     });
-    expect(state.get('data').toJS()).toMatchSnapshot();
-    expect(state.get('filter')).toMatchSnapshot();
-    expect(state.get('dataSummary')).toMatchSnapshot();
+    expect(state.get('data')
+      .toJS())
+      .toMatchSnapshot();
+    expect(state.get('filter'))
+      .toMatchSnapshot();
+    expect(state.get('dataSummary'))
+      .toMatchSnapshot();
   });
 
   it('UPDATE_SORT', () => {
@@ -66,8 +74,11 @@ describe('network reducer', () => {
         isAcs: true,
       },
     });
-    expect(state.get('data').toJS()).toMatchSnapshot();
-    expect(state.get('sort')).toMatchSnapshot();
+    expect(state.get('data')
+      .toJS())
+      .toMatchSnapshot();
+    expect(state.get('sort'))
+      .toMatchSnapshot();
   });
 
   it('SELECT_REQUEST', () => {
@@ -79,8 +90,10 @@ describe('network reducer', () => {
       type: types.SELECT_REQUEST,
       payload: preparedMockData.get(0),
     });
-    expect(state.get('selectedReqIndex')).toBe(1767214);
-    expect(state.get('reqDetail')).toMatchSnapshot();
+    expect(state.get('selectedReqIndex'))
+      .toBe(1767214);
+    expect(state.get('reqDetail'))
+      .toMatchSnapshot();
   });
 
   it('RESET', () => {
@@ -91,6 +104,7 @@ describe('network reducer', () => {
     state = reducer(newState, {
       type: types.RESET,
     });
-    expect(state).toEqual(initialState);
+    expect(state)
+      .toEqual(initialState);
   });
 });

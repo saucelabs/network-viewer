@@ -5,6 +5,7 @@ import Styles from './IconButton.styles.scss';
 import IconPause from '../../icons/IconPause';
 import { useNetwork } from '../../state/network/Context';
 import IconResume from '../../icons/IconResume';
+import Tooltip from '../Common/Tooltip/Tooltip';
 
 const PauseResumeButton = () => {
   const { callbacks } = useNetwork();
@@ -21,14 +22,16 @@ const PauseResumeButton = () => {
   };
 
   return (
-    <Button
-      className={Styles['icon-button']}
-      onClick={isPaused ? resume : pause}
-    >
-      {isPaused ?
-        <IconResume className={Styles['action-icon']} /> :
-        <IconPause className={Styles['action-icon']} />}
-    </Button>
+    <Tooltip title={isPaused ? 'Resume' : 'Pause'}>
+      <Button
+        className={Styles['icon-button']}
+        onClick={isPaused ? resume : pause}
+      >
+        {isPaused ?
+          <IconResume className={Styles['action-icon']} /> :
+          <IconPause className={Styles['action-icon']} />}
+      </Button>
+    </Tooltip>
   );
 };
 

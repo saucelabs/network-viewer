@@ -69,32 +69,25 @@ exports[`NetworkTableRow renders without crashing 1`] = `
           <td
             className="value-cell filename"
           >
-            <Popover
-              appendTarget={<body />}
-              body={
-                <span>
-                  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
-                </span>
-              }
-              enterExitTransitionDurationMs={500}
-              isOpen={false}
-              offset={4}
-              onOuterAction={[Function]}
-              place={null}
-              preferPlace="below"
-              refreshIntervalMs={200}
-              tipSize={7}
+            <Tooltip
+              delay={500}
+              placement="top"
+              title="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice"
             >
               <span
-                onMouseOut={[Function]}
-                onMouseOver={[Function]}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onPointerDown={[Function]}
+                onTouchStart={[Function]}
               >
                 slice
               </span>
-              <Portal
-                containerInfo={<body />}
+              <TooltipTransition
+                isOpen={false}
               />
-            </Popover>
+            </Tooltip>
           </td>
         </NetworkCellValue>
         <NetworkCellValue

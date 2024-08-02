@@ -13,16 +13,20 @@ import { useNetwork } from '../state/network/Context';
 
 const FilterContainer = () => {
   const { state } = useNetwork();
-  const { showImportHar, showExportHar, showPauseResume } = useTheme();
+  const {
+    showImportHar,
+    showExportHar,
+    showPauseResume,
+  } = useTheme();
 
   return (
     <section className={Styles['filters-container']}>
       <div className={Styles['filter-row']}>
         <StatusFilter />
         <Search {...state.get('search')} />
-        {showPauseResume && <PauseResumeButton {...state.get('rawData')} />}
+        {showPauseResume && <PauseResumeButton />}
         <ResetButton />
-        {showExportHar && <ExportHarButton />}
+        {showExportHar && <ExportHarButton rawData={state.get('rawData')} />}
         {showImportHar && <ImportHAR />}
       </div>
 

@@ -10,30 +10,30 @@ $bg-gray-90: #F7F8FA;
 
 $white-0: #000;
 $white-100: #fff;
-$white-98: lighten($white-0, 98%);   // #fafafa
-$white-97: lighten($white-0, 97%);   // #f7f7f7
-$white-96: lighten($white-0, 96%);   // #f5f5f5
-$white-95: lighten($white-0, 95%);   // #f2f2f2
+$white-98: lighten($white-0, 98%); // #fafafa
+$white-97: lighten($white-0, 97%); // #f7f7f7
+$white-96: lighten($white-0, 96%); // #f5f5f5
+$white-95: lighten($white-0, 95%); // #f2f2f2
 $white-93: lighten($white-0, 93.5%); // #eee
-$white-90: lighten($white-0, 90%);   // #e6e6e6
-$white-85: lighten($white-0, 85%);   // #d9d9d9
-$white-80: lighten($white-0, 80%);   // #ccc
-$white-75: lighten($white-0, 75%);   // #bfbfbf
-$white-70: lighten($white-0, 70%);   // #b2b2b2
+$white-90: lighten($white-0, 90%); // #e6e6e6
+$white-85: lighten($white-0, 85%); // #d9d9d9
+$white-80: lighten($white-0, 80%); // #ccc
+$white-75: lighten($white-0, 75%); // #bfbfbf
+$white-70: lighten($white-0, 70%); // #b2b2b2
 $white-66: lighten($white-0, 66.7%); // #aaa
-$white-60: lighten($white-0, 60%);   // #999
-$white-57: lighten($white-0, 57%);   // #919191
-$white-50: lighten($white-0, 50%);   // #808080
+$white-60: lighten($white-0, 60%); // #999
+$white-57: lighten($white-0, 57%); // #919191
+$white-50: lighten($white-0, 50%); // #808080
 $white-46: lighten($white-0, 46.7%); // #777
-$white-40: lighten($white-0, 40%);   // #666
+$white-40: lighten($white-0, 40%); // #666
 $white-39: lighten($white-0, 39.3%); // #646464
 $white-33: lighten($white-0, 33.5%); // #555
 $white-26: lighten($white-0, 26.7%); // #444
 $white-22: lighten($white-0, 22.3%); // #393939
-$white-20: lighten($white-0, 20%);   // #333
-$white-18: lighten($white-0, 18%);   // #2e2e2e
+$white-20: lighten($white-0, 20%); // #333
+$white-18: lighten($white-0, 18%); // #2e2e2e
 $white-13: lighten($white-0, 13.5%); // #222
-$white-6: lighten($white-0, 6.5%);   // #111
+$white-6: lighten($white-0, 6.5%); // #111
 $gray-lighter: #d8dde3;
 
 $time-blocked: #a1000c;
@@ -45,18 +45,18 @@ $time-wait: #7ca0bf;
 $time-receive: #65b955;
 $time-queueing: $white-80;
 
-$font-size-base:          14px !default;
-$font-size-bigger:        16px !default;
-$font-size-huge:          42px;
-$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
-$font-size-small:         ceil(($font-size-base * .85)) !default; // ~12px
+$font-size-base: 14px !default;
+$font-size-bigger: 16px !default;
+$font-size-huge: 42px;
+$font-size-large: ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small: ceil(($font-size-base * .85)) !default; // ~12px
 
-$font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
-$font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
-$font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
-$font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
-$font-size-h5:            $font-size-base !default;
-$font-size-h6:            ceil(($font-size-base * .85)) !default; // ~12px
+$font-size-h1: floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-h2: floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3: ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h4: ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5: $font-size-base !default;
+$font-size-h6: ceil(($font-size-base * .85)) !default; // ~12px
 
 // BORDERS
 $border-radius-base: 4px;
@@ -105,9 +105,6 @@ $size-xxxl: $size-base * 11; // 44px;
 
 // width/height of container
 $name-col-width: 300px;
-$filters-container-height: 84px;
-$timeline-height: 100px;
-$footer-height: 34px;
 
 // borders
 $border: 1px solid #B6BECC;

@@ -1,0 +1,53 @@
+@import "./../../../styles/variables.scss";
+
+.tooltip-label {
+  position: absolute;
+  max-width: 278px;
+
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+
+  .tooltip-label-box {
+    position: relative;
+    display: block;
+    background-color: $brand-primary-dark-gray;
+    color: $white-100;
+    overflow-wrap: break-word;
+    padding: $size-xs $size-xs-s;
+    border: $border;
+    border-radius: $border-radius-base;
+  }
+}
+
+.tooltip-visible {
+  opacity: 1;
+}
+
+.tooltip-arrow {
+  position: absolute;
+  background-color: $brand-primary-dark-gray;
+  rotate: -45deg;
+  border: 2px solid $brand-primary-dark-gray;
+}
+
+.tooltip-arrow-position {
+  &-left {
+    translate: .125rem;
+    right: 100%;
+  }
+
+  &-right {
+    translate: -.125rem;
+    left: 100%;
+  }
+
+  &-bottom {
+    translate: 0 -.125rem;
+    top: 100%;
+  }
+
+  &-top {
+    translate: 0 .125rem;
+    bottom: 100%;
+  }
+}

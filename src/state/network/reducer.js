@@ -2,17 +2,17 @@ import { Map, List } from 'immutable';
 
 import { filterData, sortBy, prepareViewerData, calculateTimings, getSummary } from './../../utils';
 import * as types from './types';
-import { DEFAULT_STATUS_FILTER } from '../../constants';
+import { DEFAULT_STATUS_FILTER, EMPTY_NETWORK_HAR } from '../../constants';
 
 const initialState = new Map({
-  rawData: null,
+  rawData: EMPTY_NETWORK_HAR,
   data: new List(),
   actualData: new List(),
   totalNetworkTime: null,
   dataSummary: new Map(),
   sort: {
     key: 'startedDateTime',
-    isAcs: true,
+    isAsc: true,
   },
   search: {
     name: 'URL',
@@ -31,11 +31,13 @@ const initialState = new Map({
   reqDetail: null,
 });
 
-const reducer = (state = initialState, { type, payload }) => {
+const reducer = (state = initialState, {
+  type,
+  payload,
+}) => {
   switch (type) {
     case types.UPDATE_DATA: {
       return state.withMutations((newState) => {
-        const sort = state.get('sort');
         const {
           data,
           totalNetworkTime,
@@ -43,12 +45,22 @@ const reducer = (state = initialState, { type, payload }) => {
           totalTransferredSize,
           totalUncompressedSize,
           finishTime,
-        } = prepareViewerData(payload.entries);
-        const sortedData = new List(sortBy(data, sort.key, sort.isAcs));
+        } = prepareViewerData(payload.log.entries);
+
+        const sort = state.get('sort');
+        const sortedData = new List(sortBy(data, sort.key, sort.isAsc));
+
+        const filteredData = filterData({
+          data: sortedData,
+          statusFilter: state.get('statusFilter'),
+          typeFilter: state.get('typeFilter'),
+          search: state.get('search'),
+        });
+
         newState
           .set('error', null)
           .set('rawData', payload)
-          .set('data', sortedData)
+          .set('data', filteredData)
           .set('actualData', sortedData)
           .set('totalNetworkTime', totalNetworkTime)
           .set('dataSummary', new Map({
@@ -56,7 +68,7 @@ const reducer = (state = initialState, { type, payload }) => {
             totalTransferredSize,
             totalUncompressedSize,
             finishTime,
-            timings: calculateTimings(payload.pages),
+            timings: calculateTimings(payload.log.pages),
             finish: finishTime,
           }));
       });
@@ -116,7 +128,7 @@ const reducer = (state = initialState, { type, payload }) => {
       return state.withMutations((newState) => {
         newState
           .set('sort', payload)
-          .set('data', sortBy(state.get('data'), payload.key, payload.isAcs));
+          .set('data', sortBy(state.get('data'), payload.key, payload.isAsc));
       });
     }
     case types.FETCH_FILE.REQUEST: {
