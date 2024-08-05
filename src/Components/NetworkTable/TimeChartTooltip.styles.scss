@@ -9,7 +9,7 @@
   border-radius: 3px;
   color: $white-33;
   font-size: $font-size-small;
-  padding: $size-m / 2;
+  padding: $size-xs-s;
   opacity: 1;
 }
 
@@ -50,8 +50,8 @@
     .waterfall-tooltip-tr:nth-of-type(odd) {
       background-color: $white-100;
     }
-    
-   .waterfall-tooltip-key {
+
+    .waterfall-tooltip-key {
       font-weight: bold;
       padding: 0 $size-m;
       position: relative;
@@ -61,8 +61,8 @@
         position: absolute;
         left: 0;
         top: $size-m / 4;
-        width: $size-m / 2;
-        height: $size-m / 2;
+        width: $size-xs-s;
+        height: $size-xs-s;
       }
 
       &.blocked {
@@ -134,7 +134,7 @@
 
   .waterfall-tooltip-thead {
     .waterfall-tooltip-th {
-      padding-bottom: $size-m / 2;
+      padding-bottom: $size-xs-s;
       color: $white-50;
 
       &:nth-child(2) {
