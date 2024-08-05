@@ -164,12 +164,16 @@ export const sortHeaders = (current, next) => {
   return current.name > next.name ? 1 : 0;
 };
 
-export const getHeaders = (entry) => ({
-  request: entry.request.headers.sort(sortHeaders),
-  response: entry.response.headers.sort(sortHeaders),
-  queryString: entry.request.queryString,
-  postData: entry.request.postData,
-});
+export const getHeaders = (entry) => {
+  const requestHeaders = [...entry.request.headers];
+  const responseHeaders = [...entry.response.headers];
+  return {
+    request: requestHeaders.sort(sortHeaders),
+    response: responseHeaders.sort(sortHeaders),
+    queryString: entry.request.queryString,
+    postData: entry.request.postData,
+  };
+};
 
 export const getTotalTimeOfEntry = ({
   startedDateTime,
@@ -347,7 +351,7 @@ export const getStatusClass = ({
   if (status >= 400 || error) {
     return 'error';
   }
-  return 'info';
+  return '';
 };
 
 export const formatValue = (key, value, unit, request = {}) => {
