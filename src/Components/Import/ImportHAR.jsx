@@ -13,16 +13,14 @@ const DROP_FILE_CONFIG = {
   multiple: false,
 };
 
-const ImportHar = ({ showButton, className }) => {
+const ImportHar = ({
+  showButton,
+  className,
+}) => {
   const { actions } = useNetwork();
   const { updateErrorMessage } = actions;
 
-  const prepareData = (newNetworkData) => (
-    actions.updateData({
-      entries: newNetworkData.log.entries,
-      pages: newNetworkData.log.pages,
-    })
-  );
+  const prepareData = (newNetworkData) => actions.updateData(newNetworkData);
 
   const onDrop = (files) => {
     const reader = new FileReader();
@@ -39,7 +37,10 @@ const ImportHar = ({ showButton, className }) => {
     reader.readAsText(files[0]);
   };
 
-  const { getRootProps, getInputProps } = useDropzone({
+  const {
+    getRootProps,
+    getInputProps,
+  } = useDropzone({
     ...DROP_FILE_CONFIG,
     onDrop,
   });
@@ -49,7 +50,12 @@ const ImportHar = ({ showButton, className }) => {
       <input {...getInputProps()} />
       {showButton ?
         (<ImportHarButton />) :
-        (<p className={Styles['drag-drop']}>Drag and drop HAR file here, or click to select file</p>)}
+        (
+          <p className={Styles['drag-drop']}>
+            Drag and drop HAR file here, or click to select
+            file
+          </p>
+        )}
     </div>
   );
 };
