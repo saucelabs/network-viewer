@@ -180,7 +180,7 @@ export const getTotalTimeOfEntry = ({
   time,
   timings,
 }) => (
-  new Date(startedDateTime).getTime() + time + (timings._blocked_queueing || timings._queued || 0)
+  new Date(startedDateTime).getTime() + time + (timings?._blocked_queueing || timings?._queued || 0)
 );
 
 export const getInterceptError = ({ response }) => (
