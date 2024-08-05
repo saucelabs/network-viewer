@@ -12,11 +12,11 @@
       margin-bottom: 0;
     }
 
-   &.active {
-    .caret-icon {
-      transform: translateY(-1px) translateX(-5px) rotate(180deg);
+    &.active {
+      .caret-icon {
+        transform: translateY(-1px) translateX(-5px) rotate(180deg);
+      }
     }
-   }
   }
 }
 
@@ -48,7 +48,7 @@
   .info-row {
     margin: 0;
     font-size: $font-size-small;
-    padding-bottom: $size-m / 2;
+    padding-bottom: $size-xs-s;
 
     &:last-child {
       padding-bottom: 0;
@@ -57,7 +57,7 @@
 
   .info-caption {
     font-weight: bold;
-    padding-right: $size-m / 2;
+    padding-right: $size-xs-s;
   }
 
   .info-value {
