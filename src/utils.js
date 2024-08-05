@@ -351,7 +351,7 @@ export const getStatusClass = ({
   if (status >= 400 || error) {
     return 'error';
   }
-  return '';
+  return 'info';
 };
 
 export const formatValue = (key, value, unit, request = {}) => {
