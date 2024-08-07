@@ -2,7 +2,7 @@
 
 exports[`HeaderInfo renders without crashing 1`] = `
 <div
-  className="header-info active"
+  className="header-info"
 >
   <HeaderTitle
     eventKey="general"
@@ -12,6 +12,5 @@ exports[`HeaderInfo renders without crashing 1`] = `
     onClick={[Function]}
     onPayloadTransform={[Function]}
   />
-  <ChildComponent />
 </div>
 `;

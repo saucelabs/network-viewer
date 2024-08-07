@@ -54,6 +54,7 @@ exports[`NetworkProvider renders without crashing 1`] = `
   onDataError={null}
   onDataLoaded={null}
   onPause={null}
+  onRequestSelect={null}
   onReset={null}
   onResume={null}
   scrollRequestPosition="near"
@@ -102,6 +103,7 @@ exports[`NetworkProvider renders without crashing 1`] = `
       [Function],
       Object {
         "onPause": null,
+        "onRequestSelect": null,
         "onReset": null,
         "onResume": null,
       },

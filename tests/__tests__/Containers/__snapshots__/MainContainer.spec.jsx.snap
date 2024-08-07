@@ -54,14 +54,13 @@ exports[`MainContainer renders without crashing 1`] = `
   onDataError={null}
   onDataLoaded={null}
   onPause={null}
+  onRequestSelect={null}
   onReset={null}
   onResume={null}
   scrollRequestPosition="near"
   scrollTimeStamp={null}
 >
-  <MainContainer
-    onRequestSelect={[Function]}
-  >
+  <MainContainer>
     <LoaderContainer
       show={false}
       text="Please wait, Fetching file is in progress."
@@ -164,7 +163,9 @@ exports[`MainContainer renders without crashing 1`] = `
                 </Search>
                 <ResetButton>
                   <Tooltip
+                    className=""
                     delay={100}
+                    hasArrow={true}
                     placement="top"
                     title="Reset"
                   >
@@ -264,7 +265,9 @@ exports[`MainContainer renders without crashing 1`] = `
                     />
                     <ImportHarButton>
                       <Tooltip
+                        className=""
                         delay={100}
+                        hasArrow={true}
                         placement="top"
                         title="Import HAR"
                       >
@@ -519,9 +522,7 @@ exports[`MainContainer renders without crashing 1`] = `
           </FilterContainer>
         </div>
         <section>
-          <NetworkTableContainer
-            onRequestSelect={[Function]}
-          >
+          <NetworkTableContainer>
             <section>
               <ImportHar
                 className={null}

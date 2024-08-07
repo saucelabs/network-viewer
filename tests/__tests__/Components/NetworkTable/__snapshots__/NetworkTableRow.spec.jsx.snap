@@ -4,6 +4,42 @@ exports[`NetworkTableRow renders without crashing 1`] = `
 <table>
   <tbody>
     <NetworkTableRow
+      columns={
+        Object {
+          "domain": Object {
+            "key": "domain",
+            "name": "Domain",
+          },
+          "file": Object {
+            "key": "filename",
+            "name": "Path",
+          },
+          "method": Object {
+            "key": "method",
+            "name": "Method",
+          },
+          "size": Object {
+            "key": "size",
+            "name": "Size",
+          },
+          "status": Object {
+            "key": "status",
+            "name": "Status",
+          },
+          "time": Object {
+            "key": "time",
+            "name": "Time",
+          },
+          "type": Object {
+            "key": "type",
+            "name": "Type",
+          },
+          "waterfall": Object {
+            "key": "waterfall",
+            "name": "Waterfall",
+          },
+        }
+      }
       maxTime={5000}
       onSelect={[Function]}
       payload={
@@ -32,11 +68,48 @@ exports[`NetworkTableRow renders without crashing 1`] = `
       }
       scrollHighlight={false}
     >
-      <tr
+      <div
         className="network-table-row info"
         id="network-viewer-table-row-0"
         onClick={[Function]}
       >
+        <NetworkCellValue
+          datakey="domain"
+          key="domain"
+          payload={
+            Object {
+              "domain": "developer.mozilla.org",
+              "filename": "slice",
+              "index": 0,
+              "method": "GET",
+              "size": 135.04,
+              "startedDateTime": "2019-10-14T08:47:11.592Z",
+              "status": 200,
+              "timings": Object {
+                "_blocked_queueing": 4.382999992230907,
+                "blocked": 5.496999992230907,
+                "connect": -1,
+                "dns": -1,
+                "receive": 3.252000024076551,
+                "send": 0.2819999999999998,
+                "ssl": -1,
+                "startTime": 0,
+                "wait": 26.03899999633059,
+              },
+              "type": "html",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+            }
+          }
+          unit={null}
+        >
+          <div
+            className="table-cell domain"
+          >
+            <span>
+              developer.mozilla.org
+            </span>
+          </div>
+        </NetworkCellValue>
         <NetworkCellValue
           datakey="filename"
           key="file"
@@ -66,11 +139,13 @@ exports[`NetworkTableRow renders without crashing 1`] = `
           }
           unit={null}
         >
-          <td
-            className="value-cell filename"
+          <div
+            className="table-cell filename"
           >
             <Tooltip
+              className=""
               delay={500}
+              hasArrow={true}
               placement="top"
               title="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice"
             >
@@ -88,7 +163,7 @@ exports[`NetworkTableRow renders without crashing 1`] = `
                 isOpen={false}
               />
             </Tooltip>
-          </td>
+          </div>
         </NetworkCellValue>
         <NetworkCellValue
           datakey="status"
@@ -119,13 +194,13 @@ exports[`NetworkTableRow renders without crashing 1`] = `
           }
           unit={null}
         >
-          <td
-            className="value-cell status"
+          <div
+            className="table-cell status"
           >
             <span>
               200
             </span>
-          </td>
+          </div>
         </NetworkCellValue>
         <NetworkCellValue
           datakey="method"
@@ -156,50 +231,13 @@ exports[`NetworkTableRow renders without crashing 1`] = `
           }
           unit={null}
         >
-          <td
-            className="value-cell method"
+          <div
+            className="table-cell method"
           >
             <span>
               GET
             </span>
-          </td>
-        </NetworkCellValue>
-        <NetworkCellValue
-          datakey="domain"
-          key="domain"
-          payload={
-            Object {
-              "domain": "developer.mozilla.org",
-              "filename": "slice",
-              "index": 0,
-              "method": "GET",
-              "size": 135.04,
-              "startedDateTime": "2019-10-14T08:47:11.592Z",
-              "status": 200,
-              "timings": Object {
-                "_blocked_queueing": 4.382999992230907,
-                "blocked": 5.496999992230907,
-                "connect": -1,
-                "dns": -1,
-                "receive": 3.252000024076551,
-                "send": 0.2819999999999998,
-                "ssl": -1,
-                "startTime": 0,
-                "wait": 26.03899999633059,
-              },
-              "type": "html",
-              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
-            }
-          }
-          unit={null}
-        >
-          <td
-            className="value-cell domain"
-          >
-            <span>
-              developer.mozilla.org
-            </span>
-          </td>
+          </div>
         </NetworkCellValue>
         <NetworkCellValue
           datakey="type"
@@ -230,13 +268,13 @@ exports[`NetworkTableRow renders without crashing 1`] = `
           }
           unit={null}
         >
-          <td
-            className="value-cell type"
+          <div
+            className="table-cell type"
           >
             <span>
               html
             </span>
-          </td>
+          </div>
         </NetworkCellValue>
         <NetworkCellValue
           datakey="size"
@@ -267,13 +305,13 @@ exports[`NetworkTableRow renders without crashing 1`] = `
           }
           unit={null}
         >
-          <td
-            className="value-cell size"
+          <div
+            className="table-cell size"
           >
             <span>
               135.04
             </span>
-          </td>
+          </div>
         </NetworkCellValue>
         <NetworkCellValue
           datakey="time"
@@ -304,14 +342,48 @@ exports[`NetworkTableRow renders without crashing 1`] = `
           }
           unit={null}
         >
-          <td
-            className="value-cell time"
+          <div
+            className="table-cell time"
           >
             <span />
-          </td>
+          </div>
         </NetworkCellValue>
-        <td />
-      </tr>
+        <NetworkCellValue
+          datakey="waterfall"
+          key="waterfall"
+          payload={
+            Object {
+              "domain": "developer.mozilla.org",
+              "filename": "slice",
+              "index": 0,
+              "method": "GET",
+              "size": 135.04,
+              "startedDateTime": "2019-10-14T08:47:11.592Z",
+              "status": 200,
+              "timings": Object {
+                "_blocked_queueing": 4.382999992230907,
+                "blocked": 5.496999992230907,
+                "connect": -1,
+                "dns": -1,
+                "receive": 3.252000024076551,
+                "send": 0.2819999999999998,
+                "ssl": -1,
+                "startTime": 0,
+                "wait": 26.03899999633059,
+              },
+              "type": "html",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+            }
+          }
+          unit={null}
+        >
+          <div
+            className="table-cell waterfall"
+          >
+            <span />
+          </div>
+        </NetworkCellValue>
+      </div>
     </NetworkTableRow>
   </tbody>
 </table>

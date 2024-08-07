@@ -54,6 +54,7 @@ exports[`FilterContainer renders without crashing 1`] = `
   onDataError={null}
   onDataLoaded={null}
   onPause={null}
+  onRequestSelect={null}
   onReset={null}
   onResume={null}
   scrollRequestPosition="near"
@@ -155,7 +156,9 @@ exports[`FilterContainer renders without crashing 1`] = `
         </Search>
         <ResetButton>
           <Tooltip
+            className=""
             delay={100}
+            hasArrow={true}
             placement="top"
             title="Reset"
           >
@@ -255,7 +258,9 @@ exports[`FilterContainer renders without crashing 1`] = `
             />
             <ImportHarButton>
               <Tooltip
+                className=""
                 delay={100}
+                hasArrow={true}
                 placement="top"
                 title="Import HAR"
               >

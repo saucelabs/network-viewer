@@ -2,56 +2,94 @@
 
 exports[`NetworkTableHeader renders without crashing 1`] = `
 <table>
-  <NetworkTableHeader>
-    <thead>
-      <tr>
-        <th
-          className="value-cell filename"
-          key="file"
-        >
-          File
-        </th>
-        <th
-          className="value-cell status"
-          key="status"
-        >
-          Status
-        </th>
-        <th
-          className="value-cell method"
-          key="method"
-        >
-          Method
-        </th>
-        <th
-          className="value-cell domain"
-          key="domain"
-        >
-          Domain
-        </th>
-        <th
-          className="value-cell type"
-          key="type"
-        >
-          Type
-        </th>
-        <th
-          className="value-cell size"
-          key="size"
-        >
-          Size
-        </th>
-        <th
-          className="value-cell time"
-          key="time"
-        >
-          Time
-        </th>
-        <th>
-          Waterfall
-        </th>
-      </tr>
-    </thead>
+  <NetworkTableHeader
+    columns={
+      Object {
+        "domain": Object {
+          "key": "domain",
+          "name": "Domain",
+        },
+        "file": Object {
+          "key": "filename",
+          "name": "Path",
+        },
+        "method": Object {
+          "key": "method",
+          "name": "Method",
+        },
+        "size": Object {
+          "key": "size",
+          "name": "Size",
+        },
+        "status": Object {
+          "key": "status",
+          "name": "Status",
+        },
+        "time": Object {
+          "key": "time",
+          "name": "Time",
+        },
+        "type": Object {
+          "key": "type",
+          "name": "Type",
+        },
+        "waterfall": Object {
+          "key": "waterfall",
+          "name": "Waterfall",
+        },
+      }
+    }
+  >
+    <div>
+      <div
+        className="domain"
+        key="domain"
+      >
+        Domain
+      </div>
+      <div
+        className="filename"
+        key="file"
+      >
+        Path
+      </div>
+      <div
+        className="status"
+        key="status"
+      >
+        Status
+      </div>
+      <div
+        className="method"
+        key="method"
+      >
+        Method
+      </div>
+      <div
+        className="type"
+        key="type"
+      >
+        Type
+      </div>
+      <div
+        className="size"
+        key="size"
+      >
+        Size
+      </div>
+      <div
+        className="time"
+        key="time"
+      >
+        Time
+      </div>
+      <div
+        className="waterfall"
+        key="waterfall"
+      >
+        Waterfall
+      </div>
+    </div>
   </NetworkTableHeader>
 </table>
 `;
