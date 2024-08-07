@@ -1,12 +1,18 @@
 @import "./../../styles/variables.scss";
 
+.time-chart {
+  margin-right: $size-xs-s;
+}
+
+.time-chart-tooltip {
+  background-color: $white-100 !important;
+}
+
 .tooltip {
   display: block;
-  width: 300px;
+  width: 270px;
   height: auto;
   background: $white-100;
-  border: $border;
-  border-radius: 3px;
   color: $white-33;
   font-size: $font-size-small;
   padding: $size-xs-s;
