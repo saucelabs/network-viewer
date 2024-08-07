@@ -4,10 +4,11 @@ import { mount } from 'enzyme';
 import NetworkTableRow from './../../../../src/Components/NetworkTable/NetworkTableRow';
 
 describe('NetworkTableRow', () => {
-  const NOOP = () => {};
+  const NOOP = () => {
+  };
 
   const props = {
-    payload: {
+    entry: {
       domain: 'developer.mozilla.org',
       filename: 'slice',
       index: 0,
@@ -42,6 +43,7 @@ describe('NetworkTableRow', () => {
         </tbody>
       </table>,
     );
-    expect(element).toMatchSnapshot();
+    expect(element)
+      .toMatchSnapshot();
   });
 });

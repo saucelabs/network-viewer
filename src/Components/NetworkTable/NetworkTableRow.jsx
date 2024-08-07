@@ -11,40 +11,44 @@ import { getStatusClass } from '../../utils';
 const context = classNames.bind(Styles);
 
 const NetworkTableRow = ({
-  payload,
+  entry,
   maxTime,
   scrollHighlight,
   onSelect,
 }) => {
   const handleSelectRequest = () => {
-    onSelect(payload);
+    onSelect(entry);
   };
 
   const rowProps = {
     className: context(
       'network-table-row',
-      getStatusClass(payload), {
+      getStatusClass(entry), {
         highlight: scrollHighlight,
       }),
-    id: ROW_ID_PREFIX + payload.index,
+    id: ROW_ID_PREFIX + entry.index,
     onClick: handleSelectRequest,
   };
 
   return (
     <tr {...rowProps}>
-      {Object.entries(VIEWER_FIELDS).map(([datakey, { key, unit }]) => (
-        <NetworkCellValue
-          key={datakey}
-          datakey={key}
-          payload={payload}
-          unit={unit}
-        />
-      ))}
+      {Object.entries(VIEWER_FIELDS)
+        .map(([datakey, {
+          key,
+          unit,
+        }]) => (
+          <NetworkCellValue
+            key={datakey}
+            datakey={key}
+            payload={entry}
+            unit={unit}
+          />
+        ))}
       <td className={Styles['timeline-header']}>
-        {payload.time ? (
+        {entry.time ? (
           <TimeChart
             maxTime={maxTime}
-            timings={payload.timings}
+            timings={entry.timings}
           />
         ) : ''}
       </td>
@@ -53,9 +57,9 @@ const NetworkTableRow = ({
 };
 
 NetworkTableRow.propTypes = {
+  entry: PropTypes.object.isRequired,
   maxTime: PropTypes.number.isRequired,
   onSelect: PropTypes.func.isRequired,
-  payload: PropTypes.object.isRequired,
   scrollHighlight: PropTypes.bool.isRequired,
 };
 

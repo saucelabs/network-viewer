@@ -58,9 +58,9 @@ const NetworkTableContainer = ({ onRequestSelect }) => {
             .map((rowInfo) => (
               <NetworkTableRow
                 key={rowInfo.index}
+                entry={rowInfo}
                 maxTime={totalNetworkTime}
                 onSelect={handleReqSelect}
-                payload={rowInfo}
                 scrollHighlight={selectedReqIndex === rowInfo.index}
               />
             ))}
