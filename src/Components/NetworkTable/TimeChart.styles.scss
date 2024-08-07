@@ -1,5 +1,9 @@
 @import "./../../styles/variables.scss";
 
+.time-chart {
+  margin-right: $size-xs-s;
+}
+
 .tooltip {
   display: block;
   width: 300px;

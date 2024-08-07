@@ -1,9 +1,18 @@
 @import "./../styles/variables";
 
+.har-selection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .table-container {
-  flex: 1 1 auto;
+  display: grid;
+  grid-template-columns: 30% repeat(2, 1fr) 15% repeat(3, 1fr) 20%;
+  grid-template-rows: 40px auto;
+
+  column-gap: $size-xs;
   height: 100%;
-  overflow: auto;
 
   &.limited-cols {
     max-width: $name-col-width;
@@ -16,28 +25,12 @@
       thead tr th:first-child,
       td:nth-child(1) {
         width: 100%;
-     }
+      }
 
       th:nth-child(1) ~ th,
       td:nth-child(1) ~ td {
         display: none;
-      }   
-    }
-  }
-
-  .table {
-    width: 100%;
-    border-right: 0;
-    border-collapse: collapse;
-    table-layout: fixed;
-
-    td, th {
-      padding: .3rem;
-    }
-
-    thead th {
-      vertical-align: bottom;
-      color: $white-66;
+      }
     }
   }
 }

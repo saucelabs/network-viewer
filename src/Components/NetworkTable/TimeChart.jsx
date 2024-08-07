@@ -5,8 +5,12 @@ import Popover from 'react-popover';
 import { calcChartAttributes } from './../../utils';
 import { TIME_CHART_DEFAULT_PROPS, TIME_CHART_SVG_PROPS } from './../../constants';
 import TimeChartTooltip from './TimeChartTooltip';
+import Styles from './TimeChart.styles.scss';
 
-const TimeChart = ({ timings, maxTime }) => {
+const TimeChart = ({
+  timings,
+  maxTime,
+}) => {
   const chartAttributes = useMemo(() => calcChartAttributes(timings, maxTime), [timings, maxTime]);
   const [isOpen, updateOpen] = useState(false);
   const displayPopover = () => updateOpen(true);
@@ -19,6 +23,7 @@ const TimeChart = ({ timings, maxTime }) => {
       preferPlace="below"
     >
       <div
+        className={Styles['time-chart']}
         onMouseOut={hidePopover}
         onMouseOver={displayPopover}
       >

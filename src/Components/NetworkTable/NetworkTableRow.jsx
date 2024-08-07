@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 
 import { VIEWER_FIELDS, ROW_ID_PREFIX } from './../../constants';
-import Styles from './NetworkTableHeader.styles.scss';
+import Styles from './NetworkTable.styles.scss';
 import TimeChart from './TimeChart';
 import NetworkCellValue from './NetworkCellValue';
 import { getStatusClass } from '../../utils';
@@ -23,32 +23,33 @@ const NetworkTableRow = ({
   const rowProps = {
     className: context(
       'network-table-row',
-      getStatusClass(payload), {
-        highlight: scrollHighlight,
-      }),
+      getStatusClass(payload),
+      { highlight: scrollHighlight },
+    ),
     id: ROW_ID_PREFIX + payload.index,
     onClick: handleSelectRequest,
   };
 
   return (
-    <tr {...rowProps}>
-      {Object.entries(VIEWER_FIELDS).map(([datakey, { key, unit }]) => (
-        <NetworkCellValue
-          key={datakey}
-          datakey={key}
-          payload={payload}
-          unit={unit}
-        />
-      ))}
-      <td className={Styles['timeline-header']}>
-        {payload.time ? (
+    <div {...rowProps}>
+      {Object.entries(VIEWER_FIELDS)
+        .map(([datakey, {
+          key,
+          unit,
+        }]) => (key === 'waterfall' && payload.time ? (
           <TimeChart
             maxTime={maxTime}
             timings={payload.timings}
           />
-        ) : ''}
-      </td>
-    </tr>
+        ) : (
+          <NetworkCellValue
+            key={datakey}
+            datakey={key}
+            payload={payload}
+            unit={unit}
+          />
+        )))}
+    </div>
   );
 };
 

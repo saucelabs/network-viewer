@@ -1,0 +1,100 @@
+@import "./../../styles/variables.scss";
+
+.network-table-body {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: span 8 / span 8;
+  overflow-y: auto;
+  overflow-x: hidden;
+  grid-template-rows: 40px auto 1fr;
+}
+
+.table-cell {
+  color: $brand-primary-gray;
+  align-self: center;
+
+  display: grid;
+  grid-template-columns: subgrid;
+
+  &.filename {
+  }
+
+  &.waterfall {
+  }
+
+  .value-text {
+    flex: 1 1 auto;
+    width: 100%;
+    color: $brand-primary-dark-gray;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    word-break: break-all;
+  }
+}
+
+.network-table-header {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: span 8 / span 8;
+
+  padding: $size-s $size-xs-s;
+  font-size: $font-size-small;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: $border;
+  align-content: center;
+}
+
+.network-table-row {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: span 8 / span 8;
+  cursor: pointer;
+  padding: $size-xs $size-xs-s;
+
+  &:nth-of-type(odd) {
+    background-color: $white-97;
+  }
+
+  &.pending {
+    color: $white-66;
+  }
+
+  &.error {
+    color: $brand-danger;
+  }
+
+  &:hover {
+    background: $white-90;
+  }
+
+  &.highlight {
+    background: $dark-gray;
+    color: $white-100;
+  }
+}
+
+
+.footer {
+  border-top: $border;
+  width: 100%;
+  background: $bg-gray-90;
+  padding: $size-xs-s $size-s;
+  display: inline-flex;
+  vertical-align: middle;
+
+  span {
+    flex: 1 1 auto;
+    justify-content: center;
+    display: inline-flex;
+    align-items: center;
+    border-right: 1px solid $white-80;
+    padding: 0 $size-xs;
+    overflow: hidden;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+}

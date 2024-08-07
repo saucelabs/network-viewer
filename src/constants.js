@@ -27,6 +27,10 @@ export const VIEWER_FIELDS = Object.freeze({
     key: 'time',
     name: 'Time',
   }),
+  waterfall: Object.freeze({
+    key: 'waterfall',
+    name: 'Waterfall',
+  }),
 });
 
 export const FILTER_OPTION = Object.freeze({

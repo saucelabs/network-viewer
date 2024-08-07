@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 
 import { formatValue } from '../../utils';
-import Styles from './NetworkTableHeader.styles.scss';
+import Styles from './NetworkTable.styles.scss';
 import { VIEWER_FIELDS } from '../../constants';
 import Tooltip from '../Common/Tooltip/Tooltip';
 
@@ -33,16 +33,16 @@ const NetworkCellValue = ({
 
   if (!shouldDisplayTooltip) {
     return (
-      <td className={context('value-cell', datakey)}>
+      <div className={context('table-cell', datakey)}>
         <span className={Styles['value-text']}>
           {formattedValue}
         </span>
-      </td>
+      </div>
     );
   }
 
   return (
-    <td className={context('value-cell', datakey)}>
+    <div className={context('table-cell', datakey)}>
       <Tooltip
         delay={500}
         title={getTitle()}
@@ -51,7 +51,7 @@ const NetworkCellValue = ({
           {formattedValue}
         </span>
       </Tooltip>
-    </td>
+    </div>
   );
 };
 
