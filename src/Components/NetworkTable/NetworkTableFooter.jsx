@@ -2,12 +2,15 @@ import React from 'react';
 import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
 
-import Styles from './NetworkTableFooter.styles.scss';
+import Styles from './NetworkTable.styles.scss';
 import { formatSize, formatTime } from './../../utils';
 
 const context = classNames.bind(Styles);
 
-const NetworkTableFooter = ({ dataSummary, showAllInfo }) => (
+const NetworkTableFooter = ({
+  dataSummary,
+  showAllInfo,
+}) => (
   <div className={context('footer')}>
     {showAllInfo ? (
       <>

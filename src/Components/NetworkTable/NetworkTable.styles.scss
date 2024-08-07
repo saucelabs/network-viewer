@@ -1,31 +1,5 @@
 @import "./../../styles/variables.scss";
 
-.network-table-body {
-  display: grid;
-  overflow-y: auto;
-  overflow-x: hidden;
-  grid-template-columns: subgrid;
-  grid-column: span 8 / span 8;
-}
-
-.table-cell {
-  color: $brand-primary-gray;
-  align-self: center;
-
-  display: grid;
-  grid-template-columns: subgrid;
-
-  .value-text {
-    flex: 1 1 auto;
-    width: 100%;
-    color: $brand-primary-dark-gray;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    word-break: break-all;
-  }
-}
-
 .network-table-header {
   display: grid;
   grid-template-columns: subgrid;
@@ -39,6 +13,14 @@
   align-content: center;
 }
 
+.network-table-body {
+  display: grid;
+  overflow-y: auto;
+  overflow-x: hidden;
+  grid-template-columns: subgrid;
+  grid-column: span 8 / span 8;
+}
+
 .network-table-row {
   display: grid;
   grid-template-columns: subgrid;
@@ -46,8 +28,10 @@
   cursor: pointer;
   padding: $size-xs $size-xs-s;
 
-  &:nth-of-type(odd) {
-    background-color: $white-97;
+  border-bottom: $border;
+
+  &:nth-last-child(2) {
+    border-bottom: none;
   }
 
   &.pending {
@@ -68,6 +52,23 @@
   }
 }
 
+.table-cell {
+  color: $brand-primary-gray;
+  align-self: center;
+
+  display: grid;
+  grid-template-columns: subgrid;
+
+  .value-text {
+    flex: 1 1 auto;
+    width: 100%;
+    color: $brand-primary-dark-gray;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    word-break: break-all;
+  }
+}
 
 .footer {
   border-top: $border;

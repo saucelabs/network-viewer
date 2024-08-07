@@ -8,10 +8,8 @@ $tab-height: 35px;
   height: 100%;
   overflow: auto;
   background: $white-100;
-  position: absolute;
-  right: 0;
-  width: calc(100% - #{$name-col-width});
   border-left: $border;
+  position: relative;
 
   .nav-tabs {
     padding-left: $close-button-width;
@@ -43,8 +41,8 @@ $tab-height: 35px;
     border: 0;
 
     .close-icon {
-      height: $size-xs * 2;
-      width: $size-xs * 2;
+      height: $size-xs-s;
+      width: $size-xs-s;
 
       g {
         stroke: $white-33;
