@@ -1,14 +1,15 @@
 import React from 'react';
 import classNames from 'classnames/bind';
+import PropTypes from 'prop-types';
 
 import { VIEWER_FIELDS } from './../../constants';
 import Styles from './NetworkTable.styles.scss';
 
 const context = classNames.bind(Styles);
 
-const NetworkTableHeader = () => (
+const NetworkTableHeader = ({ columns }) => (
   <div className={Styles['network-table-header']}>
-    {Object.entries(VIEWER_FIELDS)
+    {Object.entries(columns)
       .map(([datakey, {
         key,
         name,
@@ -22,5 +23,13 @@ const NetworkTableHeader = () => (
       ))}
   </div>
 );
+
+NetworkTableHeader.propTypes = {
+  columns: PropTypes.object,
+};
+
+NetworkTableHeader.defaultProps = {
+  columns: VIEWER_FIELDS,
+};
 
 export default NetworkTableHeader;

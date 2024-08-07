@@ -8,29 +8,15 @@
 
 .table-container {
   display: grid;
-  grid-template-columns: 30% repeat(2, 1fr) 15% repeat(3, 1fr) 20%;
-  grid-template-rows: 40px auto;
+  grid-template-columns: 15% 20% repeat(5, 1fr) 15%;
+  grid-template-rows: 40px auto 1fr;
 
   column-gap: $size-xs;
   height: 100%;
+  width: 100%;
 
   &.limited-cols {
+    grid-template-columns: 0% 100%;
     max-width: $name-col-width;
-
-    .table {
-      td, th {
-        border-right: 0;
-      }
-
-      thead tr th:first-child,
-      td:nth-child(1) {
-        width: 100%;
-      }
-
-      th:nth-child(1) ~ th,
-      td:nth-child(1) ~ td {
-        display: none;
-      }
-    }
   }
 }

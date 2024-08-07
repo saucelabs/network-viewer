@@ -2,11 +2,10 @@
 
 .network-table-body {
   display: grid;
-  grid-template-columns: subgrid;
-  grid-column: span 8 / span 8;
   overflow-y: auto;
   overflow-x: hidden;
-  grid-template-rows: 40px auto 1fr;
+  grid-template-columns: subgrid;
+  grid-column: span 8 / span 8;
 }
 
 .table-cell {
@@ -15,12 +14,6 @@
 
   display: grid;
   grid-template-columns: subgrid;
-
-  &.filename {
-  }
-
-  &.waterfall {
-  }
 
   .value-text {
     flex: 1 1 auto;

@@ -11,6 +11,7 @@ import { getStatusClass } from '../../utils';
 const context = classNames.bind(Styles);
 
 const NetworkTableRow = ({
+  columns,
   payload,
   maxTime,
   scrollHighlight,
@@ -32,12 +33,13 @@ const NetworkTableRow = ({
 
   return (
     <div {...rowProps}>
-      {Object.entries(VIEWER_FIELDS)
+      {Object.entries(columns)
         .map(([datakey, {
           key,
           unit,
         }]) => (key === 'waterfall' && payload.time ? (
           <TimeChart
+            key={key}
             maxTime={maxTime}
             timings={payload.timings}
           />
@@ -54,10 +56,15 @@ const NetworkTableRow = ({
 };
 
 NetworkTableRow.propTypes = {
+  columns: PropTypes.object,
   maxTime: PropTypes.number.isRequired,
   onSelect: PropTypes.func.isRequired,
   payload: PropTypes.object.isRequired,
   scrollHighlight: PropTypes.bool.isRequired,
+};
+
+NetworkTableRow.defaultProps = {
+  columns: VIEWER_FIELDS,
 };
 
 export default NetworkTableRow;

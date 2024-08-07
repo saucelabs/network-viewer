@@ -1,7 +1,11 @@
 export const VIEWER_FIELDS = Object.freeze({
+  domain: Object.freeze({
+    key: 'domain',
+    name: 'Domain',
+  }),
   file: Object.freeze({
     key: 'filename',
-    name: 'File',
+    name: 'Path',
   }),
   status: Object.freeze({
     key: 'status',
@@ -10,10 +14,6 @@ export const VIEWER_FIELDS = Object.freeze({
   method: Object.freeze({
     key: 'method',
     name: 'Method',
-  }),
-  domain: Object.freeze({
-    key: 'domain',
-    name: 'Domain',
   }),
   type: Object.freeze({
     key: 'type',
@@ -30,6 +30,13 @@ export const VIEWER_FIELDS = Object.freeze({
   waterfall: Object.freeze({
     key: 'waterfall',
     name: 'Waterfall',
+  }),
+});
+
+export const VIEWER_FIELD_FILE = Object.freeze({
+  file: Object.freeze({
+    key: 'filename',
+    name: 'Path',
   }),
 });
 

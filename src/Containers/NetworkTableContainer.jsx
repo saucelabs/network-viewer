@@ -9,6 +9,7 @@ import ErrorMessage from './../Components/ErrorMessage';
 import { useTheme } from '../state/theme/Context';
 import InputHAR from '../Components/Import/InputHAR';
 import NetworkTableBody from '../Components/NetworkTable/NetworkTableBody';
+import { VIEWER_FIELD_FILE } from '../constants';
 
 const context = classNames.bind(Styles);
 
@@ -34,14 +35,15 @@ const NetworkTableContainer = () => {
     );
   }
 
+  const columns = showReqDetail ? VIEWER_FIELD_FILE : undefined;
   return (
     <section className={context(
       'table-container',
       { 'limited-cols': showReqDetail },
     )}
     >
-      <NetworkTableHeader />
-      <NetworkTableBody />
+      <NetworkTableHeader columns={columns} />
+      <NetworkTableBody columns={columns} />
     </section>
   );
 };
