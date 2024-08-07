@@ -1,10 +1,10 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
-import Popover from 'react-popover';
 
 import { calcChartAttributes } from './../../utils';
 import { TIME_CHART_DEFAULT_PROPS, TIME_CHART_SVG_PROPS } from './../../constants';
 import TimeChartTooltip from './TimeChartTooltip';
+import Tooltip from '../Common/Tooltip/Tooltip';
 import Styles from './TimeChart.styles.scss';
 
 const TimeChart = ({
@@ -12,34 +12,27 @@ const TimeChart = ({
   maxTime,
 }) => {
   const chartAttributes = useMemo(() => calcChartAttributes(timings, maxTime), [timings, maxTime]);
-  const [isOpen, updateOpen] = useState(false);
-  const displayPopover = () => updateOpen(true);
-  const hidePopover = () => updateOpen(false);
 
   return (
-    <Popover
-      body={<TimeChartTooltip data={timings} />}
-      isOpen={isOpen}
-      preferPlace="below"
+    <Tooltip
+      className={Styles['time-chart-tooltip']}
+      delay={300}
+      hasArrow={false}
+      placement="left"
+      title={<TimeChartTooltip data={timings} />}
     >
-      <div
-        className={Styles['time-chart']}
-        onMouseOut={hidePopover}
-        onMouseOver={displayPopover}
-      >
-        <svg {...TIME_CHART_SVG_PROPS}>
-          <g>
-            {chartAttributes.map((chartProps) => (
-              <rect
-                key={chartProps.key}
-                {...chartProps}
-                {...TIME_CHART_DEFAULT_PROPS}
-              />
-            ))}
-          </g>
-        </svg>
-      </div>
-    </Popover>
+      <svg {...TIME_CHART_SVG_PROPS}>
+        <g>
+          {chartAttributes.map((chartProps) => (
+            <rect
+              key={chartProps.key}
+              {...chartProps}
+              {...TIME_CHART_DEFAULT_PROPS}
+            />
+          ))}
+        </g>
+      </svg>
+    </Tooltip>
   );
 };
 

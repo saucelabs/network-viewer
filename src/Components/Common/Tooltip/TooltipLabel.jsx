@@ -18,13 +18,16 @@ const TooltipLabel = forwardRef(({
     <div
       ref={ref}
       className={classnames(
-        className,
         Styles['tooltip-label'],
         { [Styles['tooltip-visible']]: isOpen },
       )}
       {...mergeProps(props, tooltipProps)}
     >
-      <span className={Styles['tooltip-label-box']}>
+      <span className={classnames(
+        className,
+        Styles['tooltip-label-box'],
+      )}
+      >
         {children}
       </span>
     </div>

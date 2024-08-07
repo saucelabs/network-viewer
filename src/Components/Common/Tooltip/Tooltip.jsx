@@ -13,14 +13,19 @@ const ARROW_CROSS_SIZE = Math.sqrt(32);
 
 const Tooltip = forwardRef(({
   children,
+  className,
   delay,
+  hasArrow,
   placement,
   title,
 }, forwardedRef) => {
   const targetRef = useObjectRef(forwardedRef);
   const tooltipRef = useRef(null);
 
-  const state = useTooltipTriggerState({ delay });
+  const state = useTooltipTriggerState({
+    // isOpen: true,
+    delay,
+  });
 
   const {
     overlayProps,
@@ -85,14 +90,17 @@ const Tooltip = forwardRef(({
       <TooltipTransition isOpen={state.isOpen}>
         <TooltipLabel
           ref={tooltipRef}
+          className={className}
           state={state}
           {...overlayProps}
           {...tooltipProps}
         >
-          <TooltipArrow
-            placementAxis={arrowPlacement}
-            {...arrowProps}
-          />
+          {hasArrow && (
+            <TooltipArrow
+              placementAxis={arrowPlacement}
+              {...arrowProps}
+            />
+          )}
           {title}
         </TooltipLabel>
       </TooltipTransition>
@@ -102,13 +110,17 @@ const Tooltip = forwardRef(({
 
 Tooltip.propTypes = {
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
   delay: PropTypes.number,
+  hasArrow: PropTypes.bool,
   placement: PropTypes.oneOf(['top', 'bottom', 'left', 'right']),
   title: PropTypes.node.isRequired,
 };
 
 Tooltip.defaultProps = {
+  className: '',
   delay: 100,
+  hasArrow: true,
   placement: 'top',
 };
 
