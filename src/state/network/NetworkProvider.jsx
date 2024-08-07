@@ -79,23 +79,6 @@ const NetworkProvider = (props) => {
     }
   }, [scrollTimeStamp, actualData]);
 
-  // Scroll to request row onChange of scrollToIndex
-  // setTimeout is required when reqDetail is visible,
-  // it allows DOM to adjust before we scroll it to highlighted request
-  useEffect(() => {
-    if (selectedReqIndex) {
-      setTimeout(() => {
-        const element = document.getElementById(ROW_ID_PREFIX + selectedReqIndex);
-        if (element) {
-          element.scrollIntoView({
-            alignToTop: true,
-            behavior: 'smooth',
-          });
-        }
-      }, 300);
-    }
-  }, [selectedReqIndex]);
-
   return (
     <NetworkContext.Provider
       value={value}
