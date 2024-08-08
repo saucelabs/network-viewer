@@ -33,12 +33,43 @@ export const VIEWER_FIELDS = Object.freeze({
   }),
 });
 
-export const VIEWER_FIELD_FILE = Object.freeze({
+export const VIEWER_FIELDS_HIDE_WATERFALL = Object.freeze({
   file: Object.freeze({
     key: 'filename',
     name: 'Path',
   }),
+  domain: Object.freeze({
+    key: 'domain',
+    name: 'Domain',
+  }),
+  status: Object.freeze({
+    key: 'status',
+    name: 'Status',
+  }),
+  method: Object.freeze({
+    key: 'method',
+    name: 'Method',
+  }),
+  type: Object.freeze({
+    key: 'type',
+    name: 'Type',
+  }),
+  size: Object.freeze({
+    key: 'size',
+    name: 'Size',
+  }),
+  time: Object.freeze({
+    key: 'time',
+    name: 'Time',
+  }),
 });
+
+export const VIEWER_FIELD_FILE = {
+  file: Object.freeze({
+    key: 'filename',
+    name: 'Path',
+  }),
+};
 
 export const FILTER_OPTION = Object.freeze({
   STATUS: 'STATUS',

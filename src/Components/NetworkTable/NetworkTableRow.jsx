@@ -2,24 +2,28 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 
-import { VIEWER_FIELDS, ROW_ID_PREFIX } from './../../constants';
+import { ROW_ID_PREFIX } from './../../constants';
 import Styles from './NetworkTable.styles.scss';
 import TimeChart from './TimeChart';
 import NetworkCellValue from './NetworkCellValue';
-import { getStatusClass } from '../../utils';
+import { getStatusClass, getViewerFields } from '../../utils';
+import { useTheme } from '../../state/theme/Context';
+import { useNetwork } from '../../state/network/Context';
 
 const context = classNames.bind(Styles);
 
 const NetworkTableRow = ({
-  columns,
   entry,
   maxTime,
   scrollHighlight,
   onSelect,
 }) => {
-  const handleSelectRequest = () => {
-    onSelect(entry);
-  };
+  const { state } = useNetwork();
+  const showReqDetail = state.get('showReqDetail');
+  const { showWaterfall } = useTheme();
+
+  const columns = getViewerFields(showReqDetail, showWaterfall);
+  const handleSelectRequest = () => onSelect(entry);
 
   const rowProps = {
     className: context(
@@ -56,15 +60,10 @@ const NetworkTableRow = ({
 };
 
 NetworkTableRow.propTypes = {
-  columns: PropTypes.object,
   entry: PropTypes.object.isRequired,
   maxTime: PropTypes.number.isRequired,
   onSelect: PropTypes.func.isRequired,
   scrollHighlight: PropTypes.bool.isRequired,
-};
-
-NetworkTableRow.defaultProps = {
-  columns: VIEWER_FIELDS,
 };
 
 export default NetworkTableRow;

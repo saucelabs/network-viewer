@@ -1,4 +1,10 @@
-import { TIMINGS, TIMELINE_DATA_POINT_HEIGHT, FILTER_OPTION } from './constants';
+import {
+  FILTER_OPTION,
+  TIMELINE_DATA_POINT_HEIGHT,
+  TIMINGS,
+  VIEWER_FIELD_FILE, VIEWER_FIELDS,
+  VIEWER_FIELDS_HIDE_WATERFALL,
+} from './constants';
 
 /* eslint no-underscore-dangle: 0 */
 
@@ -28,7 +34,7 @@ export const formatTime = (time) => {
 };
 
 export const getUrlInfo = (url) => {
-  // If there's an invalid URL (resource identifier, etc) the constructor would throw an exception.
+  // If there's an invalid URL (resource identifier, etc.) the constructor would throw an exception.
   // Return a 'placeholder' object with default values in the event the passed value cannot be
   // parsed.
   try {
@@ -103,7 +109,7 @@ export const getContent = ({
   text,
 }) => {
   if (mimeType === 'application/json') {
-    let parsedJson = text;
+    let parsedJson;
     try {
       parsedJson = JSON.stringify(JSON.parse(text), null, 2);
     } catch (err) {
@@ -322,12 +328,9 @@ export const parseTime = (time) => {
   return `${time.toFixed(2)} ms`;
 };
 
-export const calcTotalTime = (data) => {
-  const total = Object.keys(data)
-    .filter((key) => !['_blocked_queueing', '_queued', 'startTime'].includes(key))
-    .reduce((acc, key) => acc + data[key], 0);
-  return total;
-};
+export const calcTotalTime = (data) => Object.keys(data)
+  .filter((key) => !['_blocked_queueing', '_queued', 'startTime'].includes(key))
+  .reduce((acc, key) => acc + data[key], 0);
 
 export const prepareTooltipData = (data) => ({
   queuedAt: parseTime(data.startTime),
@@ -378,8 +381,8 @@ export const calcChartAttributes = (data, maxTime, cx, index, cy = null) => {
   const chartAttributes = [];
 
   Object.keys(TIMINGS)
-    .forEach((key) => {
-      const timingInfo = TIMINGS[key];
+    .forEach((timingKey) => {
+      const timingInfo = TIMINGS[timingKey];
       const dataKey = Array.isArray(timingInfo.dataKey) ?
         timingInfo.dataKey.find((key) => data[key]) :
         timingInfo.dataKey;
@@ -396,7 +399,7 @@ export const calcChartAttributes = (data, maxTime, cx, index, cy = null) => {
         y: index ? ((index % 10) * (TIMELINE_DATA_POINT_HEIGHT + 1)) + 40 : cy,
         x: `${previousX}%`,
         fill: timingInfo.fill,
-        key,
+        timingKey,
       });
     });
 
@@ -477,11 +480,19 @@ export const getSummary = (data) => (
 );
 
 export const parseRequestPayload = (text) => {
-  let parsedJson = text;
+  let parsedJson;
   try {
     parsedJson = JSON.stringify(JSON.parse(text), null, 2);
   } catch (err) {
     parsedJson = text;
   }
   return parsedJson;
+};
+
+export const getViewerFields = (showReqDetail, showWaterfall) => {
+  if (showReqDetail) {
+    return VIEWER_FIELD_FILE;
+  }
+
+  return showWaterfall ? VIEWER_FIELDS : VIEWER_FIELDS_HIDE_WATERFALL;
 };

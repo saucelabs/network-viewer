@@ -15,6 +15,10 @@
   height: 100%;
   width: 100%;
 
+  &.hide-waterfall {
+    grid-template-columns: 25% 15% repeat(5, 1fr);
+  }
+
   &.limited-cols {
     grid-template-columns: 100%;
     max-width: $name-col-width;

@@ -1,35 +1,36 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import PropTypes from 'prop-types';
 
-import { VIEWER_FIELDS } from './../../constants';
 import Styles from './NetworkTable.styles.scss';
+import { useNetwork } from '../../state/network/Context';
+import { useTheme } from '../../state/theme/Context';
+import { getViewerFields } from '../../utils';
 
 const context = classNames.bind(Styles);
 
-const NetworkTableHeader = ({ columns }) => (
-  <div className={Styles['network-table-header']}>
-    {Object.entries(columns)
-      .map(([datakey, {
-        key,
-        name,
-      }]) => (
-        <div
-          key={datakey}
-          className={context(Styles['value-cell'], key)}
-        >
-          {name}
-        </div>
-      ))}
-  </div>
-);
+const NetworkTableHeader = () => {
+  const { state } = useNetwork();
+  const showReqDetail = state.get('showReqDetail');
+  const { showWaterfall } = useTheme();
 
-NetworkTableHeader.propTypes = {
-  columns: PropTypes.object,
-};
+  const columns = getViewerFields(showReqDetail, showWaterfall);
 
-NetworkTableHeader.defaultProps = {
-  columns: VIEWER_FIELDS,
+  return (
+    <div className={Styles['network-table-header']}>
+      {Object.entries(columns)
+        .map(([datakey, {
+          key,
+          name,
+        }]) => (
+          <div
+            key={datakey}
+            className={context(Styles['value-cell'], key)}
+          >
+            {name}
+          </div>
+        ))}
+    </div>
+  );
 };
 
 export default NetworkTableHeader;

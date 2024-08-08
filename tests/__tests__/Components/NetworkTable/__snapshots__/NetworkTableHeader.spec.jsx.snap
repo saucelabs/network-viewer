@@ -1,57 +1,78 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NetworkTableHeader renders without crashing 1`] = `
-<table>
-  <NetworkTableHeader
-    columns={
-      Object {
-        "domain": Object {
-          "key": "domain",
-          "name": "Domain",
-        },
-        "file": Object {
-          "key": "filename",
-          "name": "Path",
-        },
-        "method": Object {
-          "key": "method",
-          "name": "Method",
-        },
-        "size": Object {
-          "key": "size",
-          "name": "Size",
-        },
-        "status": Object {
-          "key": "status",
-          "name": "Status",
-        },
-        "time": Object {
-          "key": "time",
-          "name": "Time",
-        },
-        "type": Object {
-          "key": "type",
-          "name": "Type",
-        },
-        "waterfall": Object {
-          "key": "waterfall",
-          "name": "Waterfall",
-        },
-      }
+<NetworkProvider
+  autoHighlightChange={false}
+  data={null}
+  fetchOptions={
+    Object {
+      "withCredentials": true,
     }
-  >
+  }
+  file={null}
+  initialState={
+    Immutable.Map {
+      "search": Object {
+        "name": "URL",
+        "value": "",
+      },
+      "error": null,
+      "statusFilter": Object {
+        "name": "All",
+        "value": null,
+      },
+      "scrollToIndex": null,
+      "data": Immutable.List [],
+      "selectedReqIndex": null,
+      "reqDetail": null,
+      "showReqDetail": false,
+      "typeFilter": Object {
+        "name": null,
+        "value": null,
+      },
+      "rawData": Object {
+        "log": Object {
+          "creator": Object {
+            "name": "",
+            "version": "",
+          },
+          "entries": Array [],
+          "pages": Array [],
+          "version": "",
+        },
+      },
+      "totalNetworkTime": null,
+      "actualData": Immutable.List [],
+      "dataSummary": Immutable.Map {},
+      "loading": false,
+      "sort": Object {
+        "isAsc": true,
+        "key": "startedDateTime",
+      },
+    }
+  }
+  onDataError={null}
+  onDataLoaded={null}
+  onPause={null}
+  onRequestSelect={null}
+  onReset={null}
+  onResume={null}
+  scrollRequestPosition="near"
+  scrollTimeStamp={null}
+>
+  <NetworkTableHeader>
     <div>
-      <div
-        className="domain"
-        key="domain"
-      >
-        Domain
-      </div>
       <div
         className="filename"
         key="file"
       >
         Path
+      </div>
+      <div
+        className="domain"
+        key="domain"
+      >
+        Domain
       </div>
       <div
         className="status"
@@ -91,5 +112,5 @@ exports[`NetworkTableHeader renders without crashing 1`] = `
       </div>
     </div>
   </NetworkTableHeader>
-</table>
+</NetworkProvider>
 `;

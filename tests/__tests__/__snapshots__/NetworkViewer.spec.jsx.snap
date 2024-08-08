@@ -60,14 +60,13 @@ exports[`renders without crashing 1`] = `
       onDataError={null}
       onDataLoaded={null}
       onPause={[Function]}
+      onRequestSelect={[Function]}
       onReset={[Function]}
       onResume={[Function]}
       scrollRequestPosition="near"
       scrollTimeStamp={null}
     >
-      <MainContainer
-        onRequestSelect={[Function]}
-      />
+      <MainContainer />
     </NetworkProvider>
   </ThemeProvider>
 </section>

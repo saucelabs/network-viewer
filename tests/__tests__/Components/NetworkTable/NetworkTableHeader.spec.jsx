@@ -2,13 +2,14 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import NetworkTableHeader from './../../../../src/Components/NetworkTable/NetworkTableHeader';
+import NetworkProvider from '../../../../src/state/network/NetworkProvider';
 
 describe('NetworkTableHeader', () => {
   it('renders without crashing', () => {
     const element = mount(
-      <table>
+      <NetworkProvider>
         <NetworkTableHeader />
-      </table>,
+      </NetworkProvider>,
     );
     expect(element).toMatchSnapshot();
   });
