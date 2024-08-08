@@ -252,6 +252,7 @@ export const NETWORK_VIEWER_DEFAULT_OPTIONS = {
   showImportHar: true,
   showPauseResume: false,
   showTimeline: false,
+  showWaterfall: true,
 };
 
 export const PAYLOAD_CAPTIONS = Object.freeze({

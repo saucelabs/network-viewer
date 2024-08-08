@@ -148,14 +148,16 @@ exports[`FilterContainer renders without crashing 1`] = `
         >
           <input
             onChange={[Function]}
-            placeholder="Search by full URL"
+            placeholder="Search by URL"
             type="text"
             value=""
           />
         </Search>
         <ResetButton>
           <Tooltip
+            className=""
             delay={100}
+            hasArrow={true}
             placement="top"
             title="Reset"
           >
@@ -255,7 +257,9 @@ exports[`FilterContainer renders without crashing 1`] = `
             />
             <ImportHarButton>
               <Tooltip
+                className=""
                 delay={100}
+                hasArrow={true}
                 placement="top"
                 title="Import HAR"
               >

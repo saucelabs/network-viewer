@@ -4,9 +4,7 @@ exports[`NetworkTableRow renders without crashing 1`] = `
 <table>
   <tbody>
     <NetworkTableRow
-      maxTime={5000}
-      onSelect={[Function]}
-      payload={
+      entry={
         Object {
           "domain": "developer.mozilla.org",
           "filename": "slice",
@@ -30,6 +28,8 @@ exports[`NetworkTableRow renders without crashing 1`] = `
           "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
         }
       }
+      maxTime={5000}
+      onSelect={[Function]}
       scrollHighlight={false}
     >
       <tr
@@ -70,7 +70,9 @@ exports[`NetworkTableRow renders without crashing 1`] = `
             className="value-cell filename"
           >
             <Tooltip
+              className=""
               delay={500}
+              hasArrow={true}
               placement="top"
               title="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice"
             >

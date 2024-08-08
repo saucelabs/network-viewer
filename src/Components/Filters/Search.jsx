@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 import Styles from './Search.styles.scss';
 import { useNetwork } from '../../state/network/Context';
 
-const Search = ({ name, value }) => {
+const Search = ({
+  name,
+  value,
+}) => {
   const { actions } = useNetwork();
 
   const handleInputChange = ({ target }) => {
@@ -18,7 +21,7 @@ const Search = ({ name, value }) => {
     <input
       className={Styles['search-input']}
       onChange={handleInputChange}
-      placeholder="Search by full URL"
+      placeholder="Search by URL"
       type="text"
       value={value}
     />
