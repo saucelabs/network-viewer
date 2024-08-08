@@ -72,7 +72,7 @@ exports[`NetworkTableRow renders without crashing 1`] = `
             <Tooltip
               className=""
               delay={500}
-              hasArrow={true}
+              hasArrow={false}
               placement="top"
               title="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice"
             >
@@ -124,9 +124,9 @@ exports[`NetworkTableRow renders without crashing 1`] = `
           <td
             className="value-cell status"
           >
-            <span>
+            <div>
               200
-            </span>
+            </div>
           </td>
         </NetworkCellValue>
         <NetworkCellValue
@@ -161,9 +161,9 @@ exports[`NetworkTableRow renders without crashing 1`] = `
           <td
             className="value-cell method"
           >
-            <span>
+            <div>
               GET
-            </span>
+            </div>
           </td>
         </NetworkCellValue>
         <NetworkCellValue
@@ -198,9 +198,9 @@ exports[`NetworkTableRow renders without crashing 1`] = `
           <td
             className="value-cell domain"
           >
-            <span>
+            <div>
               developer.mozilla.org
-            </span>
+            </div>
           </td>
         </NetworkCellValue>
         <NetworkCellValue
@@ -235,9 +235,9 @@ exports[`NetworkTableRow renders without crashing 1`] = `
           <td
             className="value-cell type"
           >
-            <span>
+            <div>
               html
-            </span>
+            </div>
           </td>
         </NetworkCellValue>
         <NetworkCellValue
@@ -272,9 +272,9 @@ exports[`NetworkTableRow renders without crashing 1`] = `
           <td
             className="value-cell size"
           >
-            <span>
+            <div>
               135.04
-            </span>
+            </div>
           </td>
         </NetworkCellValue>
         <NetworkCellValue
@@ -309,7 +309,7 @@ exports[`NetworkTableRow renders without crashing 1`] = `
           <td
             className="value-cell time"
           >
-            <span />
+            <div />
           </td>
         </NetworkCellValue>
         <td />
