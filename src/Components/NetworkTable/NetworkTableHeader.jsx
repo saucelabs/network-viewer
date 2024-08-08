@@ -16,7 +16,7 @@ const NetworkTableHeader = ({ columns }) => (
       }]) => (
         <div
           key={datakey}
-          className={context(Styles['table-cell'], key)}
+          className={context(Styles['value-cell'], key)}
         >
           {name}
         </div>

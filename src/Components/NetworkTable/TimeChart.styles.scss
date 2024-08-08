@@ -1,7 +1,10 @@
 @import "./../../styles/variables.scss";
 
 .time-chart {
-  margin-right: $size-xs-s;
+  padding-right: $size-s;
+  width: 100%;
+  height: 20px;
+  viewBox: 0 0 250 20,
 }
 
 .time-chart-tooltip {

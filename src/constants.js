@@ -1,11 +1,11 @@
 export const VIEWER_FIELDS = Object.freeze({
-  domain: Object.freeze({
-    key: 'domain',
-    name: 'Domain',
-  }),
   file: Object.freeze({
     key: 'filename',
     name: 'Path',
+  }),
+  domain: Object.freeze({
+    key: 'domain',
+    name: 'Domain',
   }),
   status: Object.freeze({
     key: 'status',
@@ -196,9 +196,6 @@ export const TIMINGS = {
 };
 
 export const TIME_CHART_SVG_PROPS = {
-  width: '100%',
-  height: '20',
-  viewBox: '0 0 250 20',
   version: '1.1',
   preserveAspectRatio: 'xMinYMin meet',
 };

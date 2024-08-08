@@ -10,6 +10,7 @@
   font-weight: 700;
   text-transform: uppercase;
   border-bottom: $border;
+  color: $brand-primary-gray;
   align-content: center;
 }
 
@@ -27,8 +28,8 @@
   grid-column: span 8 / span 8;
   cursor: pointer;
   padding: $size-xs $size-xs-s;
-
   border-bottom: $border;
+  color: $brand-primary-dark-gray;
 
   &:nth-last-child(2) {
     border-bottom: none;
@@ -52,8 +53,7 @@
   }
 }
 
-.table-cell {
-  color: $brand-primary-gray;
+.value-cell {
   align-self: center;
 
   display: grid;
@@ -62,7 +62,6 @@
   .value-text {
     flex: 1 1 auto;
     width: 100%;
-    color: $brand-primary-dark-gray;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
