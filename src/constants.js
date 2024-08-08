@@ -112,7 +112,7 @@ export const TYPE_FILTERS = [
 ];
 
 export const DEFAULT_STATUS_FILTER = {
-  name: '-',
+  name: 'All',
   value: null,
 };
 export const STATUS_FILTERS = [
