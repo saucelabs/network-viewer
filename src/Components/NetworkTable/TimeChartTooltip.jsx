@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 
-import Styles from './TimeChartTooltip.styles.scss';
+import Styles from './TimeChart.styles.scss';
 import { TIMINGS } from '../../constants';
 import { prepareTooltipData } from '../../utils';
 
@@ -36,7 +36,10 @@ const TimeChartTooltip = ({ data }) => {
           {`Started at ${tooltipData.startedAt}`}
         </p>
       </section>
-      {DETAIL.map(({ title, category }) => (
+      {DETAIL.map(({
+        title,
+        category,
+      }) => (
         <section
           key={title}
           className={Styles['tooltip-info']}
@@ -48,7 +51,7 @@ const TimeChartTooltip = ({ data }) => {
                   {title}
                 </th>
                 <th className={Styles['waterfall-tooltip-th']}>
-                    DURATION
+                  DURATION
                 </th>
               </tr>
             </thead>
@@ -62,7 +65,9 @@ const TimeChartTooltip = ({ data }) => {
                     {TIMINGS[key].name}
                   </td>
                   <td className={Styles['waterfall-tooltip-value']}>
-                    {Array.isArray(TIMINGS[key].dataKey) ? tooltipData[TIMINGS[key].dataKey.find(key => tooltipData[key])] : tooltipData[TIMINGS[key].dataKey]}
+                    {Array.isArray(TIMINGS[key].dataKey) ?
+                      tooltipData[TIMINGS[key].dataKey.find((dataKey) => tooltipData[dataKey])] :
+                      tooltipData[TIMINGS[key].dataKey]}
                   </td>
                 </tr>
               ))}

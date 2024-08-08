@@ -1,22 +1,24 @@
 @import "./../../styles/variables.scss";
 
-.tooltip {
-  display: block;
-  width: 300px;
-  height: auto;
-  background: $white-100;
-  border: $border;
-  border-radius: 3px;
-  color: $white-33;
-  font-size: $font-size-small;
-  padding: $size-m / 2;
-  opacity: 1;
+.time-chart {
+  margin-right: $size-xs-s;
 }
 
-:global {
-  .Popover-tip {
-    display: none;
-  }
+.time-chart-tooltip {
+  background-color: $white-100 !important;
+  overflow: hidden !important;
+  scrollbar-color: auto !important;
+}
+
+.tooltip {
+  display: block;
+  width: 280px;
+  height: auto;
+  background: $white-100;
+  color: $white-33;
+  font-size: $font-size-small;
+  padding: $size-xs-s;
+  opacity: 1;
 }
 
 .tooltip-info {
@@ -50,8 +52,8 @@
     .waterfall-tooltip-tr:nth-of-type(odd) {
       background-color: $white-100;
     }
-    
-   .waterfall-tooltip-key {
+
+    .waterfall-tooltip-key {
       font-weight: bold;
       padding: 0 $size-m;
       position: relative;
@@ -60,9 +62,9 @@
         content: "";
         position: absolute;
         left: 0;
-        top: $size-m / 4;
-        width: $size-m / 2;
-        height: $size-m / 2;
+        top: $size-xs;
+        width: $size-xs-s;
+        height: $size-xs-s;
       }
 
       &.blocked {
@@ -134,7 +136,7 @@
 
   .waterfall-tooltip-thead {
     .waterfall-tooltip-th {
-      padding-bottom: $size-m / 2;
+      padding-bottom: $size-xs-s;
       color: $white-50;
 
       &:nth-child(2) {

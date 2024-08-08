@@ -112,7 +112,7 @@ export const TYPE_FILTERS = [
 ];
 
 export const DEFAULT_STATUS_FILTER = {
-  name: '-',
+  name: 'All',
   value: null,
 };
 export const STATUS_FILTERS = [
@@ -252,6 +252,7 @@ export const NETWORK_VIEWER_DEFAULT_OPTIONS = {
   showImportHar: true,
   showPauseResume: false,
   showTimeline: false,
+  showWaterfall: true,
 };
 
 export const PAYLOAD_CAPTIONS = Object.freeze({

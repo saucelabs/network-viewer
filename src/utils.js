@@ -354,12 +354,15 @@ export const getStatusClass = ({
   return 'info';
 };
 
-export const formatValue = (key, value, unit, request = {}) => {
+export const formatValue = (key, value, unit, entry = {}) => {
   switch (key) {
     case 'time':
-      return value === 0 && !request.error ? 'Pending' : parseTime(value);
+      if (entry.status === 0) {
+        return 'Pending';
+      }
+      return value === 0 && !entry.error ? '-' : parseTime(value);
     case 'status':
-      if (request.error) {
+      if (entry.error) {
         return '(failed)';
       }
       return value === 0 ? 'Pending' : value;

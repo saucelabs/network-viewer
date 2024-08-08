@@ -2,20 +2,22 @@
 
 .tooltip-label {
   position: absolute;
-  max-width: 278px;
-
   opacity: 0;
   transition: opacity 300ms ease-in-out;
 
   .tooltip-label-box {
-    position: relative;
-    display: block;
+    max-width: 300px;
+    max-height: 500px;
+    display: inline-block;
     background-color: $brand-primary-dark-gray;
     color: $white-100;
-    overflow-wrap: break-word;
     padding: $size-xs $size-xs-s;
     border: $border;
     border-radius: $border-radius-base;
+
+    overflow-y: auto;
+    scrollbar-color: $brand-primary-gray $brand-primary-dark-gray;
+    word-break: break-all;
   }
 }
 

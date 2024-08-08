@@ -18,7 +18,7 @@ exports[`ImportHAR renders without crashing 1`] = `
       },
       "error": null,
       "statusFilter": Object {
-        "name": "-",
+        "name": "All",
         "value": null,
       },
       "scrollToIndex": null,
@@ -90,7 +90,9 @@ exports[`ImportHAR renders without crashing 1`] = `
       />
       <ImportHarButton>
         <Tooltip
+          className=""
           delay={100}
+          hasArrow={false}
           placement="top"
           title="Import HAR"
         >

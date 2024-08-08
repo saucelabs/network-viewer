@@ -18,7 +18,7 @@ exports[`MainContainer renders without crashing 1`] = `
       },
       "error": null,
       "statusFilter": Object {
-        "name": "-",
+        "name": "All",
         "value": null,
       },
       "scrollToIndex": null,
@@ -77,7 +77,7 @@ exports[`MainContainer renders without crashing 1`] = `
                     items={
                       Array [
                         Object {
-                          "name": "-",
+                          "name": "All",
                           "value": null,
                         },
                         Object {
@@ -105,7 +105,7 @@ exports[`MainContainer renders without crashing 1`] = `
                     onChange={[Function]}
                     selected={
                       Object {
-                        "name": "-",
+                        "name": "All",
                         "value": null,
                       }
                     }
@@ -128,7 +128,7 @@ exports[`MainContainer renders without crashing 1`] = `
                           onClick={[Function]}
                           type="button"
                         >
-                          Status: -
+                          Status: All
                           <IconChevronUp
                             className=""
                           >
@@ -157,14 +157,16 @@ exports[`MainContainer renders without crashing 1`] = `
                 >
                   <input
                     onChange={[Function]}
-                    placeholder="Search by full URL"
+                    placeholder="Search by URL"
                     type="text"
                     value=""
                   />
                 </Search>
                 <ResetButton>
                   <Tooltip
+                    className=""
                     delay={100}
+                    hasArrow={false}
                     placement="top"
                     title="Reset"
                   >
@@ -264,7 +266,9 @@ exports[`MainContainer renders without crashing 1`] = `
                     />
                     <ImportHarButton>
                       <Tooltip
+                        className=""
                         delay={100}
+                        hasArrow={false}
                         placement="top"
                         title="Import HAR"
                       >
