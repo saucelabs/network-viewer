@@ -120,7 +120,7 @@ Tooltip.propTypes = {
 Tooltip.defaultProps = {
   className: '',
   delay: 100,
-  hasArrow: true,
+  hasArrow: false,
   placement: 'top',
 };
 

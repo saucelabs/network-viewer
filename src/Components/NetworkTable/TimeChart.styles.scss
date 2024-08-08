@@ -6,6 +6,8 @@
 
 .time-chart-tooltip {
   background-color: $white-100 !important;
+  overflow: hidden !important;
+  scrollbar-color: auto !important;
 }
 
 .tooltip {
