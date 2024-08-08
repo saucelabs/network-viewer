@@ -34,9 +34,9 @@ const NetworkCellValue = ({
   if (!shouldDisplayTooltip) {
     return (
       <td className={context('value-cell', datakey)}>
-        <span className={Styles['value-text']}>
+        <div className={Styles['value-text']}>
           {formattedValue}
-        </span>
+        </div>
       </td>
     );
   }

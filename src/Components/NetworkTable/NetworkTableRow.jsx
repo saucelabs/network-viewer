@@ -49,12 +49,12 @@ const NetworkTableRow = ({
         ))}
       {showWaterfall && (
         <td className={Styles['timeline-header']}>
-          {entry.time && (
+          {entry.time ? (
             <TimeChart
               maxTime={maxTime}
               timings={entry.timings}
             />
-          )}
+          ) : ''}
         </td>
       )}
     </tr>
