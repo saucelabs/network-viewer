@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import { useNetwork } from '../state/network/Context';
 import FilterContainer from './FilterContainer';

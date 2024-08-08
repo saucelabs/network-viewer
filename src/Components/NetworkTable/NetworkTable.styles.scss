@@ -5,7 +5,7 @@
   grid-template-columns: subgrid;
   grid-column: span 8 / span 8;
 
-  padding: $size-s $size-xs-s;
+  padding: $size-xs-s;
   font-size: $font-size-small;
   font-weight: 700;
   text-transform: uppercase;
@@ -30,6 +30,7 @@
   padding: $size-xs $size-xs-s;
   border-bottom: $border;
   color: $brand-primary-dark-gray;
+  font-size: $font-size-small;
 
   &:nth-last-child(2) {
     border-bottom: none;
@@ -73,7 +74,7 @@
   border-top: $border;
   width: 100%;
   background: $bg-gray-90;
-  padding: $size-xs-s $size-s;
+  padding: $size-xs $size-s;
   display: inline-flex;
   vertical-align: middle;
 
