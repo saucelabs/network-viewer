@@ -4,6 +4,8 @@ import classNames from 'classnames/bind';
 
 import { formatValue } from '../../utils';
 import Styles from './NetworkTableHeader.styles.scss';
+import { VIEWER_FIELDS } from '../../constants';
+import Tooltip from '../Common/Tooltip/Tooltip';
 
 const context = classNames.bind(Styles);
 
@@ -13,12 +15,42 @@ const NetworkCellValue = ({
   payload,
 }) => {
   const formattedValue = formatValue(datakey, payload[datakey], unit, payload);
+  const shouldDisplayTooltip = (
+    datakey === VIEWER_FIELDS.file.key ||
+    payload.error
+  );
+
+  const getTitle = () => {
+    if (datakey === VIEWER_FIELDS.file.key) {
+      return payload.url;
+    }
+    if (payload.error) {
+      return payload.error;
+    }
+
+    return formattedValue;
+  };
+
+  if (!shouldDisplayTooltip) {
+    return (
+      <td className={context('value-cell', datakey)}>
+        <span className={Styles['value-text']}>
+          {formattedValue}
+        </span>
+      </td>
+    );
+  }
 
   return (
     <td className={context('value-cell', datakey)}>
-      <span className={Styles['value-text']}>
-        {formattedValue}
-      </span>
+      <Tooltip
+        delay={500}
+        title={getTitle()}
+      >
+        <span className={Styles['value-text']}>
+          {formattedValue}
+        </span>
+      </Tooltip>
     </td>
   );
 };
