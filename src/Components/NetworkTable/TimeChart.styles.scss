@@ -10,19 +10,13 @@
 
 .tooltip {
   display: block;
-  width: 270px;
+  width: 280px;
   height: auto;
   background: $white-100;
   color: $white-33;
   font-size: $font-size-small;
   padding: $size-xs-s;
   opacity: 1;
-}
-
-:global {
-  .Popover-tip {
-    display: none;
-  }
 }
 
 .tooltip-info {
@@ -66,7 +60,7 @@
         content: "";
         position: absolute;
         left: 0;
-        top: $size-m / 4;
+        top: $size-xs;
         width: $size-xs-s;
         height: $size-xs-s;
       }

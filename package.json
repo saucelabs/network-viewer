@@ -96,6 +96,7 @@
     "postcss": "^8.4.39",
     "prop-types": "^15.8.1",
     "react-dom": "^16.14.0",
+    "react-scripts": "^5.0.1",
     "recharts": "1.8.5",
     "release-it": "^15.11.0",
     "rollup": "^2.79.1",

@@ -7,14 +7,16 @@ import TimeChartTooltip from './TimeChartTooltip';
 import Tooltip from '../Common/Tooltip/Tooltip';
 import Styles from './TimeChart.styles.scss';
 
-const TimeChart = ({ timings, maxTime }) => {
+const TimeChart = ({
+  timings,
+  maxTime,
+}) => {
   const chartAttributes = useMemo(() => calcChartAttributes(timings, maxTime), [timings, maxTime]);
 
   return (
     <Tooltip
       className={Styles['time-chart-tooltip']}
       delay={300}
-      hasArrow={false}
       placement="left"
       title={<TimeChartTooltip data={timings} />}
     >
