@@ -6,23 +6,19 @@
 
 .time-chart-tooltip {
   background-color: $white-100 !important;
+  overflow: hidden !important;
+  scrollbar-color: auto !important;
 }
 
 .tooltip {
   display: block;
-  width: 270px;
+  width: 280px;
   height: auto;
   background: $white-100;
   color: $white-33;
   font-size: $font-size-small;
   padding: $size-xs-s;
   opacity: 1;
-}
-
-:global {
-  .Popover-tip {
-    display: none;
-  }
 }
 
 .tooltip-info {

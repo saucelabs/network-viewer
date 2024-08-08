@@ -18,7 +18,7 @@ exports[`ImportHAR renders without crashing 1`] = `
       },
       "error": null,
       "statusFilter": Object {
-        "name": "-",
+        "name": "All",
         "value": null,
       },
       "scrollToIndex": null,
@@ -54,7 +54,6 @@ exports[`ImportHAR renders without crashing 1`] = `
   onDataError={null}
   onDataLoaded={null}
   onPause={null}
-  onRequestSelect={null}
   onReset={null}
   onResume={null}
   scrollRequestPosition="near"
@@ -93,7 +92,7 @@ exports[`ImportHAR renders without crashing 1`] = `
         <Tooltip
           className=""
           delay={100}
-          hasArrow={true}
+          hasArrow={false}
           placement="top"
           title="Import HAR"
         >

@@ -17,7 +17,6 @@ const TimeChart = ({
     <Tooltip
       className={Styles['time-chart-tooltip']}
       delay={300}
-      hasArrow={false}
       placement="left"
       title={<TimeChartTooltip data={timings} />}
     >

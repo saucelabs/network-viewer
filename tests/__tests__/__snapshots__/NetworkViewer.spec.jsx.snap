@@ -24,7 +24,7 @@ exports[`renders without crashing 1`] = `
           },
           "error": null,
           "statusFilter": Object {
-            "name": "-",
+            "name": "All",
             "value": null,
           },
           "scrollToIndex": null,
@@ -59,14 +59,15 @@ exports[`renders without crashing 1`] = `
       }
       onDataError={null}
       onDataLoaded={null}
-      onPause={null}
-      onRequestSelect={[Function]}
-      onReset={null}
-      onResume={null}
+      onPause={[Function]}
+      onReset={[Function]}
+      onResume={[Function]}
       scrollRequestPosition="near"
       scrollTimeStamp={null}
     >
-      <MainContainer />
+      <MainContainer
+        onRequestSelect={[Function]}
+      />
     </NetworkProvider>
   </ThemeProvider>
 </section>

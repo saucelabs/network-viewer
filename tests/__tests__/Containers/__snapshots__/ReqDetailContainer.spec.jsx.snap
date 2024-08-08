@@ -18,7 +18,7 @@ exports[`ReqDetailContainer renders without crashing 1`] = `
       },
       "error": null,
       "statusFilter": Object {
-        "name": "-",
+        "name": "All",
         "value": null,
       },
       "scrollToIndex": null,

@@ -33,16 +33,16 @@ const NetworkCellValue = ({
 
   if (!shouldDisplayTooltip) {
     return (
-      <div className={context('table-cell', datakey)}>
-        <span className={Styles['value-text']}>
+      <div className={context('value-cell', datakey)}>
+        <div className={Styles['value-text']}>
           {formattedValue}
-        </span>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className={context('table-cell', datakey)}>
+    <div className={context('value-cell', datakey)}>
       <Tooltip
         delay={500}
         title={getTitle()}

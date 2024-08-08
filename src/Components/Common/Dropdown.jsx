@@ -60,7 +60,6 @@ const Dropdown = ({
       >
         <>
           {`Status: ${selectedKey.name}`}
-          {isExpand}
           {isExpand ?
             <IconChevronDown className={Styles.icn} /> :
             <IconChevronUp className={Styles.icn} />}

@@ -12,22 +12,22 @@ const context = classNames.bind(Styles);
 
 const NetworkTableRow = ({
   columns,
-  payload,
+  entry,
   maxTime,
   scrollHighlight,
   onSelect,
 }) => {
   const handleSelectRequest = () => {
-    onSelect(payload);
+    onSelect(entry);
   };
 
   const rowProps = {
     className: context(
       'network-table-row',
-      getStatusClass(payload),
+      getStatusClass(entry),
       { highlight: scrollHighlight },
     ),
-    id: ROW_ID_PREFIX + payload.index,
+    id: ROW_ID_PREFIX + entry.index,
     onClick: handleSelectRequest,
   };
 
@@ -37,17 +37,17 @@ const NetworkTableRow = ({
         .map(([datakey, {
           key,
           unit,
-        }]) => (key === 'waterfall' && payload.time ? (
+        }]) => (key === 'waterfall' && entry.time ? (
           <TimeChart
             key={key}
             maxTime={maxTime}
-            timings={payload.timings}
+            timings={entry.timings}
           />
         ) : (
           <NetworkCellValue
             key={datakey}
             datakey={key}
-            payload={payload}
+            payload={entry}
             unit={unit}
           />
         )))}
@@ -57,9 +57,9 @@ const NetworkTableRow = ({
 
 NetworkTableRow.propTypes = {
   columns: PropTypes.object,
+  entry: PropTypes.object.isRequired,
   maxTime: PropTypes.number.isRequired,
   onSelect: PropTypes.func.isRequired,
-  payload: PropTypes.object.isRequired,
   scrollHighlight: PropTypes.bool.isRequired,
 };
 

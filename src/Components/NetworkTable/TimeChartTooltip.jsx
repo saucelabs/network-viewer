@@ -36,10 +36,7 @@ const TimeChartTooltip = ({ data }) => {
           {`Started at ${tooltipData.startedAt}`}
         </p>
       </section>
-      {DETAIL.map(({
-        title,
-        category,
-      }) => (
+      {DETAIL.map(({ title, category }) => (
         <section
           key={title}
           className={Styles['tooltip-info']}
@@ -65,7 +62,9 @@ const TimeChartTooltip = ({ data }) => {
                     {TIMINGS[key].name}
                   </td>
                   <td className={Styles['waterfall-tooltip-value']}>
-                    {Array.isArray(TIMINGS[key].dataKey) ? tooltipData[TIMINGS[key].dataKey.find((key) => tooltipData[key])] : tooltipData[TIMINGS[key].dataKey]}
+                    {Array.isArray(TIMINGS[key].dataKey) ?
+                      tooltipData[TIMINGS[key].dataKey.find((dataKey) => tooltipData[dataKey])] :
+                      tooltipData[TIMINGS[key].dataKey]}
                   </td>
                 </tr>
               ))}

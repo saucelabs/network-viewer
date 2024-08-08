@@ -18,7 +18,7 @@ exports[`Search renders without crashing 1`] = `
       },
       "error": null,
       "statusFilter": Object {
-        "name": "-",
+        "name": "All",
         "value": null,
       },
       "scrollToIndex": null,
@@ -67,7 +67,7 @@ exports[`Search renders without crashing 1`] = `
   >
     <input
       onChange={[Function]}
-      placeholder="Search by full URL"
+      placeholder="Search by URL"
       type="text"
       value="test"
     />
