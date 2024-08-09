@@ -4,7 +4,7 @@ $close-button-width: 35px;
 $tab-height: 35px;
 
 .req-detail-container {
-  flex: 1 1 auto;
+  width: 70%;
   height: 100%;
   overflow: auto;
   background: $white-100;
@@ -20,6 +20,7 @@ $tab-height: 35px;
     color: $white-33;
     border: 0;
     border-bottom: 2px solid transparent;
+    padding: $size-xs-s $size-s $size-xs;
 
     &:hover {
       text-decoration: none;
@@ -39,6 +40,7 @@ $tab-height: 35px;
     cursor: pointer;
     background: transparent;
     border: 0;
+    outline: none;
 
     .close-icon {
       height: $size-xs-s;
@@ -59,7 +61,7 @@ $tab-height: 35px;
   .tabs-container {
     display: flex;
     width: 100%;
-    padding: $size-m;
+    padding: $size-s $size-m;
     height: calc(100% - #{$tab-height});
     overflow: auto;
   }

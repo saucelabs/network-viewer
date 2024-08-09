@@ -5,7 +5,6 @@ import { reducer, initialState as defaultState } from './reducer';
 import { updateData, fetchFile, updateScrollToIndex } from './actions';
 import { NetworkContext } from './Context';
 import { findRequestIndex } from '../../utils';
-import { ROW_ID_PREFIX } from '../../constants';
 
 const NetworkProvider = (props) => {
   const {
@@ -32,7 +31,6 @@ const NetworkProvider = (props) => {
     onRequestSelect,
   };
   const value = useMemo(() => [state, dispatch, callbacks], [state]);
-  const selectedReqIndex = value[0].get('selectedReqIndex');
   const requestData = value[0].get('data');
   const showReqDetail = value[0].get('showReqDetail');
   const actualData = value[0].get('actualData');

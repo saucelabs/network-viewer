@@ -21,6 +21,6 @@
 
   &.limited-cols {
     grid-template-columns: 100%;
-    max-width: $name-col-width;
+    width: 30%;
   }
 }
