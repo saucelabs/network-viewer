@@ -235,7 +235,6 @@ exports[`MainContainer renders without crashing 1`] = `
                   </Tooltip>
                 </ResetButton>
                 <ImportHar
-                  className={null}
                   showButton={true}
                 >
                   <div
@@ -525,7 +524,6 @@ exports[`MainContainer renders without crashing 1`] = `
           <NetworkTableContainer>
             <section>
               <ImportHar
-                className={null}
                 showButton={false}
               >
                 <div

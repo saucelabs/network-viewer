@@ -228,7 +228,6 @@ exports[`FilterContainer renders without crashing 1`] = `
           </Tooltip>
         </ResetButton>
         <ImportHar
-          className={null}
           showButton={true}
         >
           <div

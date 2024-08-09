@@ -61,7 +61,6 @@ exports[`ImportHAR renders without crashing 1`] = `
   scrollTimeStamp={null}
 >
   <ImportHar
-    className={null}
     showButton={true}
   >
     <div
