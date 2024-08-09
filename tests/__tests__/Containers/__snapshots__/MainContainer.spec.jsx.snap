@@ -23,6 +23,7 @@ exports[`MainContainer renders without crashing 1`] = `
       },
       "scrollToIndex": null,
       "data": Immutable.List [],
+      "tableHeaderWidth": "100%",
       "selectedReqIndex": null,
       "reqDetail": null,
       "showReqDetail": false,
@@ -54,14 +55,13 @@ exports[`MainContainer renders without crashing 1`] = `
   onDataError={null}
   onDataLoaded={null}
   onPause={null}
+  onRequestSelect={null}
   onReset={null}
   onResume={null}
   scrollRequestPosition="near"
   scrollTimeStamp={null}
 >
-  <MainContainer
-    onRequestSelect={[Function]}
-  >
+  <MainContainer>
     <LoaderContainer
       show={false}
       text="Please wait, Fetching file is in progress."
@@ -236,7 +236,6 @@ exports[`MainContainer renders without crashing 1`] = `
                   </Tooltip>
                 </ResetButton>
                 <ImportHar
-                  className={null}
                   showButton={true}
                 >
                   <div
@@ -523,12 +522,9 @@ exports[`MainContainer renders without crashing 1`] = `
           </FilterContainer>
         </div>
         <section>
-          <NetworkTableContainer
-            onRequestSelect={[Function]}
-          >
+          <NetworkTableContainer>
             <section>
               <ImportHar
-                className={null}
                 showButton={false}
               >
                 <div

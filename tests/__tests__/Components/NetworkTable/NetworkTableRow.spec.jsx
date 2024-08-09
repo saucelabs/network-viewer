@@ -2,6 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import NetworkTableRow from './../../../../src/Components/NetworkTable/NetworkTableRow';
+import NetworkProvider from '../../../../src/state/network/NetworkProvider';
 
 describe('NetworkTableRow', () => {
   const NOOP = () => {
@@ -37,13 +38,10 @@ describe('NetworkTableRow', () => {
 
   it('renders without crashing', () => {
     const element = mount(
-      <table>
-        <tbody>
-          <NetworkTableRow {...props} />
-        </tbody>
-      </table>,
+      <NetworkProvider>
+        <NetworkTableRow {...props} />
+      </NetworkProvider>,
     );
-    expect(element)
-      .toMatchSnapshot();
+    expect(element).toMatchSnapshot();
   });
 });

@@ -13,8 +13,9 @@ const HeaderInfo = ({
   component,
   isEncodeEnabled,
   isParseEnabled,
+  isVisible,
 }) => {
-  const [isVisible, updateVisibleStates] = useState(true);
+  const [isOpen, setIsOpen] = useState(isVisible);
   const [isPayloadTransformed, updateTransform] = useState(true);
 
   const handlePayloadTransform = () => updateTransform(!isPayloadTransformed);
@@ -25,16 +26,16 @@ const HeaderInfo = ({
   });
 
   return (
-    <div className={context('header-info', { active: isVisible })}>
+    <div className={context('header-info', { active: isOpen })}>
       <HeaderTitle
         eventKey={eventKey}
         isEncodeEnabled={isEncodeEnabled}
         isParseEnabled={isParseEnabled}
         isPayloadTransformed={isPayloadTransformed}
-        onClick={() => updateVisibleStates(!isVisible)}
+        onClick={() => setIsOpen(!isOpen)}
         onPayloadTransform={handlePayloadTransform}
       />
-      {isVisible && <ChildComponent /> }
+      {isOpen && <ChildComponent />}
     </div>
   );
 };
@@ -45,12 +46,14 @@ HeaderInfo.propTypes = {
   eventKey: PropTypes.string.isRequired,
   isEncodeEnabled: PropTypes.bool,
   isParseEnabled: PropTypes.bool,
+  isVisible: PropTypes.bool,
 };
 
 HeaderInfo.defaultProps = {
   data: null,
   isEncodeEnabled: false,
   isParseEnabled: false,
+  isVisible: false,
 };
 
 export default HeaderInfo;

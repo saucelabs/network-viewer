@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import { useNetwork } from '../state/network/Context';
 import FilterContainer from './FilterContainer';
@@ -12,7 +11,7 @@ import TimelineContainer from './TimelineContainer';
 import { useTheme } from '../state/theme/Context';
 import NetworkTableFooter from './../Components/NetworkTable/NetworkTableFooter';
 
-const MainContainer = ({ onRequestSelect }) => {
+const MainContainer = () => {
   const { state } = useNetwork();
   const { showTimeline } = useTheme();
   const loading = state.get('loading');
@@ -32,7 +31,7 @@ const MainContainer = ({ onRequestSelect }) => {
             <FilterContainer />
           </div>
           <section className={Styles['main-container']}>
-            <NetworkTableContainer onRequestSelect={onRequestSelect} />
+            <NetworkTableContainer />
             {showReqDetail && <ReqDetailContainer />}
           </section>
           {actualData.size ? <NetworkTableFooter dataSummary={dataSummary} /> : null}
@@ -40,15 +39,6 @@ const MainContainer = ({ onRequestSelect }) => {
       </LoaderContainer>
     </>
   );
-};
-
-MainContainer.propTypes = {
-  onRequestSelect: PropTypes.func,
-};
-
-MainContainer.defaultProps = {
-  onRequestSelect: () => {
-  },
 };
 
 export default MainContainer;

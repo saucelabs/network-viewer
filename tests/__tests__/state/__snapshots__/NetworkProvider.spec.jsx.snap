@@ -23,6 +23,7 @@ exports[`NetworkProvider renders without crashing 1`] = `
       },
       "scrollToIndex": null,
       "data": Immutable.List [],
+      "tableHeaderWidth": "100%",
       "selectedReqIndex": null,
       "reqDetail": null,
       "showReqDetail": false,
@@ -54,6 +55,7 @@ exports[`NetworkProvider renders without crashing 1`] = `
   onDataError={null}
   onDataLoaded={null}
   onPause={null}
+  onRequestSelect={null}
   onReset={null}
   onResume={null}
   scrollRequestPosition="near"
@@ -72,6 +74,7 @@ exports[`NetworkProvider renders without crashing 1`] = `
         },
         "scrollToIndex": null,
         "data": Immutable.List [],
+        "tableHeaderWidth": "100%",
         "selectedReqIndex": null,
         "reqDetail": null,
         "showReqDetail": false,
@@ -102,6 +105,7 @@ exports[`NetworkProvider renders without crashing 1`] = `
       [Function],
       Object {
         "onPause": null,
+        "onRequestSelect": null,
         "onReset": null,
         "onResume": null,
       },

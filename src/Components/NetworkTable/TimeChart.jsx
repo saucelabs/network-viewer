@@ -20,7 +20,10 @@ const TimeChart = ({
       placement="left"
       title={<TimeChartTooltip data={timings} />}
     >
-      <svg {...TIME_CHART_SVG_PROPS}>
+      <svg
+        {...TIME_CHART_SVG_PROPS}
+        className={Styles['time-chart']}
+      >
         <g>
           {chartAttributes.map((chartProps) => (
             <rect

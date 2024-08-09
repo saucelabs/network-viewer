@@ -22,10 +22,7 @@ const Tooltip = forwardRef(({
   const targetRef = useObjectRef(forwardedRef);
   const tooltipRef = useRef(null);
 
-  const state = useTooltipTriggerState({
-    // isOpen: true,
-    delay,
-  });
+  const state = useTooltipTriggerState({ delay });
 
   const {
     overlayProps,

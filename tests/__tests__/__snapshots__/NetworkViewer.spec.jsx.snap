@@ -29,6 +29,7 @@ exports[`renders without crashing 1`] = `
           },
           "scrollToIndex": null,
           "data": Immutable.List [],
+          "tableHeaderWidth": "100%",
           "selectedReqIndex": null,
           "reqDetail": null,
           "showReqDetail": false,
@@ -60,14 +61,13 @@ exports[`renders without crashing 1`] = `
       onDataError={null}
       onDataLoaded={null}
       onPause={[Function]}
+      onRequestSelect={[Function]}
       onReset={[Function]}
       onResume={[Function]}
       scrollRequestPosition="near"
       scrollTimeStamp={null}
     >
-      <MainContainer
-        onRequestSelect={[Function]}
-      />
+      <MainContainer />
     </NetworkProvider>
   </ThemeProvider>
 </section>

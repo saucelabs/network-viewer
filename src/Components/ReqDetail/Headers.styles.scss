@@ -5,8 +5,8 @@
 
   .header-info {
     border-bottom: 1px solid $white-90;
-    margin-bottom: $size-m;
-    padding-bottom: $size-m;
+    padding-bottom: $size-xs-s;
+    margin-bottom: $size-xs-s;
 
     &:last-child {
       margin-bottom: 0;
@@ -27,13 +27,13 @@
 
   .caret-icon {
     display: inline-block;
-    height: $size-xs * 2;
+    height: $size-xs-s;
     transform: translateY(-1px) translateX(-5px) rotate(90deg);
-    width: $size-xs * 2;
+    width: $size-xs-s;
   }
 
   .encode-url {
-    margin-left: $size-xs * 2;
+    margin-left: $size-xs-s;
     font-size: $font-size-small;
   }
 
@@ -43,12 +43,13 @@
 }
 
 .header-detail {
-  padding: $size-m 0 0 $size-m;
+  padding-top: $size-xs-s;
+  padding-left: $size-xs-s;
 
   .info-row {
     margin: 0;
     font-size: $font-size-small;
-    padding-bottom: $size-xs-s;
+    padding-bottom: $size-xs;
 
     &:last-child {
       padding-bottom: 0;

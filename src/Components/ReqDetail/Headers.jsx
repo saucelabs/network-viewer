@@ -16,16 +16,17 @@ const Headers = ({ data }) => (!data ? null : (
       component={General}
       data={data}
       eventKey="general"
-    />
-    <HeaderInfo
-      component={Response}
-      data={data}
-      eventKey="response"
+      isVisible
     />
     <HeaderInfo
       component={Request}
       data={data}
       eventKey="request"
+    />
+    <HeaderInfo
+      component={Response}
+      data={data}
+      eventKey="response"
     />
     {(data.headers.queryString && data.headers.queryString.length) ? (
       <HeaderInfo

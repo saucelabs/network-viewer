@@ -35,12 +35,13 @@ const NetworkViewer = ({
         onDataError={onDataError}
         onDataLoaded={onDataLoaded}
         onPause={onPause}
+        onRequestSelect={onRequestSelect}
         onReset={onReset}
         onResume={onResume}
         scrollRequestPosition={scrollRequestPosition}
         scrollTimeStamp={scrollTimeStamp}
       >
-        <MainContainer onRequestSelect={onRequestSelect} />
+        <MainContainer />
       </NetworkProvider>
     </ThemeProvider>
   </section>

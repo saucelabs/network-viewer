@@ -1,7 +1,11 @@
 export const VIEWER_FIELDS = Object.freeze({
   file: Object.freeze({
     key: 'filename',
-    name: 'File',
+    name: 'Path',
+  }),
+  domain: Object.freeze({
+    key: 'domain',
+    name: 'Domain',
   }),
   status: Object.freeze({
     key: 'status',
@@ -11,9 +15,40 @@ export const VIEWER_FIELDS = Object.freeze({
     key: 'method',
     name: 'Method',
   }),
+  type: Object.freeze({
+    key: 'type',
+    name: 'Type',
+  }),
+  size: Object.freeze({
+    key: 'size',
+    name: 'Size',
+  }),
+  time: Object.freeze({
+    key: 'time',
+    name: 'Time',
+  }),
+  waterfall: Object.freeze({
+    key: 'waterfall',
+    name: 'Waterfall',
+  }),
+});
+
+export const VIEWER_FIELDS_HIDE_WATERFALL = Object.freeze({
+  file: Object.freeze({
+    key: 'filename',
+    name: 'Path',
+  }),
   domain: Object.freeze({
     key: 'domain',
     name: 'Domain',
+  }),
+  status: Object.freeze({
+    key: 'status',
+    name: 'Status',
+  }),
+  method: Object.freeze({
+    key: 'method',
+    name: 'Method',
   }),
   type: Object.freeze({
     key: 'type',
@@ -28,6 +63,13 @@ export const VIEWER_FIELDS = Object.freeze({
     name: 'Time',
   }),
 });
+
+export const VIEWER_FIELD_FILE = {
+  file: Object.freeze({
+    key: 'filename',
+    name: 'Path',
+  }),
+};
 
 export const FILTER_OPTION = Object.freeze({
   STATUS: 'STATUS',
@@ -185,8 +227,6 @@ export const TIMINGS = {
 };
 
 export const TIME_CHART_SVG_PROPS = {
-  width: '100%',
-  height: '20',
   viewBox: '0 0 250 20',
   version: '1.1',
   preserveAspectRatio: 'xMinYMin meet',
@@ -277,3 +317,6 @@ export const EMPTY_NETWORK_HAR = Object.freeze({
     pages: [],
   },
 });
+
+export const TABLE_HEADER_HEIGHT = 32;
+export const TABLE_ENTRY_HEIGHT = 24;

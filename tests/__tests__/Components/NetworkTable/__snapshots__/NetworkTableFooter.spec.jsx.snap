@@ -17,7 +17,7 @@ exports[`NetworkTableFooter renders without crashing 1`] = `
     showAllInfo={true}
   >
     <div
-      className="footer"
+      className="network-table-footer"
     >
       <span>
         20 requests

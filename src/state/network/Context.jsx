@@ -20,6 +20,7 @@ export const useNetwork = () => {
     updateTypeFilter: actions.updateTypeFilter,
     updateErrorMessage: actions.updateErrorMessage,
     selectRequest: actions.selectRequest,
+    setTableHeaderWidth: actions.setTableHeaderWidth,
     updateScrollToIndex: actions.updateScrollToIndex,
     resetState: actions.resetState,
   })(dispatch, state);

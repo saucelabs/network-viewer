@@ -1,57 +1,123 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NetworkTableHeader renders without crashing 1`] = `
-<table>
+<NetworkProvider
+  autoHighlightChange={false}
+  data={null}
+  fetchOptions={
+    Object {
+      "withCredentials": true,
+    }
+  }
+  file={null}
+  initialState={
+    Immutable.Map {
+      "search": Object {
+        "name": "URL",
+        "value": "",
+      },
+      "error": null,
+      "statusFilter": Object {
+        "name": "All",
+        "value": null,
+      },
+      "scrollToIndex": null,
+      "data": Immutable.List [],
+      "tableHeaderWidth": "100%",
+      "selectedReqIndex": null,
+      "reqDetail": null,
+      "showReqDetail": false,
+      "typeFilter": Object {
+        "name": null,
+        "value": null,
+      },
+      "rawData": Object {
+        "log": Object {
+          "creator": Object {
+            "name": "",
+            "version": "",
+          },
+          "entries": Array [],
+          "pages": Array [],
+          "version": "",
+        },
+      },
+      "totalNetworkTime": null,
+      "actualData": Immutable.List [],
+      "dataSummary": Immutable.Map {},
+      "loading": false,
+      "sort": Object {
+        "isAsc": true,
+        "key": "startedDateTime",
+      },
+    }
+  }
+  onDataError={null}
+  onDataLoaded={null}
+  onPause={null}
+  onRequestSelect={null}
+  onReset={null}
+  onResume={null}
+  scrollRequestPosition="near"
+  scrollTimeStamp={null}
+>
   <NetworkTableHeader>
-    <thead>
-      <tr>
-        <th
-          className="value-cell filename"
-          key="file"
-        >
-          File
-        </th>
-        <th
-          className="value-cell status"
-          key="status"
-        >
-          Status
-        </th>
-        <th
-          className="value-cell method"
-          key="method"
-        >
-          Method
-        </th>
-        <th
-          className="value-cell domain"
-          key="domain"
-        >
-          Domain
-        </th>
-        <th
-          className="value-cell type"
-          key="type"
-        >
-          Type
-        </th>
-        <th
-          className="value-cell size"
-          key="size"
-        >
-          Size
-        </th>
-        <th
-          className="value-cell time"
-          key="time"
-        >
-          Time
-        </th>
-        <th>
-          Waterfall
-        </th>
-      </tr>
-    </thead>
+    <div
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="table-column value-cell file show-waterfall"
+        key="filename"
+      >
+        Path
+      </div>
+      <div
+        className="table-column value-cell domain show-waterfall"
+        key="domain"
+      >
+        Domain
+      </div>
+      <div
+        className="table-column value-cell status show-waterfall"
+        key="status"
+      >
+        Status
+      </div>
+      <div
+        className="table-column value-cell method show-waterfall"
+        key="method"
+      >
+        Method
+      </div>
+      <div
+        className="table-column value-cell type show-waterfall"
+        key="type"
+      >
+        Type
+      </div>
+      <div
+        className="table-column value-cell size show-waterfall"
+        key="size"
+      >
+        Size
+      </div>
+      <div
+        className="table-column value-cell time show-waterfall"
+        key="time"
+      >
+        Time
+      </div>
+      <div
+        className="table-column value-cell waterfall show-waterfall"
+        key="waterfall"
+      >
+        Waterfall
+      </div>
+    </div>
   </NetworkTableHeader>
-</table>
+</NetworkProvider>
 `;

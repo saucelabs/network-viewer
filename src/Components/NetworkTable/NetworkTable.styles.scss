@@ -1,0 +1,104 @@
+@import "./../../styles/variables.scss";
+
+.network-table-header {
+  display: flex;
+  width: 100%;
+
+  padding: $size-xs-s;
+  font-size: $font-size-small;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: $border;
+  color: $brand-primary-gray;
+  align-content: center;
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.table-column {
+  display:flex;
+  width: 12%;
+  align-self: center;
+  padding-right: $size-xs-s;
+
+  &:last-child {
+    padding-right: 0;
+  }
+
+  &.show-waterfall {
+    width: 9%;
+  }
+
+  &.file {
+    width: 25%;
+
+    &.limited-cols {
+      width: 100%;
+    }
+  }
+
+  &.domain,
+  &.waterfall{
+    width: 15%;
+  }
+}
+
+.network-table-row {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+
+  cursor: pointer;
+  padding: $size-xs $size-xs-s;
+  border-bottom: $border;
+  color: $brand-primary-dark-gray;
+  font-size: $font-size-small;
+
+  &.pending {
+    color: $white-66;
+  }
+
+  &.error {
+    color: $brand-danger;
+  }
+
+  &:hover {
+    background: $white-90;
+  }
+
+  &.highlight {
+    background: $dark-gray;
+    color: $white-100;
+  }
+}
+.value-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: break-all;
+}
+
+.network-table-footer {
+  border-top: $border;
+  width: 100%;
+  background: $bg-gray-90;
+  padding: $size-xs $size-s;
+  display: inline-flex;
+  vertical-align: middle;
+
+  span {
+    flex: 1 1 auto;
+    justify-content: center;
+    display: inline-flex;
+    align-items: center;
+    border-right: 1px solid $white-80;
+    padding: 0 $size-xs;
+    overflow: hidden;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+}

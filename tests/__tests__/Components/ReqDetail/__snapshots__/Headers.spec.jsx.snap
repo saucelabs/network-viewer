@@ -96,6 +96,7 @@ exports[`Headers renders without crashing 1`] = `
       eventKey="general"
       isEncodeEnabled={false}
       isParseEnabled={false}
+      isVisible={true}
     >
       <div
         className="header-info active"
@@ -228,15 +229,16 @@ exports[`Headers renders without crashing 1`] = `
           "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
         }
       }
-      eventKey="response"
+      eventKey="request"
       isEncodeEnabled={false}
       isParseEnabled={false}
+      isVisible={false}
     >
       <div
-        className="header-info active"
+        className="header-info"
       >
         <HeaderTitle
-          eventKey="response"
+          eventKey="request"
           isEncodeEnabled={false}
           isParseEnabled={false}
           isPayloadTransformed={true}
@@ -268,24 +270,10 @@ exports[`Headers renders without crashing 1`] = `
                   </g>
                 </svg>
               </IconCaretUp>
-              Response Headers
+              Request Headers
             </span>
           </div>
         </HeaderTitle>
-        <ChildComponent>
-          <div>
-            <p
-              key="Connection-0"
-            >
-              <span>
-                Connection:
-              </span>
-              <span>
-                keep-alive
-              </span>
-            </p>
-          </div>
-        </ChildComponent>
       </div>
     </HeaderInfo>
     <HeaderInfo
@@ -333,15 +321,16 @@ exports[`Headers renders without crashing 1`] = `
           "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
         }
       }
-      eventKey="request"
+      eventKey="response"
       isEncodeEnabled={false}
       isParseEnabled={false}
+      isVisible={false}
     >
       <div
-        className="header-info active"
+        className="header-info"
       >
         <HeaderTitle
-          eventKey="request"
+          eventKey="response"
           isEncodeEnabled={false}
           isParseEnabled={false}
           isPayloadTransformed={true}
@@ -373,24 +362,10 @@ exports[`Headers renders without crashing 1`] = `
                   </g>
                 </svg>
               </IconCaretUp>
-              Request Headers
+              Response Headers
             </span>
           </div>
         </HeaderTitle>
-        <ChildComponent>
-          <div>
-            <p
-              key="Connection-0"
-            >
-              <span>
-                Connection:
-              </span>
-              <span>
-                keep-alive
-              </span>
-            </p>
-          </div>
-        </ChildComponent>
       </div>
     </HeaderInfo>
     <HeaderInfo
@@ -441,9 +416,10 @@ exports[`Headers renders without crashing 1`] = `
       eventKey="requestPayload"
       isEncodeEnabled={false}
       isParseEnabled={true}
+      isVisible={false}
     >
       <div
-        className="header-info active"
+        className="header-info"
       >
         <HeaderTitle
           eventKey="requestPayload"
@@ -489,17 +465,6 @@ exports[`Headers renders without crashing 1`] = `
             </span>
           </div>
         </HeaderTitle>
-        <ChildComponent>
-          <div>
-            <div>
-              <pre>
-                {
-  "hello": "foo"
-}
-              </pre>
-            </div>
-          </div>
-        </ChildComponent>
       </div>
     </HeaderInfo>
   </section>
