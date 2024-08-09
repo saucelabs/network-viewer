@@ -11,7 +11,7 @@ const NetworkTableFooter = ({
   dataSummary,
   showAllInfo,
 }) => (
-  <div className={context('footer')}>
+  <div className={context('network-table-footer')}>
     {showAllInfo ? (
       <>
         <span>{`${dataSummary.get('totalRequests')} requests`}</span>

@@ -23,6 +23,7 @@ exports[`NetworkTableRow renders without crashing 1`] = `
       },
       "scrollToIndex": null,
       "data": Immutable.List [],
+      "tableHeaderWidth": "100%",
       "selectedReqIndex": null,
       "reqDetail": null,
       "showReqDetail": false,
@@ -88,322 +89,342 @@ exports[`NetworkTableRow renders without crashing 1`] = `
     maxTime={5000}
     onSelect={[Function]}
     scrollHighlight={false}
+    style={Object {}}
   >
     <div
-      className="network-table-row info"
-      id="network-viewer-table-row-0"
-      onClick={[Function]}
+      style={Object {}}
     >
-      <NetworkCellValue
-        datakey="filename"
-        key="file"
-        payload={
-          Object {
-            "domain": "developer.mozilla.org",
-            "filename": "slice",
-            "index": 0,
-            "method": "GET",
-            "size": 135.04,
-            "startedDateTime": "2019-10-14T08:47:11.592Z",
-            "status": 200,
-            "timings": Object {
-              "_blocked_queueing": 4.382999992230907,
-              "blocked": 5.496999992230907,
-              "connect": -1,
-              "dns": -1,
-              "receive": 3.252000024076551,
-              "send": 0.2819999999999998,
-              "ssl": -1,
-              "startTime": 0,
-              "wait": 26.03899999633059,
-            },
-            "type": "html",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
-          }
-        }
-        unit={null}
+      <div
+        className="network-table-row info"
+        id="network-viewer-table-row-0"
+        onClick={[Function]}
       >
         <div
-          className="value-cell filename"
+          className="table-column file show-waterfall"
+          key="filename"
         >
-          <Tooltip
-            className=""
-            delay={500}
-            hasArrow={false}
-            placement="top"
-            title="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice"
+          <NetworkCellValue
+            datakey="filename"
+            payload={
+              Object {
+                "domain": "developer.mozilla.org",
+                "filename": "slice",
+                "index": 0,
+                "method": "GET",
+                "size": 135.04,
+                "startedDateTime": "2019-10-14T08:47:11.592Z",
+                "status": 200,
+                "timings": Object {
+                  "_blocked_queueing": 4.382999992230907,
+                  "blocked": 5.496999992230907,
+                  "connect": -1,
+                  "dns": -1,
+                  "receive": 3.252000024076551,
+                  "send": 0.2819999999999998,
+                  "ssl": -1,
+                  "startTime": 0,
+                  "wait": 26.03899999633059,
+                },
+                "type": "html",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+              }
+            }
+            unit={null}
           >
-            <span
-              onBlur={[Function]}
-              onClick={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onPointerDown={[Function]}
-              onTouchStart={[Function]}
+            <Tooltip
+              className=""
+              delay={500}
+              hasArrow={false}
+              placement="top"
+              title="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice"
             >
-              slice
-            </span>
-            <TooltipTransition
-              isOpen={false}
+              <div
+                className="value-text filename"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onPointerDown={[Function]}
+                onTouchStart={[Function]}
+              >
+                slice
+              </div>
+              <TooltipTransition
+                isOpen={false}
+              />
+            </Tooltip>
+          </NetworkCellValue>
+        </div>
+        <div
+          className="table-column domain show-waterfall"
+          key="domain"
+        >
+          <NetworkCellValue
+            datakey="domain"
+            payload={
+              Object {
+                "domain": "developer.mozilla.org",
+                "filename": "slice",
+                "index": 0,
+                "method": "GET",
+                "size": 135.04,
+                "startedDateTime": "2019-10-14T08:47:11.592Z",
+                "status": 200,
+                "timings": Object {
+                  "_blocked_queueing": 4.382999992230907,
+                  "blocked": 5.496999992230907,
+                  "connect": -1,
+                  "dns": -1,
+                  "receive": 3.252000024076551,
+                  "send": 0.2819999999999998,
+                  "ssl": -1,
+                  "startTime": 0,
+                  "wait": 26.03899999633059,
+                },
+                "type": "html",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+              }
+            }
+            unit={null}
+          >
+            <div
+              className="value-text domain"
+            >
+              developer.mozilla.org
+            </div>
+          </NetworkCellValue>
+        </div>
+        <div
+          className="table-column status show-waterfall"
+          key="status"
+        >
+          <NetworkCellValue
+            datakey="status"
+            payload={
+              Object {
+                "domain": "developer.mozilla.org",
+                "filename": "slice",
+                "index": 0,
+                "method": "GET",
+                "size": 135.04,
+                "startedDateTime": "2019-10-14T08:47:11.592Z",
+                "status": 200,
+                "timings": Object {
+                  "_blocked_queueing": 4.382999992230907,
+                  "blocked": 5.496999992230907,
+                  "connect": -1,
+                  "dns": -1,
+                  "receive": 3.252000024076551,
+                  "send": 0.2819999999999998,
+                  "ssl": -1,
+                  "startTime": 0,
+                  "wait": 26.03899999633059,
+                },
+                "type": "html",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+              }
+            }
+            unit={null}
+          >
+            <div
+              className="value-text status"
+            >
+              200
+            </div>
+          </NetworkCellValue>
+        </div>
+        <div
+          className="table-column method show-waterfall"
+          key="method"
+        >
+          <NetworkCellValue
+            datakey="method"
+            payload={
+              Object {
+                "domain": "developer.mozilla.org",
+                "filename": "slice",
+                "index": 0,
+                "method": "GET",
+                "size": 135.04,
+                "startedDateTime": "2019-10-14T08:47:11.592Z",
+                "status": 200,
+                "timings": Object {
+                  "_blocked_queueing": 4.382999992230907,
+                  "blocked": 5.496999992230907,
+                  "connect": -1,
+                  "dns": -1,
+                  "receive": 3.252000024076551,
+                  "send": 0.2819999999999998,
+                  "ssl": -1,
+                  "startTime": 0,
+                  "wait": 26.03899999633059,
+                },
+                "type": "html",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+              }
+            }
+            unit={null}
+          >
+            <div
+              className="value-text method"
+            >
+              GET
+            </div>
+          </NetworkCellValue>
+        </div>
+        <div
+          className="table-column type show-waterfall"
+          key="type"
+        >
+          <NetworkCellValue
+            datakey="type"
+            payload={
+              Object {
+                "domain": "developer.mozilla.org",
+                "filename": "slice",
+                "index": 0,
+                "method": "GET",
+                "size": 135.04,
+                "startedDateTime": "2019-10-14T08:47:11.592Z",
+                "status": 200,
+                "timings": Object {
+                  "_blocked_queueing": 4.382999992230907,
+                  "blocked": 5.496999992230907,
+                  "connect": -1,
+                  "dns": -1,
+                  "receive": 3.252000024076551,
+                  "send": 0.2819999999999998,
+                  "ssl": -1,
+                  "startTime": 0,
+                  "wait": 26.03899999633059,
+                },
+                "type": "html",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+              }
+            }
+            unit={null}
+          >
+            <div
+              className="value-text type"
+            >
+              html
+            </div>
+          </NetworkCellValue>
+        </div>
+        <div
+          className="table-column size show-waterfall"
+          key="size"
+        >
+          <NetworkCellValue
+            datakey="size"
+            payload={
+              Object {
+                "domain": "developer.mozilla.org",
+                "filename": "slice",
+                "index": 0,
+                "method": "GET",
+                "size": 135.04,
+                "startedDateTime": "2019-10-14T08:47:11.592Z",
+                "status": 200,
+                "timings": Object {
+                  "_blocked_queueing": 4.382999992230907,
+                  "blocked": 5.496999992230907,
+                  "connect": -1,
+                  "dns": -1,
+                  "receive": 3.252000024076551,
+                  "send": 0.2819999999999998,
+                  "ssl": -1,
+                  "startTime": 0,
+                  "wait": 26.03899999633059,
+                },
+                "type": "html",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+              }
+            }
+            unit={null}
+          >
+            <div
+              className="value-text size"
+            >
+              135.04
+            </div>
+          </NetworkCellValue>
+        </div>
+        <div
+          className="table-column time show-waterfall"
+          key="time"
+        >
+          <NetworkCellValue
+            datakey="time"
+            payload={
+              Object {
+                "domain": "developer.mozilla.org",
+                "filename": "slice",
+                "index": 0,
+                "method": "GET",
+                "size": 135.04,
+                "startedDateTime": "2019-10-14T08:47:11.592Z",
+                "status": 200,
+                "timings": Object {
+                  "_blocked_queueing": 4.382999992230907,
+                  "blocked": 5.496999992230907,
+                  "connect": -1,
+                  "dns": -1,
+                  "receive": 3.252000024076551,
+                  "send": 0.2819999999999998,
+                  "ssl": -1,
+                  "startTime": 0,
+                  "wait": 26.03899999633059,
+                },
+                "type": "html",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+              }
+            }
+            unit={null}
+          >
+            <div
+              className="value-text time"
             />
-          </Tooltip>
+          </NetworkCellValue>
         </div>
-      </NetworkCellValue>
-      <NetworkCellValue
-        datakey="domain"
-        key="domain"
-        payload={
-          Object {
-            "domain": "developer.mozilla.org",
-            "filename": "slice",
-            "index": 0,
-            "method": "GET",
-            "size": 135.04,
-            "startedDateTime": "2019-10-14T08:47:11.592Z",
-            "status": 200,
-            "timings": Object {
-              "_blocked_queueing": 4.382999992230907,
-              "blocked": 5.496999992230907,
-              "connect": -1,
-              "dns": -1,
-              "receive": 3.252000024076551,
-              "send": 0.2819999999999998,
-              "ssl": -1,
-              "startTime": 0,
-              "wait": 26.03899999633059,
-            },
-            "type": "html",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
-          }
-        }
-        unit={null}
-      >
         <div
-          className="value-cell domain"
+          className="table-column waterfall show-waterfall"
+          key="waterfall"
         >
-          <div>
-            developer.mozilla.org
-          </div>
+          <NetworkCellValue
+            datakey="waterfall"
+            payload={
+              Object {
+                "domain": "developer.mozilla.org",
+                "filename": "slice",
+                "index": 0,
+                "method": "GET",
+                "size": 135.04,
+                "startedDateTime": "2019-10-14T08:47:11.592Z",
+                "status": 200,
+                "timings": Object {
+                  "_blocked_queueing": 4.382999992230907,
+                  "blocked": 5.496999992230907,
+                  "connect": -1,
+                  "dns": -1,
+                  "receive": 3.252000024076551,
+                  "send": 0.2819999999999998,
+                  "ssl": -1,
+                  "startTime": 0,
+                  "wait": 26.03899999633059,
+                },
+                "type": "html",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+              }
+            }
+            unit={null}
+          >
+            <div
+              className="value-text waterfall"
+            />
+          </NetworkCellValue>
         </div>
-      </NetworkCellValue>
-      <NetworkCellValue
-        datakey="status"
-        key="status"
-        payload={
-          Object {
-            "domain": "developer.mozilla.org",
-            "filename": "slice",
-            "index": 0,
-            "method": "GET",
-            "size": 135.04,
-            "startedDateTime": "2019-10-14T08:47:11.592Z",
-            "status": 200,
-            "timings": Object {
-              "_blocked_queueing": 4.382999992230907,
-              "blocked": 5.496999992230907,
-              "connect": -1,
-              "dns": -1,
-              "receive": 3.252000024076551,
-              "send": 0.2819999999999998,
-              "ssl": -1,
-              "startTime": 0,
-              "wait": 26.03899999633059,
-            },
-            "type": "html",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
-          }
-        }
-        unit={null}
-      >
-        <div
-          className="value-cell status"
-        >
-          <div>
-            200
-          </div>
-        </div>
-      </NetworkCellValue>
-      <NetworkCellValue
-        datakey="method"
-        key="method"
-        payload={
-          Object {
-            "domain": "developer.mozilla.org",
-            "filename": "slice",
-            "index": 0,
-            "method": "GET",
-            "size": 135.04,
-            "startedDateTime": "2019-10-14T08:47:11.592Z",
-            "status": 200,
-            "timings": Object {
-              "_blocked_queueing": 4.382999992230907,
-              "blocked": 5.496999992230907,
-              "connect": -1,
-              "dns": -1,
-              "receive": 3.252000024076551,
-              "send": 0.2819999999999998,
-              "ssl": -1,
-              "startTime": 0,
-              "wait": 26.03899999633059,
-            },
-            "type": "html",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
-          }
-        }
-        unit={null}
-      >
-        <div
-          className="value-cell method"
-        >
-          <div>
-            GET
-          </div>
-        </div>
-      </NetworkCellValue>
-      <NetworkCellValue
-        datakey="type"
-        key="type"
-        payload={
-          Object {
-            "domain": "developer.mozilla.org",
-            "filename": "slice",
-            "index": 0,
-            "method": "GET",
-            "size": 135.04,
-            "startedDateTime": "2019-10-14T08:47:11.592Z",
-            "status": 200,
-            "timings": Object {
-              "_blocked_queueing": 4.382999992230907,
-              "blocked": 5.496999992230907,
-              "connect": -1,
-              "dns": -1,
-              "receive": 3.252000024076551,
-              "send": 0.2819999999999998,
-              "ssl": -1,
-              "startTime": 0,
-              "wait": 26.03899999633059,
-            },
-            "type": "html",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
-          }
-        }
-        unit={null}
-      >
-        <div
-          className="value-cell type"
-        >
-          <div>
-            html
-          </div>
-        </div>
-      </NetworkCellValue>
-      <NetworkCellValue
-        datakey="size"
-        key="size"
-        payload={
-          Object {
-            "domain": "developer.mozilla.org",
-            "filename": "slice",
-            "index": 0,
-            "method": "GET",
-            "size": 135.04,
-            "startedDateTime": "2019-10-14T08:47:11.592Z",
-            "status": 200,
-            "timings": Object {
-              "_blocked_queueing": 4.382999992230907,
-              "blocked": 5.496999992230907,
-              "connect": -1,
-              "dns": -1,
-              "receive": 3.252000024076551,
-              "send": 0.2819999999999998,
-              "ssl": -1,
-              "startTime": 0,
-              "wait": 26.03899999633059,
-            },
-            "type": "html",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
-          }
-        }
-        unit={null}
-      >
-        <div
-          className="value-cell size"
-        >
-          <div>
-            135.04
-          </div>
-        </div>
-      </NetworkCellValue>
-      <NetworkCellValue
-        datakey="time"
-        key="time"
-        payload={
-          Object {
-            "domain": "developer.mozilla.org",
-            "filename": "slice",
-            "index": 0,
-            "method": "GET",
-            "size": 135.04,
-            "startedDateTime": "2019-10-14T08:47:11.592Z",
-            "status": 200,
-            "timings": Object {
-              "_blocked_queueing": 4.382999992230907,
-              "blocked": 5.496999992230907,
-              "connect": -1,
-              "dns": -1,
-              "receive": 3.252000024076551,
-              "send": 0.2819999999999998,
-              "ssl": -1,
-              "startTime": 0,
-              "wait": 26.03899999633059,
-            },
-            "type": "html",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
-          }
-        }
-        unit={null}
-      >
-        <div
-          className="value-cell time"
-        >
-          <div />
-        </div>
-      </NetworkCellValue>
-      <NetworkCellValue
-        datakey="waterfall"
-        key="waterfall"
-        payload={
-          Object {
-            "domain": "developer.mozilla.org",
-            "filename": "slice",
-            "index": 0,
-            "method": "GET",
-            "size": 135.04,
-            "startedDateTime": "2019-10-14T08:47:11.592Z",
-            "status": 200,
-            "timings": Object {
-              "_blocked_queueing": 4.382999992230907,
-              "blocked": 5.496999992230907,
-              "connect": -1,
-              "dns": -1,
-              "receive": 3.252000024076551,
-              "send": 0.2819999999999998,
-              "ssl": -1,
-              "startTime": 0,
-              "wait": 26.03899999633059,
-            },
-            "type": "html",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
-          }
-        }
-        unit={null}
-      >
-        <div
-          className="value-cell waterfall"
-        >
-          <div />
-        </div>
-      </NetworkCellValue>
+      </div>
     </div>
   </NetworkTableRow>
 </NetworkProvider>

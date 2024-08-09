@@ -381,10 +381,10 @@ export const calcChartAttributes = (data, maxTime, cx, index, cy = null) => {
   const chartAttributes = [];
 
   Object.keys(TIMINGS)
-    .forEach((timingKey) => {
-      const timingInfo = TIMINGS[timingKey];
+    .forEach((key) => {
+      const timingInfo = TIMINGS[key];
       const dataKey = Array.isArray(timingInfo.dataKey) ?
-        timingInfo.dataKey.find((key) => data[key]) :
+        timingInfo.dataKey.find((dKey) => data[dKey]) :
         timingInfo.dataKey;
       const value = data[dataKey];
       if (value <= 0) {
@@ -399,7 +399,7 @@ export const calcChartAttributes = (data, maxTime, cx, index, cy = null) => {
         y: index ? ((index % 10) * (TIMELINE_DATA_POINT_HEIGHT + 1)) + 40 : cy,
         x: `${previousX}%`,
         fill: timingInfo.fill,
-        timingKey,
+        key,
       });
     });
 

@@ -57,6 +57,11 @@ export const selectRequest = (dispatch) => (payload) => dispatch({
   payload,
 });
 
+export const setTableHeaderWidth = (dispatch) => (payload) => dispatch({
+  type: types.SET_TABLE_HEADER_WIDTH,
+  payload,
+});
+
 export const resetState = (dispatch) => (payload) => dispatch({
   type: types.RESET,
   payload,

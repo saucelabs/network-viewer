@@ -15,8 +15,9 @@ const context = classNames.bind(Styles);
 const NetworkTableRow = ({
   entry,
   maxTime,
-  scrollHighlight,
   onSelect,
+  scrollHighlight,
+  style,
 }) => {
   const { state } = useNetwork();
   const showReqDetail = state.get('showReqDetail');
@@ -36,25 +37,36 @@ const NetworkTableRow = ({
   };
 
   return (
-    <div {...rowProps}>
-      {Object.entries(columns)
-        .map(([datakey, {
-          key,
-          unit,
-        }]) => (key === 'waterfall' && entry.time ? (
-          <TimeChart
-            key={key}
-            maxTime={maxTime}
-            timings={entry.timings}
-          />
-        ) : (
-          <NetworkCellValue
-            key={datakey}
-            datakey={key}
-            payload={entry}
-            unit={unit}
-          />
-        )))}
+    <div style={{ ...style }}>
+      <div {...rowProps}>
+        {Object.entries(columns)
+          .map(([datakey, {
+            key,
+            unit,
+          }]) => (
+            <div
+              key={key}
+              className={context(
+                'table-column', datakey,
+                { 'limited-cols': showReqDetail },
+                { 'show-waterfall': showWaterfall },
+              )}
+            >
+              {(key === 'waterfall' && entry.time ? (
+                <TimeChart
+                  maxTime={maxTime}
+                  timings={entry.timings}
+                />
+              ) : (
+                <NetworkCellValue
+                  datakey={key}
+                  payload={entry}
+                  unit={unit}
+                />
+              ))}
+            </div>
+          ))}
+      </div>
     </div>
   );
 };
@@ -64,6 +76,11 @@ NetworkTableRow.propTypes = {
   maxTime: PropTypes.number.isRequired,
   onSelect: PropTypes.func.isRequired,
   scrollHighlight: PropTypes.bool.isRequired,
+  style: PropTypes.object,
+};
+
+NetworkTableRow.defaultProps = {
+  style: {},
 };
 
 export default NetworkTableRow;

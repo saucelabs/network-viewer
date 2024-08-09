@@ -1,26 +1,18 @@
 @import "./../styles/variables";
 
+.table-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  &.limited-cols {
+    width: 30%;
+  }
+}
+
 .har-selection {
   display: flex;
   flex-direction: column;
   width: 100%;
-}
-
-.table-container {
-  display: grid;
-  grid-template-columns: 25% 15% repeat(5, 1fr) 15%;
-  grid-template-rows: 32px auto 1fr;
-
-  column-gap: $size-xs;
-  height: 100%;
-  width: 100%;
-
-  &.hide-waterfall {
-    grid-template-columns: 25% 15% repeat(5, 1fr);
-  }
-
-  &.limited-cols {
-    grid-template-columns: 100%;
-    width: 30%;
-  }
 }

@@ -29,6 +29,7 @@ const initialState = new Map({
   selectedReqIndex: null,
   showReqDetail: false,
   reqDetail: null,
+  tableHeaderWidth: '100%',
 });
 
 const reducer = (state = initialState, {
@@ -166,6 +167,11 @@ const reducer = (state = initialState, {
           .set('selectedReqIndex', payload ? payload.index : null)
           .set('reqDetail', payload)
           .set('showReqDetail', !!payload);
+      });
+    }
+    case types.SET_TABLE_HEADER_WIDTH: {
+      return state.withMutations((newState) => {
+        newState.set('tableHeaderWidth', `${payload}px`);
       });
     }
     case types.RESET: {

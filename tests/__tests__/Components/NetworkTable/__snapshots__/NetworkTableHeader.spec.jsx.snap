@@ -23,6 +23,7 @@ exports[`NetworkTableHeader renders without crashing 1`] = `
       },
       "scrollToIndex": null,
       "data": Immutable.List [],
+      "tableHeaderWidth": "100%",
       "selectedReqIndex": null,
       "reqDetail": null,
       "showReqDetail": false,
@@ -61,51 +62,57 @@ exports[`NetworkTableHeader renders without crashing 1`] = `
   scrollTimeStamp={null}
 >
   <NetworkTableHeader>
-    <div>
+    <div
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
       <div
-        className="filename"
-        key="file"
+        className="table-column value-cell file show-waterfall"
+        key="filename"
       >
         Path
       </div>
       <div
-        className="domain"
+        className="table-column value-cell domain show-waterfall"
         key="domain"
       >
         Domain
       </div>
       <div
-        className="status"
+        className="table-column value-cell status show-waterfall"
         key="status"
       >
         Status
       </div>
       <div
-        className="method"
+        className="table-column value-cell method show-waterfall"
         key="method"
       >
         Method
       </div>
       <div
-        className="type"
+        className="table-column value-cell type show-waterfall"
         key="type"
       >
         Type
       </div>
       <div
-        className="size"
+        className="table-column value-cell size show-waterfall"
         key="size"
       >
         Size
       </div>
       <div
-        className="time"
+        className="table-column value-cell time show-waterfall"
         key="time"
       >
         Time
       </div>
       <div
-        className="waterfall"
+        className="table-column value-cell waterfall show-waterfall"
         key="waterfall"
       >
         Waterfall

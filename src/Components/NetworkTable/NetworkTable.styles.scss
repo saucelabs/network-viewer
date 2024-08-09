@@ -1,9 +1,8 @@
 @import "./../../styles/variables.scss";
 
 .network-table-header {
-  display: grid;
-  grid-template-columns: subgrid;
-  grid-column: span 8 / span 8;
+  display: flex;
+  width: 100%;
 
   padding: $size-xs-s;
   font-size: $font-size-small;
@@ -12,30 +11,50 @@
   border-bottom: $border;
   color: $brand-primary-gray;
   align-content: center;
+
+  &:last-child {
+    padding-right: 0;
+  }
 }
 
-.network-table-body {
-  display: grid;
-  overflow-y: auto;
-  overflow-x: hidden;
-  grid-template-columns: subgrid;
-  grid-column: span 8 / span 8;
-  outline: none;
+.table-column {
+  display:flex;
+  width: 12%;
+  align-self: center;
+  padding-right: $size-xs-s;
+
+  &:last-child {
+    padding-right: 0;
+  }
+
+  &.show-waterfall {
+    width: 9%;
+  }
+
+  &.file {
+    width: 25%;
+
+    &.limited-cols {
+      width: 100%;
+    }
+  }
+
+  &.domain,
+  &.waterfall{
+    width: 15%;
+  }
 }
 
 .network-table-row {
-  display: grid;
-  grid-template-columns: subgrid;
-  grid-column: span 8 / span 8;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+
   cursor: pointer;
   padding: $size-xs $size-xs-s;
   border-bottom: $border;
   color: $brand-primary-dark-gray;
   font-size: $font-size-small;
-
-  &:nth-last-child(2) {
-    border-bottom: none;
-  }
 
   &.pending {
     color: $white-66;
@@ -54,24 +73,14 @@
     color: $white-100;
   }
 }
-
-.value-cell {
-  align-self: center;
-
-  display: grid;
-  grid-template-columns: subgrid;
-
-  .value-text {
-    flex: 1 1 auto;
-    width: 100%;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    word-break: break-all;
-  }
+.value-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: break-all;
 }
 
-.footer {
+.network-table-footer {
   border-top: $border;
   width: 100%;
   background: $bg-gray-90;

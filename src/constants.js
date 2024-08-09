@@ -227,6 +227,7 @@ export const TIMINGS = {
 };
 
 export const TIME_CHART_SVG_PROPS = {
+  viewBox: '0 0 250 20',
   version: '1.1',
   preserveAspectRatio: 'xMinYMin meet',
 };
@@ -316,3 +317,6 @@ export const EMPTY_NETWORK_HAR = Object.freeze({
     pages: [],
   },
 });
+
+export const TABLE_HEADER_HEIGHT = 32;
+export const TABLE_ENTRY_HEIGHT = 24;

@@ -53,6 +53,7 @@
     "react": "^16.13.1",
     "react-dropzone": "11.0.1",
     "react-transition-group": "^4.4.1",
+    "react-window": "^1.8.10",
     "recharts": ">=1.8.5"
   },
   "peerDependencies": {

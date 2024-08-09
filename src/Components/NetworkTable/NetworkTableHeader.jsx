@@ -11,20 +11,30 @@ const context = classNames.bind(Styles);
 const NetworkTableHeader = () => {
   const { state } = useNetwork();
   const showReqDetail = state.get('showReqDetail');
+  const tableHeaderWidth = state.get('tableHeaderWidth');
   const { showWaterfall } = useTheme();
 
   const columns = getViewerFields(showReqDetail, showWaterfall);
 
   return (
-    <div className={Styles['network-table-header']}>
+    <div
+      className={Styles['network-table-header']}
+      style={{ width: tableHeaderWidth }}
+    >
       {Object.entries(columns)
         .map(([datakey, {
           key,
           name,
         }]) => (
           <div
-            key={datakey}
-            className={context(Styles['value-cell'], key)}
+            key={key}
+            className={context(
+              'table-column',
+              'value-cell',
+              datakey,
+              { 'limited-cols': showReqDetail },
+              { 'show-waterfall': showWaterfall },
+            )}
           >
             {name}
           </div>
