@@ -123,6 +123,7 @@ exports[`NetworkTableContainer renders without crashing 1`] = `
                     >
                       <input
                         checked={false}
+                        name="checkbox"
                         onChange={[Function]}
                         type="checkbox"
                       />
@@ -132,6 +133,7 @@ exports[`NetworkTableContainer renders without crashing 1`] = `
                 </Checkbox>
               </CORSCheckbox>
               <input
+                name="har-url"
                 onChange={[Function]}
                 placeholder="HAR file URL"
                 type="text"

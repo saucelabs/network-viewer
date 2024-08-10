@@ -27,6 +27,7 @@ const URLInput = ({ onSubmit }) => {
       />
       <input
         className={Styles.input}
+        name="har-url"
         onChange={handleInputChange}
         placeholder="HAR file URL"
         type="text"

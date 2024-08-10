@@ -20,6 +20,7 @@ const Search = ({
   return (
     <input
       className={Styles['search-input']}
+      name="search"
       onChange={handleInputChange}
       placeholder="Search by URL"
       type="text"

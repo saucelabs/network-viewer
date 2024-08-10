@@ -149,6 +149,7 @@ exports[`FilterContainer renders without crashing 1`] = `
           value=""
         >
           <input
+            name="search"
             onChange={[Function]}
             placeholder="Search by URL"
             type="text"
