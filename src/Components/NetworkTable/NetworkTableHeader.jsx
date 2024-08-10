@@ -1,37 +1,45 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 
-import { VIEWER_FIELDS } from './../../constants';
-import Styles from './NetworkTableHeader.styles.scss';
+import Styles from './NetworkTable.styles.scss';
+import { useNetwork } from '../../state/network/Context';
 import { useTheme } from '../../state/theme/Context';
+import { getViewerFields } from '../../utils';
 
 const context = classNames.bind(Styles);
 
 const NetworkTableHeader = () => {
+  const { state } = useNetwork();
+  const showReqDetail = state.get('showReqDetail');
+  const tableHeaderWidth = state.get('tableHeaderWidth');
   const { showWaterfall } = useTheme();
 
+  const columns = getViewerFields(showReqDetail, showWaterfall);
+
   return (
-    <thead className={Styles.thead}>
-      <tr>
-        {Object.entries(VIEWER_FIELDS)
-          .map(([datakey, {
-            key,
-            name,
-          }]) => (
-            <th
-              key={datakey}
-              className={context('value-cell', key)}
-            >
-              {name}
-            </th>
-          ))}
-        {showWaterfall && (
-          <th className={Styles['timeline-header']}>
-            Waterfall
-          </th>
-        )}
-      </tr>
-    </thead>
+    <div
+      className={Styles['network-table-header']}
+      style={{ width: tableHeaderWidth }}
+    >
+      {Object.entries(columns)
+        .map(([datakey, {
+          key,
+          name,
+        }]) => (
+          <div
+            key={key}
+            className={context(
+              'table-column',
+              'value-cell',
+              datakey,
+              { 'limited-cols': showReqDetail },
+              { 'show-waterfall': showWaterfall },
+            )}
+          >
+            {name}
+          </div>
+        ))}
+    </div>
   );
 };
 

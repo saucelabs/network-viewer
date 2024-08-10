@@ -103,9 +103,7 @@ $size-xxxl: $size-base * 11; // 44px;
   brandBlue: $brand-blue;
 }
 
-// width/height of container
-$name-col-width: 300px;
-
 // borders
-$border: 1px solid #B6BECC;
-$border-dashed: 2px dashed #B6BECC;
+$border-color: #DBE0EA;
+$border: 1px solid $border-color;
+$border-dashed: 2px dashed $border-color;

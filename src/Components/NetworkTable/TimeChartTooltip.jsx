@@ -36,10 +36,7 @@ const TimeChartTooltip = ({ data }) => {
           {`Started at ${tooltipData.startedAt}`}
         </p>
       </section>
-      {DETAIL.map(({
-        title,
-        category,
-      }) => (
+      {DETAIL.map(({ title, category }) => (
         <section
           key={title}
           className={Styles['tooltip-info']}

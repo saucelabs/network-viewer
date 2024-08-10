@@ -5,7 +5,6 @@ import { reducer, initialState as defaultState } from './reducer';
 import { updateData, fetchFile, updateScrollToIndex } from './actions';
 import { NetworkContext } from './Context';
 import { findRequestIndex } from '../../utils';
-import { ROW_ID_PREFIX } from '../../constants';
 
 const NetworkProvider = (props) => {
   const {
@@ -21,6 +20,7 @@ const NetworkProvider = (props) => {
     onPause,
     onResume,
     onReset,
+    onRequestSelect,
   } = props;
 
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -28,9 +28,9 @@ const NetworkProvider = (props) => {
     onPause,
     onResume,
     onReset,
+    onRequestSelect,
   };
   const value = useMemo(() => [state, dispatch, callbacks], [state]);
-  const selectedReqIndex = value[0].get('selectedReqIndex');
   const requestData = value[0].get('data');
   const showReqDetail = value[0].get('showReqDetail');
   const actualData = value[0].get('actualData');
@@ -94,6 +94,7 @@ NetworkProvider.propTypes = {
   onDataError: PropTypes.func,
   onDataLoaded: PropTypes.func,
   onPause: PropTypes.func,
+  onRequestSelect: PropTypes.func,
   onReset: PropTypes.func,
   onResume: PropTypes.func,
   scrollRequestPosition: PropTypes.oneOf(['before', 'after', 'near']),
@@ -109,6 +110,7 @@ NetworkProvider.defaultProps = {
   onDataError: null,
   onDataLoaded: null,
   onPause: null,
+  onRequestSelect: null,
   onReset: null,
   onResume: null,
   scrollRequestPosition: 'near',
