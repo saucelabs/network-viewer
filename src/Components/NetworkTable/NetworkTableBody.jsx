@@ -51,7 +51,7 @@ const NetworkTableBody = ({ height }) => {
 
   useEffect(() => {
     const outerRef = ref?.current?._outerRef;
-    if (outerRef.scrollTop + outerRef.offsetHeight + TABLE_ENTRY_HEIGHT === outerRef.scrollHeight) {
+    if (outerRef.scrollTop + outerRef.offsetHeight + TABLE_ENTRY_HEIGHT >= outerRef.scrollHeight) {
       ref.current._outerRef.scrollTop = outerRef.scrollHeight;
     }
   }, [data, ref]);
