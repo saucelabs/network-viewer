@@ -7,6 +7,8 @@ import NetworkTableRow from './NetworkTableRow';
 import { TABLE_ENTRY_HEIGHT } from '../../constants';
 import { useResizeObserver } from '../../hooks/useResizeObserver';
 
+/* eslint no-underscore-dangle: 0 */
+
 const virtualizedTableRow = ({
   data,
   index,
@@ -44,7 +46,15 @@ const NetworkTableBody = ({ height }) => {
 
   const ref = useRef(null);
   const { elementDims } = useResizeObserver(ref);
+
   useEffect(() => actions.setTableHeaderWidth(elementDims.width), [elementDims]);
+
+  useEffect(() => {
+    const outerRef = ref?.current?._outerRef;
+    if (outerRef.scrollTop + outerRef.offsetHeight + TABLE_ENTRY_HEIGHT === outerRef.scrollHeight) {
+      ref.current._outerRef.scrollTop = outerRef.scrollHeight;
+    }
+  }, [data, ref]);
 
   const handleReqSelect = (payload) => {
     actions.updateScrollToIndex(payload.index);
@@ -53,20 +63,22 @@ const NetworkTableBody = ({ height }) => {
   };
 
   return (
-    <FixedSizeList
-      ref={ref}
-      height={height}
-      itemCount={data.size}
-      itemData={{
-        listData: data,
-        totalNetworkTime,
-        handleReqSelect,
-        selectedReqIndex,
-      }}
-      itemSize={TABLE_ENTRY_HEIGHT}
-    >
-      {virtualizedTableRow}
-    </FixedSizeList>
+    <>
+      <FixedSizeList
+        ref={ref}
+        height={height}
+        itemCount={data.size}
+        itemData={{
+          listData: data,
+          totalNetworkTime,
+          handleReqSelect,
+          selectedReqIndex,
+        }}
+        itemSize={TABLE_ENTRY_HEIGHT}
+      >
+        {virtualizedTableRow}
+      </FixedSizeList>
+    </>
   );
 };
 

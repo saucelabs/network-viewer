@@ -21,6 +21,7 @@ const Checkbox = ({
       <input
         checked={isChecked}
         className={Styles.checkbox}
+        name="checkbox"
         onChange={onChange}
         type="checkbox"
       />

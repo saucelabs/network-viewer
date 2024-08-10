@@ -67,6 +67,7 @@ exports[`Search renders without crashing 1`] = `
     value="test"
   >
     <input
+      name="search"
       onChange={[Function]}
       placeholder="Search by URL"
       type="text"

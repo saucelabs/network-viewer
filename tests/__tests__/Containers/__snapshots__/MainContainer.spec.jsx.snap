@@ -156,6 +156,7 @@ exports[`MainContainer renders without crashing 1`] = `
                   value=""
                 >
                   <input
+                    name="search"
                     onChange={[Function]}
                     placeholder="Search by URL"
                     type="text"
@@ -584,6 +585,7 @@ exports[`MainContainer renders without crashing 1`] = `
                             >
                               <input
                                 checked={false}
+                                name="checkbox"
                                 onChange={[Function]}
                                 type="checkbox"
                               />
@@ -593,6 +595,7 @@ exports[`MainContainer renders without crashing 1`] = `
                         </Checkbox>
                       </CORSCheckbox>
                       <input
+                        name="har-url"
                         onChange={[Function]}
                         placeholder="HAR file URL"
                         type="text"
