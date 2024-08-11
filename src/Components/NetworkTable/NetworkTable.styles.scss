@@ -1,5 +1,11 @@
 @import "./../../styles/variables.scss";
 
+.network-table-body {
+  outline: none;
+  border-top: $border;
+}
+
+
 .network-table-header {
   display: flex;
   width: 100%;
@@ -8,7 +14,6 @@
   font-size: $font-size-small;
   font-weight: 700;
   text-transform: uppercase;
-  border-bottom: $border;
   color: $brand-primary-gray;
   align-content: center;
 

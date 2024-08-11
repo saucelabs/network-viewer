@@ -6,6 +6,7 @@ import { useNetwork } from '../../state/network/Context';
 import NetworkTableRow from './NetworkTableRow';
 import { TABLE_ENTRY_HEIGHT } from '../../constants';
 import { useResizeObserver } from '../../hooks/useResizeObserver';
+import Styles from './NetworkTable.styles.scss';
 
 /* eslint no-underscore-dangle: 0 */
 
@@ -66,6 +67,7 @@ const NetworkTableBody = ({ height }) => {
     <>
       <FixedSizeList
         ref={ref}
+        className={Styles['network-table-body']}
         height={height}
         itemCount={data.size}
         itemData={{
