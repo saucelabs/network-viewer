@@ -22,9 +22,7 @@ const NetworkTableRow = ({
   const { state } = useNetwork();
   const showReqDetail = state.get('showReqDetail');
   const { showWaterfall } = useTheme();
-
   const columns = getViewerFields(showReqDetail, showWaterfall);
-  const handleSelectRequest = () => onSelect(entry);
 
   const rowProps = {
     className: context(
@@ -33,39 +31,36 @@ const NetworkTableRow = ({
       { highlight: scrollHighlight },
     ),
     id: ROW_ID_PREFIX + entry.index,
-    onClick: handleSelectRequest,
+    onClick: () => onSelect(entry),
   };
 
   return (
     <div style={{ ...style }}>
       <div {...rowProps}>
-        {Object.entries(columns)
-          .map(([datakey, {
-            key,
-            unit,
-          }]) => (
-            <div
-              key={key}
-              className={context(
-                'table-column', datakey,
-                { 'limited-cols': showReqDetail },
-                { 'show-waterfall': showWaterfall },
-              )}
-            >
-              {(key === 'waterfall' && entry.time ? (
-                <TimeChart
-                  maxTime={maxTime}
-                  timings={entry.timings}
-                />
-              ) : (
-                <NetworkCellValue
-                  datakey={key}
-                  payload={entry}
-                  unit={unit}
-                />
-              ))}
-            </div>
-          ))}
+        {Object.entries(columns).map(([datakey, { key, unit }]) => (
+          <div
+            key={key}
+            className={context(
+              'table-column', datakey,
+              { 'limited-cols': showReqDetail },
+              { 'show-waterfall': showWaterfall },
+            )}
+          >
+            {(key === 'waterfall' && entry.time ? (
+              <TimeChart
+                maxTime={maxTime}
+                timings={entry.timings}
+              />
+            ) : (
+              <NetworkCellValue
+                datakey={key}
+                onClick={rowProps.onClick}
+                payload={entry}
+                unit={unit}
+              />
+            ))}
+          </div>
+        ))}
       </div>
     </div>
   );

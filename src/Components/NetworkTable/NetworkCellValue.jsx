@@ -11,8 +11,9 @@ const context = classNames.bind(Styles);
 
 const NetworkCellValue = ({
   datakey,
-  unit,
+  onClick,
   payload,
+  unit,
 }) => {
   const formattedValue = formatValue(datakey, payload[datakey], unit, payload);
   const shouldDisplayTooltip = (
@@ -44,7 +45,11 @@ const NetworkCellValue = ({
       delay={500}
       title={getTitle()}
     >
-      <div className={context('value-text', datakey)}>
+      {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
+      <div
+        className={context('value-text', datakey)}
+        onClick={onClick}
+      >
         {formattedValue}
       </div>
     </Tooltip>
@@ -53,11 +58,13 @@ const NetworkCellValue = ({
 
 NetworkCellValue.propTypes = {
   datakey: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
   payload: PropTypes.object,
   unit: PropTypes.string,
 };
 
 NetworkCellValue.defaultProps = {
+  onClick: () => {},
   payload: {},
   unit: null,
 };
