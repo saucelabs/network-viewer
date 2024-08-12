@@ -58,6 +58,10 @@ const NetworkTableBody = ({ height }) => {
   }, [data, ref]);
 
   const handleReqSelect = (payload) => {
+    if (selectedReqIndex === payload.index) {
+      return;
+    }
+
     actions.updateScrollToIndex(payload.index);
     actions.selectRequest(payload);
     callbacks.onRequestSelect(payload);

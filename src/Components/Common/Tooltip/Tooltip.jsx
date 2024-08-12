@@ -83,7 +83,6 @@ const Tooltip = forwardRef(({
           // Merge the child's original props, with the new props provided by the trigger.
           ...mergeProps(child.props, eventedProps),
         })}
-      {/* <TooltipTransition isOpen={state.isOpen}> */}
       <TooltipTransition isOpen={state.isOpen}>
         <TooltipLabel
           ref={tooltipRef}

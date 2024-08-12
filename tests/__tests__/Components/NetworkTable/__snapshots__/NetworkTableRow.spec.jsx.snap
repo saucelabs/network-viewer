@@ -105,6 +105,7 @@ exports[`NetworkTableRow renders without crashing 1`] = `
         >
           <NetworkCellValue
             datakey="filename"
+            onClick={[Function]}
             payload={
               Object {
                 "domain": "developer.mozilla.org",
@@ -161,6 +162,7 @@ exports[`NetworkTableRow renders without crashing 1`] = `
         >
           <NetworkCellValue
             datakey="domain"
+            onClick={[Function]}
             payload={
               Object {
                 "domain": "developer.mozilla.org",
@@ -200,6 +202,7 @@ exports[`NetworkTableRow renders without crashing 1`] = `
         >
           <NetworkCellValue
             datakey="status"
+            onClick={[Function]}
             payload={
               Object {
                 "domain": "developer.mozilla.org",
@@ -239,6 +242,7 @@ exports[`NetworkTableRow renders without crashing 1`] = `
         >
           <NetworkCellValue
             datakey="method"
+            onClick={[Function]}
             payload={
               Object {
                 "domain": "developer.mozilla.org",
@@ -278,6 +282,7 @@ exports[`NetworkTableRow renders without crashing 1`] = `
         >
           <NetworkCellValue
             datakey="type"
+            onClick={[Function]}
             payload={
               Object {
                 "domain": "developer.mozilla.org",
@@ -317,6 +322,7 @@ exports[`NetworkTableRow renders without crashing 1`] = `
         >
           <NetworkCellValue
             datakey="size"
+            onClick={[Function]}
             payload={
               Object {
                 "domain": "developer.mozilla.org",
@@ -356,6 +362,7 @@ exports[`NetworkTableRow renders without crashing 1`] = `
         >
           <NetworkCellValue
             datakey="time"
+            onClick={[Function]}
             payload={
               Object {
                 "domain": "developer.mozilla.org",
@@ -393,6 +400,7 @@ exports[`NetworkTableRow renders without crashing 1`] = `
         >
           <NetworkCellValue
             datakey="waterfall"
+            onClick={[Function]}
             payload={
               Object {
                 "domain": "developer.mozilla.org",
