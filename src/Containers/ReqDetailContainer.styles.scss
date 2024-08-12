@@ -41,10 +41,12 @@ $tab-height: 35px;
     background: transparent;
     border: 0;
     outline: none;
+    padding-top: $size-xs;
 
     .close-icon {
-      height: $size-xs-s;
-      width: $size-xs-s;
+      fill: $brand-primary-gray;
+      height: $size-s;
+      width: $size-s;
 
       g {
         stroke: $white-33;
