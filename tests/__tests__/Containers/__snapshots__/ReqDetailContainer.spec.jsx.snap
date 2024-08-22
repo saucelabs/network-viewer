@@ -26,6 +26,7 @@ exports[`ReqDetailContainer renders without crashing 1`] = `
       "tableHeaderWidth": "100%",
       "selectedReqIndex": null,
       "reqDetail": null,
+      "numberOfNewEntries": 0,
       "showReqDetail": false,
       "typeFilter": Object {
         "name": null,

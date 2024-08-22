@@ -2,9 +2,14 @@
 
 exports[`Response renders without crashing for content 1`] = `
 <div>
-  <pre>
+  <div>
+    <CopyAllButton
+      text="{\\"foo\\": \\"bar\\"}"
+    />
+  </div>
+  <span>
     {"foo": "bar"}
-  </pre>
+  </span>
 </div>
 `;
 
