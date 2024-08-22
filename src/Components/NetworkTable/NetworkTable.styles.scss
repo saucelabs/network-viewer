@@ -5,6 +5,30 @@
   border-top: $border;
 }
 
+.no-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: $size-xxxl;
+
+  .network-icon {
+    fill: $brand-primary-light-gray;
+    height: $size-xl;
+    width: $size-xl;
+  }
+
+  .header {
+    padding: $size-xl 0 $size-s 0;
+    font-weight: 600;
+    color: $brand-primary-dark-gray;
+  }
+
+  .subtext {
+    color: $brand-primary-gray;
+  }
+}
+
+
 .network-table-header {
   display: flex;
   width: 100%;

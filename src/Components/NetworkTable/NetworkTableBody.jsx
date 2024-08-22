@@ -8,6 +8,7 @@ import { TABLE_ENTRY_HEIGHT } from '../../constants';
 import { useResizeObserver } from '../../hooks/useResizeObserver';
 import Styles from './NetworkTable.styles.scss';
 import { useTheme } from '../../state/theme/Context';
+import IconNetworkRequest from '../../icons/IconNetworkRequest';
 
 /* eslint no-underscore-dangle: 0 */
 
@@ -45,6 +46,7 @@ const NetworkTableBody = ({ height }) => {
   const { enableAutoScroll } = useTheme();
   const numberOfNewEntries = state.get('numberOfNewEntries');
   const data = state.get('data');
+  const actualData = state.get('actualData');
   const totalNetworkTime = state.get('totalNetworkTime');
   const selectedReqIndex = state.get('selectedReqIndex');
 
@@ -74,6 +76,19 @@ const NetworkTableBody = ({ height }) => {
     actions.selectRequest(payload);
     callbacks.onRequestSelect(payload);
   };
+
+  if (actualData.size === 0) {
+    return (
+      <div
+        ref={ref}
+        className={Styles['no-data']}
+      >
+        <IconNetworkRequest className={Styles['network-icon']} />
+        <span className={Styles.header}>Recording network activity</span>
+        <span className={Styles.subtext}>Perform a request to see the network activity</span>
+      </div>
+    );
+  }
 
   return (
     <>
