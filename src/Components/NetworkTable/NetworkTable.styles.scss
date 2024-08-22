@@ -5,7 +5,6 @@
   border-top: $border;
 }
 
-
 .network-table-header {
   display: flex;
   width: 100%;
@@ -27,13 +26,14 @@
   width: 12%;
   align-self: center;
   padding-right: $size-xs-s;
+  min-width: $table-column-min-width;
 
   &:last-child {
     padding-right: 0;
   }
 
   &.show-waterfall {
-    width: 9%;
+    width: 10%;
   }
 
   &.file {
@@ -44,8 +44,7 @@
     }
   }
 
-  &.domain,
-  &.waterfall{
+  &.domain {
     width: 15%;
   }
 }

@@ -27,7 +27,7 @@ const NetworkTableContainer = () => {
     if (ref?.current) {
       setTableBodyHeight(ref.current.clientHeight - TABLE_HEADER_HEIGHT);
     }
-  }, [ref]);
+  }, [ref, actualData]);
 
   if (error) {
     return (
