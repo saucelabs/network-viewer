@@ -289,12 +289,13 @@ export const HEADERS_TITLES = Object.freeze({
 export const MAX_COLOR_CONTENT_SIZE = 100000; // 100kB
 export const TIMELINE_DATA_POINT_HEIGHT = 2;
 export const NETWORK_VIEWER_DEFAULT_OPTIONS = {
+  enableAutoScroll: false,
   showExportHar: false,
   showImportHar: true,
   showPauseResume: false,
+  showReset: true,
   showTimeline: false,
   showWaterfall: true,
-  enableAutoScroll: false,
 };
 
 export const PAYLOAD_CAPTIONS = Object.freeze({
