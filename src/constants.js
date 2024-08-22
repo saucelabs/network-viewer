@@ -227,14 +227,15 @@ export const TIMINGS = {
 };
 
 export const TIME_CHART_SVG_PROPS = {
-  viewBox: '0 0 250 20',
+  height: '15',
+  viewBox: '0 0 200 20',
   version: '1.1',
   preserveAspectRatio: 'xMinYMin meet',
 };
 
 export const TIME_CHART_DEFAULT_PROPS = {
-  height: 16,
-  y: 3.5,
+  height: 30,
+  y: 0,
 };
 
 export const ROW_ID_PREFIX = 'network-viewer-table-row-';
@@ -293,6 +294,7 @@ export const NETWORK_VIEWER_DEFAULT_OPTIONS = {
   showPauseResume: false,
   showTimeline: false,
   showWaterfall: true,
+  enableAutoScroll: false,
 };
 
 export const PAYLOAD_CAPTIONS = Object.freeze({
