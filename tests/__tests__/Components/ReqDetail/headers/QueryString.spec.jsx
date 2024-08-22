@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import QueryString from './../../../../../src/Components/ReqDetail/headers/QueryString';
+import QueryString from '../../../../../src/Components/ReqDetail/sections/QueryString';
 
 describe('QueryString', () => {
   const props = {

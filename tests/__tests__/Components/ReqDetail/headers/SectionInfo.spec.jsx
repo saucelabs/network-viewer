@@ -1,9 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import HeaderInfo from './../../../../../src/Components/ReqDetail/headers/HeaderInfo';
+import SectionInfo from '../../../../../src/Components/ReqDetail/sections/SectionInfo';
 
-describe('HeaderInfo', () => {
+describe('SectionInfo', () => {
   const props = {
     eventKey: 'general',
     data: {},
@@ -11,7 +11,7 @@ describe('HeaderInfo', () => {
   };
 
   it('renders without crashing', () => {
-    const element = shallow(<HeaderInfo {...props} />);
+    const element = shallow(<SectionInfo {...props} />);
     expect(element).toMatchSnapshot();
   });
 });

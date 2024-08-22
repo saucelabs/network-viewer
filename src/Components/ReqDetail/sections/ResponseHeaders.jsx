@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Styles from './../Headers.styles.scss';
+import Styles from './../ReqDetail.styles.scss';
 
-const FormData = ({ data, isPayloadTransformed }) => (
+const ResponseHeaders = ({ data }) => (
   <div className={Styles['header-detail']}>
-    {data.headers.postData.params.map(({ name, value }, index) => (
+    {data.headers.response.map(({ name, value }, index) => (
       <p
         key={`${name}-${index}`}
         className={Styles['info-row']}
@@ -14,20 +14,19 @@ const FormData = ({ data, isPayloadTransformed }) => (
           {`${name}:`}
         </span>
         <span className={Styles['info-value']}>
-          {isPayloadTransformed ? decodeURIComponent(value) : value}
+          {value}
         </span>
       </p>
     ))}
   </div>
 );
 
-FormData.propTypes = {
+ResponseHeaders.propTypes = {
   data: PropTypes.object,
-  isPayloadTransformed: PropTypes.bool.isRequired,
 };
 
-FormData.defaultProps = {
+ResponseHeaders.defaultProps = {
   data: null,
 };
 
-export default FormData;
+export default ResponseHeaders;

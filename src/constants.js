@@ -264,12 +264,12 @@ export const HEADERS_TITLES = Object.freeze({
     key: 'general',
     name: 'General',
   }),
-  request: Object.freeze({
-    key: 'request',
+  requestHeaders: Object.freeze({
+    key: 'requestHeaders',
     name: 'Request Headers',
   }),
-  response: Object.freeze({
-    key: 'response',
+  responseHeaders: Object.freeze({
+    key: 'responseHeaders',
     name: 'Response Headers',
   }),
   queryString: Object.freeze({

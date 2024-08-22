@@ -1,13 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Response from './../../../../../src/Components/ReqDetail/headers/Response';
+import RequestHeaders from '../../../../../src/Components/ReqDetail/sections/RequestHeaders';
 
-describe('Response', () => {
+describe('RequestHeaders', () => {
   const props = {
     data: {
       headers: {
-        response: [{
+        request: [{
           name: 'foo',
           value: 'bar',
         }],
@@ -17,7 +17,7 @@ describe('Response', () => {
   };
 
   it('renders without crashing', () => {
-    const element = shallow(<Response {...props} />);
+    const element = shallow(<RequestHeaders {...props} />);
     expect(element).toMatchSnapshot();
   });
 });

@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 import { HEADERS_TITLES, PAYLOAD_CAPTIONS } from './../../../constants';
 import IconCaretUp from './../../../icons/IconCaretUp';
-import Styles from './../Headers.styles.scss';
+import Styles from './../ReqDetail.styles.scss';
 
-const HeaderTitle = ({
+const SectionTitle = ({
   onClick,
   eventKey,
   isEncodeEnabled,
@@ -39,7 +39,7 @@ const HeaderTitle = ({
   );
 };
 
-HeaderTitle.propTypes = {
+SectionTitle.propTypes = {
   eventKey: PropTypes.string.isRequired,
   isEncodeEnabled: PropTypes.bool,
   isParseEnabled: PropTypes.bool,
@@ -48,10 +48,10 @@ HeaderTitle.propTypes = {
   onPayloadTransform: PropTypes.func.isRequired,
 };
 
-HeaderTitle.defaultProps = {
+SectionTitle.defaultProps = {
   isEncodeEnabled: false,
   isParseEnabled: false,
   isPayloadTransformed: true,
 };
 
-export default HeaderTitle;
+export default SectionTitle;

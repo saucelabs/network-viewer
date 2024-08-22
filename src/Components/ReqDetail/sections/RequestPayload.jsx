@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 
-import Styles from './../Headers.styles.scss';
+import Styles from './../ReqDetail.styles.scss';
 import { parseRequestPayload } from '../../../utils';
 
 const RequestPayload = ({ data, isPayloadTransformed }) => {

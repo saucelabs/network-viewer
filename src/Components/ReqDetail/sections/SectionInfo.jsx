@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 
-import Styles from './../Headers.styles.scss';
-import HeaderTitle from './HeaderTitle';
+import Styles from './../ReqDetail.styles.scss';
+import SectionTitle from './SectionTitle';
 
 const context = classNames.bind(Styles);
 
-const HeaderInfo = ({
+const SectionInfo = ({
   eventKey,
   data,
   component,
@@ -27,7 +27,7 @@ const HeaderInfo = ({
 
   return (
     <div className={context('header-info', { active: isOpen })}>
-      <HeaderTitle
+      <SectionTitle
         eventKey={eventKey}
         isEncodeEnabled={isEncodeEnabled}
         isParseEnabled={isParseEnabled}
@@ -40,7 +40,7 @@ const HeaderInfo = ({
   );
 };
 
-HeaderInfo.propTypes = {
+SectionInfo.propTypes = {
   component: PropTypes.func.isRequired,
   data: PropTypes.object,
   eventKey: PropTypes.string.isRequired,
@@ -49,11 +49,11 @@ HeaderInfo.propTypes = {
   isVisible: PropTypes.bool,
 };
 
-HeaderInfo.defaultProps = {
+SectionInfo.defaultProps = {
   data: null,
   isEncodeEnabled: false,
   isParseEnabled: false,
   isVisible: false,
 };
 
-export default HeaderInfo;
+export default SectionInfo;

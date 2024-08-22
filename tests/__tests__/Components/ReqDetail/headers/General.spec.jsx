@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import General from './../../../../../src/Components/ReqDetail/headers/General';
+import General from '../../../../../src/Components/ReqDetail/sections/General';
 
 describe('General', () => {
   const props = {

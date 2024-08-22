@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Styles from './../Headers.styles.scss';
+import Styles from './../ReqDetail.styles.scss';
 import { GENERAL_HEADERS } from '../../../constants';
 
 const General = ({ data }) => (

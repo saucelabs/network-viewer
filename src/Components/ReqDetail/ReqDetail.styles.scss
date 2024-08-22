@@ -1,5 +1,14 @@
 @import "./../../styles/variables";
 
+.no-data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-h4;
+  width: 100%;
+  color: $brand-primary-dark-gray;
+}
+
 .headers-container {
   width: 100%;
 
