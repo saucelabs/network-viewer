@@ -66,5 +66,6 @@ $tab-height: 35px;
     padding: $size-s $size-m;
     height: calc(100% - #{$tab-height});
     overflow: auto;
+    outline: none;
   }
 }

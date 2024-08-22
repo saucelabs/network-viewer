@@ -1,0 +1,17 @@
+@import "./../../styles/variables";
+
+.copy-button {
+  height: $filter-button-height;
+  color: $brand-blue;
+  font-size: $font-size-h6;
+
+  .copy-text {
+    padding-left: $size-xs;
+  }
+
+  .copy-icon {
+    fill: $brand-blue;
+    height: $size-s;
+    width: $size-s;
+  }
+}

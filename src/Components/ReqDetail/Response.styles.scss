@@ -12,4 +12,16 @@
 .response-content {
   font-size: $font-size-small;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .copy-button {
+    align-self: end;
+  }
+
+  .response-body {
+    font-family: monospace;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
 }
