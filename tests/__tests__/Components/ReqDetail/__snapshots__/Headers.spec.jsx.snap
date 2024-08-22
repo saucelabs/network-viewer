@@ -140,7 +140,7 @@ exports[`Headers renders without crashing 1`] = `
         </HeaderTitle>
         <ChildComponent>
           <div>
-            <p
+            <div
               key="url"
             >
               <span>
@@ -149,8 +149,8 @@ exports[`Headers renders without crashing 1`] = `
               <span>
                 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
               </span>
-            </p>
-            <p
+            </div>
+            <div
               key="method"
             >
               <span>
@@ -159,8 +159,8 @@ exports[`Headers renders without crashing 1`] = `
               <span>
                 GET
               </span>
-            </p>
-            <p
+            </div>
+            <div
               key="status"
             >
               <span>
@@ -169,8 +169,8 @@ exports[`Headers renders without crashing 1`] = `
               <span>
                 200
               </span>
-            </p>
-            <p
+            </div>
+            <div
               key="serverIPAddress"
             >
               <span>
@@ -179,7 +179,7 @@ exports[`Headers renders without crashing 1`] = `
               <span>
                 :80
               </span>
-            </p>
+            </div>
           </div>
         </ChildComponent>
       </div>

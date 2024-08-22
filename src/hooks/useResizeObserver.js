@@ -8,25 +8,23 @@ export const useResizeObserver = (elementRef) => {
     height: 0,
   });
   useEffect(() => {
-    const element = elementRef.current;
-
     const onResize = () => {
-      if (element._outerRef) {
+      if (elementRef) {
         setElementDims({
-          width: element._outerRef.clientWidth,
-          height: element._outerRef.clientHeight,
+          width: elementRef.clientWidth,
+          height: elementRef.clientHeight,
         });
       }
     };
     const resizeObserver = new ResizeObserver(onResize);
 
-    if (element._outerRef) {
-      resizeObserver.observe(element._outerRef);
+    if (elementRef) {
+      resizeObserver.observe(elementRef);
     }
 
     return () => {
-      if (element._outerRef) {
-        resizeObserver.unobserve(element._outerRef);
+      if (elementRef) {
+        resizeObserver.unobserve(elementRef);
       }
     };
   }, [elementRef]);

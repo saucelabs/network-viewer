@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Styles from './Response.styles.scss';
+import CopyAllButton from './CopyAllButton';
 
 const NoResponseText = () => (
   <h4 className={Styles['no-response']}>This request has no response data available.</h4>
@@ -16,9 +17,12 @@ const Response = ({ data }) => {
 
   return (
     <div className={Styles['response-content']}>
-      <pre className={Styles['log-body-colorless']}>
+      <div className={Styles['copy-button']}>
+        <CopyAllButton text={content} />
+      </div>
+      <span className={Styles['response-body']}>
         {content}
-      </pre>
+      </span>
     </div>
   );
 };

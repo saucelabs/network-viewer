@@ -2,23 +2,23 @@
 
 exports[`General renders intercept error 1`] = `
 <div>
-  <p
+  <div
     key="url"
   >
     <span>
       Request URL:
     </span>
     <span />
-  </p>
-  <p
+  </div>
+  <div
     key="method"
   >
     <span>
       Request Method:
     </span>
     <span />
-  </p>
-  <p
+  </div>
+  <div
     key="status"
   >
     <span>
@@ -27,51 +27,51 @@ exports[`General renders intercept error 1`] = `
     <span>
       ERR_TIMED_OUT
     </span>
-  </p>
-  <p
+  </div>
+  <div
     key="serverIPAddress"
   >
     <span>
       Remote Address:
     </span>
     <span />
-  </p>
+  </div>
 </div>
 `;
 
 exports[`General renders without crashing 1`] = `
 <div>
-  <p
+  <div
     key="url"
   >
     <span>
       Request URL:
     </span>
     <span />
-  </p>
-  <p
+  </div>
+  <div
     key="method"
   >
     <span>
       Request Method:
     </span>
     <span />
-  </p>
-  <p
+  </div>
+  <div
     key="status"
   >
     <span>
       Status Code:
     </span>
     <span />
-  </p>
-  <p
+  </div>
+  <div
     key="serverIPAddress"
   >
     <span>
       Remote Address:
     </span>
     <span />
-  </p>
+  </div>
 </div>
 `;
