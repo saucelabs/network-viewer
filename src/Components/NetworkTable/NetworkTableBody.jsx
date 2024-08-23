@@ -31,7 +31,7 @@ const virtualizedTableRow = ({
       entry={item}
       maxTime={totalNetworkTime}
       onSelect={handleReqSelect}
-      scrollHighlight={selectedReqIndex === index}
+      scrollHighlight={selectedReqIndex === item.index}
       style={style}
     />
   );

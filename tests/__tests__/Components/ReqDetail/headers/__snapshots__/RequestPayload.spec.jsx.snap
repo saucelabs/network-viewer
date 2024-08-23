@@ -3,9 +3,14 @@
 exports[`RequestPayload renders without crashing 1`] = `
 <div>
   <div>
-    <pre>
+    <div>
+      <CopyAllButton
+        text="{ 'name': 'foo' }"
+      />
+    </div>
+    <div>
       { 'name': 'foo' }
-    </pre>
+    </div>
   </div>
 </div>
 `;

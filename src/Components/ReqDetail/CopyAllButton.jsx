@@ -38,11 +38,11 @@ const CopyAllButton = ({ text }) => {
 };
 
 CopyAllButton.propTypes = {
-  text: PropTypes.object,
+  text: PropTypes.any,
 };
 
 CopyAllButton.defaultProps = {
-  text: 'testi testi',
+  text: '',
 };
 
 export default CopyAllButton;

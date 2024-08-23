@@ -3,20 +3,23 @@ import PropTypes from 'prop-types';
 
 import Styles from './../ReqDetail.styles.scss';
 import { parseRequestPayload } from '../../../utils';
+import CopyAllButton from '../CopyAllButton';
 
 const RequestPayload = ({ data, isPayloadTransformed }) => {
   const payloadData = data.headers.postData.text;
   const parsedData = useMemo(() => parseRequestPayload(payloadData), [payloadData]);
+  const payload = isPayloadTransformed ? parsedData : payloadData;
 
   return (
     <div className={Styles['section-detail']}>
-      {isPayloadTransformed ? (
-        <div className={Styles['response-content']}>
-          <pre className={Styles['log-body-colorless']}>
-            {parsedData}
-          </pre>
+      <div className={Styles['response-content']}>
+        <div className={Styles['copy-button']}>
+          <CopyAllButton text={payload} />
         </div>
-      ) : payloadData}
+        <div className={Styles['payload-body']}>
+          {payload}
+        </div>
+      </div>
     </div>
   );
 };

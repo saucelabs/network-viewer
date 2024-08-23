@@ -12,7 +12,7 @@ const Request = ({ data }) => {
     !data.headers.postData?.params &&
     !data.headers.queryString?.length
   ) {
-    return (<h4 className={Styles['no-data']}>This request has no request data available.</h4>);
+    return (<h4 className={Styles['no-payload']}>This request has no request data available.</h4>);
   }
 
   return (!data ? null : (
@@ -23,16 +23,17 @@ const Request = ({ data }) => {
           data={data}
           eventKey="requestPayload"
           isParseEnabled
+          isVisible
         />
       )}
-      {(data.headers.queryString && data.headers.queryString.length) ? (
+      {data.headers.queryString && !!data.headers.queryString.length && (
         <SectionInfo
           component={QueryString}
           data={data}
           eventKey="queryString"
           isEncodeEnabled
         />
-      ) : null}
+      )}
       {data.headers.postData && data.headers.postData.params && (
         <SectionInfo
           component={FormData}
