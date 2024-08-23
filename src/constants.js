@@ -259,18 +259,22 @@ export const GENERAL_HEADERS = Object.freeze({
   }),
 });
 
-export const HEADERS_TITLES = Object.freeze({
+export const SECTION_TITLES = Object.freeze({
   general: Object.freeze({
     key: 'general',
     name: 'General',
   }),
-  request: Object.freeze({
-    key: 'request',
+  requestHeaders: Object.freeze({
+    key: 'requestHeaders',
     name: 'Request Headers',
   }),
-  response: Object.freeze({
-    key: 'response',
+  responseHeaders: Object.freeze({
+    key: 'responseHeaders',
     name: 'Response Headers',
+  }),
+  requestPayload: Object.freeze({
+    key: 'requestPayload',
+    name: 'Request Payload',
   }),
   queryString: Object.freeze({
     key: 'queryString',
@@ -280,21 +284,18 @@ export const HEADERS_TITLES = Object.freeze({
     key: 'formData',
     name: 'Form Data',
   }),
-  requestPayload: Object.freeze({
-    key: 'requestPayload',
-    name: 'Request Payload',
-  }),
 });
 
 export const MAX_COLOR_CONTENT_SIZE = 100000; // 100kB
 export const TIMELINE_DATA_POINT_HEIGHT = 2;
 export const NETWORK_VIEWER_DEFAULT_OPTIONS = {
+  enableAutoScroll: false,
   showExportHar: false,
   showImportHar: true,
   showPauseResume: false,
+  showReset: true,
   showTimeline: false,
   showWaterfall: true,
-  enableAutoScroll: false,
 };
 
 export const PAYLOAD_CAPTIONS = Object.freeze({

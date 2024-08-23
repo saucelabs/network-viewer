@@ -110,10 +110,19 @@ exports[`ReqDetailContainer renders without crashing 1`] = `
           </a>
           <a
             className="tab-item"
-            key="response"
+            key="request"
             onClick={[Function]}
             role="tab"
             tabIndex={1}
+          >
+            Request
+          </a>
+          <a
+            className="tab-item"
+            key="response"
+            onClick={[Function]}
+            role="tab"
+            tabIndex={2}
           >
             Response
           </a>

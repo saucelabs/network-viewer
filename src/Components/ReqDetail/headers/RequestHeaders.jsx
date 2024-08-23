@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Styles from './../Headers.styles.scss';
+import Styles from '../ReqDetail.styles.scss';
 
-const Request = ({ data }) => (
-  <div className={Styles['header-detail']}>
+const RequestHeaders = ({ data }) => (
+  <div className={Styles['section-detail']}>
     {data.headers.request.map(({ name, value }, index) => (
-      <p
+      <div
         key={`${name}-${index}`}
         className={Styles['info-row']}
       >
@@ -16,17 +16,17 @@ const Request = ({ data }) => (
         <span className={Styles['info-value']}>
           {value}
         </span>
-      </p>
+      </div>
     ))}
   </div>
 );
 
-Request.propTypes = {
+RequestHeaders.propTypes = {
   data: PropTypes.object,
 };
 
-Request.defaultProps = {
+RequestHeaders.defaultProps = {
   data: null,
 };
 
-export default Request;
+export default RequestHeaders;

@@ -48,7 +48,7 @@ exports[`Headers renders without crashing 1`] = `
   maxTime={5000}
 >
   <section>
-    <HeaderInfo
+    <SectionInfo
       component={[Function]}
       data={
         Object {
@@ -98,93 +98,86 @@ exports[`Headers renders without crashing 1`] = `
       isParseEnabled={false}
       isVisible={true}
     >
-      <div
-        className="header-info active"
+      <SectionTitle
+        eventKey="general"
+        isEncodeEnabled={false}
+        isOpen={true}
+        isParseEnabled={false}
+        isPayloadTransformed={true}
+        onClick={[Function]}
+        onPayloadTransform={[Function]}
       >
-        <HeaderTitle
-          eventKey="general"
-          isEncodeEnabled={false}
-          isParseEnabled={false}
-          isPayloadTransformed={true}
-          onClick={[Function]}
-          onPayloadTransform={[Function]}
-        >
-          <div>
-            <span
-              onClick={[Function]}
-              role="button"
-              tabIndex={0}
+        <div>
+          <span
+            onClick={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <IconCaretDown
+              className=""
             >
-              <IconCaretUp
+              <svg
                 className=""
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  className=""
-                  height="8"
-                  preserveAspectRatio="xMidYMid"
-                  viewBox="0 0 13 8"
-                  width="13"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g>
-                    <path
-                      d="M11.547,8.008 C11.547,8.008 6.500,2.919 6.500,2.919 C6.500,2.919 1.453,8.008 1.453,8.008 C1.453,8.008 0.011,6.554 0.011,6.554 C0.011,6.554 6.500,0.011 6.500,0.011 C6.500,0.011 12.989,6.554 12.989,6.554 C12.989,6.554 11.547,8.008 11.547,8.008 Z"
-                      fillRule="evenodd"
-                    />
-                  </g>
-                </svg>
-              </IconCaretUp>
-              General
+                <path
+                  d="M5.04607 8.29925C4.94259 8.1833 5.02523 8 5.181 8H18.8192C18.975 8 19.0577 8.1833 18.9542 8.29925L12.1351 15.9397C12.0632 16.0201 11.937 16.0201 11.8652 15.9397L5.04607 8.29925Z"
+                />
+              </svg>
+            </IconCaretDown>
+            General
+          </span>
+        </div>
+      </SectionTitle>
+      <ChildComponent>
+        <div>
+          <div
+            key="url"
+          >
+            <span>
+              Request URL:
+            </span>
+            <span>
+              https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
             </span>
           </div>
-        </HeaderTitle>
-        <ChildComponent>
-          <div>
-            <div
-              key="url"
-            >
-              <span>
-                Request URL:
-              </span>
-              <span>
-                https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
-              </span>
-            </div>
-            <div
-              key="method"
-            >
-              <span>
-                Request Method:
-              </span>
-              <span>
-                GET
-              </span>
-            </div>
-            <div
-              key="status"
-            >
-              <span>
-                Status Code:
-              </span>
-              <span>
-                200
-              </span>
-            </div>
-            <div
-              key="serverIPAddress"
-            >
-              <span>
-                Remote Address:
-              </span>
-              <span>
-                :80
-              </span>
-            </div>
+          <div
+            key="method"
+          >
+            <span>
+              Request Method:
+            </span>
+            <span>
+              GET
+            </span>
           </div>
-        </ChildComponent>
-      </div>
-    </HeaderInfo>
-    <HeaderInfo
+          <div
+            key="status"
+          >
+            <span>
+              Status Code:
+            </span>
+            <span>
+              200
+            </span>
+          </div>
+          <div
+            key="serverIPAddress"
+          >
+            <span>
+              Remote Address:
+            </span>
+            <span>
+              :80
+            </span>
+          </div>
+        </div>
+      </ChildComponent>
+    </SectionInfo>
+    <SectionInfo
       component={[Function]}
       data={
         Object {
@@ -229,54 +222,47 @@ exports[`Headers renders without crashing 1`] = `
           "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
         }
       }
-      eventKey="request"
+      eventKey="requestHeaders"
       isEncodeEnabled={false}
       isParseEnabled={false}
       isVisible={false}
     >
-      <div
-        className="header-info"
+      <SectionTitle
+        eventKey="requestHeaders"
+        isEncodeEnabled={false}
+        isOpen={false}
+        isParseEnabled={false}
+        isPayloadTransformed={true}
+        onClick={[Function]}
+        onPayloadTransform={[Function]}
       >
-        <HeaderTitle
-          eventKey="request"
-          isEncodeEnabled={false}
-          isParseEnabled={false}
-          isPayloadTransformed={true}
-          onClick={[Function]}
-          onPayloadTransform={[Function]}
-        >
-          <div>
-            <span
-              onClick={[Function]}
-              role="button"
-              tabIndex={0}
+        <div>
+          <span
+            onClick={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <IconCaretRight
+              className=""
             >
-              <IconCaretUp
+              <svg
                 className=""
+                height="24"
+                viewBox="0 0 25 24"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  className=""
-                  height="8"
-                  preserveAspectRatio="xMidYMid"
-                  viewBox="0 0 13 8"
-                  width="13"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g>
-                    <path
-                      d="M11.547,8.008 C11.547,8.008 6.500,2.919 6.500,2.919 C6.500,2.919 1.453,8.008 1.453,8.008 C1.453,8.008 0.011,6.554 0.011,6.554 C0.011,6.554 6.500,0.011 6.500,0.011 C6.500,0.011 12.989,6.554 12.989,6.554 C12.989,6.554 11.547,8.008 11.547,8.008 Z"
-                      fillRule="evenodd"
-                    />
-                  </g>
-                </svg>
-              </IconCaretUp>
-              Request Headers
-            </span>
-          </div>
-        </HeaderTitle>
-      </div>
-    </HeaderInfo>
-    <HeaderInfo
+                <path
+                  d="M8.42327 18.954C8.30732 19.0575 8.12402 18.9748 8.12402 18.8191L8.12402 5.18082C8.12402 5.02505 8.30732 4.9424 8.42327 5.04589L16.0637 11.865C16.1441 11.9368 16.1441 12.0631 16.0637 12.1349L8.42327 18.954Z"
+                />
+              </svg>
+            </IconCaretRight>
+            Request Headers
+          </span>
+        </div>
+      </SectionTitle>
+    </SectionInfo>
+    <SectionInfo
       component={[Function]}
       data={
         Object {
@@ -321,152 +307,46 @@ exports[`Headers renders without crashing 1`] = `
           "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
         }
       }
-      eventKey="response"
+      eventKey="responseHeaders"
       isEncodeEnabled={false}
       isParseEnabled={false}
       isVisible={false}
     >
-      <div
-        className="header-info"
+      <SectionTitle
+        eventKey="responseHeaders"
+        isEncodeEnabled={false}
+        isOpen={false}
+        isParseEnabled={false}
+        isPayloadTransformed={true}
+        onClick={[Function]}
+        onPayloadTransform={[Function]}
       >
-        <HeaderTitle
-          eventKey="response"
-          isEncodeEnabled={false}
-          isParseEnabled={false}
-          isPayloadTransformed={true}
-          onClick={[Function]}
-          onPayloadTransform={[Function]}
-        >
-          <div>
-            <span
-              onClick={[Function]}
-              role="button"
-              tabIndex={0}
+        <div>
+          <span
+            onClick={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <IconCaretRight
+              className=""
             >
-              <IconCaretUp
+              <svg
                 className=""
+                height="24"
+                viewBox="0 0 25 24"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  className=""
-                  height="8"
-                  preserveAspectRatio="xMidYMid"
-                  viewBox="0 0 13 8"
-                  width="13"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g>
-                    <path
-                      d="M11.547,8.008 C11.547,8.008 6.500,2.919 6.500,2.919 C6.500,2.919 1.453,8.008 1.453,8.008 C1.453,8.008 0.011,6.554 0.011,6.554 C0.011,6.554 6.500,0.011 6.500,0.011 C6.500,0.011 12.989,6.554 12.989,6.554 C12.989,6.554 11.547,8.008 11.547,8.008 Z"
-                      fillRule="evenodd"
-                    />
-                  </g>
-                </svg>
-              </IconCaretUp>
-              Response Headers
-            </span>
-          </div>
-        </HeaderTitle>
-      </div>
-    </HeaderInfo>
-    <HeaderInfo
-      component={[Function]}
-      data={
-        Object {
-          "domain": "developer.mozilla.org",
-          "filename": "slice",
-          "headers": Object {
-            "postData": Object {
-              "text": "{\\"hello\\": \\"foo\\"}",
-            },
-            "queryString": Array [],
-            "request": Array [
-              Object {
-                "name": "Connection",
-                "value": "keep-alive",
-              },
-            ],
-            "response": Array [
-              Object {
-                "name": "Connection",
-                "value": "keep-alive",
-              },
-            ],
-          },
-          "index": 0,
-          "method": "GET",
-          "serverIPAddress": ":80",
-          "size": 135.04,
-          "startedDateTime": "2019-10-14T08:47:11.592Z",
-          "status": 200,
-          "timings": Object {
-            "_blocked_queueing": 4.382999992230907,
-            "blocked": 5.496999992230907,
-            "connect": -1,
-            "dns": -1,
-            "receive": 3.252000024076551,
-            "send": 0.2819999999999998,
-            "ssl": -1,
-            "startTime": 0,
-            "wait": 26.03899999633059,
-          },
-          "type": "html",
-          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
-        }
-      }
-      eventKey="requestPayload"
-      isEncodeEnabled={false}
-      isParseEnabled={true}
-      isVisible={false}
-    >
-      <div
-        className="header-info"
-      >
-        <HeaderTitle
-          eventKey="requestPayload"
-          isEncodeEnabled={false}
-          isParseEnabled={true}
-          isPayloadTransformed={true}
-          onClick={[Function]}
-          onPayloadTransform={[Function]}
-        >
-          <div>
-            <span
-              onClick={[Function]}
-              role="button"
-              tabIndex={0}
-            >
-              <IconCaretUp
-                className=""
-              >
-                <svg
-                  className=""
-                  height="8"
-                  preserveAspectRatio="xMidYMid"
-                  viewBox="0 0 13 8"
-                  width="13"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g>
-                    <path
-                      d="M11.547,8.008 C11.547,8.008 6.500,2.919 6.500,2.919 C6.500,2.919 1.453,8.008 1.453,8.008 C1.453,8.008 0.011,6.554 0.011,6.554 C0.011,6.554 6.500,0.011 6.500,0.011 C6.500,0.011 12.989,6.554 12.989,6.554 C12.989,6.554 11.547,8.008 11.547,8.008 Z"
-                      fillRule="evenodd"
-                    />
-                  </g>
-                </svg>
-              </IconCaretUp>
-              Request Payload
-            </span>
-            <span
-              onClick={[Function]}
-              role="button"
-              tabIndex={0}
-            >
-              view source
-            </span>
-          </div>
-        </HeaderTitle>
-      </div>
-    </HeaderInfo>
+                <path
+                  d="M8.42327 18.954C8.30732 19.0575 8.12402 18.9748 8.12402 18.8191L8.12402 5.18082C8.12402 5.02505 8.30732 4.9424 8.42327 5.04589L16.0637 11.865C16.1441 11.9368 16.1441 12.0631 16.0637 12.1349L8.42327 18.954Z"
+                />
+              </svg>
+            </IconCaretRight>
+            Response Headers
+          </span>
+        </div>
+      </SectionTitle>
+    </SectionInfo>
   </section>
 </Headers>
 `;

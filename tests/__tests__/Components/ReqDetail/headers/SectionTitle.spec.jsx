@@ -1,9 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import HeaderTitle from './../../../../../src/Components/ReqDetail/headers/HeaderTitle';
+import SectionTitle from '../../../../../src/Components/ReqDetail/SectionTitle';
 
-describe('HeaderTitle', () => {
+describe('SectionTitle', () => {
   const props = {
     eventKey: 'general',
     onClick: () => {},
@@ -11,7 +11,7 @@ describe('HeaderTitle', () => {
   };
 
   it('renders without crashing', () => {
-    const element = shallow(<HeaderTitle {...props} />);
+    const element = shallow(<SectionTitle {...props} />);
     expect(element).toMatchSnapshot();
   });
 });

@@ -3,13 +3,15 @@
 exports[`Response renders without crashing for content 1`] = `
 <div>
   <div>
-    <CopyAllButton
-      text="{\\"foo\\": \\"bar\\"}"
-    />
+    <div>
+      <CopyAllButton
+        text="{\\"foo\\": \\"bar\\"}"
+      />
+    </div>
+    <span>
+      {"foo": "bar"}
+    </span>
   </div>
-  <span>
-    {"foo": "bar"}
-  </span>
 </div>
 `;
 
