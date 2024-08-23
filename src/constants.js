@@ -259,7 +259,7 @@ export const GENERAL_HEADERS = Object.freeze({
   }),
 });
 
-export const HEADERS_TITLES = Object.freeze({
+export const SECTION_TITLES = Object.freeze({
   general: Object.freeze({
     key: 'general',
     name: 'General',
@@ -272,6 +272,10 @@ export const HEADERS_TITLES = Object.freeze({
     key: 'responseHeaders',
     name: 'Response Headers',
   }),
+  requestPayload: Object.freeze({
+    key: 'requestPayload',
+    name: 'Request Payload',
+  }),
   queryString: Object.freeze({
     key: 'queryString',
     name: 'Query String Parameters',
@@ -279,10 +283,6 @@ export const HEADERS_TITLES = Object.freeze({
   formData: Object.freeze({
     key: 'formData',
     name: 'Form Data',
-  }),
-  requestPayload: Object.freeze({
-    key: 'requestPayload',
-    name: 'Request Payload',
   }),
 });
 

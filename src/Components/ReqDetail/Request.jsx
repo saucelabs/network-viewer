@@ -16,7 +16,7 @@ const Request = ({ data }) => {
   }
 
   return (!data ? null : (
-    <section className={Styles['headers-container']}>
+    <section className={Styles['section-container']}>
       {data.headers.postData && data.headers.postData.text && (
         <SectionInfo
           component={RequestPayload}

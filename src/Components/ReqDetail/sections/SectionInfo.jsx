@@ -26,17 +26,18 @@ const SectionInfo = ({
   });
 
   return (
-    <div className={context('header-info', { active: isOpen })}>
+    <>
       <SectionTitle
         eventKey={eventKey}
         isEncodeEnabled={isEncodeEnabled}
+        isOpen={isOpen}
         isParseEnabled={isParseEnabled}
         isPayloadTransformed={isPayloadTransformed}
         onClick={() => setIsOpen(!isOpen)}
         onPayloadTransform={handlePayloadTransform}
       />
       {isOpen && <ChildComponent />}
-    </div>
+    </>
   );
 };
 

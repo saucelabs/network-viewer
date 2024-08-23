@@ -1,16 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SectionInfo renders without crashing 1`] = `
-<div
-  className="header-info"
->
+<Fragment>
   <SectionTitle
     eventKey="general"
     isEncodeEnabled={false}
+    isOpen={false}
     isParseEnabled={false}
     isPayloadTransformed={true}
     onClick={[Function]}
     onPayloadTransform={[Function]}
   />
-</div>
+</Fragment>
 `;

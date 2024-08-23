@@ -9,7 +9,7 @@ const RequestPayload = ({ data, isPayloadTransformed }) => {
   const parsedData = useMemo(() => parseRequestPayload(payloadData), [payloadData]);
 
   return (
-    <div className={Styles['header-detail']}>
+    <div className={Styles['section-detail']}>
       {isPayloadTransformed ? (
         <div className={Styles['response-content']}>
           <pre className={Styles['log-body-colorless']}>

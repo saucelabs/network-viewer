@@ -1,7 +1,7 @@
 @import "./../styles/variables";
 
 $close-button-width: 35px;
-$tab-height: 35px;
+$tab-height: 32px;
 
 .req-detail-container {
   width: 70%;
@@ -12,24 +12,24 @@ $tab-height: 35px;
   position: relative;
 
   .nav-tabs {
+    height: $tab-height;
     padding-left: $close-button-width;
-    border: 0;
   }
 
   .tab-link {
-    color: $white-33;
-    border: 0;
-    border-bottom: 2px solid transparent;
+    color: $brand-primary-dark-gray;
     padding: $size-xs-s $size-s $size-xs;
+    border: 0;
+    margin: 0;
 
     &:hover {
       text-decoration: none;
     }
 
     &.active {
-      border: 0;
-      color: $white-20;
-      border-bottom: 2px solid $white-20;
+      color: $brand-primary-dark-gray;
+      font-weight: 600;
+      border-bottom: 2px solid $brand-primary-dark-gray;
     }
   }
 
@@ -63,7 +63,6 @@ $tab-height: 35px;
   .tabs-container {
     display: flex;
     width: 100%;
-    padding: $size-s $size-m;
     height: calc(100% - #{$tab-height});
     overflow: auto;
     outline: none;

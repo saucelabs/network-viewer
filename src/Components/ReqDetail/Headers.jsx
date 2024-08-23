@@ -8,7 +8,7 @@ import SectionInfo from './sections/SectionInfo';
 import Styles from './ReqDetail.styles.scss';
 
 const Headers = ({ data }) => (!data ? null : (
-  <section className={Styles['headers-container']}>
+  <section className={Styles['section-container']}>
     <SectionInfo
       component={General}
       data={data}

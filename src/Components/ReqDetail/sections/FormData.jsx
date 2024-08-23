@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import Styles from './../ReqDetail.styles.scss';
 
 const FormData = ({ data, isPayloadTransformed }) => (
-  <div className={Styles['header-detail']}>
+  <div className={Styles['section-detail']}>
     {data.headers.postData.params.map(({ name, value }, index) => (
-      <p
+      <div
         key={`${name}-${index}`}
         className={Styles['info-row']}
       >
@@ -16,7 +16,7 @@ const FormData = ({ data, isPayloadTransformed }) => (
         <span className={Styles['info-value']}>
           {isPayloadTransformed ? decodeURIComponent(value) : value}
         </span>
-      </p>
+      </div>
     ))}
   </div>
 );

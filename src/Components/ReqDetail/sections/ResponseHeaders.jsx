@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import Styles from './../ReqDetail.styles.scss';
 
 const ResponseHeaders = ({ data }) => (
-  <div className={Styles['header-detail']}>
+  <div className={Styles['section-detail']}>
     {data.headers.response.map(({ name, value }, index) => (
-      <p
+      <div
         key={`${name}-${index}`}
         className={Styles['info-row']}
       >
@@ -16,7 +16,7 @@ const ResponseHeaders = ({ data }) => (
         <span className={Styles['info-value']}>
           {value}
         </span>
-      </p>
+      </div>
     ))}
   </div>
 );
