@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Styles from './../ReqDetail.styles.scss';
+import Styles from '../ReqDetail.styles.scss';
 
-const QueryString = ({ data, isPayloadTransformed }) => (
+const RequestHeaders = ({ data }) => (
   <div className={Styles['section-detail']}>
-    {data.headers.queryString.map(({ name, value }, index) => (
+    {data.headers.request.map(({ name, value }, index) => (
       <div
         key={`${name}-${index}`}
         className={Styles['info-row']}
@@ -14,20 +14,19 @@ const QueryString = ({ data, isPayloadTransformed }) => (
           {`${name}:`}
         </span>
         <span className={Styles['info-value']}>
-          {isPayloadTransformed ? decodeURIComponent(value) : value}
+          {value}
         </span>
       </div>
     ))}
   </div>
 );
 
-QueryString.propTypes = {
+RequestHeaders.propTypes = {
   data: PropTypes.object,
-  isPayloadTransformed: PropTypes.bool.isRequired,
 };
 
-QueryString.defaultProps = {
+RequestHeaders.defaultProps = {
   data: null,
 };
 
-export default QueryString;
+export default RequestHeaders;

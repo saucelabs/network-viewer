@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { SECTION_TITLES, PAYLOAD_CAPTIONS } from './../../../constants';
-import Styles from './../ReqDetail.styles.scss';
-import IconCaretDown from '../../../icons/IconCaretDown';
-import IconCaretRight from '../../../icons/IconCaretRight';
+import { SECTION_TITLES, PAYLOAD_CAPTIONS } from '../../constants';
+import Styles from './ReqDetail.styles.scss';
+import IconCaretDown from '../../icons/IconCaretDown';
+import IconCaretRight from '../../icons/IconCaretRight';
 
 const SectionTitle = ({
   onClick,

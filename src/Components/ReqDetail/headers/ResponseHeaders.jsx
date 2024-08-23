@@ -1,33 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Styles from './../ReqDetail.styles.scss';
-import { GENERAL_HEADERS } from '../../../constants';
+import Styles from '../ReqDetail.styles.scss';
 
-const General = ({ data }) => (
+const ResponseHeaders = ({ data }) => (
   <div className={Styles['section-detail']}>
-    {Object.entries(GENERAL_HEADERS).map(([dataKey, { key, name }]) => (
+    {data.headers.response.map(({ name, value }, index) => (
       <div
-        key={dataKey}
+        key={`${name}-${index}`}
         className={Styles['info-row']}
       >
         <span className={Styles['info-caption']}>
           {`${name}:`}
         </span>
         <span className={Styles['info-value']}>
-          {key === 'status' && data.error ? data.error : data[key]}
+          {value}
         </span>
       </div>
     ))}
   </div>
 );
 
-General.propTypes = {
+ResponseHeaders.propTypes = {
   data: PropTypes.object,
 };
 
-General.defaultProps = {
+ResponseHeaders.defaultProps = {
   data: null,
 };
 
-export default General;
+export default ResponseHeaders;

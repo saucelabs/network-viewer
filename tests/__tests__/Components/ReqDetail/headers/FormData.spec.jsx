@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import FormData from '../../../../../src/Components/ReqDetail/sections/FormData';
+import FormData from '../../../../../src/Components/ReqDetail/request/FormData';
 
 describe('FormData', () => {
   const props = {

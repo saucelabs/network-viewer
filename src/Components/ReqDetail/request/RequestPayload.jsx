@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 
-import Styles from './../ReqDetail.styles.scss';
+import Styles from '../ReqDetail.styles.scss';
 import { parseRequestPayload } from '../../../utils';
 import CopyAllButton from '../CopyAllButton';
 

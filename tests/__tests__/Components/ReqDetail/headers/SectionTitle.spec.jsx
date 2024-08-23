@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import SectionTitle from '../../../../../src/Components/ReqDetail/sections/SectionTitle';
+import SectionTitle from '../../../../../src/Components/ReqDetail/SectionTitle';
 
 describe('SectionTitle', () => {
   const props = {

@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import General from './sections/General';
-import ResponseHeaders from './sections/ResponseHeaders';
-import RequestHeaders from './sections/RequestHeaders';
-import SectionInfo from './sections/SectionInfo';
+import General from './headers/General';
+import ResponseHeaders from './headers/ResponseHeaders';
+import RequestHeaders from './headers/RequestHeaders';
+import SectionInfo from './SectionInfo';
 import Styles from './ReqDetail.styles.scss';
 
 const Headers = ({ data }) => (!data ? null : (

@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Styles from './../ReqDetail.styles.scss';
+import Styles from '../ReqDetail.styles.scss';
 
-const ResponseHeaders = ({ data }) => (
+const FormData = ({ data, isPayloadTransformed }) => (
   <div className={Styles['section-detail']}>
-    {data.headers.response.map(({ name, value }, index) => (
+    {data.headers.postData.params.map(({ name, value }, index) => (
       <div
         key={`${name}-${index}`}
         className={Styles['info-row']}
@@ -14,19 +14,20 @@ const ResponseHeaders = ({ data }) => (
           {`${name}:`}
         </span>
         <span className={Styles['info-value']}>
-          {value}
+          {isPayloadTransformed ? decodeURIComponent(value) : value}
         </span>
       </div>
     ))}
   </div>
 );
 
-ResponseHeaders.propTypes = {
+FormData.propTypes = {
   data: PropTypes.object,
+  isPayloadTransformed: PropTypes.bool.isRequired,
 };
 
-ResponseHeaders.defaultProps = {
+FormData.defaultProps = {
   data: null,
 };
 
-export default ResponseHeaders;
+export default FormData;

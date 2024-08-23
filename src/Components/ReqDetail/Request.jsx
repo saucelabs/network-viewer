@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import QueryString from './sections/QueryString';
-import FormData from './sections/FormData';
-import SectionInfo from './sections/SectionInfo';
+import QueryString from './request/QueryString';
+import FormData from './request/FormData';
+import SectionInfo from './SectionInfo';
 import Styles from './ReqDetail.styles.scss';
-import RequestPayload from './sections/RequestPayload';
+import RequestPayload from './request/RequestPayload';
 
 const Request = ({ data }) => {
   if (!data.headers.postData?.text &&

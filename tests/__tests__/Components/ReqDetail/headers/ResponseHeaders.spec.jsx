@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import ResponseHeaders from '../../../../../src/Components/ReqDetail/sections/ResponseHeaders';
+import ResponseHeaders from '../../../../../src/Components/ReqDetail/headers/ResponseHeaders';
 
 describe('ResponseHeaders', () => {
   const props = {

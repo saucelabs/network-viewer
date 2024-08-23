@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import RequestHeaders from '../../../../../src/Components/ReqDetail/sections/RequestHeaders';
+import RequestHeaders from '../../../../../src/Components/ReqDetail/headers/RequestHeaders';
 
 describe('RequestHeaders', () => {
   const props = {

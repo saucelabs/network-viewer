@@ -1,33 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Styles from './../ReqDetail.styles.scss';
+import Styles from '../ReqDetail.styles.scss';
+import { GENERAL_HEADERS } from '../../../constants';
 
-const FormData = ({ data, isPayloadTransformed }) => (
+const General = ({ data }) => (
   <div className={Styles['section-detail']}>
-    {data.headers.postData.params.map(({ name, value }, index) => (
+    {Object.entries(GENERAL_HEADERS).map(([dataKey, { key, name }]) => (
       <div
-        key={`${name}-${index}`}
+        key={dataKey}
         className={Styles['info-row']}
       >
         <span className={Styles['info-caption']}>
           {`${name}:`}
         </span>
         <span className={Styles['info-value']}>
-          {isPayloadTransformed ? decodeURIComponent(value) : value}
+          {key === 'status' && data.error ? data.error : data[key]}
         </span>
       </div>
     ))}
   </div>
 );
 
-FormData.propTypes = {
+General.propTypes = {
   data: PropTypes.object,
-  isPayloadTransformed: PropTypes.bool.isRequired,
 };
 
-FormData.defaultProps = {
+General.defaultProps = {
   data: null,
 };
 
-export default FormData;
+export default General;
