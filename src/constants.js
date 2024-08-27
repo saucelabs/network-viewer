@@ -289,6 +289,7 @@ export const SECTION_TITLES = Object.freeze({
 export const MAX_COLOR_CONTENT_SIZE = 100000; // 100kB
 export const TIMELINE_DATA_POINT_HEIGHT = 2;
 export const NETWORK_VIEWER_DEFAULT_OPTIONS = {
+  NoDataPlaceholder: undefined,
   enableAutoScroll: false,
   showExportHar: false,
   showImportHar: true,

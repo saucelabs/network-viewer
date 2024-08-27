@@ -9,7 +9,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: $size-xxxl;
+  padding: $size-xxxl $size-l;
+  text-align: center;
+
 
   .network-icon {
     fill: $brand-primary-light-gray;
