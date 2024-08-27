@@ -23,7 +23,7 @@
 
   .section-title {
     display: flex;
-    align-content: center;
+    align-items: center;
 
     .caret-icon {
       fill: $brand-primary-gray;
@@ -45,6 +45,7 @@
 
 .section-detail {
   padding: $size-xs-s $size-s;
+  width: 100%;
 
   .info-row {
     margin: 0;
@@ -75,14 +76,21 @@
   color: $brand-primary-dark-gray;
 }
 
-.response-content {
+.payload-content {
   font-size: $font-size-small;
   width: 100%;
   display: flex;
   flex-direction: column;
 
   .copy-button {
-    align-self: end;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-top: -$size-xs-s;
+    background: $white-100;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
   }
 
   .payload-body {
