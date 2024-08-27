@@ -43,7 +43,7 @@ const NetworkTableBody = ({ height }) => {
     actions,
     callbacks,
   } = useNetwork();
-  const { enableAutoScroll } = useTheme();
+  const { enableAutoScroll, NoDataPlaceholder } = useTheme();
   const numberOfNewEntries = state.get('numberOfNewEntries');
   const data = state.get('data');
   const actualData = state.get('actualData');
@@ -84,8 +84,13 @@ const NetworkTableBody = ({ height }) => {
         className={Styles['no-data']}
       >
         <IconNetworkRequest className={Styles['network-icon']} />
-        <span className={Styles.header}>Recording network activity</span>
-        <span className={Styles.subtext}>Perform a request to see the network activity</span>
+        {NoDataPlaceholder && <NoDataPlaceholder />}
+        {!NoDataPlaceholder && (
+          <>
+            <span className={Styles.header}>Recording network activity</span>
+            <span className={Styles.subtext}>Perform a request to see the network activity</span>
+          </>
+        )}
       </div>
     );
   }
