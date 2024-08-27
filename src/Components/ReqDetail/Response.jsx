@@ -17,7 +17,7 @@ const Response = ({ data }) => {
 
   return (
     <div className={Styles['section-detail']}>
-      <div className={Styles['response-content']}>
+      <div className={Styles['payload-content']}>
         <div className={Styles['copy-button']}>
           <CopyAllButton text={content} />
         </div>
