@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 
 import Styles from './URLInput.styles.scss';
 import Button from './../../../src/Components/Common/Button';
 import CORSCheckbox from './CORSCheckbox';
+import { useNetwork } from '../../state/network/Context';
 
-const URLInput = ({ onSubmit }) => {
+const URLInput = () => {
+  const { actions } = useNetwork();
   const [url, setURL] = useState('');
   const [isCORSEnabled, setCORS] = useState(false);
   const handleInputChange = ({ target }) => {
@@ -13,7 +14,7 @@ const URLInput = ({ onSubmit }) => {
   };
 
   const handleSubmit = () => {
-    onSubmit({
+    actions.fetchFile({
       file: url,
       isCORSEnabled,
     });
@@ -41,10 +42,6 @@ const URLInput = ({ onSubmit }) => {
       </Button>
     </div>
   );
-};
-
-URLInput.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
 };
 
 export default URLInput;

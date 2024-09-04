@@ -1,10 +1,12 @@
 @import './../../src/styles/variables';
 
 .app-container {
+  display: flex;
+  flex-direction: column;
   height: 100%;
 
   .network-container {
-    height: auto;
+    flex: 1 1 auto;
 
     &.network-container-data-loaded {
       height: 100%;

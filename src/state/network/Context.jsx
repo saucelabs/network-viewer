@@ -13,6 +13,7 @@ export const useNetwork = () => {
   const [state, dispatch, callbacks] = context;
 
   const wrappedActions = actionsWrapper({
+    fetchFile: actions.fetchFile,
     updateData: actions.updateData,
     updateSearch: actions.updateSearch,
     updateSort: actions.updateSort,
