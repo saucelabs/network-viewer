@@ -181,7 +181,7 @@ export const STATUS_FILTERS = [
   },
 ];
 
-export const FETCH_FILE_LOAD_TEXT = 'Please wait, Fetching file is in progress.';
+export const FETCH_FILE_LOAD_TEXT = 'Please wait, fetching file is in progress.';
 
 export const TIMINGS = {
   queueing: {
