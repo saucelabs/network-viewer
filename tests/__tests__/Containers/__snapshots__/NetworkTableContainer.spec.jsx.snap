@@ -102,9 +102,7 @@ exports[`NetworkTableContainer renders without crashing 1`] = `
           <h4>
             OR add HAR file URL in the below input box
           </h4>
-          <URLInput
-            onSubmit={[Function]}
-          >
+          <URLInput>
             <div>
               <CORSCheckbox
                 isEnabled={false}
