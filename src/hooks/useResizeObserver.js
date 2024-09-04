@@ -3,31 +3,35 @@ import { useEffect, useState } from 'react';
 /* eslint no-underscore-dangle: 0 */
 
 export const useResizeObserver = (elementRef) => {
+  let ref = null;
   const [elementDims, setElementDims] = useState({
     width: 0,
     height: 0,
   });
+
   useEffect(() => {
+    ref = elementRef.current;
     const onResize = () => {
-      if (elementRef) {
+      if (ref) {
         setElementDims({
-          width: elementRef.clientWidth,
-          height: elementRef.clientHeight,
+          width: ref.clientWidth,
+          height: ref.clientHeight,
         });
       }
     };
+
     const resizeObserver = new ResizeObserver(onResize);
 
-    if (elementRef) {
-      resizeObserver.observe(elementRef);
+    if (ref) {
+      resizeObserver.observe(ref);
     }
 
     return () => {
-      if (elementRef) {
-        resizeObserver.unobserve(elementRef);
+      if (ref) {
+        resizeObserver.unobserve(ref);
       }
     };
-  }, [elementRef]);
+  }, [ref]);
 
   return { elementDims };
 };
