@@ -14,6 +14,7 @@ const config = deepMerge(baseConfig, {
     'jsx-a11y/label-has-associated-control': 0,
     'jsx-a11y/mouse-events-have-key-events': 0,
     'react/forbid-prop-types': 0,
+    'react/function-component-definition': 'off',
     'react/jsx-no-bind': 'error',
     'react/jsx-child-element-spacing': 2,
     'react/jsx-closing-tag-location': 2,

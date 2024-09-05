@@ -1,4 +1,4 @@
-import common, { defaultPlugins, postcssPlugin } from './common';
+import common, { defaultPlugins, postcssPlugin } from './common.mjs';
 
 export default {
   ...common,

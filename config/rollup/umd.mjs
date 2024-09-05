@@ -1,6 +1,6 @@
 import replace from '@rollup/plugin-replace';
 
-import common, { defaultPlugins, postcssPlugin } from './common';
+import common, { defaultPlugins, postcssPlugin } from './common.mjs';
 
 export default {
   input: common.input,
