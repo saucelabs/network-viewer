@@ -10,6 +10,7 @@ import { useTheme } from '../state/theme/Context';
 import InputHAR from '../Components/Import/InputHAR';
 import NetworkTableBody from '../Components/NetworkTable/NetworkTableBody';
 import { TABLE_HEADER_HEIGHT } from '../constants';
+import { useIsVisible } from '../hooks/useIsVisible';
 
 const context = classNames.bind(Styles);
 
@@ -22,12 +23,13 @@ const NetworkTableContainer = () => {
 
   const [tableBodyHeight, setTableBodyHeight] = useState(0);
   const ref = useRef(null);
+  const isVisible = useIsVisible(ref);
 
   useEffect(() => {
-    if (ref?.current) {
+    if (ref?.current && isVisible) {
       setTableBodyHeight(ref.current.clientHeight - TABLE_HEADER_HEIGHT);
     }
-  }, [ref]);
+  }, [ref, actualData, isVisible]);
 
   if (error) {
     return (

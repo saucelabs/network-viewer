@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import RequestPayload from './../../../../../src/Components/ReqDetail/headers/RequestPayload';
+import RequestPayload from '../../../../../src/Components/ReqDetail/request/RequestPayload';
 
 describe('RequestPayload', () => {
   const props = {

@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HeaderTitle renders without crashing 1`] = `
+exports[`SectionTitle renders without crashing 1`] = `
 <div>
   <span
     onClick={[Function]}
     role="button"
     tabIndex={0}
   >
-    <IconCaretUp
+    <IconCaretRight
       className=""
     />
     General

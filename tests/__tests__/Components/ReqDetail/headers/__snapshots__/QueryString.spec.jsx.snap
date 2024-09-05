@@ -2,7 +2,7 @@
 
 exports[`QueryString renders without crashing 1`] = `
 <div>
-  <p
+  <div
     key="foo-0"
   >
     <span>
@@ -11,6 +11,6 @@ exports[`QueryString renders without crashing 1`] = `
     <span>
       bar
     </span>
-  </p>
+  </div>
 </div>
 `;

@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { HEADERS_TITLES, PAYLOAD_CAPTIONS } from './../../../constants';
-import IconCaretUp from './../../../icons/IconCaretUp';
-import Styles from './../Headers.styles.scss';
+import { SECTION_TITLES, PAYLOAD_CAPTIONS } from '../../constants';
+import Styles from './ReqDetail.styles.scss';
+import IconCaretDown from '../../icons/IconCaretDown';
+import IconCaretRight from '../../icons/IconCaretRight';
 
-const HeaderTitle = ({
+const SectionTitle = ({
   onClick,
   eventKey,
   isEncodeEnabled,
+  isOpen,
   onPayloadTransform,
   isPayloadTransformed,
   isParseEnabled,
@@ -16,14 +18,17 @@ const HeaderTitle = ({
   const payloadStatus = PAYLOAD_CAPTIONS[isParseEnabled ? 'parse' : 'encode'][isPayloadTransformed];
 
   return (
-    <div className={Styles['header-title']}>
+    <div className={Styles['section-title-row']}>
       <span
-        onClick={() => onClick(HEADERS_TITLES[eventKey].key)}
+        className={Styles['section-title']}
+        onClick={() => onClick(SECTION_TITLES[eventKey].key)}
         role="button"
         tabIndex={0}
       >
-        <IconCaretUp className={Styles['caret-icon']} />
-        {HEADERS_TITLES[eventKey].name}
+        {isOpen ?
+          <IconCaretDown className={Styles['caret-icon']} /> :
+          <IconCaretRight className={Styles['caret-icon']} />}
+        {SECTION_TITLES[eventKey].name}
       </span>
       {(isEncodeEnabled || isParseEnabled) && (
         <span
@@ -39,19 +44,21 @@ const HeaderTitle = ({
   );
 };
 
-HeaderTitle.propTypes = {
+SectionTitle.propTypes = {
   eventKey: PropTypes.string.isRequired,
   isEncodeEnabled: PropTypes.bool,
+  isOpen: PropTypes.bool,
   isParseEnabled: PropTypes.bool,
   isPayloadTransformed: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
   onPayloadTransform: PropTypes.func.isRequired,
 };
 
-HeaderTitle.defaultProps = {
+SectionTitle.defaultProps = {
   isEncodeEnabled: false,
+  isOpen: false,
   isParseEnabled: false,
   isPayloadTransformed: true,
 };
 
-export default HeaderTitle;
+export default SectionTitle;

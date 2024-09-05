@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Request renders without crashing 1`] = `
+exports[`ResponseHeaders renders without crashing 1`] = `
 <div>
-  <p
+  <div
     key="foo-0"
   >
     <span>
@@ -11,6 +11,6 @@ exports[`Request renders without crashing 1`] = `
     <span>
       bar
     </span>
-  </p>
+  </div>
 </div>
 `;

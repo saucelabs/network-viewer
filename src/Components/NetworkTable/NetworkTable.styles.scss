@@ -5,6 +5,31 @@
   border-top: $border;
 }
 
+.no-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $size-xxxl $size-l;
+  text-align: center;
+
+
+  .network-icon {
+    fill: $brand-primary-light-gray;
+    height: $size-xl;
+    width: $size-xl;
+  }
+
+  .header {
+    padding: $size-xl 0 $size-s 0;
+    font-weight: 600;
+    color: $brand-primary-dark-gray;
+  }
+
+  .subtext {
+    color: $brand-primary-gray;
+  }
+}
+
 
 .network-table-header {
   display: flex;
@@ -27,13 +52,14 @@
   width: 12%;
   align-self: center;
   padding-right: $size-xs-s;
+  min-width: $table-column-min-width;
 
   &:last-child {
     padding-right: 0;
   }
 
   &.show-waterfall {
-    width: 9%;
+    width: 10%;
   }
 
   &.file {
@@ -44,8 +70,7 @@
     }
   }
 
-  &.domain,
-  &.waterfall{
+  &.domain {
     width: 15%;
   }
 }
@@ -92,6 +117,7 @@
   padding: $size-xs $size-s;
   display: inline-flex;
   vertical-align: middle;
+  font-size: $font-size-small;
 
   span {
     flex: 1 1 auto;

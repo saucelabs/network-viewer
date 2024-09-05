@@ -41,6 +41,7 @@ export const postcssPlugin = (options = {}) => (
     autoModules: false,
     modules: {
       generateScopedName: '[name]__[local]___[hash:base64:5]',
+      hashPrefix: 'prefix',
     },
     ...options,
   })

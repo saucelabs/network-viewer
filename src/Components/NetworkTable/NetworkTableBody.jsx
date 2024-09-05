@@ -7,6 +7,8 @@ import NetworkTableRow from './NetworkTableRow';
 import { TABLE_ENTRY_HEIGHT } from '../../constants';
 import { useResizeObserver } from '../../hooks/useResizeObserver';
 import Styles from './NetworkTable.styles.scss';
+import { useTheme } from '../../state/theme/Context';
+import IconNetworkRequest from '../../icons/IconNetworkRequest';
 
 /* eslint no-underscore-dangle: 0 */
 
@@ -29,7 +31,7 @@ const virtualizedTableRow = ({
       entry={item}
       maxTime={totalNetworkTime}
       onSelect={handleReqSelect}
-      scrollHighlight={selectedReqIndex === index}
+      scrollHighlight={selectedReqIndex === item.index}
       style={style}
     />
   );
@@ -41,19 +43,27 @@ const NetworkTableBody = ({ height }) => {
     actions,
     callbacks,
   } = useNetwork();
+  const { enableAutoScroll, NoDataPlaceholder } = useTheme();
+  const numberOfNewEntries = state.get('numberOfNewEntries');
   const data = state.get('data');
+  const actualData = state.get('actualData');
   const totalNetworkTime = state.get('totalNetworkTime');
   const selectedReqIndex = state.get('selectedReqIndex');
 
   const ref = useRef(null);
-  const { elementDims } = useResizeObserver(ref);
+  const { elementDims } = useResizeObserver(ref?.current?._outerRef || ref?.current);
 
   useEffect(() => actions.setTableHeaderWidth(elementDims.width), [elementDims]);
 
   useEffect(() => {
-    const outerRef = ref?.current?._outerRef;
-    if (outerRef.scrollTop + outerRef.offsetHeight + TABLE_ENTRY_HEIGHT >= outerRef.scrollHeight) {
-      ref.current._outerRef.scrollTop = outerRef.scrollHeight;
+    if (enableAutoScroll && ref?.current?._outerRef) {
+      const outerRef = ref?.current?._outerRef;
+      const needToScroll = outerRef.scrollTop +
+        outerRef.offsetHeight +
+        (numberOfNewEntries * TABLE_ENTRY_HEIGHT) >= outerRef.scrollHeight;
+      if (needToScroll) {
+        ref.current._outerRef.scrollTop = outerRef.scrollHeight;
+      }
     }
   }, [data, ref]);
 
@@ -66,6 +76,24 @@ const NetworkTableBody = ({ height }) => {
     actions.selectRequest(payload);
     callbacks.onRequestSelect(payload);
   };
+
+  if (actualData.size === 0) {
+    return (
+      <div
+        ref={ref}
+        className={Styles['no-data']}
+      >
+        <IconNetworkRequest className={Styles['network-icon']} />
+        {NoDataPlaceholder && <NoDataPlaceholder />}
+        {!NoDataPlaceholder && (
+          <>
+            <span className={Styles.header}>Recording network activity</span>
+            <span className={Styles.subtext}>Perform a request to see the network activity</span>
+          </>
+        )}
+      </div>
+    );
+  }
 
   return (
     <>

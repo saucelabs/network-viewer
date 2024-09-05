@@ -30,6 +30,7 @@ const initialState = new Map({
   showReqDetail: false,
   reqDetail: null,
   tableHeaderWidth: '100%',
+  numberOfNewEntries: 0,
 });
 
 const reducer = (state = initialState, {
@@ -58,11 +59,15 @@ const reducer = (state = initialState, {
           search: state.get('search'),
         });
 
+        const prevData = state.get('data');
+        const numberOfNewEntries = filteredData.size - prevData.size;
+
         newState
           .set('error', null)
           .set('rawData', payload)
           .set('data', filteredData)
           .set('actualData', sortedData)
+          .set('numberOfNewEntries', numberOfNewEntries)
           .set('totalNetworkTime', totalNetworkTime)
           .set('dataSummary', new Map({
             totalRequests,

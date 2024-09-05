@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Styles from './../Headers.styles.scss';
+import Styles from '../ReqDetail.styles.scss';
 
-const QueryString = ({ data, isPayloadTransformed }) => (
-  <div className={Styles['header-detail']}>
-    {data.headers.queryString.map(({ name, value }, index) => (
-      <p
+const FormData = ({ data, isPayloadTransformed }) => (
+  <div className={Styles['section-detail']}>
+    {data.headers.postData.params.map(({ name, value }, index) => (
+      <div
         key={`${name}-${index}`}
         className={Styles['info-row']}
       >
@@ -16,18 +16,18 @@ const QueryString = ({ data, isPayloadTransformed }) => (
         <span className={Styles['info-value']}>
           {isPayloadTransformed ? decodeURIComponent(value) : value}
         </span>
-      </p>
+      </div>
     ))}
   </div>
 );
 
-QueryString.propTypes = {
+FormData.propTypes = {
   data: PropTypes.object,
   isPayloadTransformed: PropTypes.bool.isRequired,
 };
 
-QueryString.defaultProps = {
+FormData.defaultProps = {
   data: null,
 };
 
-export default QueryString;
+export default FormData;

@@ -1,9 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Response from './../../../../../src/Components/ReqDetail/headers/Response';
+import ResponseHeaders from '../../../../../src/Components/ReqDetail/headers/ResponseHeaders';
 
-describe('Response', () => {
+describe('ResponseHeaders', () => {
   const props = {
     data: {
       headers: {
@@ -17,7 +17,7 @@ describe('Response', () => {
   };
 
   it('renders without crashing', () => {
-    const element = shallow(<Response {...props} />);
+    const element = shallow(<ResponseHeaders {...props} />);
     expect(element).toMatchSnapshot();
   });
 });

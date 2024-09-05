@@ -2,56 +2,29 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import General from './headers/General';
-import Response from './headers/Response';
-import Request from './headers/Request';
-import QueryString from './headers/QueryString';
-import FormData from './headers/FormData';
-import HeaderInfo from './headers/HeaderInfo';
-import Styles from './Headers.styles.scss';
-import RequestPayload from './headers/RequestPayload';
+import ResponseHeaders from './headers/ResponseHeaders';
+import RequestHeaders from './headers/RequestHeaders';
+import SectionInfo from './SectionInfo';
+import Styles from './ReqDetail.styles.scss';
 
 const Headers = ({ data }) => (!data ? null : (
-  <section className={Styles['headers-container']}>
-    <HeaderInfo
+  <section className={Styles['section-container']}>
+    <SectionInfo
       component={General}
       data={data}
       eventKey="general"
       isVisible
     />
-    <HeaderInfo
-      component={Request}
+    <SectionInfo
+      component={RequestHeaders}
       data={data}
-      eventKey="request"
+      eventKey="requestHeaders"
     />
-    <HeaderInfo
-      component={Response}
+    <SectionInfo
+      component={ResponseHeaders}
       data={data}
-      eventKey="response"
+      eventKey="responseHeaders"
     />
-    {(data.headers.queryString && data.headers.queryString.length) ? (
-      <HeaderInfo
-        component={QueryString}
-        data={data}
-        eventKey="queryString"
-        isEncodeEnabled
-      />
-    ) : null}
-    {data.headers.postData && data.headers.postData.params && (
-      <HeaderInfo
-        component={FormData}
-        data={data}
-        eventKey="formData"
-        isEncodeEnabled
-      />
-    )}
-    {data.headers.postData && data.headers.postData.text && (
-      <HeaderInfo
-        component={RequestPayload}
-        data={data}
-        eventKey="requestPayload"
-        isParseEnabled
-      />
-    )}
   </section>
 ));
 

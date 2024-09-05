@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Styles from './../Headers.styles.scss';
+import Styles from '../ReqDetail.styles.scss';
 import { GENERAL_HEADERS } from '../../../constants';
 
 const General = ({ data }) => (
-  <div className={Styles['header-detail']}>
+  <div className={Styles['section-detail']}>
     {Object.entries(GENERAL_HEADERS).map(([dataKey, { key, name }]) => (
-      <p
+      <div
         key={dataKey}
         className={Styles['info-row']}
       >
@@ -17,7 +17,7 @@ const General = ({ data }) => (
         <span className={Styles['info-value']}>
           {key === 'status' && data.error ? data.error : data[key]}
         </span>
-      </p>
+      </div>
     ))}
   </div>
 );

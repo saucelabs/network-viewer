@@ -14,8 +14,9 @@ import { useNetwork } from '../state/network/Context';
 const FilterContainer = () => {
   const { state } = useNetwork();
   const {
-    showImportHar,
     showExportHar,
+    showImportHar,
+    showReset,
     showPauseResume,
   } = useTheme();
 
@@ -25,7 +26,7 @@ const FilterContainer = () => {
         <StatusFilter />
         <Search {...state.get('search')} />
         {showPauseResume && <PauseResumeButton />}
-        <ResetButton />
+        {showReset && <ResetButton />}
         {showExportHar && <ExportHarButton rawData={state.get('rawData')} />}
         {showImportHar && <ImportHAR />}
       </div>

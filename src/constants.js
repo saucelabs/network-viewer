@@ -227,14 +227,15 @@ export const TIMINGS = {
 };
 
 export const TIME_CHART_SVG_PROPS = {
-  viewBox: '0 0 250 20',
+  height: '15',
+  viewBox: '0 0 200 20',
   version: '1.1',
   preserveAspectRatio: 'xMinYMin meet',
 };
 
 export const TIME_CHART_DEFAULT_PROPS = {
-  height: 16,
-  y: 3.5,
+  height: 30,
+  y: 0,
 };
 
 export const ROW_ID_PREFIX = 'network-viewer-table-row-';
@@ -258,18 +259,22 @@ export const GENERAL_HEADERS = Object.freeze({
   }),
 });
 
-export const HEADERS_TITLES = Object.freeze({
+export const SECTION_TITLES = Object.freeze({
   general: Object.freeze({
     key: 'general',
     name: 'General',
   }),
-  request: Object.freeze({
-    key: 'request',
+  requestHeaders: Object.freeze({
+    key: 'requestHeaders',
     name: 'Request Headers',
   }),
-  response: Object.freeze({
-    key: 'response',
+  responseHeaders: Object.freeze({
+    key: 'responseHeaders',
     name: 'Response Headers',
+  }),
+  requestPayload: Object.freeze({
+    key: 'requestPayload',
+    name: 'Request Payload',
   }),
   queryString: Object.freeze({
     key: 'queryString',
@@ -279,18 +284,17 @@ export const HEADERS_TITLES = Object.freeze({
     key: 'formData',
     name: 'Form Data',
   }),
-  requestPayload: Object.freeze({
-    key: 'requestPayload',
-    name: 'Request Payload',
-  }),
 });
 
 export const MAX_COLOR_CONTENT_SIZE = 100000; // 100kB
 export const TIMELINE_DATA_POINT_HEIGHT = 2;
 export const NETWORK_VIEWER_DEFAULT_OPTIONS = {
+  NoDataPlaceholder: undefined,
+  enableAutoScroll: false,
   showExportHar: false,
   showImportHar: true,
   showPauseResume: false,
+  showReset: true,
   showTimeline: false,
   showWaterfall: true,
 };
