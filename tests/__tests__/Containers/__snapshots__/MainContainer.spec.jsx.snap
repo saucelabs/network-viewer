@@ -65,7 +65,7 @@ exports[`MainContainer renders without crashing 1`] = `
   <MainContainer>
     <LoaderContainer
       show={false}
-      text="Please wait, Fetching file is in progress."
+      text="Please wait, fetching file is in progress."
     >
       <div>
         <div>
