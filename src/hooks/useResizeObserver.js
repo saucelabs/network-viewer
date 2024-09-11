@@ -10,7 +10,7 @@ export const useResizeObserver = (elementRef) => {
   });
 
   useEffect(() => {
-    ref = elementRef?.current;
+    ref = elementRef?.current?._outerRef || elementRef?.current;
     const onResize = () => {
       if (ref) {
         setElementDims({
