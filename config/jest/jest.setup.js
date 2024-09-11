@@ -15,3 +15,17 @@ global.IntersectionObserver = class IntersectionObserver {
     return null;
   }
 };
+
+global.ResizeObserver = class ResizeObserver {
+  disconnect() {
+    return null;
+  }
+
+  observe() {
+    return null;
+  }
+
+  unobserve() {
+    return null;
+  }
+};

@@ -50,22 +50,24 @@ const NetworkTableBody = ({ height }) => {
   const totalNetworkTime = state.get('totalNetworkTime');
   const selectedReqIndex = state.get('selectedReqIndex');
 
-  const ref = useRef(null);
-  const { elementDims } = useResizeObserver(ref?.current?._outerRef || ref?.current);
-
-  useEffect(() => actions.setTableHeaderWidth(elementDims.width), [elementDims]);
+  const listRef = useRef(null);
+  const { elementDims } = useResizeObserver(listRef);
 
   useEffect(() => {
-    if (enableAutoScroll && ref?.current?._outerRef) {
-      const outerRef = ref?.current?._outerRef;
+    actions.setTableHeaderWidth(elementDims.width);
+  }, [elementDims]);
+
+  useEffect(() => {
+    if (enableAutoScroll && listRef?.current?._outerRef) {
+      const outerRef = listRef?.current?._outerRef;
       const needToScroll = outerRef.scrollTop +
         outerRef.offsetHeight +
         (numberOfNewEntries * TABLE_ENTRY_HEIGHT) >= outerRef.scrollHeight;
       if (needToScroll) {
-        ref.current._outerRef.scrollTop = outerRef.scrollHeight;
+        listRef.current._outerRef.scrollTop = outerRef.scrollHeight;
       }
     }
-  }, [data, ref]);
+  }, [data, listRef]);
 
   const handleReqSelect = (payload) => {
     if (selectedReqIndex === payload.index) {
@@ -80,7 +82,7 @@ const NetworkTableBody = ({ height }) => {
   if (actualData.size === 0) {
     return (
       <div
-        ref={ref}
+        ref={listRef}
         className={Styles['no-data']}
       >
         <IconNetworkRequest className={Styles['network-icon']} />
@@ -98,7 +100,7 @@ const NetworkTableBody = ({ height }) => {
   return (
     <>
       <FixedSizeList
-        ref={ref}
+        ref={listRef}
         className={Styles['network-table-body']}
         height={height}
         itemCount={data.size}

@@ -28,6 +28,7 @@ const App = () => {
       <div className={networkContainerClassName}>
         <NetworkViewer
           onDataLoaded={() => setIsDataLoaded(true)}
+          onReset={() => setIsDataLoaded(false)}
           {...fileOptions}
         />
       </div>

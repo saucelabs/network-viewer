@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Styles from './LoaderContainer.styles.scss';
 
 const LoaderContainer = ({ children, show, text }) => {
-  const spinnerColor = Styles.brandBlue;
+  const colorBrandBlue = '#0E75DD';
   const uniqueId = `Gradient-${Math.round(Math.random() * 10000000)}`;
 
   return !show ? children : (
@@ -18,16 +18,16 @@ const LoaderContainer = ({ children, show, text }) => {
             <linearGradient id={uniqueId}>
               <stop
                 offset="0%"
-                stopColor={spinnerColor}
+                stopColor={colorBrandBlue}
               />
               <stop
                 offset="75%"
-                stopColor={spinnerColor}
+                stopColor={colorBrandBlue}
                 stopOpacity="0"
               />
               <stop
                 offset="100%"
-                stopColor={spinnerColor}
+                stopColor={colorBrandBlue}
                 stopOpacity="0"
               />
             </linearGradient>
