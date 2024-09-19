@@ -67,8 +67,7 @@ export const resetState = (dispatch) => (payload) => dispatch({
   payload,
 });
 
-export const fetchFile = (dispatch) => (payload = { options: { withCredentials: true } }) => {
-  const { file, options } = payload;
+export const fetchFile = (dispatch) => (file, options = { withCredentials: true }) => {
   fetchFileRequest(dispatch)();
   axios.get(file, options)
     .then(({ data }) => {
