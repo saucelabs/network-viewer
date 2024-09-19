@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
+import { stringify } from 'qs';
 
 import Styles from './URLInput.styles.scss';
 import Button from './../../../src/Components/Common/Button';
 import CORSCheckbox from './CORSCheckbox';
-import { useNetwork } from '../../state/network/Context';
 
 const URLInput = () => {
-  const { actions } = useNetwork();
   const [url, setURL] = useState('');
   const [isCORSEnabled, setCORS] = useState(false);
   const handleInputChange = ({ target }) => {
@@ -14,10 +13,12 @@ const URLInput = () => {
   };
 
   const handleSubmit = () => {
-    actions.fetchFile({
+    const { origin, pathname } = document.location;
+    const newURL = `${origin}${pathname}?${stringify({
       file: url,
       isCORSEnabled,
-    });
+    })}`;
+    document.location.href = newURL;
   };
 
   return (
