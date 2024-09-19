@@ -46,7 +46,7 @@ const NetworkProvider = (props) => {
   // Fetch HAR file onChange of file prop
   useEffect(() => {
     if (file) {
-      fetchFile(dispatch)({ file, fetchOptions });
+      fetchFile(dispatch)(file, fetchOptions);
     }
   }, [file]);
 
