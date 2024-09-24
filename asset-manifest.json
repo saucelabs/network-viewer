@@ -1,23 +1,16 @@
 {
   "files": {
-    "main.css": "./static/css/main.65097fa3.chunk.css",
-    "main.js": "./static/js/main.ee1439ab.chunk.js",
-    "main.js.map": "./static/js/main.ee1439ab.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.4040643a.js",
-    "runtime-main.js.map": "./static/js/runtime-main.4040643a.js.map",
-    "static/css/2.149c0da3.chunk.css": "./static/css/2.149c0da3.chunk.css",
-    "static/js/2.006f2db8.chunk.js": "./static/js/2.006f2db8.chunk.js",
-    "static/js/2.006f2db8.chunk.js.map": "./static/js/2.006f2db8.chunk.js.map",
+    "main.css": "./static/css/main.cc45db25.css",
+    "main.js": "./static/js/main.798306df.js",
     "index.html": "./index.html",
-    "static/css/2.149c0da3.chunk.css.map": "./static/css/2.149c0da3.chunk.css.map",
-    "static/css/main.65097fa3.chunk.css.map": "./static/css/main.65097fa3.chunk.css.map",
-    "static/js/2.006f2db8.chunk.js.LICENSE.txt": "./static/js/2.006f2db8.chunk.js.LICENSE.txt"
+    "static/media/_class_private_field_set.cjs": "./static/media/_class_private_field_set.925a0201d5a91d52f483.cjs",
+    "static/media/_class_private_field_get.cjs": "./static/media/_class_private_field_get.5c97547f8450bb51b47f.cjs",
+    "static/media/_class_private_field_init.cjs": "./static/media/_class_private_field_init.7f8135d7c9d481d3f2ad.cjs",
+    "main.cc45db25.css.map": "./static/css/main.cc45db25.css.map",
+    "main.798306df.js.map": "./static/js/main.798306df.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.4040643a.js",
-    "static/css/2.149c0da3.chunk.css",
-    "static/js/2.006f2db8.chunk.js",
-    "static/css/main.65097fa3.chunk.css",
-    "static/js/main.ee1439ab.chunk.js"
+    "static/css/main.cc45db25.css",
+    "static/js/main.798306df.js"
   ]
 }
