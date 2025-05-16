@@ -43,6 +43,12 @@ import { NetworkViewer } from 'network-viewer';
 <NetworkViewer />
 ```
 
+### Use as a docker container
+```sh
+docker build -t network-viewer .
+docker run -p 3000:3000 -d --name network-viewer network-viewer
+```
+
 #### Props
 | prop   | Type   | Default    | Values    | Description   |
 |:---|:---|:---|:---|:---|
