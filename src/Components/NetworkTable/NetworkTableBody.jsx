@@ -58,13 +58,12 @@ const NetworkTableBody = ({ height }) => {
   }, [elementDims]);
 
   useEffect(() => {
-    if (enableAutoScroll && listRef?.current?._outerRef) {
-      const outerRef = listRef?.current?._outerRef;
-      const needToScroll = outerRef.scrollTop +
-        outerRef.offsetHeight +
-        (numberOfNewEntries * TABLE_ENTRY_HEIGHT) >= outerRef.scrollHeight;
+    if (enableAutoScroll && listRef?.current) {
+      const needToScroll = listRef?.current.scrollTop +
+        listRef?.current.offsetHeight +
+        (numberOfNewEntries * TABLE_ENTRY_HEIGHT) >= listRef?.current.scrollHeight;
       if (needToScroll) {
-        listRef.current._outerRef.scrollTop = outerRef.scrollHeight;
+        listRef.current.scrollTop = listRef?.current.scrollHeight;
       }
     }
   }, [data, listRef]);
@@ -100,7 +99,6 @@ const NetworkTableBody = ({ height }) => {
   return (
     <>
       <FixedSizeList
-        ref={listRef}
         className={Styles['network-table-body']}
         height={height}
         itemCount={data.size}
@@ -111,6 +109,7 @@ const NetworkTableBody = ({ height }) => {
           selectedReqIndex,
         }}
         itemSize={TABLE_ENTRY_HEIGHT}
+        outerRef={listRef}
       >
         {virtualizedTableRow}
       </FixedSizeList>

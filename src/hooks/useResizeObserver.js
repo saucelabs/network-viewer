@@ -19,7 +19,7 @@ export const useResizeObserver = (elementRef) => {
   });
 
   useEffect(() => {
-    const ref = elementRef?.current?._outerRef || elementRef?.current;
+    const ref = elementRef?.current;
     const onResize = debounce(() => {
       if (ref) {
         setElementDims({
@@ -40,7 +40,7 @@ export const useResizeObserver = (elementRef) => {
         resizeObserver.unobserve(ref);
       }
     };
-  }, [elementRef?.current]);
+  }, [elementRef]);
 
   return { elementDims };
 };
