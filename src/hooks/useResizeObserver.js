@@ -19,24 +19,25 @@ export const useResizeObserver = (elementRef) => {
   });
 
   useEffect(() => {
+    const ref = elementRef?.current?._outerRef || elementRef?.current;
     const onResize = debounce(() => {
-      if (elementRef?.current) {
+      if (ref) {
         setElementDims({
-          width: elementRef?.current.clientWidth,
-          height: elementRef?.current.clientHeight,
+          width: ref.clientWidth,
+          height: ref.clientHeight,
         });
       }
     }, 50);
 
     const resizeObserver = new ResizeObserver(() => onResize());
 
-    if (elementRef?.current) {
-      resizeObserver.observe(elementRef?.current);
+    if (ref) {
+      resizeObserver.observe(ref);
     }
 
     return () => {
-      if (elementRef?.current) {
-        resizeObserver.unobserve(elementRef?.current);
+      if (ref) {
+        resizeObserver.unobserve(ref);
       }
     };
   }, [elementRef?.current]);

@@ -51,7 +51,7 @@ const NetworkTableBody = ({ height }) => {
   const selectedReqIndex = state.get('selectedReqIndex');
 
   const listRef = useRef(null);
-  const { elementDims } = useResizeObserver(listRef?.current?._outerRef || listRef?.current);
+  const { elementDims } = useResizeObserver(listRef);
 
   useEffect(() => {
     actions.setTableHeaderWidth(elementDims.width);
