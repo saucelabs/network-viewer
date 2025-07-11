@@ -20,26 +20,26 @@ export const useResizeObserver = (elementRef) => {
 
   useEffect(() => {
     const onResize = debounce(() => {
-      if (elementRef) {
+      if (elementRef?.current) {
         setElementDims({
-          width: elementRef.clientWidth,
-          height: elementRef.clientHeight,
+          width: elementRef?.current.clientWidth,
+          height: elementRef?.current.clientHeight,
         });
       }
     }, 50);
 
     const resizeObserver = new ResizeObserver(() => onResize());
 
-    if (elementRef) {
-      resizeObserver.observe(elementRef);
+    if (elementRef?.current) {
+      resizeObserver.observe(elementRef?.current);
     }
 
     return () => {
-      if (elementRef) {
-        resizeObserver.unobserve(elementRef);
+      if (elementRef?.current) {
+        resizeObserver.unobserve(elementRef?.current);
       }
     };
-  }, [elementRef]);
+  }, [elementRef?.current]);
 
   return { elementDims };
 };
