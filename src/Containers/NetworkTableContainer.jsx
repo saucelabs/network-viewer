@@ -26,7 +26,7 @@ const NetworkTableContainer = () => {
   const { elementDims } = useResizeObserver(ref?.current);
 
   useEffect(() => {
-    if (ref?.current && elementDims.height) {
+    if (ref?.current && ref?.current.clientHeight) {
       setTableBodyHeight(ref.current.clientHeight - TABLE_HEADER_HEIGHT);
     }
   }, [ref?.current, actualData, elementDims]);
