@@ -59,11 +59,12 @@ const NetworkTableBody = ({ height }) => {
 
   useEffect(() => {
     if (enableAutoScroll && listRef?.current) {
-      const needToScroll = listRef?.current.scrollTop +
-        listRef?.current.offsetHeight +
-        (numberOfNewEntries * TABLE_ENTRY_HEIGHT) >= listRef?.current.scrollHeight;
+      const { offsetHeight, scrollHeight } = listRef.current;
+      let { scrollTop } = listRef.current;
+      const needToScroll = scrollTop + offsetHeight +
+        (numberOfNewEntries * TABLE_ENTRY_HEIGHT) >= scrollHeight;
       if (needToScroll) {
-        listRef.current.scrollTop = listRef?.current.scrollHeight;
+        scrollTop = scrollHeight;
       }
     }
   }, [data, listRef]);
